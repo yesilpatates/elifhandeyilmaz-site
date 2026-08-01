@@ -1,3 +1,21 @@
+const projectCoverStylesheet = document.createElement("link");
+projectCoverStylesheet.rel = "stylesheet";
+projectCoverStylesheet.href = "assets/project-covers.css";
+projectCoverStylesheet.id = "project-cover-styles";
+
+if (!document.getElementById(projectCoverStylesheet.id)) {
+  document.head.appendChild(projectCoverStylesheet);
+}
+
+const projectCoverScript = document.createElement("script");
+projectCoverScript.src = "assets/project-covers.js";
+projectCoverScript.defer = true;
+projectCoverScript.id = "project-cover-script";
+
+if (!document.getElementById(projectCoverScript.id)) {
+  document.body.appendChild(projectCoverScript);
+}
+
 const heroTitleFont = document.createElement("link");
 heroTitleFont.rel = "stylesheet";
 heroTitleFont.href = "https://fonts.googleapis.com/css2?family=Rochester&display=swap";
