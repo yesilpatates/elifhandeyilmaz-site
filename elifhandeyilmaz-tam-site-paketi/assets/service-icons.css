@@ -82,6 +82,69 @@
   letter-spacing: -0.01em;
 }
 
+/* Balance the three homepage overview panels */
+@media (min-width: 1181px) {
+  .home-overview.section-tight {
+    padding-top: 44px;
+    padding-bottom: 46px;
+  }
+
+  .home-overview .overview-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .home-overview .overview-block {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    padding: 8px 30px 0;
+  }
+
+  .home-overview .overview-block:first-child {
+    padding-left: 0;
+  }
+
+  .home-overview .overview-block:last-child {
+    padding-right: 0;
+  }
+
+  .home-overview .section-heading.compact {
+    min-height: 72px;
+    align-items: flex-end;
+    margin-bottom: 22px;
+  }
+
+  .home-overview .mini-project-grid,
+  .home-overview .service-mini-grid,
+  .home-overview .education-card {
+    min-height: 238px;
+  }
+
+  .home-overview .mini-project {
+    height: 238px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-overview .mini-art {
+    min-height: 0;
+    flex: 1 1 auto;
+    aspect-ratio: auto;
+  }
+
+  .home-overview .education-card {
+    height: 238px;
+    grid-template-columns: 104px minmax(0, 1fr);
+    gap: 22px;
+    padding: 24px;
+  }
+
+  .home-overview .education-icon {
+    width: 104px;
+  }
+}
+
 @media (max-width: 1100px) {
   .service-mini-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
