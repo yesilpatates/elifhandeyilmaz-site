@@ -2,33 +2,60 @@
   const covers = [
     {
       src: "https://at.adobe.com/ufiqB66wHJRAswSX",
-      alt: "Marka ve Kurumsal Kimlik Tasarımı kapak görseli"
+      alt: "Marka & Kurumsal Kimlik Tasarımı kapak görseli",
+      title: "Marka & Kurumsal Kimlik",
+      label: "BRAND"
     },
     {
       src: "https://at.adobe.com/zvF3n3Q17egUXpiR",
-      alt: "Editoryal Tasarım kapak görseli"
+      alt: "Editoryal Tasarım kapak görseli",
+      title: "Editoryal Tasarım",
+      label: "EDITORIAL"
     },
     {
       src: "https://at.adobe.com/hguOld174sEQhlKx",
-      alt: "Etkinlik ve Organizasyon Tasarımı kapak görseli"
+      alt: "Etkinlik & Organizasyon Tasarımı kapak görseli",
+      title: "Etkinlik & Organizasyon Tasarımı",
+      label: "EVENT"
     },
     {
       src: "https://at.adobe.com/B3srmMwoUvQfru2c",
-      alt: "Tanıtım ve İletişim Tasarımı kapak görseli"
+      alt: "Tanıtım & İletişim Tasarımı kapak görseli",
+      title: "Tanıtım & İletişim Tasarımı",
+      label: "PROMO"
     },
     {
       src: "https://at.adobe.com/ec8nszziADbmVHkt",
-      alt: "Sosyal Medya Tasarımı kapak görseli"
+      alt: "Sosyal Medya Tasarımı kapak görseli",
+      title: "Sosyal Medya Tasarımı",
+      label: "SOCIAL"
     },
     {
       src: "https://at.adobe.com/vCPmsaZrLIa0TN9Q",
-      alt: "Web ve Arayüz Tasarımı kapak görseli"
+      alt: "Web & Arayüz Tasarımı kapak görseli",
+      title: "Web & Arayüz Tasarımı",
+      label: "UI / WEB"
     },
     {
       src: "https://at.adobe.com/TYb10FnMlNsmuouV",
-      alt: "Video ve Animasyon Tasarımı kapak görseli"
+      alt: "Video & Animasyon Tasarımı kapak görseli",
+      title: "Video & Animasyon Tasarımı",
+      label: "MOTION"
     }
   ];
+
+  const cards = [...document.querySelectorAll(".project-card")];
+
+  cards.forEach((card, index) => {
+    const cover = covers[index];
+    if (!cover) return;
+
+    const title = card.querySelector(".project-body h3");
+    const placeholderLabel = card.querySelector(".project-visual strong");
+
+    if (title) title.textContent = cover.title;
+    if (placeholderLabel) placeholderLabel.textContent = cover.label;
+  });
 
   const visuals = [...document.querySelectorAll(".project-card .project-visual")];
 
@@ -44,11 +71,15 @@
     image.decoding = "async";
     image.referrerPolicy = "no-referrer";
 
-    image.addEventListener("load", () => {
-      visual.innerHTML = "";
-      visual.classList.add("has-cover");
-      visual.appendChild(image);
-    }, { once: true });
+    image.addEventListener(
+      "load",
+      () => {
+        visual.innerHTML = "";
+        visual.classList.add("has-cover");
+        visual.appendChild(image);
+      },
+      { once: true }
+    );
   });
 
   const projectIntro = document.querySelector("#projeler .section-heading p");
