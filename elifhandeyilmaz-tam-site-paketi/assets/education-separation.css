@@ -76,30 +76,39 @@
   border: 1px solid var(--line);
   border-radius: 18px;
   background: #fff;
+  isolation: isolate;
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
 }
 
+/* The seven uploaded covers are stored in one optimized 3x3 sprite. */
 .guide-card::before {
-  content: "";
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  flex: 0 0 auto;
-  background-image: url("../images/blog/blog-covers-sprite.webp");
-  background-repeat: no-repeat;
-  background-size: 300% 300%;
-  background-color: #f7f3ed;
-  border-bottom: 1px solid var(--line);
+  content: "" !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  aspect-ratio: 16 / 9 !important;
+  display: block !important;
+  flex: 0 0 auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  background-color: #f7f3ed !important;
+  background-image: url("../images/blog/blog-covers-sprite.webp") !important;
+  background-repeat: no-repeat !important;
+  background-size: 300% 300% !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
   transition: transform 0.38s ease;
 }
 
-.guide-card:nth-child(1)::before { background-position: 0% 0%; }
-.guide-card:nth-child(2)::before { background-position: 50% 0%; }
-.guide-card:nth-child(3)::before { background-position: 100% 0%; }
-.guide-card:nth-child(4)::before { background-position: 0% 50%; }
-.guide-card:nth-child(5)::before { background-position: 50% 50%; }
-.guide-card:nth-child(6)::before { background-position: 100% 50%; }
-.guide-card:nth-child(7)::before { background-position: 0% 100%; }
+.guide-card:nth-child(1)::before { background-position: 0% 0% !important; }
+.guide-card:nth-child(2)::before { background-position: 50% 0% !important; }
+.guide-card:nth-child(3)::before { background-position: 100% 0% !important; }
+.guide-card:nth-child(4)::before { background-position: 0% 50% !important; }
+.guide-card:nth-child(5)::before { background-position: 50% 50% !important; }
+.guide-card:nth-child(6)::before { background-position: 100% 50% !important; }
+.guide-card:nth-child(7)::before { background-position: 0% 100% !important; }
 
 .guide-card:hover {
   transform: translateY(-4px);
