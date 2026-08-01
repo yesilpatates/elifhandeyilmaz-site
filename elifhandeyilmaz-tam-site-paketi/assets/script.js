@@ -1,46 +1,26 @@
-const projectCoverStylesheet = document.createElement("link");
-projectCoverStylesheet.rel = "stylesheet";
-projectCoverStylesheet.href = "assets/project-covers.css";
-projectCoverStylesheet.id = "project-cover-styles";
+const loadStylesheet = (id, href) => {
+  if (document.getElementById(id)) return;
 
-if (!document.getElementById(projectCoverStylesheet.id)) {
-  document.head.appendChild(projectCoverStylesheet);
-}
+  const stylesheet = document.createElement("link");
+  stylesheet.rel = "stylesheet";
+  stylesheet.href = href;
+  stylesheet.id = id;
+  document.head.appendChild(stylesheet);
+};
 
-const projectCoverScript = document.createElement("script");
-projectCoverScript.src = "assets/project-covers.js";
-projectCoverScript.defer = true;
-projectCoverScript.id = "project-cover-script";
+loadStylesheet("project-cover-styles", "assets/project-covers.css");
+loadStylesheet("hero-title-font", "https://fonts.googleapis.com/css2?family=Rochester&display=swap");
+loadStylesheet("hero-title-styles", "assets/hero-title.css");
+loadStylesheet("service-icons-styles", "assets/service-icons.css");
+loadStylesheet("site-optimizations", "assets/optimizations.css");
+loadStylesheet("education-separation-styles", "assets/education-separation.css");
 
-if (!document.getElementById(projectCoverScript.id)) {
+if (!document.getElementById("project-cover-script")) {
+  const projectCoverScript = document.createElement("script");
+  projectCoverScript.src = "assets/project-covers.js";
+  projectCoverScript.defer = true;
+  projectCoverScript.id = "project-cover-script";
   document.body.appendChild(projectCoverScript);
-}
-
-const heroTitleFont = document.createElement("link");
-heroTitleFont.rel = "stylesheet";
-heroTitleFont.href = "https://fonts.googleapis.com/css2?family=Rochester&display=swap";
-heroTitleFont.id = "hero-title-font";
-
-if (!document.getElementById(heroTitleFont.id)) {
-  document.head.appendChild(heroTitleFont);
-}
-
-const heroTitleStylesheet = document.createElement("link");
-heroTitleStylesheet.rel = "stylesheet";
-heroTitleStylesheet.href = "assets/hero-title.css";
-heroTitleStylesheet.id = "hero-title-styles";
-
-if (!document.getElementById(heroTitleStylesheet.id)) {
-  document.head.appendChild(heroTitleStylesheet);
-}
-
-const serviceIconsStylesheet = document.createElement("link");
-serviceIconsStylesheet.rel = "stylesheet";
-serviceIconsStylesheet.href = "assets/service-icons.css";
-serviceIconsStylesheet.id = "service-icons-styles";
-
-if (!document.getElementById(serviceIconsStylesheet.id)) {
-  document.head.appendChild(serviceIconsStylesheet);
 }
 
 const originalHeroTitle = document.querySelector(".hero-copy h1");
@@ -99,13 +79,129 @@ if (serviceGrid && serviceGrid.dataset.enhanced !== "true") {
     .join("");
 }
 
-const optimizationStylesheet = document.createElement("link");
-optimizationStylesheet.rel = "stylesheet";
-optimizationStylesheet.href = "assets/optimizations.css";
-optimizationStylesheet.id = "site-optimizations";
+const guideArticles = [
+  {
+    slug: "grafik-tasarim-nedir",
+    title: "Grafik Tasarım Nedir?",
+    description: "Grafik tasarımın amacı, çalışma alanları ve görsel iletişimdeki temel rolü."
+  },
+  {
+    slug: "grafik-tasarimin-temel-unsurlari",
+    title: "Grafik Tasarımın Temel Unsurları",
+    description: "Çizgi, şekil, renk, doku, boşluk ve tipografinin tasarımdaki işlevleri."
+  },
+  {
+    slug: "grafik-tasarimin-temel-ilkeleri",
+    title: "Grafik Tasarımın Temel İlkeleri",
+    description: "Denge, hiyerarşi, kontrast, hizalama ve tekrar ile güçlü kompozisyon kurma."
+  },
+  {
+    slug: "vektorel-ve-bitmap-tasarim",
+    title: "Vektörel ve Bitmap Tasarım",
+    description: "İki temel görsel formatın farkları, avantajları ve doğru kullanım alanları."
+  },
+  {
+    slug: "renk-bilgisi",
+    title: "Renk Bilgisi: RGB ve CMYK",
+    description: "Ekran ve baskı renk sistemleri ile renklerin algı ve iletişim üzerindeki etkisi."
+  },
+  {
+    slug: "tipografi",
+    title: "Tipografi: Yazının Tasarımdaki Gücü",
+    description: "Yazı karakteri seçimi, okunabilirlik, hiyerarşi ve tipografik düzenin temelleri."
+  },
+  {
+    slug: "dosya-formatlari",
+    title: "Dosya Formatları Rehberi",
+    description: "JPG, PNG, PDF, SVG ve tasarım dosyalarının hangi durumda kullanılması gerektiği."
+  }
+];
 
-if (!document.getElementById(optimizationStylesheet.id)) {
-  document.head.appendChild(optimizationStylesheet);
+const educationPreview = document.querySelector(".education-preview");
+
+if (educationPreview && educationPreview.dataset.blogPreview !== "true") {
+  educationPreview.dataset.blogPreview = "true";
+
+  const previewEyebrow = educationPreview.querySelector(".eyebrow");
+  const previewTitle = educationPreview.querySelector("h2");
+  const previewLink = educationPreview.querySelector(".text-link");
+  const previewCard = educationPreview.querySelector(".education-card");
+
+  if (previewEyebrow) previewEyebrow.textContent = "Bilgi paylaşımı";
+  if (previewTitle) previewTitle.textContent = "Grafik Tasarım Rehberi";
+
+  if (previewLink) {
+    previewLink.href = "#egitim";
+    previewLink.innerHTML = "Tüm Yazılar <span>→</span>";
+  }
+
+  if (previewCard) {
+    previewCard.innerHTML = `
+      <div class="education-icon" aria-hidden="true">Aa</div>
+      <div>
+        <h3>Mesleğe Yeni Başlayanlar İçin</h3>
+        <p>Grafik tasarımın temel kavramlarını sade, görsel ve uygulanabilir içeriklerle anlatan başlangıç rehberi.</p>
+        <ul>
+          <li>Tasarım temelleri</li>
+          <li>Renk bilgisi</li>
+          <li>Tipografi</li>
+          <li>Dosya formatları</li>
+        </ul>
+      </div>
+    `;
+  }
+}
+
+const academicSection = document.querySelector("section.education#egitim");
+
+if (academicSection && academicSection.dataset.academicHistory !== "true") {
+  academicSection.dataset.academicHistory = "true";
+  academicSection.id = "akademik-gecmis";
+  academicSection.classList.add("academic-history");
+
+  const academicEyebrow = academicSection.querySelector(".section-heading .eyebrow");
+  const academicTitle = academicSection.querySelector(".section-heading h2");
+
+  if (academicEyebrow) academicEyebrow.textContent = "Özgeçmiş";
+  if (academicTitle) academicTitle.textContent = "Akademik geçmiş ve mesleki gelişim";
+}
+
+if (!document.querySelector("section.guide-section#egitim")) {
+  const guideSection = document.createElement("section");
+  guideSection.className = "guide-section section";
+  guideSection.id = "egitim";
+  guideSection.innerHTML = `
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Eğitici içerikler</span>
+        <h2>Grafik Tasarım Rehberi</h2>
+        <p>Mesleğe yeni başlayanlar için grafik tasarımın temel kavramlarını, teknik bilgileri ve doğru uygulama yöntemlerini anlatan içerikler.</p>
+      </div>
+
+      <div class="guide-grid">
+        ${guideArticles
+          .map(
+            (article, index) => `
+              <a class="guide-card reveal" href="blog/index.html#${article.slug}">
+                <span class="guide-card-number">${String(index + 1).padStart(2, "0")}</span>
+                <h3>${article.title}</h3>
+                <p>${article.description}</p>
+                <span class="guide-card-meta">Yazıyı oku</span>
+              </a>
+            `
+          )
+          .join("")}
+      </div>
+    </div>
+  `;
+
+  const contactSection = document.querySelector("#iletisim");
+
+  if (contactSection) {
+    contactSection.before(guideSection);
+  } else if (academicSection) {
+    academicSection.after(guideSection);
+  }
 }
 
 const menuToggle = document.querySelector(".menu-toggle");
@@ -116,7 +212,7 @@ const sections = [...document.querySelectorAll("main section[id]")];
 
 menuToggle?.addEventListener("click", () => {
   const isOpen = menuToggle.classList.toggle("open");
-  mainNav.classList.toggle("open", isOpen);
+  mainNav?.classList.toggle("open", isOpen);
   menuToggle.setAttribute("aria-expanded", String(isOpen));
   menuToggle.setAttribute("aria-label", isOpen ? "Menüyü kapat" : "Menüyü aç");
 });
@@ -161,7 +257,8 @@ const revealObserver = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((item) => revealObserver.observe(item));
 
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearElement = document.getElementById("year");
+if (yearElement) yearElement.textContent = new Date().getFullYear();
 
 /* Cursor Magic Effect: START */
 (() => {
@@ -201,9 +298,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
   };
 
   const createSpark = (x, y, forceStar = false) => {
-    if (activeSparks >= maxSparks) {
-      return;
-    }
+    if (activeSparks >= maxSparks) return;
 
     const spark = document.createElement("span");
     const isStar = forceStar || Math.random() > 0.48;
