@@ -6,16 +6,18 @@
 }
 
 .service-mini-grid > .service-mini-card {
-  min-height: 112px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 16px 12px;
+  gap: 15px;
+  padding: 18px 13px;
   border: 1px solid var(--line);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.92);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.94);
   text-align: center;
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
@@ -26,7 +28,7 @@
   box-shadow: 0 14px 30px rgba(15, 26, 40, 0.08);
 }
 
-/* Reset the old .service-mini-grid span rules completely */
+/* Reset legacy span boxes and stars */
 .service-mini-grid > .service-mini-card > span,
 .service-mini-grid > .service-mini-card > span > span {
   min-height: 0 !important;
@@ -49,8 +51,8 @@
 }
 
 .service-mini-grid .service-mini-icon {
-  width: 30px !important;
-  height: 30px !important;
+  width: 31px !important;
+  height: 31px !important;
   display: inline-flex !important;
   color: var(--accent);
   flex: 0 0 auto;
@@ -75,11 +77,48 @@
 
 .service-mini-grid .service-mini-title {
   display: block !important;
+  max-width: 132px;
   color: var(--ink);
-  font-size: 0.78rem !important;
+  font-size: clamp(0.66rem, 0.72vw, 0.76rem) !important;
   font-weight: 600;
-  line-height: 1.42;
-  letter-spacing: -0.01em;
+  line-height: 1.34;
+  letter-spacing: -0.018em;
+}
+
+/* Replace conjunctions without retaining legacy text visually */
+.service-mini-grid .service-mini-card:nth-child(1) .service-mini-title,
+.service-mini-grid .service-mini-card:nth-child(3) .service-mini-title,
+.service-mini-grid .service-mini-card:nth-child(5) .service-mini-title,
+.service-mini-grid .service-mini-card:nth-child(6) .service-mini-title {
+  font-size: 0 !important;
+}
+
+.service-mini-grid .service-mini-card:nth-child(1) .service-mini-title::after {
+  content: "Marka & Kurumsal Kimlik" !important;
+}
+
+.service-mini-grid .service-mini-card:nth-child(3) .service-mini-title::after {
+  content: "Web & Arayüz" !important;
+}
+
+.service-mini-grid .service-mini-card:nth-child(5) .service-mini-title::after {
+  content: "Video & Animasyon" !important;
+}
+
+.service-mini-grid .service-mini-card:nth-child(6) .service-mini-title::after {
+  content: "Etkinlik & Organizasyon" !important;
+}
+
+.service-mini-grid .service-mini-card:nth-child(1) .service-mini-title::after,
+.service-mini-grid .service-mini-card:nth-child(3) .service-mini-title::after,
+.service-mini-grid .service-mini-card:nth-child(5) .service-mini-title::after,
+.service-mini-grid .service-mini-card:nth-child(6) .service-mini-title::after {
+  display: block !important;
+  color: var(--ink);
+  font-size: clamp(0.66rem, 0.72vw, 0.76rem) !important;
+  font-weight: 600;
+  line-height: 1.34;
+  letter-spacing: -0.018em;
 }
 
 /* Balance the three homepage overview panels */
@@ -101,13 +140,8 @@
     padding: 8px 30px 0;
   }
 
-  .home-overview .overview-block:first-child {
-    padding-left: 0;
-  }
-
-  .home-overview .overview-block:last-child {
-    padding-right: 0;
-  }
+  .home-overview .overview-block:first-child { padding-left: 0; }
+  .home-overview .overview-block:last-child { padding-right: 0; }
 
   .home-overview .section-heading.compact {
     min-height: 72px;
@@ -115,8 +149,12 @@
     margin-bottom: 22px;
   }
 
+  .home-overview .service-mini-grid {
+    min-height: 0;
+    align-content: start;
+  }
+
   .home-overview .mini-project-grid,
-  .home-overview .service-mini-grid,
   .home-overview .education-card {
     min-height: 238px;
   }
@@ -140,9 +178,7 @@
     padding: 24px;
   }
 
-  .home-overview .education-icon {
-    width: 104px;
-  }
+  .home-overview .education-icon { width: 104px; }
 }
 
 @media (max-width: 1100px) {
@@ -158,17 +194,21 @@
   }
 
   .service-mini-grid > .service-mini-card {
-    min-height: 100px;
     padding: 14px 10px;
-    gap: 10px;
+    gap: 11px;
+    border-radius: 16px;
   }
 
   .service-mini-grid .service-mini-icon {
-    width: 25px !important;
-    height: 25px !important;
+    width: 26px !important;
+    height: 26px !important;
   }
 
-  .service-mini-grid .service-mini-title {
-    font-size: 0.74rem !important;
+  .service-mini-grid .service-mini-title,
+  .service-mini-grid .service-mini-card:nth-child(1) .service-mini-title::after,
+  .service-mini-grid .service-mini-card:nth-child(3) .service-mini-title::after,
+  .service-mini-grid .service-mini-card:nth-child(5) .service-mini-title::after,
+  .service-mini-grid .service-mini-card:nth-child(6) .service-mini-title::after {
+    font-size: 0.69rem !important;
   }
 }
