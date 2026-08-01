@@ -5,7 +5,7 @@
   gap: 14px;
 }
 
-.service-mini-card {
+.service-mini-grid > .service-mini-card {
   min-height: 112px;
   display: flex;
   flex-direction: column;
@@ -20,23 +20,43 @@
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
-.service-mini-card:hover {
+.service-mini-grid > .service-mini-card:hover {
   transform: translateY(-3px);
   border-color: rgba(24, 183, 197, 0.24);
   box-shadow: 0 14px 30px rgba(15, 26, 40, 0.08);
 }
 
-.service-mini-icon {
-  width: 28px;
-  height: 28px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+/* Reset the old .service-mini-grid span rules completely */
+.service-mini-grid > .service-mini-card > span,
+.service-mini-grid > .service-mini-card > span > span {
+  min-height: 0 !important;
+  display: inline-flex !important;
+  place-items: unset !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  text-align: center !important;
+}
+
+.service-mini-grid > .service-mini-card span::before,
+.service-mini-grid > .service-mini-card span::after {
+  content: none !important;
+  display: none !important;
+}
+
+.service-mini-grid .service-mini-icon {
+  width: 30px !important;
+  height: 30px !important;
+  display: inline-flex !important;
   color: var(--accent);
   flex: 0 0 auto;
 }
 
-.service-mini-icon svg {
+.service-mini-grid .service-mini-icon svg {
   width: 100%;
   height: 100%;
   display: block;
@@ -48,15 +68,15 @@
   vector-effect: non-scaling-stroke;
 }
 
-.service-mini-icon svg .fill-accent {
+.service-mini-grid .service-mini-icon svg .fill-accent {
   fill: currentColor;
   stroke: none;
 }
 
-.service-mini-title {
-  display: block;
+.service-mini-grid .service-mini-title {
+  display: block !important;
   color: var(--ink);
-  font-size: 0.78rem;
+  font-size: 0.78rem !important;
   font-weight: 600;
   line-height: 1.42;
   letter-spacing: -0.01em;
@@ -74,18 +94,18 @@
     gap: 12px;
   }
 
-  .service-mini-card {
+  .service-mini-grid > .service-mini-card {
     min-height: 100px;
     padding: 14px 10px;
     gap: 10px;
   }
 
-  .service-mini-icon {
-    width: 24px;
-    height: 24px;
+  .service-mini-grid .service-mini-icon {
+    width: 25px !important;
+    height: 25px !important;
   }
 
-  .service-mini-title {
-    font-size: 0.74rem;
+  .service-mini-grid .service-mini-title {
+    font-size: 0.74rem !important;
   }
 }
