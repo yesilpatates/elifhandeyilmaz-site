@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grafik Tasarım Rehberi | Elif Handegül Yılmaz</title>
-  <meta name="description" content="Mesleğe yeni başlayanlar için grafik tasarım temelleri, renk, tipografi, dosya formatları ve uygulama bilgileri.">
+  <meta name="description" content="Mesleğe yeni başlayanlar için grafik tasarım temelleri, renk, tipografi, vektörel ve bitmap tasarım ile dosya formatları rehberi.">
   <link rel="icon" type="image/png" href="../images/ehy-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,14 +14,13 @@
       --bg: #fbf8f2;
       --surface: #fff;
       --ink: #0b1624;
-      --muted: #68707a;
+      --muted: #68717d;
       --line: #e7ded2;
-      --accent: #18b7c5;
+      --accent: #07beb8;
       --accent-dark: #087d88;
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -33,16 +32,17 @@
     }
 
     a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
 
     .container {
-      width: min(calc(100% - 40px), 1120px);
+      width: min(calc(100% - 40px), 1180px);
       margin-inline: auto;
     }
 
-    .blog-header {
+    .site-header {
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 30;
       border-bottom: 1px solid var(--line);
       background: rgba(251, 248, 242, 0.94);
       backdrop-filter: blur(14px);
@@ -59,6 +59,7 @@
     .brand img {
       width: 280px;
       height: 70px;
+      display: block;
       object-fit: contain;
       object-position: left center;
     }
@@ -69,120 +70,189 @@
       font-weight: 600;
     }
 
-    .blog-hero {
-      padding: 94px 0 64px;
+    .hero {
+      padding: 88px 0 58px;
     }
 
-    .eyebrow {
+    .eyebrow,
+    .category {
       color: var(--accent-dark);
-      font-size: 0.76rem;
+      font-size: 0.72rem;
       font-weight: 700;
-      letter-spacing: 0.13em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
     h1 {
       max-width: 850px;
       margin: 12px 0 20px;
-      font-size: clamp(2.5rem, 6vw, 5rem);
-      line-height: 1.05;
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      line-height: 1.04;
       font-weight: 500;
       letter-spacing: -0.05em;
     }
 
-    .blog-hero p {
-      max-width: 720px;
+    .hero > .container > p {
+      max-width: 760px;
       margin: 0;
       color: var(--muted);
+      font-size: 1rem;
     }
 
-    .article-nav {
+    .card-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 38px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      padding: 12px 0 92px;
     }
 
-    .article-nav a {
-      padding: 15px 17px;
+    .card {
+      min-width: 0;
+      overflow: hidden;
       border: 1px solid var(--line);
-      border-radius: 13px;
+      border-radius: 20px;
       background: var(--surface);
-      font-size: 0.82rem;
-      font-weight: 600;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
     }
 
-    .article-nav a:hover {
-      transform: translateY(-2px);
-      border-color: rgba(24, 183, 197, 0.4);
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(7, 190, 184, 0.32);
+      box-shadow: 0 20px 44px rgba(15, 26, 40, 0.09);
+    }
+
+    .cover {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-image: url("../images/blog/blog-covers-sprite.webp");
+      background-repeat: no-repeat;
+      background-size: 300% 300%;
+      background-color: #f3eee7;
+    }
+
+    .cover-1 { background-position: 0% 0%; }
+    .cover-2 { background-position: 50% 0%; }
+    .cover-3 { background-position: 100% 0%; }
+    .cover-4 { background-position: 0% 50%; }
+    .cover-5 { background-position: 50% 50%; }
+    .cover-6 { background-position: 100% 50%; }
+    .cover-7 { background-position: 0% 100%; }
+
+    .card-body {
+      padding: 21px 21px 23px;
+    }
+
+    .card h2 {
+      margin: 8px 0 10px;
+      font-size: 1.08rem;
+      line-height: 1.38;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .card p {
+      margin: 0 0 17px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.65;
+    }
+
+    .read-more {
+      color: var(--accent-dark);
+      font-size: 0.78rem;
+      font-weight: 600;
     }
 
     .articles {
-      padding-bottom: 100px;
+      padding: 88px 0 100px;
+      border-top: 1px solid var(--line);
+      background: var(--surface);
     }
+
+    .articles-heading {
+      max-width: 760px;
+      margin-bottom: 44px;
+    }
+
+    .articles-heading h2 {
+      margin: 10px 0 12px;
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.08;
+      font-weight: 500;
+      letter-spacing: -0.045em;
+    }
+
+    .articles-heading p { margin: 0; color: var(--muted); }
 
     .article {
       scroll-margin-top: 110px;
       display: grid;
-      grid-template-columns: 74px minmax(0, 1fr);
-      gap: 30px;
-      padding: 48px 0;
+      grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
+      gap: clamp(28px, 5vw, 68px);
+      align-items: start;
+      padding: 54px 0;
       border-top: 1px solid var(--line);
     }
 
+    .article-cover {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 16px 35px rgba(15, 26, 40, 0.07);
+    }
+
     .article-number {
-      width: 54px;
-      height: 54px;
-      display: grid;
+      display: inline-grid;
       place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 17px;
       border-radius: 50%;
       color: var(--accent-dark);
       background: #d9f3f4;
-      font-size: 0.76rem;
+      font-size: 0.72rem;
       font-weight: 700;
     }
 
-    .article h2 {
-      margin: 0 0 12px;
-      font-size: clamp(1.55rem, 3vw, 2.45rem);
-      line-height: 1.2;
+    .article h3 {
+      margin: 0 0 14px;
+      font-size: clamp(1.6rem, 3vw, 2.55rem);
+      line-height: 1.18;
       font-weight: 500;
       letter-spacing: -0.035em;
     }
 
-    .article p {
-      max-width: 760px;
-      margin: 0 0 14px;
-      color: var(--muted);
-    }
-
-    .article ul {
-      margin: 18px 0 0;
-      padding-left: 20px;
-      color: var(--muted);
-    }
-
+    .article p { margin: 0 0 14px; color: var(--muted); }
+    .article ul { margin: 18px 0 0; padding-left: 20px; color: var(--muted); }
     .article li { margin-bottom: 7px; }
 
     footer {
       padding: 28px 0;
       border-top: 1px solid var(--line);
       color: var(--muted);
-      background: var(--surface);
+      background: var(--bg);
       font-size: 0.82rem;
     }
 
-    @media (max-width: 700px) {
-      .brand img { width: 215px; }
-      .blog-hero { padding-top: 66px; }
-      .article-nav { grid-template-columns: 1fr; }
-      .article { grid-template-columns: 1fr; gap: 18px; }
+    @media (max-width: 950px) {
+      .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .article { grid-template-columns: 1fr; }
+      .article-cover { max-width: 720px; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(calc(100% - 28px), 1180px); }
+      .brand img { width: 215px; height: 62px; }
+      .header-inner { min-height: 74px; }
+      .hero { padding: 60px 0 42px; }
+      .card-grid { grid-template-columns: 1fr; gap: 19px; padding-bottom: 70px; }
+      .articles { padding: 66px 0 78px; }
+      .article { padding: 42px 0; gap: 24px; }
     }
   </style>
 </head>
 <body>
-  <header class="blog-header">
+  <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="../index.html#anasayfa" aria-label="Ana sayfaya dön">
         <img src="../images/ehy-logo.png" alt="Elif Handegül Yılmaz">
@@ -192,70 +262,142 @@
   </header>
 
   <main>
-    <section class="blog-hero">
+    <section class="hero">
       <div class="container">
         <span class="eyebrow">Eğitici içerikler</span>
         <h1>Grafik Tasarım Rehberi</h1>
-        <p>Mesleğe yeni başlayanlar için grafik tasarımın temel kavramlarını, doğru uygulama yöntemlerini ve teknik bilgileri sade bir anlatımla bir araya getiren başlangıç serisi.</p>
-
-        <nav class="article-nav" aria-label="Yazı listesi">
-          <a href="#grafik-tasarim-nedir">01 · Grafik Tasarım Nedir?</a>
-          <a href="#grafik-tasarimin-temel-unsurlari">02 · Temel Unsurlar</a>
-          <a href="#grafik-tasarimin-temel-ilkeleri">03 · Temel İlkeler</a>
-          <a href="#vektorel-ve-bitmap-tasarim">04 · Vektörel ve Bitmap</a>
-          <a href="#renk-bilgisi">05 · RGB ve CMYK</a>
-          <a href="#tipografi">06 · Tipografi</a>
-          <a href="#dosya-formatlari">07 · Dosya Formatları</a>
-        </nav>
+        <p>Mesleğe yeni başlayanlar için grafik tasarımın temel kavramlarını, doğru uygulama yöntemlerini ve teknik bilgileri sade, görsel ve uygulanabilir bir anlatımla bir araya getiren başlangıç serisi.</p>
       </div>
+    </section>
+
+    <section class="container card-grid" aria-label="Grafik tasarım yazıları">
+      <a class="card" href="#grafik-tasarim-nedir">
+        <div class="cover cover-1" role="img" aria-label="Grafik Tasarım Nedir kapak görseli"></div>
+        <div class="card-body">
+          <span class="category">Başlangıç Rehberi</span>
+          <h2>Grafik Tasarım Nedir?</h2>
+          <p>Grafik tasarımın amacı, iletişimdeki rolü ve temel kullanım alanları.</p>
+          <span class="read-more">Yazıyı oku →</span>
+        </div>
+      </a>
+
+      <a class="card" href="#grafik-tasarimin-temel-unsurlari">
+        <div class="cover cover-2" role="img" aria-label="Grafik Tasarımın Temel Unsurları kapak görseli"></div>
+        <div class="card-body">
+          <span class="category">Tasarım Temelleri</span>
+          <h2>Grafik Tasarımın Temel Unsurları</h2>
+          <p>Nokta, çizgi, şekil, form, renk, doku, tipografi ve boşluk.</p>
+          <span class="read-more">Yazıyı oku →</span>
+        </div>
+      </a>
+
+      <a class="card" href="#grafik-tasarimin-temel-ilkeleri">
+        <div class="cover cover-3" role="img" aria-label="Grafik Tasarımın Temel İlkeleri kapak görseli"></div>
+        <div class="card-body">
+          <span class="category">Tasarım Temelleri</span>
+          <h2>Grafik Tasarımın Temel İlkeleri</h2>
+          <p>Denge, hiyerarşi, vurgu, ritim, birlik, kontrast ve oran.</p>
+          <span class="read-more">Yazıyı oku →</span>
+        </div>
+      </a>
+
+      <a class="card" href="#vektorel-ve-bitmap-tasarim">
+        <div class="cover cover-4" role="img" aria-label="Vektörel ve Bitmap Tasarım kapak görseli"></div>
+        <div class="card-body">
+          <span class="category">Dijital Görsel</span>
+          <h2>Vektörel ve Bitmap Tasarım</h2>
+          <p>İki temel görsel yapının farkları, avantajları ve kullanım alanları.</p>
+          <span class="read-more">Yazıyı oku →</span>
+        </div>
+      </a>
+
+      <a class="card" href="#renk-bilgisi">
+        <div class="cover cover-5" role="img" aria-label="Renk Bilgisi RGB ve CMYK kapak görseli"></div>
+        <div class="card-body">
+          <span class="category">Renk Bilgisi</span>
+          <h2>RGB, CMYK ve Renklerin Gücü</h2>
+          <p>Ekran ve baskı renk sistemleri ile renklerin psikolojik etkileri.</p>
+          <span class="read-more">Yazıyı oku →</span>
+        </div>
+      </a>
+
+      <a class="card" href="#tipografi">
+        <div class="cover cover-6" role="img" aria-label="Tipografi Yazının Tasarımdaki Gücü kapak görseli"></div>
+        <div class="card-body">
+          <span class="category">Tipografi</span>
+          <h2>Tipografi: Yazının Tasarımdaki Gücü</h2>
+          <p>Yazı karakteri, okunabilirlik, hiyerarşi ve doğru tipografi kullanımı.</p>
+          <span class="read-more">Yazıyı oku →</span>
+        </div>
+      </a>
+
+      <a class="card" href="#dosya-formatlari">
+        <div class="cover cover-7" role="img" aria-label="Dosya Formatları Rehberi kapak görseli"></div>
+        <div class="card-body">
+          <span class="category">Teknik Bilgiler</span>
+          <h2>Dosya Formatları Rehberi</h2>
+          <p>AI, EPS, PDF, SVG, JPG, PNG, TIFF ve GIF formatlarının kullanımı.</p>
+          <span class="read-more">Yazıyı oku →</span>
+        </div>
+      </a>
     </section>
 
     <section class="articles">
       <div class="container">
+        <div class="articles-heading">
+          <span class="eyebrow">Başlangıç serisi</span>
+          <h2>Grafik tasarımın temel bilgileri</h2>
+          <p>Her içerik, yeni başlayanların tasarım kararlarını daha bilinçli vermesine yardımcı olacak temel bilgileri özetler.</p>
+        </div>
+
         <article class="article" id="grafik-tasarim-nedir">
-          <span class="article-number">01</span>
+          <div class="article-cover"><div class="cover cover-1" role="img" aria-label="Grafik Tasarım Nedir"></div></div>
           <div>
-            <h2>Grafik Tasarım Nedir?</h2>
+            <span class="article-number">01</span>
+            <h3>Grafik Tasarım Nedir?</h3>
             <p>Grafik tasarım; bilgi, fikir ve duyguları görsel öğeler aracılığıyla anlaşılır ve etkili biçimde aktarma sürecidir. Tasarım yalnızca estetik üretmek değil, belirli bir iletişim sorununa işlevsel çözüm geliştirmektir.</p>
             <ul>
               <li>Mesajı hedef kitle için anlaşılır hâle getirir.</li>
               <li>Markaların görsel kimliğini ve iletişim dilini oluşturur.</li>
-              <li>Baskıdan dijital arayüzlere kadar farklı alanlarda kullanılır.</li>
+              <li>Baskıdan dijital arayüzlere kadar geniş bir alanda kullanılır.</li>
             </ul>
           </div>
         </article>
 
         <article class="article" id="grafik-tasarimin-temel-unsurlari">
-          <span class="article-number">02</span>
+          <div class="article-cover"><div class="cover cover-2" role="img" aria-label="Grafik Tasarımın Temel Unsurları"></div></div>
           <div>
-            <h2>Grafik Tasarımın Temel Unsurları</h2>
-            <p>Her tasarım; çizgi, şekil, renk, doku, boşluk, görsel ve tipografi gibi temel yapı taşlarından oluşur. Bu unsurların bilinçli kullanımı mesajın algılanma biçimini doğrudan etkiler.</p>
+            <span class="article-number">02</span>
+            <h3>Grafik Tasarımın Temel Unsurları</h3>
+            <p>Her tasarım; nokta, çizgi, şekil, form, renk, doku, tipografi ve boşluk gibi yapı taşlarından oluşur. Bu unsurların bilinçli kullanımı mesajın algılanma biçimini doğrudan etkiler.</p>
             <ul>
-              <li>Boşluk, içeriğin nefes almasını ve okunmasını sağlar.</li>
-              <li>Renk, dikkat ve duygusal etki oluşturur.</li>
-              <li>Tipografi, metnin karakterini ve hiyerarşisini belirler.</li>
+              <li>Boşluk içeriğin nefes almasını ve okunmasını sağlar.</li>
+              <li>Renk dikkat ve duygusal etki oluşturur.</li>
+              <li>Tipografi metnin karakterini ve hiyerarşisini belirler.</li>
             </ul>
           </div>
         </article>
 
         <article class="article" id="grafik-tasarimin-temel-ilkeleri">
-          <span class="article-number">03</span>
+          <div class="article-cover"><div class="cover cover-3" role="img" aria-label="Grafik Tasarımın Temel İlkeleri"></div></div>
           <div>
-            <h2>Grafik Tasarımın Temel İlkeleri</h2>
-            <p>Denge, kontrast, hiyerarşi, hizalama, tekrar, yakınlık ve bütünlük; görsel öğelerin düzenli ve anlamlı bir kompozisyon oluşturmasını sağlayan temel ilkelerdir.</p>
+            <span class="article-number">03</span>
+            <h3>Grafik Tasarımın Temel İlkeleri</h3>
+            <p>Denge, hiyerarşi, vurgu, ritim, birlik, kontrast, oran, boşluk, yön ve tekrar; görsel öğelerin düzenli ve anlamlı bir kompozisyon oluşturmasını sağlayan temel ilkelerdir.</p>
             <ul>
-              <li>Hiyerarşi, izleyicinin önce neye bakacağını belirler.</li>
-              <li>Kontrast, önemli öğeleri görünür kılar.</li>
-              <li>Hizalama ve tekrar, tasarımda tutarlılık oluşturur.</li>
+              <li>Hiyerarşi izleyicinin önce neye bakacağını belirler.</li>
+              <li>Kontrast önemli öğeleri görünür kılar.</li>
+              <li>Tekrar ve birlik tasarımda tutarlılık oluşturur.</li>
             </ul>
           </div>
         </article>
 
         <article class="article" id="vektorel-ve-bitmap-tasarim">
-          <span class="article-number">04</span>
+          <div class="article-cover"><div class="cover cover-4" role="img" aria-label="Vektörel ve Bitmap Tasarım"></div></div>
           <div>
-            <h2>Vektörel ve Bitmap Tasarım Arasındaki Farklar</h2>
-            <p>Vektörel grafikler matematiksel yollar ve noktalarla, bitmap görseller ise piksellerle oluşur. Kullanılacak format; tasarımın amacı, ölçek ihtiyacı ve çıktı ortamına göre seçilmelidir.</p>
+            <span class="article-number">04</span>
+            <h3>Vektörel ve Bitmap Tasarım Arasındaki Farklar</h3>
+            <p>Vektörel grafikler matematiksel yollar ve noktalarla, bitmap görseller ise piksellerle oluşur. Kullanılacak yapı tasarımın amacı, ölçek ihtiyacı ve çıktı ortamına göre seçilmelidir.</p>
             <ul>
               <li>Logo ve ikonlarda ölçeklenebilir vektörel formatlar tercih edilir.</li>
               <li>Fotoğraf ve detaylı görseller bitmap yapıdadır.</li>
@@ -265,10 +407,11 @@
         </article>
 
         <article class="article" id="renk-bilgisi">
-          <span class="article-number">05</span>
+          <div class="article-cover"><div class="cover cover-5" role="img" aria-label="Renk Bilgisi RGB ve CMYK"></div></div>
           <div>
-            <h2>Renk Bilgisi: RGB, CMYK ve Renklerin Gücü</h2>
-            <p>RGB ışıkla çalışan ekranlar, CMYK ise mürekkeple üretilen baskı işleri için kullanılan renk modelidir. Doğru renk sistemi seçimi, tasarımın ekranda ve baskıda beklenen sonucu vermesi için gereklidir.</p>
+            <span class="article-number">05</span>
+            <h3>Renk Bilgisi: RGB, CMYK ve Renklerin Gücü</h3>
+            <p>RGB ışıkla çalışan ekranlar, CMYK ise mürekkeple üretilen baskı işleri için kullanılan renk modelidir. Doğru renk sistemi seçimi, tasarımın beklenen sonucu vermesi için gereklidir.</p>
             <ul>
               <li>Dijital içerikler RGB renk modunda hazırlanır.</li>
               <li>Matbaa işleri CMYK renk moduna göre kontrol edilir.</li>
@@ -278,9 +421,10 @@
         </article>
 
         <article class="article" id="tipografi">
-          <span class="article-number">06</span>
+          <div class="article-cover"><div class="cover cover-6" role="img" aria-label="Tipografi Yazının Tasarımdaki Gücü"></div></div>
           <div>
-            <h2>Tipografi: Yazının Tasarımdaki Gücü</h2>
+            <span class="article-number">06</span>
+            <h3>Tipografi: Yazının Tasarımdaki Gücü</h3>
             <p>Tipografi; yazı karakteri, punto, satır aralığı, harf aralığı, hizalama ve hiyerarşi kararlarının bütünüdür. İyi tipografi mesajı okunabilir, anlaşılır ve karakterli hâle getirir.</p>
             <ul>
               <li>Başlık ve gövde metni arasında net hiyerarşi kurulmalıdır.</li>
@@ -291,14 +435,15 @@
         </article>
 
         <article class="article" id="dosya-formatlari">
-          <span class="article-number">07</span>
+          <div class="article-cover"><div class="cover cover-7" role="img" aria-label="Dosya Formatları Rehberi"></div></div>
           <div>
-            <h2>Dosya Formatları Rehberi</h2>
-            <p>Her dosya formatı farklı bir kullanım amacına sahiptir. Doğru format seçimi görsel kaliteyi, dosya boyutunu, düzenlenebilirliği ve çıktı güvenliğini etkiler.</p>
+            <span class="article-number">07</span>
+            <h3>Dosya Formatları Rehberi</h3>
+            <p>Her dosya formatı farklı bir kullanım amacına hizmet eder. Doğru formatı seçmek kaliteyi korur, dosya boyutunu optimize eder ve uyumluluk sorunlarını azaltır.</p>
             <ul>
-              <li>JPG fotoğraf ve sıkıştırılmış web görselleri için uygundur.</li>
-              <li>PNG şeffaf arka plan gereken dijital görsellerde kullanılır.</li>
-              <li>SVG ölçeklenebilir web grafikleri, PDF ise baskı ve paylaşım için kullanılır.</li>
+              <li>AI, EPS ve SVG düzenlenebilir vektörel çalışmalar için kullanılır.</li>
+              <li>JPG fotoğraflar, PNG şeffaf arka plan gereken dijital görseller için uygundur.</li>
+              <li>PDF baskı ve paylaşım, TIFF ise yüksek kaliteli arşiv ve baskı için tercih edilir.</li>
             </ul>
           </div>
         </article>
