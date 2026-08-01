@@ -9,6 +9,7 @@
 
 .section-heading h2 {
   font-size: clamp(2rem, 3.5vw, 3.8rem);
+  font-weight: 500;
 }
 
 .nav-wrap {
