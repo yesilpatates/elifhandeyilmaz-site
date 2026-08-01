@@ -1,6 +1,6 @@
 const heroTitleFont = document.createElement("link");
 heroTitleFont.rel = "stylesheet";
-heroTitleFont.href = "https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap";
+heroTitleFont.href = "https://fonts.googleapis.com/css2?family=Rochester&display=swap";
 heroTitleFont.id = "hero-title-font";
 
 if (!document.getElementById(heroTitleFont.id)) {
