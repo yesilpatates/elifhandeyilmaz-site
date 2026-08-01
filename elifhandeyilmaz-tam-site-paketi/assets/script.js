@@ -1,3 +1,12 @@
+const optimizationStylesheet = document.createElement("link");
+optimizationStylesheet.rel = "stylesheet";
+optimizationStylesheet.href = "assets/optimizations.css";
+optimizationStylesheet.id = "site-optimizations";
+
+if (!document.getElementById(optimizationStylesheet.id)) {
+  document.head.appendChild(optimizationStylesheet);
+}
+
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
 const header = document.querySelector(".site-header");
@@ -74,14 +83,15 @@ document.getElementById("year").textContent = new Date().getFullYear();
   let lastSparkY = targetY;
   let lastSparkTime = 0;
   let activeSparks = 0;
+  let moveCount = 0;
 
-  const maxSparks = 34;
-  const sparkDistance = 16;
-  const sparkInterval = 34;
+  const maxSparks = 48;
+  const sparkDistance = 10;
+  const sparkInterval = 26;
 
   const animateGlow = () => {
-    currentX += (targetX - currentX) * 0.16;
-    currentY += (targetY - currentY) * 0.16;
+    currentX += (targetX - currentX) * 0.2;
+    currentY += (targetY - currentY) * 0.2;
 
     glow.style.left = `${currentX}px`;
     glow.style.top = `${currentY}px`;
@@ -89,25 +99,28 @@ document.getElementById("year").textContent = new Date().getFullYear();
     requestAnimationFrame(animateGlow);
   };
 
-  const createSpark = (x, y) => {
+  const createSpark = (x, y, forceStar = false) => {
     if (activeSparks >= maxSparks) {
       return;
     }
 
     const spark = document.createElement("span");
+    const isStar = forceStar || Math.random() > 0.48;
     const angle = Math.random() * Math.PI * 2;
-    const distance = 24 + Math.random() * 48;
-    const size = 2.5 + Math.random() * 4.5;
-    const duration = 480 + Math.random() * 420;
+    const distance = 20 + Math.random() * 46;
+    const size = isStar ? 6 + Math.random() * 7 : 2.5 + Math.random() * 3.5;
+    const duration = 520 + Math.random() * 380;
+    const offsetX = (Math.random() - 0.5) * 12;
+    const offsetY = (Math.random() - 0.5) * 12;
 
-    spark.className = "cursor-spark";
-    spark.style.left = `${x}px`;
-    spark.style.top = `${y}px`;
+    spark.className = `cursor-spark ${isStar ? "is-star" : "is-dot"}`;
+    spark.style.left = `${x + offsetX}px`;
+    spark.style.top = `${y + offsetY}px`;
     spark.style.setProperty("--spark-size", `${size}px`);
     spark.style.setProperty("--spark-x", `${Math.cos(angle) * distance}px`);
-    spark.style.setProperty("--spark-y", `${Math.sin(angle) * distance - 18}px`);
-    spark.style.setProperty("--spark-scale", `${0.08 + Math.random() * 0.35}`);
-    spark.style.setProperty("--spark-rotation", `${80 + Math.random() * 220}deg`);
+    spark.style.setProperty("--spark-y", `${Math.sin(angle) * distance - 14}px`);
+    spark.style.setProperty("--spark-scale", `${0.05 + Math.random() * 0.22}`);
+    spark.style.setProperty("--spark-rotation", `${100 + Math.random() * 260}deg`);
     spark.style.setProperty("--spark-duration", `${duration}ms`);
 
     activeSparks += 1;
@@ -123,6 +136,15 @@ document.getElementById("year").textContent = new Date().getFullYear();
     );
   };
 
+  const emitTrail = (x, y) => {
+    moveCount += 1;
+    createSpark(x, y, moveCount % 3 === 0);
+
+    if (moveCount % 4 === 0) {
+      createSpark(x, y, true);
+    }
+  };
+
   window.addEventListener(
     "pointermove",
     (event) => {
@@ -136,7 +158,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
       const distance = Math.hypot(deltaX, deltaY);
 
       if (distance >= sparkDistance && now - lastSparkTime >= sparkInterval) {
-        createSpark(event.clientX, event.clientY);
+        emitTrail(event.clientX, event.clientY);
         lastSparkX = event.clientX;
         lastSparkY = event.clientY;
         lastSparkTime = now;
@@ -144,6 +166,12 @@ document.getElementById("year").textContent = new Date().getFullYear();
     },
     { passive: true }
   );
+
+  window.addEventListener("pointerdown", (event) => {
+    for (let i = 0; i < 7; i += 1) {
+      createSpark(event.clientX, event.clientY, i % 2 === 0);
+    }
+  });
 
   window.addEventListener("pointerleave", () => {
     glow.classList.remove("is-visible");
