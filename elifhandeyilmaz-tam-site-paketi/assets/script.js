@@ -1,3 +1,34 @@
+const heroTitleFont = document.createElement("link");
+heroTitleFont.rel = "stylesheet";
+heroTitleFont.href = "https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap";
+heroTitleFont.id = "hero-title-font";
+
+if (!document.getElementById(heroTitleFont.id)) {
+  document.head.appendChild(heroTitleFont);
+}
+
+const heroTitleStylesheet = document.createElement("link");
+heroTitleStylesheet.rel = "stylesheet";
+heroTitleStylesheet.href = "assets/hero-title.css";
+heroTitleStylesheet.id = "hero-title-styles";
+
+if (!document.getElementById(heroTitleStylesheet.id)) {
+  document.head.appendChild(heroTitleStylesheet);
+}
+
+const originalHeroTitle = document.querySelector(".hero-copy h1");
+
+if (originalHeroTitle && !originalHeroTitle.classList.contains("hero-title")) {
+  originalHeroTitle.className = "hero-title";
+  originalHeroTitle.innerHTML = `
+    <span class="hero-title-line">Fikirleri güçlü ve tutarlı</span>
+    <span class="hero-title-script-reveal">
+      <span class="hero-title-script">görsel deneyimlere</span>
+    </span>
+    <span class="hero-title-line">dönüştürüyorum.</span>
+  `;
+}
+
 const optimizationStylesheet = document.createElement("link");
 optimizationStylesheet.rel = "stylesheet";
 optimizationStylesheet.href = "assets/optimizations.css";
