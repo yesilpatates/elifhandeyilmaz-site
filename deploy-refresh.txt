@@ -1,0 +1,2 @@
+Deployment refresh: 2026-08-01 13:36 Europe/Istanbul
+Latest site content includes blog cover integrations and education/blog separation.
