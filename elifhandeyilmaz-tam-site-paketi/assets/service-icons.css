@@ -1,0 +1,70 @@
+/* Service mini icons */
+.service-mini-grid {
+  gap: 12px;
+}
+
+.service-mini-grid > .service-mini-item {
+  min-height: 104px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 12px 14px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.service-mini-grid > .service-mini-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(15, 26, 40, 0.08);
+  border-color: rgba(24, 183, 197, 0.22);
+}
+
+.service-mini-grid > .service-mini-item::before {
+  content: none;
+}
+
+.service-mini-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex: 0 0 auto;
+}
+
+.service-mini-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.85;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.service-mini-label {
+  display: block;
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+@media (max-width: 700px) {
+  .service-mini-grid > .service-mini-item {
+    min-height: 96px;
+    padding: 14px 10px 12px;
+    gap: 10px;
+  }
+
+  .service-mini-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
