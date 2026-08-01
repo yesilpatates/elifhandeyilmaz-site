@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.04em;
+  gap: 0.12em;
   max-width: 650px;
   margin: 0;
   letter-spacing: -0.052em;
@@ -20,9 +20,11 @@
   display: inline-block;
   position: relative;
   width: 0;
+  min-height: 1.08em;
   max-width: 100%;
   overflow: hidden;
-  padding-right: 0.24em;
+  padding: 0.06em 0.24em 0.14em 0;
+  margin: -0.02em 0 0.04em;
   vertical-align: top;
   animation: script-reveal 2.9s steps(18, end) 0.38s forwards;
 }
@@ -30,10 +32,10 @@
 .hero-title-script-reveal::after {
   content: "";
   position: absolute;
-  top: 10%;
+  top: 12%;
   right: 0;
   width: 2px;
-  height: 82%;
+  height: 76%;
   border-radius: 999px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(7, 190, 184, 0.92));
   box-shadow:
@@ -52,14 +54,14 @@
   white-space: nowrap;
   font-family: "Rochester", cursive;
   font-size: clamp(3.15rem, 4.45vw, 4.65rem);
-  line-height: 0.92;
+  line-height: 1.04;
   font-weight: 400;
   letter-spacing: 0.005em;
   color: #07beb8;
   text-shadow:
     0 0 10px rgba(7, 190, 184, 0.22),
     0 0 22px rgba(7, 190, 184, 0.14);
-  transform: translateY(0.02em);
+  transform: translateY(0);
   animation: script-glow-pulse 2.6s ease-in-out 0.48s 2;
 }
 
@@ -121,12 +123,18 @@
 }
 
 @media (max-width: 900px) {
+  .hero-title {
+    gap: 0.1em;
+  }
+
   .hero-title-line {
     font-size: clamp(2.65rem, 7vw, 3.8rem);
   }
 
   .hero-title-script-reveal {
     --script-final-width: 10.05em;
+    min-height: 1.04em;
+    padding-bottom: 0.12em;
   }
 
   .hero-title-script {
@@ -135,6 +143,10 @@
 }
 
 @media (max-width: 700px) {
+  .hero-title {
+    gap: 0.09em;
+  }
+
   .hero-title-line {
     font-size: clamp(2.15rem, 8.8vw, 3.05rem);
     line-height: 1.04;
@@ -142,12 +154,14 @@
 
   .hero-title-script-reveal {
     --script-final-width: 10em;
-    padding-right: 0.2em;
+    min-height: 1em;
+    padding: 0.04em 0.2em 0.11em 0;
+    margin: 0;
   }
 
   .hero-title-script {
     font-size: clamp(2.75rem, 11.2vw, 3.65rem);
-    line-height: 0.94;
+    line-height: 1.02;
   }
 }
 
