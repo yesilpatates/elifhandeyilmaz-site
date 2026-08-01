@@ -64,19 +64,42 @@
 .guide-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 20px;
 }
 
 .guide-card {
-  min-height: 230px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  padding: 24px;
+  overflow: hidden;
+  padding: 0 0 22px;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: #fff;
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
 }
+
+.guide-card::before {
+  content: "";
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  flex: 0 0 auto;
+  background-image: url("../images/blog/blog-covers-sprite.webp");
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  background-color: #f7f3ed;
+  border-bottom: 1px solid var(--line);
+  transition: transform 0.38s ease;
+}
+
+.guide-card:nth-child(1)::before { background-position: 0% 0%; }
+.guide-card:nth-child(2)::before { background-position: 50% 0%; }
+.guide-card:nth-child(3)::before { background-position: 100% 0%; }
+.guide-card:nth-child(4)::before { background-position: 0% 50%; }
+.guide-card:nth-child(5)::before { background-position: 50% 50%; }
+.guide-card:nth-child(6)::before { background-position: 100% 50%; }
+.guide-card:nth-child(7)::before { background-position: 0% 100%; }
 
 .guide-card:hover {
   transform: translateY(-4px);
@@ -84,12 +107,16 @@
   box-shadow: 0 18px 40px rgba(15, 26, 40, 0.08);
 }
 
+.guide-card:hover::before {
+  transform: scale(1.018);
+}
+
 .guide-card-number {
   width: 38px;
   height: 38px;
   display: grid;
   place-items: center;
-  margin-bottom: 22px;
+  margin: 18px 20px 14px;
   border-radius: 50%;
   color: var(--accent-dark);
   background: #d9f3f4;
@@ -98,7 +125,7 @@
 }
 
 .guide-card h3 {
-  margin: 0 0 10px;
+  margin: 0 20px 10px;
   font-size: 1.04rem;
   line-height: 1.38;
   font-weight: 600;
@@ -106,7 +133,7 @@
 }
 
 .guide-card p {
-  margin: 0;
+  margin: 0 20px;
   color: var(--muted);
   font-size: 0.82rem;
   line-height: 1.65;
@@ -116,7 +143,7 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  margin-top: auto;
+  margin: auto 20px 0;
   padding-top: 18px;
   color: var(--accent-dark);
   font-size: 0.75rem;
@@ -162,6 +189,5 @@
 
   .guide-card {
     min-height: 0;
-    padding: 21px;
   }
 }
