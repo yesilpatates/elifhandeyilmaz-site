@@ -34,6 +34,15 @@ if (!document.getElementById(heroTitleStylesheet.id)) {
   document.head.appendChild(heroTitleStylesheet);
 }
 
+const serviceIconsStylesheet = document.createElement("link");
+serviceIconsStylesheet.rel = "stylesheet";
+serviceIconsStylesheet.href = "assets/service-icons.css";
+serviceIconsStylesheet.id = "service-icons-styles";
+
+if (!document.getElementById(serviceIconsStylesheet.id)) {
+  document.head.appendChild(serviceIconsStylesheet);
+}
+
 const originalHeroTitle = document.querySelector(".hero-copy h1");
 
 if (originalHeroTitle && !originalHeroTitle.classList.contains("hero-title")) {
@@ -46,6 +55,32 @@ if (originalHeroTitle && !originalHeroTitle.classList.contains("hero-title")) {
     <span class="hero-title-line">dönüştürüyorum.</span>
   `;
 }
+
+const serviceIcons = [
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 17 8l-3 11H10L7 8l5-4.5Z"></path><path d="M12 7v7"></path><path d="M10 10.5h4"></path></svg>',
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="7" height="14" rx="1.5"></rect><path d="M11 7h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7"></path><path d="M7 9.5h1.5"></path><path d="M7 12.5h1.5"></path><path d="M13.5 10h3.5"></path><path d="M13.5 13h3.5"></path></svg>',
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="11" rx="2"></rect><path d="M9 19h6"></path><path d="M12 16v3"></path><path d="m9 9-2 2 2 2"></path><path d="m13 9 2 2-2 2"></path></svg>',
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6.5h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-7l-4 3v-3H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2Z"></path><circle cx="9" cy="11.5" r="0.8" fill="currentColor" stroke="none"></circle><circle cx="12" cy="11.5" r="0.8" fill="currentColor" stroke="none"></circle><circle cx="15" cy="11.5" r="0.8" fill="currentColor" stroke="none"></circle></svg>',
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="7" width="13.5" height="10" rx="2"></rect><path d="m17 10 4-2.5v9L17 14"></path><path d="m10 11 3 1.9-3 1.9Z"></path><path d="M6 5.5h8"></path></svg>',
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4z"></path><path d="M12 16v3"></path><path d="M9 20h6"></path><path d="M7.5 13v-2.5"></path><path d="M11 13V8.5"></path><path d="M14.5 13V9.5"></path><path d="M18 13V7.5"></path></svg>'
+];
+
+const serviceItems = [...document.querySelectorAll(".service-mini-grid > span")];
+
+serviceItems.forEach((item, index) => {
+  if (item.classList.contains("service-mini-item")) {
+    return;
+  }
+
+  const label = item.innerHTML.trim();
+  const icon = serviceIcons[index] || serviceIcons[0];
+
+  item.classList.add("service-mini-item");
+  item.innerHTML = `
+    <span class="service-mini-icon" aria-hidden="true">${icon}</span>
+    <span class="service-mini-label">${label}</span>
+  `;
+});
 
 const optimizationStylesheet = document.createElement("link");
 optimizationStylesheet.rel = "stylesheet";
