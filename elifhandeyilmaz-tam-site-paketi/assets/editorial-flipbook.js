@@ -6,24 +6,32 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dis
 const editorialProject = {
   title: "Edinburg Tarih, Kültür ve Zamansız Güzellik",
   description: "Kültür Dergisi",
-  pdf: "assets/editorial/edinburg-tanitim.pdf"
+  cover: "https://at.adobe.com/m5Vj9pElJnE08K92",
+  pdf: "https://at.adobe.com/TkIXxlc92bi9TucR"
 };
 
 let pdfPromise = null;
 let pageFlip = null;
 let modal = null;
 let initialized = false;
+let loadingFailed = false;
 let lastFocused = null;
 
 const getPdf = () => {
   if (!pdfPromise) {
-    pdfPromise = pdfjsLib.getDocument({ url: editorialProject.pdf }).promise;
+    pdfPromise = pdfjsLib.getDocument({
+      url: editorialProject.pdf,
+      withCredentials: false,
+      disableRange: false,
+      disableStream: false
+    }).promise;
   }
   return pdfPromise;
 };
 
 const createModal = () => {
   if (modal) return modal;
+
   modal = document.createElement("div");
   modal.className = "editorial-flipbook";
   modal.hidden = true;
@@ -41,30 +49,42 @@ const createModal = () => {
         </div>
         <button class="editorial-flipbook-close" type="button" aria-label="Dergiyi kapat" data-editorial-close>×</button>
       </header>
+
       <div class="editorial-flipbook-stage">
         <button class="editorial-flipbook-nav editorial-flipbook-prev" type="button" aria-label="Önceki sayfa">‹</button>
-        <div class="editorial-book-shell"><div class="editorial-book" id="edinburg-book"></div></div>
+        <div class="editorial-book-shell">
+          <div class="editorial-book" id="edinburg-book"></div>
+        </div>
         <button class="editorial-flipbook-nav editorial-flipbook-next" type="button" aria-label="Sonraki sayfa">›</button>
         <div class="editorial-flipbook-loading">Dergi hazırlanıyor…</div>
       </div>
+
       <footer class="editorial-flipbook-toolbar">
         <button type="button" data-editorial-first>İlk sayfa</button>
         <span class="editorial-flipbook-counter" aria-live="polite">1 / 21</span>
         <button type="button" data-editorial-fullscreen>Tam ekran</button>
       </footer>
     </section>`;
+
   document.body.appendChild(modal);
 
-  modal.querySelectorAll("[data-editorial-close]").forEach((element) => element.addEventListener("click", closeModal));
-  modal.querySelector(".editorial-flipbook-prev").addEventListener("click", () => pageFlip?.flipPrev("top"));
-  modal.querySelector(".editorial-flipbook-next").addEventListener("click", () => pageFlip?.flipNext("top"));
-  modal.querySelector("[data-editorial-first]").addEventListener("click", () => pageFlip?.turnToPage(0));
-  modal.querySelector("[data-editorial-fullscreen]").addEventListener("click", async () => {
+  modal.querySelectorAll("[data-editorial-close]").forEach((element) => {
+    element.addEventListener("click", closeModal);
+  });
+
+  modal.querySelector(".editorial-flipbook-prev")?.addEventListener("click", () => pageFlip?.flipPrev("top"));
+  modal.querySelector(".editorial-flipbook-next")?.addEventListener("click", () => pageFlip?.flipNext("top"));
+  modal.querySelector("[data-editorial-first]")?.addEventListener("click", () => pageFlip?.turnToPage(0));
+  modal.querySelector("[data-editorial-fullscreen]")?.addEventListener("click", async () => {
     const dialog = modal.querySelector(".editorial-flipbook-dialog");
-    if (!document.fullscreenElement) {
-      await dialog.requestFullscreen?.();
-    } else {
-      await document.exitFullscreen?.();
+    try {
+      if (!document.fullscreenElement) {
+        await dialog?.requestFullscreen?.();
+      } else {
+        await document.exitFullscreen?.();
+      }
+    } catch (error) {
+      console.info("Tam ekran açılamadı:", error);
     }
   });
 
@@ -81,15 +101,23 @@ const renderPdfPages = async () => {
   const pdf = await getPdf();
   const book = modal.querySelector("#edinburg-book");
   const loading = modal.querySelector(".editorial-flipbook-loading");
+
+  if (!book || !loading) return;
+
+  book.replaceChildren();
   const pages = [];
-  const renderScale = Math.min(1.45, Math.max(1.05, window.devicePixelRatio || 1));
+  const renderScale = Math.min(1.5, Math.max(1.08, window.devicePixelRatio || 1));
 
   for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
     const page = await pdf.getPage(pageNumber);
     const viewport = page.getViewport({ scale: renderScale });
     const pageElement = document.createElement("div");
     pageElement.className = "editorial-page";
-    if (pageNumber === 1 || pageNumber === pdf.numPages) pageElement.dataset.density = "hard";
+
+    if (pageNumber === 1 || pageNumber === pdf.numPages) {
+      pageElement.dataset.density = "hard";
+    }
+
     const canvas = document.createElement("canvas");
     const context = canvas.getContext("2d", { alpha: false });
     canvas.width = Math.ceil(viewport.width);
@@ -97,6 +125,7 @@ const renderPdfPages = async () => {
     canvas.setAttribute("aria-label", `${editorialProject.title}, sayfa ${pageNumber}`);
     pageElement.appendChild(canvas);
     book.appendChild(pageElement);
+
     await page.render({ canvasContext: context, viewport }).promise;
     pages.push(pageElement);
     loading.textContent = `Dergi hazırlanıyor… ${pageNumber} / ${pdf.numPages}`;
@@ -129,12 +158,20 @@ const renderPdfPages = async () => {
 };
 
 const showLoadError = (error) => {
-  const stage = modal.querySelector(".editorial-flipbook-stage");
-  const loading = modal.querySelector(".editorial-flipbook-loading");
+  loadingFailed = true;
+  const stage = modal?.querySelector(".editorial-flipbook-stage");
+  const loading = modal?.querySelector(".editorial-flipbook-loading");
+  if (!stage || !loading) return;
+
   loading.hidden = true;
+  stage.querySelector(".editorial-flipbook-error")?.remove();
+
   const message = document.createElement("div");
   message.className = "editorial-flipbook-error";
-  message.innerHTML = `PDF dosyası henüz yayın klasöründe bulunamadı.<code>${editorialProject.pdf}</code>`;
+  message.innerHTML = `
+    <strong>PDF görüntülenemedi.</strong>
+    <span>Dosyayı normal PDF görünümünde açabilirsiniz.</span>
+    <a href="${editorialProject.pdf}" target="_blank" rel="noopener">PDF’yi aç</a>`;
   stage.appendChild(message);
   console.error("Editoryal PDF yüklenemedi:", error);
 };
@@ -144,11 +181,13 @@ async function openModal() {
   lastFocused = document.activeElement;
   modal.hidden = false;
   document.body.classList.add("editorial-flipbook-open");
+
   requestAnimationFrame(() => {
     modal.classList.add("is-open");
     modal.querySelector(".editorial-flipbook-close")?.focus({ preventScroll: true });
   });
-  if (!initialized) {
+
+  if (!initialized && !loadingFailed) {
     try {
       await renderPdfPages();
     } catch (error) {
@@ -161,24 +200,42 @@ function closeModal() {
   if (!modal) return;
   modal.classList.remove("is-open");
   document.body.classList.remove("editorial-flipbook-open");
+
   window.setTimeout(() => {
     modal.hidden = true;
     lastFocused?.focus?.({ preventScroll: true });
   }, 220);
 }
 
-const enhanceEditorialCard = async () => {
+const setEditorialCover = (card) => {
+  const visual = card.querySelector(".project-visual");
+  if (!visual) return;
+
+  const image = new Image();
+  image.className = "editorial-card-cover";
+  image.src = editorialProject.cover;
+  image.alt = `${editorialProject.title} kapak görseli`;
+  image.loading = "eager";
+  image.decoding = "async";
+  image.referrerPolicy = "no-referrer";
+  image.addEventListener("load", () => visual.replaceChildren(image), { once: true });
+};
+
+const enhanceEditorialCard = () => {
   const cards = [...document.querySelectorAll(".project-card")];
   const card = cards[1];
   if (!card || card.dataset.editorialFlipbook === "true") return;
+
   card.dataset.editorialFlipbook = "true";
   card.classList.add("has-editorial-flipbook");
-  card.querySelectorAll(".editorial-card-modal-trigger").forEach((item) => item.remove());
+  card.querySelectorAll(".editorial-card-modal-trigger, .project-card-hitarea").forEach((item) => item.remove());
 
   const title = card.querySelector(".project-body h3");
   const description = card.querySelector(".project-body p");
-  if (title) title.textContent = "Editoryal Tasarım";
-  if (description) description.textContent = `${editorialProject.title} — ${editorialProject.description}`;
+  if (title) title.textContent = editorialProject.title;
+  if (description) description.textContent = editorialProject.description;
+
+  setEditorialCover(card);
 
   const trigger = document.createElement("button");
   trigger.type = "button";
@@ -186,34 +243,25 @@ const enhanceEditorialCard = async () => {
   trigger.setAttribute("aria-label", `${editorialProject.title} çevirmeli dergisini aç`);
   trigger.addEventListener("click", openModal);
   card.appendChild(trigger);
-
-  try {
-    const pdf = await getPdf();
-    const page = await pdf.getPage(1);
-    const viewport = page.getViewport({ scale: 0.72 });
-    const canvas = document.createElement("canvas");
-    canvas.width = Math.ceil(viewport.width);
-    canvas.height = Math.ceil(viewport.height);
-    await page.render({ canvasContext: canvas.getContext("2d", { alpha: false }), viewport }).promise;
-    const image = document.createElement("img");
-    image.className = "editorial-card-cover";
-    image.src = canvas.toDataURL("image/jpeg", 0.88);
-    image.alt = `${editorialProject.title} kapak görseli`;
-    card.querySelector(".project-visual")?.replaceChildren(image);
-  } catch (error) {
-    console.info("Editoryal kapak PDF yüklenince otomatik görünecek.", error);
-  }
 };
 
 document.addEventListener("keydown", (event) => {
   if (!modal || modal.hidden) return;
-  if (event.key === "Escape") closeModal();
-  if (event.key === "ArrowLeft") pageFlip?.flipPrev("top");
-  if (event.key === "ArrowRight") pageFlip?.flipNext("top");
+
+  if (event.key === "Escape") {
+    event.preventDefault();
+    closeModal();
+  } else if (event.key === "ArrowLeft") {
+    event.preventDefault();
+    pageFlip?.flipPrev("top");
+  } else if (event.key === "ArrowRight") {
+    event.preventDefault();
+    pageFlip?.flipNext("top");
+  }
 });
 
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => window.setTimeout(enhanceEditorialCard, 450), { once: true });
+  document.addEventListener("DOMContentLoaded", () => window.setTimeout(enhanceEditorialCard, 650), { once: true });
 } else {
-  window.setTimeout(enhanceEditorialCard, 450);
+  window.setTimeout(enhanceEditorialCard, 650);
 }
