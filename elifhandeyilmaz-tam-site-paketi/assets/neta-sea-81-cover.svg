@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" role="img" aria-labelledby="title desc">
+  <title id="title">Neta Sea Sayı 81 kapak görseli</title>
+  <desc id="desc">Mart Nisan 2026 tarihli Neta Sea denizcilik dergisi için stilize edilmiş kapak.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f2f58"/>
+      <stop offset="0.55" stop-color="#174d78"/>
+      <stop offset="1" stop-color="#071c34"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#47b8e0" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="960" fill="#fff"/>
+  <rect x="38" y="34" width="644" height="108" rx="8" fill="#162b53"/>
+  <text x="62" y="77" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">MART – NİSAN 2026  |  SAYI 81</text>
+  <text x="62" y="119" fill="#72c8ef" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">DENİZCİLİK • SAVUNMA • TEKNOLOJİ</text>
+  <text x="42" y="242" fill="#172b54" font-family="Arial Black, Arial, sans-serif" font-size="112" font-weight="900" letter-spacing="-7">NETA SEA</text>
+  <rect x="42" y="264" width="636" height="10" fill="#55b9e4"/>
+  <rect x="42" y="300" width="636" height="578" rx="8" fill="url(#sea)"/>
+  <path d="M42 695 C190 590 330 760 678 600 L678 878 L42 878Z" fill="#0d385c" opacity=".85"/>
+  <path d="M42 755 C220 645 418 823 678 676 L678 878 L42 878Z" fill="#062441" opacity=".9"/>
+  <ellipse cx="555" cy="416" rx="190" ry="165" fill="url(#glow)" opacity=".4"/>
+  <path d="M145 666 L500 666 L594 710 L530 742 L171 742 L104 710Z" fill="#cfd7df"/>
+  <path d="M305 535 L472 535 L509 666 L262 666Z" fill="#d9e0e7"/>
+  <rect x="333" y="472" width="118" height="67" rx="5" fill="#e4e9ee"/>
+  <rect x="356" y="445" width="72" height="30" fill="#e4e9ee"/>
+  <line x1="393" y1="445" x2="393" y2="386" stroke="#e4e9ee" stroke-width="8"/>
+  <line x1="393" y1="397" x2="455" y2="424" stroke="#e4e9ee" stroke-width="5"/>
+  <text x="78" y="380" fill="#e8b24d" font-family="Arial Black, Arial, sans-serif" font-size="63" font-weight="900">SAHA EXPO</text>
+  <text x="78" y="442" fill="#fff" font-family="Arial Black, Arial, sans-serif" font-size="58" font-weight="900">2026</text>
+  <text x="80" y="486" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">MAVİ VATAN’IN SAVUNMA ZİRVESİ</text>
+  <rect x="42" y="896" width="636" height="30" rx="5" fill="#162b53"/>
+  <text x="360" y="918" text-anchor="middle" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">PORTFÖY • EDİTORYAL TASARIM</text>
+</svg>
