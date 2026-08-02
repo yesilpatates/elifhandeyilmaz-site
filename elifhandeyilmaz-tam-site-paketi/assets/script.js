@@ -50,15 +50,24 @@
     window.setTimeout(loadWebProjects, 450);
   };
 
+  const loadCoreScript = () => {
+    const coreScript = document.createElement("script");
+    coreScript.src = "assets/core-script.js?v=20260802-local-v2";
+    coreScript.defer = true;
+    coreScript.onload = loadEnhancements;
+    coreScript.onerror = () => {
+      console.error("Yerel ana site betiği yüklenemedi.");
+      loadEnhancements();
+    };
+    document.body.appendChild(coreScript);
+  };
+
   disableEditorialSection();
 
-  const coreScript = document.createElement("script");
-  coreScript.src = "assets/core-script.js?v=20260802-local-v1";
-  coreScript.defer = true;
-  coreScript.onload = loadEnhancements;
-  coreScript.onerror = () => {
-    console.error("Yerel ana site betiği yüklenemedi.");
-    loadEnhancements();
-  };
-  document.body.appendChild(coreScript);
+  const brandImageScript = document.createElement("script");
+  brandImageScript.src = "assets/brand-image-urls.js?v=20260802-v1";
+  brandImageScript.defer = true;
+  brandImageScript.onload = loadCoreScript;
+  brandImageScript.onerror = loadCoreScript;
+  document.body.appendChild(brandImageScript);
 })();
