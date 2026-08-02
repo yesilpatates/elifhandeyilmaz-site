@@ -31,14 +31,7 @@
     </header>
 
     <figure class="case-study-presentation">
-      <img
-        class="js-base64-image"
-        data-src="../../../images/projects/marka-kurumsal-kimlik/sagligim-burada-sunum.webp.b64"
-        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-        alt="Sağlığım Burada marka kimliği; logo, açık hava uygulamaları, promosyon ürünleri ve kurumsal materyaller"
-        width="320"
-        height="480"
-      >
+      <img src="https://at.adobe.com/S38mohytVzQkPjQS" alt="Sağlığım Burada marka kimliği; logo, açık hava uygulamaları, promosyon ürünleri ve kurumsal materyaller" width="1500" height="2000" referrerpolicy="no-referrer">
     </figure>
 
     <nav class="case-study-footer" aria-label="Proje gezinme bağlantıları">
@@ -46,20 +39,5 @@
       <a href="../../../index.html#iletisim">Benzer bir proje için iletişime geç →</a>
     </nav>
   </main>
-
-  <script>
-    (() => {
-      document.querySelectorAll(".js-base64-image").forEach(async (image) => {
-        try {
-          const response = await fetch(image.dataset.src, { cache: "force-cache" });
-          if (!response.ok) throw new Error("Görsel yüklenemedi");
-          const base64 = (await response.text()).trim();
-          image.src = `data:image/webp;base64,${base64}`;
-        } catch (error) {
-          image.alt = `${image.alt} (yüklenemedi)`;
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
