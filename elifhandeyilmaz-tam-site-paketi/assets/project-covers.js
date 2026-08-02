@@ -9,151 +9,124 @@
     { src: "https://at.adobe.com/TYb10FnMlNsmuouV", alt: "Video & Animasyon Tasarımı kapak görseli", title: "Video & Animasyon Tasarımı", label: "MOTION" }
   ];
 
+  const project = (title, image, company, logo) => ({
+    title,
+    image,
+    company,
+    logo,
+    category: "Marka & Kurumsal Kimlik",
+    alt: `${title} marka kimliği sunumu`
+  });
+
   const brandProjects = [
-    {
-      title: "Sağlığım Burada",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/i3gTkcW18diXU4vk",
-      alt: "Sağlığım Burada marka kimliği sunumu",
-      company: `Sağlığım Burada, bireylerin daha sağlıklı ve dengeli bir yaşam sürmesine destek olmak amacıyla hizmet veren modern bir sağlık ve danışmanlık markasıdır. Güvenilir bilgi, uzman yaklaşımı ve kolay erişilebilir çözümlerle sağlığı hayatın doğal bir parçası hâline getirmeyi hedefler.`,
-      logo: `Sağlığım Burada logosu; insan figürü, yaprak ve dairesel formları bir araya getirerek sağlıklı yaşamı, gelişimi ve bütüncül iyilik hâlini simgeler. Mavi tonlar güveni ve profesyonelliği, turkuaz ise yenilenmeyi, canlılığı ve sağlığı temsil eder. Akıcı yazı karakteri markaya samimi ve ulaşılabilir bir kimlik kazandırır.`
-    },
-    {
-      title: "La Douceur",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/GsfR5p3nDymqlbfR",
-      alt: "La Douceur butik tatlı markası kimlik sunumu",
-      company: `La Douceur, Fransız pastacılık geleneğinden ilham alan butik bir tatlı markasıdır. Özenle hazırlanan tatlıları, kaliteli malzemeleri ve zarif sunum anlayışıyla her lokmayı unutulmaz bir lezzet deneyimine dönüştürmeyi hedefler.`,
-      logo: `La Douceur logosu, zarafeti ve Fransız esintisini yansıtan akıcı kaligrafik bir tipografiyle tasarlanmıştır. Yumuşak pembe tonları tatlılığın ve şıklığın simgesi olurken, sıcak kahve tonları markanın kalite ve samimiyet anlayışını vurgular. Logo, butik lezzetleri estetik bir kimlikle buluşturan sofistike marka karakterini yansıtır.`
-    },
-    {
-      title: "Special Burger",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/T6t6WRq31UnKl9nn",
-      alt: "Special Burger marka kimliği sunumu",
-      company: `Special Burger, kaliteli malzemeler ve özenle hazırlanan tarifleri bir araya getiren modern bir burger restoranıdır. Taptaze içerikler, doyurucu lezzetler ve hızlı servis anlayışıyla her misafirine keyifli bir burger deneyimi sunmayı hedefler.`,
-      logo: `Special Burger logosu, markanın temel ürünü olan hamburgeri modern ve akılda kalıcı bir simgeye dönüştürür. Burger formuna entegre edilen “S” harfi, markanın kimliğini güçlü bir şekilde vurgularken; sıcak sarı tonları lezzeti, kahverengi güveni ve doğallığı, kırmızı ise iştahı ve enerjiyi temsil eder. Logo, lezzet, kalite ve samimiyeti yansıtan güçlü bir marka karakteri oluşturur.`
-    },
-    {
-      title: "Pilavyeri",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/xmKGqJUsYPRsAOhe",
-      alt: "Pilavyeri restoran marka kimliği sunumu",
-      company: `Pilavyeri, geleneksel pilav lezzetini modern sunum ve hızlı servis anlayışıyla buluşturan bir restoran markasıdır. Günlük ve taze malzemelerle hazırlanan özel pilav çeşitlerini, kaliteli hizmet anlayışıyla sunarak her öğünü lezzetli ve doyurucu bir deneyime dönüştürmeyi hedefler.`,
-      logo: `Pilavyeri logosu, markanın ana ürünü olan pilavı simgeleyen kaşık figürünü modern ve akılda kalıcı bir tasarımla bütünleştirir. Turkuaz renk tazeliği, güveni ve hijyeni temsil ederken; dinamik tipografi markanın samimi ve ulaşılabilir karakterini yansıtır. Logo, geleneksel lezzeti çağdaş bir marka kimliğiyle buluşturan özgün bir görsel dil oluşturur.`
-    },
-    {
-      title: "Fikir Atölyesi",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/udOYRbgFbkkqvvmW",
-      alt: "Fikir Atölyesi yaratıcı iletişim ajansı marka kimliği sunumu",
-      company: `Fikir Atölyesi, markaların hikâyelerini etkileyici senaryolar ve yaratıcı içeriklerle buluşturan bir yaratıcı iletişim ajansıdır. Televizyon reklamları, dijital kampanyalar, tanıtım filmleri ve kurumsal projeler için özgün fikirler geliştirir; senaryo yazımından yaratıcı konsept oluşturmaya kadar tüm süreci profesyonel bir yaklaşımla yönetir. Her projede hedef kitleye dokunan, akılda kalıcı ve güçlü anlatılar üretmeyi amaçlar.`,
-      logo: `Fikir Atölyesi logosu, yaratıcılığı ve hikâye anlatımını simgeleyen kalem tüyü ile fikirlerin sürekli gelişimini temsil eden dairesel formu bir araya getirir. Mavi ve mor tonları güveni, hayal gücünü ve üretkenliği yansıtırken, yıldız detayları ilhamın ve yaratıcı fikirlerin doğuşunu simgeler. Logo, markanın özgün senaryolar üreten, güçlü hikâyeler anlatan ve yaratıcı iletişim odaklı kimliğini yansıtır.`
-    },
-    {
-      title: "Coko Pet Shop",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/D31xs4KCQZHVF6RA",
-      alt: "Coko Pet Shop marka kimliği sunumu",
-      company: `Coko Pet Shop, evcil dostların sağlıklı, mutlu ve konforlu bir yaşam sürmesi için kaliteli ürünler ve güvenilir hizmet sunan modern bir pet shop markasıdır. Mama, oyuncak, bakım ürünleri ve temel ihtiyaçları özenle seçerek kedi, köpek ve diğer evcil hayvan sahiplerine güvenilir alışveriş deneyimi sunmayı hedefler.`,
-      logo: `Coko Pet Shop logosu, köpek, kedi ve tavşan figürlerini tek bir akıcı çizgide birleştirerek farklı evcil dostlara duyulan sevgi ve özeni simgeler. Turkuaz renk güveni, hijyeni ve canlılığı temsil ederken, modern tipografi markanın samimi ve ulaşılabilir karakterini yansıtır. Logo, evcil hayvanlarla kurulan güçlü bağı ve bakım odaklı hizmet anlayışını modern bir görsel kimlikle ifade eder.`
-    },
-    {
-      title: "Minik Dünya Kreşi",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/PyD5VPTQRV0BRMTj",
-      alt: "Minik Dünya Kreşi marka kimliği sunumu",
-      company: `Minik Dünya Kreşi, çocukların güvenli, sevgi dolu ve destekleyici bir ortamda gelişimini önemseyen bir okul öncesi eğitim kurumudur. Oyun temelli eğitim yaklaşımıyla çocukların sosyal, duygusal ve zihinsel becerilerini destekleyerek keşfeden, öğrenen ve özgüvenli bireyler olmalarını hedefler.`,
-      logo: `Minik Dünya Kreşi logosu; doğayı, gelişimi ve çocukların güvenli dünyasını simgeleyen ağaç formu üzerine kurulmuştur. Ağaç içindeki çocuk figürleri oyun, öğrenme ve huzurlu gelişimi temsil eder. Yeşil tonlar doğallığı ve büyümeyi; kahverengi tonlar ise güveni, sıcaklığı ve sağlamlığı yansıtır.`
-    },
-    {
-      title: "Coffee Point",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/MaDktMEGW14xswb1",
-      alt: "Coffee Point kahve markası kimlik sunumu",
-      company: `Coffee Point, kaliteli kahveyi sıcak bir atmosferle buluşturan modern bir kahve markasıdır. Özenle seçilen kahve çekirdekleri ve özenli sunum anlayışıyla her fincanda keyifli bir kahve deneyimi sunmayı hedefler. Günün her anında lezzetli molalar için misafirlerini samimi bir ortamda ağırlar.`,
-      logo: `Coffee Point logosu, buharı tüten kahve fincanını sade ve modern çizgilerle yorumlayarak tazelik, sıcaklık ve kaliteyi simgeler. Kahve tonları doğallığı, samimiyeti ve zengin aromayı temsil ederken, dairesel form birlikteliği ve keyifli buluşmaları ifade eder. Minimal tasarımıyla logo, markanın sıcak, modern ve davetkâr kimliğini yansıtır.`
-    },
-    {
-      title: "Damla Doğal Kaynak Suyu",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/uHiqeeRLQfnDNW9u",
-      alt: "Damla Doğal Kaynak Suyu marka kimliği sunumu",
-      company: `Damla Doğal Kaynak Suyu, doğal kaynaklardan özenle elde edilen içme suyunu, saflığını ve doğal mineral dengesini koruyarak tüketicilere ulaştıran güvenilir bir su markasıdır. Kalite, hijyen ve sürdürülebilir üretim anlayışıyla her damlada doğanın tazeliğini sunmayı hedefler.`,
-      logo: `Damla logosu, su damlası formunu modern bir tasarımla birleştirerek saflığı, doğallığı ve yaşamı simgeler. Mavi tonlar temizliği, güveni ve ferahlığı temsil ederken, alttaki akış çizgisi doğal su kaynaklarının sürekliliğini ifade eder. Güçlü ve akıcı tipografiyle tamamlanan logo, markanın doğal, güvenilir ve kaliteli kimliğini yansıtır.`
-    },
-    {
-      title: "SigortaGuru",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/Ftdy5QFpw4HLKGIM",
-      alt: "SigortaGuru sigorta danışmanlığı marka kimliği sunumu",
-      company: `SigortaGuru, bireylerin ve işletmelerin sigorta ihtiyaçlarına güvenilir, hızlı ve doğru çözümler sunan profesyonel bir sigorta danışmanlık markasıdır. Trafik, kasko, konut, sağlık ve iş yeri sigortaları başta olmak üzere farklı branşlarda, ihtiyaçlara uygun poliçe seçenekleriyle müşterilerinin yanında yer alır.`,
-      logo: `SigortaGuru logosu, bilgeliği ve güveni simgeleyen baykuş figürünü modern bir tasarımla buluşturur. Baykuş, doğru yönlendirme ve uzman danışmanlığı temsil ederken; turkuaz tonları güveni, huzuru ve şeffaflığı, koyu mavi tonları ise profesyonelliği ve kurumsallığı ifade eder. Logo, markanın bilgiye dayalı, güven veren ve müşteri odaklı hizmet anlayışını yansıtır.`
-    },
-    {
-      title: "Canvera",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/N4MBIg2TmUtWxaw7",
-      alt: "Canvera sağlık markası kimlik sunumu",
-      company: `Canvera, sağlık alanında güvenilir, yenilikçi ve insan odaklı çözümler sunan modern bir markadır. Kalite, erişilebilirlik ve güncel teknolojiyi bir araya getirerek kullanıcıların sağlık hizmetlerine duyduğu güveni güçlendirmeyi hedefler.`,
-      logo: `Canvera logosu, markanın güven, sağlık ve yenilikçilik değerlerini yansıtan modern bir tasarıma sahiptir. Sembolde birleşen dinamik çizgiler gelişimi ve güçlü bağı temsil ederken; mavi tonlar güveni ve profesyonelliği, turuncu ise enerjiyi ve yenilikçi yaklaşımı simgeler.`
-    },
-    {
-      title: "Techora",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/QFt6E184xLFFQmzv",
-      alt: "Techora teknoloji markası kimlik sunumu",
-      company: `Techora, yenilikçi bilgisayar donanımları ve akıllı teknoloji çözümleri geliştiren modern bir teknoloji markasıdır. Performans, dayanıklılık ve işlevselliği çağdaş tasarımla birleştirerek geleceğin dijital ihtiyaçlarına yönelik ürünler sunar.`,
-      logo: `Techora logosu; teknoloji, bağlantı ve veri akışı kavramlarından ilham alır. Devre formundaki amblem elektronik sistemleri ve yeniliği simgelerken, pembe ve mavi tonlar markanın enerjik, güvenilir ve çağdaş karakterini yansıtır.`
-    },
-    {
-      title: "Pixel Craft Studio",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/pJmqz6MEiCwRCw5z",
-      alt: "Pixel Craft Studio animasyon stüdyosu marka kimliği sunumu",
-      company: `Pixel Craft Studio, yaratıcı fikirleri etkileyici animasyonlara dönüştüren bir animasyon film stüdyosudur. 2D ve 3D animasyon, kısa film, motion graphics ve dijital görsel içerik alanlarında; özgün, estetik ve hikâye odaklı projeler üretir.`,
-      logo: `Pixel Craft Studio logosu, piksel estetiğinden ilham alan modern ve geometrik bir tipografiye sahiptir. Kullanılan mavi tonlar dijital dünyayı, güveni ve yaratıcılığı temsil ederken; altın ve bej vurgu çizgileri markaya dengeli ve seçkin bir karakter kazandırır. Logo, stüdyonun yaratıcı üretim gücünü ve dijital ustalığını yansıtır.`
-    },
-    {
-      title: "Velorie",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/rhHX2M0xiSuMdbiA",
-      alt: "Velorie kadın giyim markası kimlik sunumu",
-      company: `Velorie, modern kadının zarafetini ve özgüvenini yansıtan, şıklığı zamansız tasarımlarla buluşturan bir kadın giyim markasıdır. Kaliteli kumaşlar, özenli işçilik ve çağdaş çizgilerle hazırlanan koleksiyonlarıyla her stile estetik ve konfor sunmayı hedefler.`,
-      logo: `Velorie logosu, markanın zarafet ve akıcılık anlayışını yansıtan modern bir tipografiyle tasarlanmıştır. “V” harfinden geçen dalga formu; kumaşın yumuşak hareketini, feminen zarafeti ve estetik akışı simgeler. Pudra ve rose gold tonları ise şıklığı, sıcaklığı ve lüksü temsil ederek markaya sofistike bir kimlik kazandırır.`
-    },
-    {
-      title: "DreamPix",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/ZdK6QBsmCqCePH2h",
-      alt: "DreamPix fotoğrafçılık markası kimlik sunumu",
-      company: `DreamPix, özel anları doğal, estetik ve zamansız fotoğraflara dönüştüren profesyonel bir fotoğrafçılık markasıdır. Düğün, nişan, özel gün, portre, aile, etkinlik ve kurumsal çekimlerde; her hikâyenin kendine özgü duygusunu ve atmosferini yansıtan çalışmalar gerçekleştirir. Doğru ışık, güçlü kompozisyon ve doğal anlatım anlayışıyla çalışan DreamPix, yalnızca görüntü kaydetmeyi değil; yaşanan anların duygusunu geleceğe taşımayı amaçlar. Her çekim, müşterinin beklentilerine ve çekimin karakterine uygun olarak özenle planlanır ve profesyonel bir yaklaşımla tamamlanır.`,
-      logo: `DreamPix logosu, fotoğraf makinesi diyaframından esinlenen dairesel bir amblem ile modern bir yazı karakterinden oluşur. Amblemde birbiri etrafında hareket eden parçalar; bakış açısını, doğru anı yakalamayı, yaratıcılığı ve fotoğrafın dinamik yapısını temsil eder. Merkezde oluşan boşluk ise fotoğrafçının odaklandığı kadrajı ve çekilen görüntünün merkezindeki hikâyeyi simgeler. “DREAM” kelimesinin güçlü yapısı markanın profesyonelliğini ve güvenilirliğini; daha ince kullanılan “PIX” bölümü ise fotoğrafın estetik, zarif ve modern yönünü ifade eder. Yeşil ve turkuaz tonları markaya doğal, sakin, güven veren ve çağdaş bir görünüm kazandırır.`
-    },
-    {
-      title: "Taze Masa",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/9tiuggslE5tRJQdC",
-      alt: "Taze Masa sağlıklı yemek markası kimlik sunumu",
-      company: `Taze Masa, sağlıklı ev yemeklerini günlük ve taze malzemelerle hazırlayan modern bir yemek markasıdır. Dengeli beslenmeyi lezzetle buluşturarak, her öğünde ev sıcaklığını ve doğal tatları müşterileriyle buluşturmayı hedefler.`,
-      logo: `Taze Masa logosu; kase, yaprak, kaşık ve masa figürlerini bir araya getirerek sağlıklı beslenme, doğallık ve ev yapımı lezzeti simgeler. Yeşil tonlar tazeliği ve doğal içerikleri, turuncu tonlar sıcaklığı, enerjiyi ve iştahı temsil eder. Masa altındaki kalp detayı ise yemeklerin özenle ve sevgiyle hazırlandığını vurgulayarak markanın samimi ve güvenilir kimliğini yansıtır.`
-    },
-    {
-      title: "Dentiva Plus",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/SVrf7LnIFv3hJVDK",
-      alt: "Dentiva Plus diş kliniği marka kimliği sunumu",
-      company: `Dentiva Plus, ağız ve diş sağlığı alanında modern, güvenilir ve hasta odaklı hizmet sunan bir diş kliniğidir. Uzman yaklaşımı, güncel tedavi yöntemleri ve konforlu hizmet anlayışıyla her yaştan danışanın sağlıklı ve estetik bir gülüşe kavuşmasını hedefler.`,
-      logo: `Dentiva Plus logosu, diş formundan ilham alan akıcı ve modern bir tasarıma sahiptir. Mavi tonlar güveni, sağlığı ve profesyonelliği; altın tonlar ise kaliteyi ve seçkin hizmet anlayışını temsil eder. Logonun dinamik çizgileri, sağlıklı ve güçlü bir gülüşü simgeler.`
-    },
-    {
-      title: "Louvreia Contemporary Art Cafe",
-      category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/SDb7cuviZyClNfyw",
-      alt: "Louvreia Contemporary Art Cafe marka kimliği sunumu",
-      company: `Louvreia Contemporary Art Cafe, sanat ve kahve deneyimini aynı atmosferde buluşturan çağdaş bir sanat kafesidir. Nitelikli kahve sunumlarını sergiler, yaratıcı etkinlikler ve sanat odaklı buluşmalarla birleştirerek ziyaretçilerine ilham veren sosyal bir alan sunar.`,
-      logo: `Louvreia logosu; resim paleti, fırça ve kahve fincanı öğelerini tek bir kompozisyonda birleştirir. Sanat ile kafe kültürünün birlikteliğini simgeleyen tasarımda kiremit ve yeşil tonlar yaratıcılığı, sıcaklığı ve seçkinliği; açık mavi ile siyah ise dinginliği ve çağdaş marka karakterini yansıtır.`
-    }
+    project(
+      "Sağlığım Burada",
+      "https://at.adobe.com/i3gTkcW18diXU4vk",
+      `Sağlığım Burada, bireylerin daha sağlıklı ve dengeli bir yaşam sürmesine destek olmak amacıyla hizmet veren modern bir sağlık ve danışmanlık markasıdır. Güvenilir bilgi, uzman yaklaşımı ve kolay erişilebilir çözümlerle sağlığı hayatın doğal bir parçası hâline getirmeyi hedefler.`,
+      `Sağlığım Burada logosu; insan figürü, yaprak ve dairesel formları bir araya getirerek sağlıklı yaşamı, gelişimi ve bütüncül iyilik hâlini simgeler. Mavi tonlar güveni ve profesyonelliği, turkuaz ise yenilenmeyi, canlılığı ve sağlığı temsil eder. Akıcı yazı karakteri markaya samimi ve ulaşılabilir bir kimlik kazandırır.`
+    ),
+    project(
+      "La Douceur",
+      "https://at.adobe.com/GsfR5p3nDymqlbfR",
+      `La Douceur, Fransız pastacılık geleneğinden ilham alan butik bir tatlı markasıdır. Özenle hazırlanan tatlıları, kaliteli malzemeleri ve zarif sunum anlayışıyla her lokmayı unutulmaz bir lezzet deneyimine dönüştürmeyi hedefler.`,
+      `La Douceur logosu, zarafeti ve Fransız esintisini yansıtan akıcı kaligrafik bir tipografiyle tasarlanmıştır. Yumuşak pembe tonları tatlılığın ve şıklığın simgesi olurken, sıcak kahve tonları markanın kalite ve samimiyet anlayışını vurgular. Logo, butik lezzetleri estetik bir kimlikle buluşturan sofistike marka karakterini yansıtır.`
+    ),
+    project(
+      "Special Burger",
+      "https://at.adobe.com/T6t6WRq31UnKl9nn",
+      `Special Burger, kaliteli malzemeler ve özenle hazırlanan tarifleri bir araya getiren modern bir burger restoranıdır. Taptaze içerikler, doyurucu lezzetler ve hızlı servis anlayışıyla her misafirine keyifli bir burger deneyimi sunmayı hedefler.`,
+      `Special Burger logosu, markanın temel ürünü olan hamburgeri modern ve akılda kalıcı bir simgeye dönüştürür. Burger formuna entegre edilen “S” harfi, markanın kimliğini güçlü bir şekilde vurgularken; sıcak sarı tonları lezzeti, kahverengi güveni ve doğallığı, kırmızı ise iştahı ve enerjiyi temsil eder. Logo, lezzet, kalite ve samimiyeti yansıtan güçlü bir marka karakteri oluşturur.`
+    ),
+    project(
+      "Pilavyeri",
+      "https://at.adobe.com/xmKGqJUsYPRsAOhe",
+      `Pilavyeri, geleneksel pilav lezzetini modern sunum ve hızlı servis anlayışıyla buluşturan bir restoran markasıdır. Günlük ve taze malzemelerle hazırlanan özel pilav çeşitlerini, kaliteli hizmet anlayışıyla sunarak her öğünü lezzetli ve doyurucu bir deneyime dönüştürmeyi hedefler.`,
+      `Pilavyeri logosu, markanın ana ürünü olan pilavı simgeleyen kaşık figürünü modern ve akılda kalıcı bir tasarımla bütünleştirir. Turkuaz renk tazeliği, güveni ve hijyeni temsil ederken; dinamik tipografi markanın samimi ve ulaşılabilir karakterini yansıtır. Logo, geleneksel lezzeti çağdaş bir marka kimliğiyle buluşturan özgün bir görsel dil oluşturur.`
+    ),
+    project(
+      "Fikir Atölyesi",
+      "https://at.adobe.com/udOYRbgFbkkqvvmW",
+      `Fikir Atölyesi, markaların hikâyelerini etkileyici senaryolar ve yaratıcı içeriklerle buluşturan bir yaratıcı iletişim ajansıdır. Televizyon reklamları, dijital kampanyalar, tanıtım filmleri ve kurumsal projeler için özgün fikirler geliştirir; senaryo yazımından yaratıcı konsept oluşturmaya kadar tüm süreci profesyonel bir yaklaşımla yönetir. Her projede hedef kitleye dokunan, akılda kalıcı ve güçlü anlatılar üretmeyi amaçlar.`,
+      `Fikir Atölyesi logosu, yaratıcılığı ve hikâye anlatımını simgeleyen kalem tüyü ile fikirlerin sürekli gelişimini temsil eden dairesel formu bir araya getirir. Mavi ve mor tonları güveni, hayal gücünü ve üretkenliği yansıtırken, yıldız detayları ilhamın ve yaratıcı fikirlerin doğuşunu simgeler. Logo, markanın özgün senaryolar üreten, güçlü hikâyeler anlatan ve yaratıcı iletişim odaklı kimliğini yansıtır.`
+    ),
+    project(
+      "Coko Pet Shop",
+      "https://at.adobe.com/D31xs4KCQZHVF6RA",
+      `Coko Pet Shop, evcil dostların sağlıklı, mutlu ve konforlu bir yaşam sürmesi için kaliteli ürünler ve güvenilir hizmet sunan modern bir pet shop markasıdır. Mama, oyuncak, bakım ürünleri ve temel ihtiyaçları özenle seçerek kedi, köpek ve diğer evcil hayvan sahiplerine güvenilir alışveriş deneyimi sunmayı hedefler.`,
+      `Coko Pet Shop logosu, köpek, kedi ve tavşan figürlerini tek bir akıcı çizgide birleştirerek farklı evcil dostlara duyulan sevgi ve özeni simgeler. Turkuaz renk güveni, hijyeni ve canlılığı temsil ederken, modern tipografi markanın samimi ve ulaşılabilir karakterini yansıtır. Logo, evcil hayvanlarla kurulan güçlü bağı ve bakım odaklı hizmet anlayışını modern bir görsel kimlikle ifade eder.`
+    ),
+    project(
+      "Minik Dünya Kreşi",
+      "https://at.adobe.com/PyD5VPTQRV0BRMTj",
+      `Minik Dünya Kreşi, çocukların güvenli, sevgi dolu ve destekleyici bir ortamda gelişimini önemseyen bir okul öncesi eğitim kurumudur. Oyun temelli eğitim yaklaşımıyla çocukların sosyal, duygusal ve zihinsel becerilerini destekleyerek keşfeden, öğrenen ve özgüvenli bireyler olmalarını hedefler.`,
+      `Minik Dünya Kreşi logosu; doğayı, gelişimi ve çocukların güvenli dünyasını simgeleyen ağaç formu üzerine kurulmuştur. Ağaç içindeki çocuk figürleri oyun, öğrenme ve huzurlu gelişimi temsil eder. Yeşil tonlar doğallığı ve büyümeyi; kahverengi tonlar ise güveni, sıcaklığı ve sağlamlığı yansıtır.`
+    ),
+    project(
+      "Coffee Point",
+      "https://at.adobe.com/MaDktMEGW14xswb1",
+      `Coffee Point, kaliteli kahveyi sıcak bir atmosferle buluşturan modern bir kahve markasıdır. Özenle seçilen kahve çekirdekleri ve özenli sunum anlayışıyla her fincanda keyifli bir kahve deneyimi sunmayı hedefler. Günün her anında lezzetli molalar için misafirlerini samimi bir ortamda ağırlar.`,
+      `Coffee Point logosu, buharı tüten kahve fincanını sade ve modern çizgilerle yorumlayarak tazelik, sıcaklık ve kaliteyi simgeler. Kahve tonları doğallığı, samimiyeti ve zengin aromayı temsil ederken, dairesel form birlikteliği ve keyifli buluşmaları ifade eder. Minimal tasarımıyla logo, markanın sıcak, modern ve davetkâr kimliğini yansıtır.`
+    ),
+    project(
+      "Damla Doğal Kaynak Suyu",
+      "https://at.adobe.com/uHiqeeRLQfnDNW9u",
+      `Damla Doğal Kaynak Suyu, doğal kaynaklardan özenle elde edilen içme suyunu, saflığını ve doğal mineral dengesini koruyarak tüketicilere ulaştıran güvenilir bir su markasıdır. Kalite, hijyen ve sürdürülebilir üretim anlayışıyla her damlada doğanın tazeliğini sunmayı hedefler.`,
+      `Damla logosu, su damlası formunu modern bir tasarımla birleştirerek saflığı, doğallığı ve yaşamı simgeler. Mavi tonlar temizliği, güveni ve ferahlığı temsil ederken, alttaki akış çizgisi doğal su kaynaklarının sürekliliğini ifade eder. Güçlü ve akıcı tipografiyle tamamlanan logo, markanın doğal, güvenilir ve kaliteli kimliğini yansıtır.`
+    ),
+    project(
+      "SigortaGuru",
+      "https://at.adobe.com/Ftdy5QFpw4HLKGIM",
+      `SigortaGuru, bireylerin ve işletmelerin sigorta ihtiyaçlarına güvenilir, hızlı ve doğru çözümler sunan profesyonel bir sigorta danışmanlık markasıdır. Trafik, kasko, konut, sağlık ve iş yeri sigortaları başta olmak üzere farklı branşlarda, ihtiyaçlara uygun poliçe seçenekleriyle müşterilerinin yanında yer alır.`,
+      `SigortaGuru logosu, bilgeliği ve güveni simgeleyen baykuş figürünü modern bir tasarımla buluşturur. Baykuş, doğru yönlendirme ve uzman danışmanlığı temsil ederken; turkuaz tonları güveni, huzuru ve şeffaflığı, koyu mavi tonları ise profesyonelliği ve kurumsallığı ifade eder. Logo, markanın bilgiye dayalı, güven veren ve müşteri odaklı hizmet anlayışını yansıtır.`
+    ),
+    project(
+      "Canvera",
+      "https://at.adobe.com/N4MBIg2TmUtWxaw7",
+      `Canvera, sağlık alanında güvenilir, yenilikçi ve insan odaklı çözümler sunan modern bir markadır. Kalite, erişilebilirlik ve güncel teknolojiyi bir araya getirerek kullanıcıların sağlık hizmetlerine duyduğu güveni güçlendirmeyi hedefler.`,
+      `Canvera logosu, markanın güven, sağlık ve yenilikçilik değerlerini yansıtan modern bir tasarıma sahiptir. Sembolde birleşen dinamik çizgiler gelişimi ve güçlü bağı temsil ederken; mavi tonlar güveni ve profesyonelliği, turuncu ise enerjiyi ve yenilikçi yaklaşımı simgeler.`
+    ),
+    project(
+      "Techora",
+      "https://at.adobe.com/QFt6E184xLFFQmzv",
+      `Techora, yenilikçi bilgisayar donanımları ve akıllı teknoloji çözümleri geliştiren modern bir teknoloji markasıdır. Performans, dayanıklılık ve işlevselliği çağdaş tasarımla birleştirerek geleceğin dijital ihtiyaçlarına yönelik ürünler sunar.`,
+      `Techora logosu; teknoloji, bağlantı ve veri akışı kavramlarından ilham alır. Devre formundaki amblem elektronik sistemleri ve yeniliği simgelerken, pembe ve mavi tonlar markanın enerjik, güvenilir ve çağdaş karakterini yansıtır.`
+    ),
+    project(
+      "Pixel Craft Studio",
+      "https://at.adobe.com/pJmqz6MEiCwRCw5z",
+      `Pixel Craft Studio, yaratıcı fikirleri etkileyici animasyonlara dönüştüren bir animasyon film stüdyosudur. 2D ve 3D animasyon, kısa film, motion graphics ve dijital görsel içerik alanlarında; özgün, estetik ve hikâye odaklı projeler üretir.`,
+      `Pixel Craft Studio logosu, piksel estetiğinden ilham alan modern ve geometrik bir tipografiye sahiptir. Kullanılan mavi tonlar dijital dünyayı, güveni ve yaratıcılığı temsil ederken; altın ve bej vurgu çizgileri markaya dengeli ve seçkin bir karakter kazandırır. Logo, stüdyonun yaratıcı üretim gücünü ve dijital ustalığını yansıtır.`
+    ),
+    project(
+      "Velorie",
+      "https://at.adobe.com/rhHX2M0xiSuMdbiA",
+      `Velorie, modern kadının zarafetini ve özgüvenini yansıtan, şıklığı zamansız tasarımlarla buluşturan bir kadın giyim markasıdır. Kaliteli kumaşlar, özenli işçilik ve çağdaş çizgilerle hazırlanan koleksiyonlarıyla her stile estetik ve konfor sunmayı hedefler.`,
+      `Velorie logosu, markanın zarafet ve akıcılık anlayışını yansıtan modern bir tipografiyle tasarlanmıştır. “V” harfinden geçen dalga formu; kumaşın yumuşak hareketini, feminen zarafeti ve estetik akışı simgeler. Pudra ve rose gold tonları ise şıklığı, sıcaklığı ve lüksü temsil ederek markaya sofistike bir kimlik kazandırır.`
+    ),
+    project(
+      "DreamPix",
+      "https://at.adobe.com/fbfWvuphnxRdSNRK",
+      `DreamPix, özel anları doğal, estetik ve zamansız fotoğraflara dönüştüren profesyonel bir fotoğrafçılık markasıdır. Düğün, nişan, özel gün, portre, aile, etkinlik ve kurumsal çekimlerde; her hikâyenin kendine özgü duygusunu ve atmosferini yansıtan çalışmalar gerçekleştirir. Doğru ışık, güçlü kompozisyon ve doğal anlatım anlayışıyla çalışan DreamPix, yalnızca görüntü kaydetmeyi değil; yaşanan anların duygusunu geleceğe taşımayı amaçlar. Her çekim, müşterinin beklentilerine ve çekimin karakterine uygun olarak özenle planlanır ve profesyonel bir yaklaşımla tamamlanır.`,
+      `DreamPix logosu, fotoğraf makinesi diyaframından esinlenen dairesel bir amblem ile modern bir yazı karakterinden oluşur. Amblemde birbiri etrafında hareket eden parçalar; bakış açısını, doğru anı yakalamayı, yaratıcılığı ve fotoğrafın dinamik yapısını temsil eder. Merkezde oluşan boşluk ise fotoğrafçının odaklandığı kadrajı ve çekilen görüntünün merkezindeki hikâyeyi simgeler. “DREAM” kelimesinin güçlü yapısı markanın profesyonelliğini ve güvenilirliğini; daha ince kullanılan “PIX” bölümü ise fotoğrafın estetik, zarif ve modern yönünü ifade eder. Yeşil ve turkuaz tonları markaya doğal, sakin, güven veren ve çağdaş bir görünüm kazandırır.`
+    ),
+    project(
+      "Taze Masa",
+      "https://at.adobe.com/grqXq1bwo7ZY4xMa",
+      `Taze Masa, sağlıklı ev yemeklerini günlük ve taze malzemelerle hazırlayan modern bir yemek markasıdır. Dengeli beslenmeyi lezzetle buluşturarak, her öğünde ev sıcaklığını ve doğal tatları müşterileriyle buluşturmayı hedefler.`,
+      `Taze Masa logosu; kase, yaprak, kaşık ve masa figürlerini bir araya getirerek sağlıklı beslenme, doğallık ve ev yapımı lezzeti simgeler. Yeşil tonlar tazeliği ve doğal içerikleri, turuncu tonlar sıcaklığı, enerjiyi ve iştahı temsil eder. Masa altındaki kalp detayı ise yemeklerin özenle ve sevgiyle hazırlandığını vurgulayarak markanın samimi ve güvenilir kimliğini yansıtır.`
+    ),
+    project(
+      "Dentiva Plus",
+      "https://at.adobe.com/DfIJlX2HdyccmXvk",
+      `Dentiva Plus, ağız ve diş sağlığı alanında modern, güvenilir ve hasta odaklı hizmet sunan bir diş kliniğidir. Uzman yaklaşımı, güncel tedavi yöntemleri ve konforlu hizmet anlayışıyla her yaştan danışanın sağlıklı ve estetik bir gülüşe kavuşmasını hedefler.`,
+      `Dentiva Plus logosu, diş formundan ilham alan akıcı ve modern bir tasarıma sahiptir. Mavi tonlar güveni, sağlığı ve profesyonelliği; altın tonlar ise kaliteyi ve seçkin hizmet anlayışını temsil eder. Logonun dinamik çizgileri, sağlıklı ve güçlü bir gülüşü simgeler.`
+    ),
+    project(
+      "Louvreia Contemporary Art Cafe",
+      "https://at.adobe.com/M30uaZoo8fRapziQ",
+      `Louvreia Contemporary Art Cafe, sanat ve kahve deneyimini aynı atmosferde buluşturan çağdaş bir sanat kafesidir. Nitelikli kahve sunumlarını sergiler, yaratıcı etkinlikler ve sanat odaklı buluşmalarla birleştirerek ziyaretçilerine ilham veren sosyal bir alan sunar.`,
+      `Louvreia logosu; resim paleti, fırça ve kahve fincanı öğelerini tek bir kompozisyonda birleştirir. Sanat ile kafe kültürünün birlikteliğini simgeleyen tasarımda kiremit ve yeşil tonlar yaratıcılığı, sıcaklığı ve seçkinliği; açık mavi ile siyah ise dinginliği ve çağdaş marka karakterini yansıtır.`
+    )
   ];
 
   const cards = [...document.querySelectorAll(".project-card")];
@@ -161,15 +134,12 @@
   cards.forEach((card, index) => {
     const cover = covers[index];
     if (!cover) return;
-
     const title = card.querySelector(".project-body h3");
     const label = card.querySelector(".project-visual strong");
     if (title) title.textContent = cover.title;
     if (label) label.textContent = cover.label;
-
     const visual = card.querySelector(".project-visual");
     if (!visual) return;
-
     const image = new Image();
     image.className = "project-cover-image";
     image.src = cover.src;
@@ -191,7 +161,6 @@
   const createLightbox = () => {
     const current = document.querySelector(".project-lightbox");
     if (current) return current;
-
     const lightbox = document.createElement("div");
     lightbox.className = "project-lightbox";
     lightbox.hidden = true;
@@ -216,19 +185,12 @@
             <span class="project-lightbox-counter" aria-live="polite"></span>
           </div>
           <div class="project-lightbox-copy-grid">
-            <section>
-              <h3>Firma Hakkında</h3>
-              <p class="project-lightbox-company"></p>
-            </section>
-            <section>
-              <h3>Logo Tanımı</h3>
-              <p class="project-lightbox-logo"></p>
-            </section>
+            <section><h3>Firma Hakkında</h3><p class="project-lightbox-company"></p></section>
+            <section><h3>Logo Tanımı</h3><p class="project-lightbox-logo"></p></section>
           </div>
         </div>
       </article>
-      <button class="project-lightbox-arrow project-lightbox-next" type="button" aria-label="Sonraki projeyi göster"><span aria-hidden="true">›</span></button>
-    `;
+      <button class="project-lightbox-arrow project-lightbox-next" type="button" aria-label="Sonraki projeyi göster"><span aria-hidden="true">›</span></button>`;
     document.body.appendChild(lightbox);
     return lightbox;
   };
@@ -245,7 +207,6 @@
   const prevButton = lightbox.querySelector(".project-lightbox-prev");
   const nextButton = lightbox.querySelector(".project-lightbox-next");
   const closeButton = lightbox.querySelector(".project-lightbox-close");
-
   let activeIndex = 0;
   let lastFocusedElement = null;
 
@@ -259,33 +220,31 @@
 
   const renderProject = (index) => {
     activeIndex = (index + brandProjects.length) % brandProjects.length;
-    const project = brandProjects[activeIndex];
-
+    const item = brandProjects[activeIndex];
     panel.scrollTop = 0;
     lightbox.classList.add("is-loading");
     loading.hidden = false;
     displayImage.removeAttribute("src");
-    displayImage.alt = project.alt;
-    title.textContent = project.title;
-    category.textContent = project.category;
+    displayImage.alt = item.alt;
+    title.textContent = item.title;
+    category.textContent = item.category;
     counter.textContent = `${activeIndex + 1} / ${brandProjects.length}`;
-    company.textContent = project.company;
-    logo.textContent = project.logo;
-
+    company.textContent = item.company;
+    logo.textContent = item.logo;
     const preloader = new Image();
     preloader.decoding = "async";
     preloader.referrerPolicy = "no-referrer";
     preloader.onload = () => {
-      displayImage.src = project.image;
+      displayImage.src = item.image;
       lightbox.classList.remove("is-loading");
       loading.hidden = true;
     };
     preloader.onerror = () => {
       lightbox.classList.remove("is-loading");
       loading.hidden = true;
-      displayImage.alt = `${project.alt} yüklenemedi`;
+      displayImage.alt = `${item.alt} yüklenemedi`;
     };
-    preloader.src = project.image;
+    preloader.src = item.image;
     updateArrowState();
   };
 
@@ -309,20 +268,14 @@
     }, 220);
   };
 
-  const showPrevious = () => {
-    if (brandProjects.length > 1) renderProject(activeIndex - 1);
-  };
-
-  const showNext = () => {
-    if (brandProjects.length > 1) renderProject(activeIndex + 1);
-  };
-
+  const showPrevious = () => brandProjects.length > 1 && renderProject(activeIndex - 1);
+  const showNext = () => brandProjects.length > 1 && renderProject(activeIndex + 1);
   const brandCard = cards[0];
+
   if (brandCard) {
     brandCard.querySelectorAll(".project-card-hitarea, .project-card-modal-trigger").forEach((element) => element.remove());
     brandCard.style.position = "relative";
     brandCard.classList.add("has-project-modal");
-
     const trigger = document.createElement("button");
     trigger.className = "project-card-modal-trigger";
     trigger.type = "button";
@@ -337,7 +290,6 @@
 
   document.addEventListener("keydown", (event) => {
     if (lightbox.hidden) return;
-
     if (event.key === "Escape") {
       event.preventDefault();
       closeLightbox();
@@ -350,7 +302,6 @@
     } else if (event.key === "Tab") {
       const focusable = [...lightbox.querySelectorAll("button:not([disabled])")].filter((element) => !element.classList.contains("is-hidden"));
       if (!focusable.length) return;
-
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
       if (event.shiftKey && document.activeElement === first) {
