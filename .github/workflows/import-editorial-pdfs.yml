@@ -1,0 +1,65 @@
+name: Import editorial PDFs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/import-editorial-pdfs.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-pdfs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu al
+        uses: actions/checkout@v4
+
+      - name: PDF dosyalarını indir
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          TARGET="elifhandeyilmaz-tam-site-paketi/assets/editorial-pdfs"
+          mkdir -p "$TARGET"
+
+          download_pdf() {
+            local url="$1"
+            local output="$2"
+            echo "İndiriliyor: $output"
+            curl --fail --location --retry 3 --retry-all-errors \
+              --connect-timeout 30 --max-time 1200 \
+              -A "Mozilla/5.0" -H "Accept: application/pdf" \
+              "$url" -o "$output"
+
+            if [[ "$(head -c 4 "$output")" != "%PDF" ]]; then
+              echo "İndirilen dosya PDF değil: $output"
+              file "$output" || true
+              head -c 300 "$output" || true
+              exit 1
+            fi
+          }
+
+          download_pdf "https://at.adobe.com/INoikeXCDphjXHXV" "$TARGET/yat-haber-58.pdf"
+          download_pdf "https://at.adobe.com/aNFTA7bMb3PTDNgA" "$TARGET/yat-haber-59.pdf"
+          download_pdf "https://at.adobe.com/WEWViG3yWsBZEH7S" "$TARGET/neta-sea-81.pdf"
+
+          ls -lh "$TARGET"
+
+      - name: Dosyaları kaydet
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add elifhandeyilmaz-tam-site-paketi/assets/editorial-pdfs/*.pdf
+
+          if git diff --cached --quiet; then
+            echo "Yeni değişiklik yok."
+            exit 0
+          fi
+
+          git commit -m "Editoryal PDF dosyalarını siteye ekle"
+          git push
