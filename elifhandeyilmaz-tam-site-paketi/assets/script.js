@@ -8,6 +8,13 @@
     document.head.appendChild(link);
   };
 
+  const formatHeroTitle = () => {
+    const title = document.querySelector(".hero-copy h1");
+    if (!title || title.dataset.formatted === "true") return;
+    title.dataset.formatted = "true";
+    title.innerHTML = '<span class="hero-title-first">Fikirleri güçlü ve tutarlı</span><span class="hero-title-second">görsel deneyimlere dönüştürüyorum.</span>';
+  };
+
   const disableEditorialSection = () => {
     const editorialProjectCard = [...document.querySelectorAll(".project-card")].find((card) => {
       const title = card.querySelector(".project-body h3")?.textContent?.toLocaleLowerCase("tr-TR") || "";
@@ -46,6 +53,7 @@
   };
 
   const loadEnhancements = () => {
+    formatHeroTitle();
     disableEditorialSection();
     window.setTimeout(loadWebProjects, 450);
   };
@@ -62,7 +70,8 @@
     document.body.appendChild(coreScript);
   };
 
-  addStylesheet("home-hero-polish", "assets/home-hero-polish.css?v=20260803-home-v1");
+  addStylesheet("home-hero-polish", "assets/home-hero-polish.css?v=20260803-home-v3");
+  formatHeroTitle();
   disableEditorialSection();
 
   const brandImageScript = document.createElement("script");
