@@ -14,7 +14,7 @@
     const moduleScript = document.createElement("script");
     moduleScript.id = "editorial-flipbook-script";
     moduleScript.type = "module";
-    moduleScript.src = "assets/editorial-flipbook.js";
+    moduleScript.src = "assets/editorial-flipbook-loader.js";
     document.body.appendChild(moduleScript);
   };
 
