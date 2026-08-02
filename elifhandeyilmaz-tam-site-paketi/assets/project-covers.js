@@ -68,7 +68,7 @@
     {
       title: "Special Burger",
       category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/YMTwr3nEVRSyxIVN",
+      image: "https://at.adobe.com/T6t6WRq31UnKl9nn",
       alt: "Special Burger marka kimliği sunumu",
       company:
         "Special Burger, kaliteli malzemeler ve özenle hazırlanan tarifleri bir araya getiren modern bir burger restoranıdır. Taptaze içerikler, doyurucu lezzetler ve hızlı servis anlayışıyla her misafirine keyifli bir burger deneyimi sunmayı hedefler.",
@@ -84,15 +84,12 @@
     if (!cover) return;
 
     const title = card.querySelector(".project-body h3");
-    const placeholderLabel = card.querySelector(".project-visual strong");
-
+    const label = card.querySelector(".project-visual strong");
     if (title) title.textContent = cover.title;
-    if (placeholderLabel) placeholderLabel.textContent = cover.label;
-  });
+    if (label) label.textContent = cover.label;
 
-  [...document.querySelectorAll(".project-card .project-visual")].forEach((visual, index) => {
-    const cover = covers[index];
-    if (!cover) return;
+    const visual = card.querySelector(".project-visual");
+    if (!visual) return;
 
     const image = new Image();
     image.className = "project-cover-image";
@@ -101,13 +98,11 @@
     image.loading = index < 2 ? "eager" : "lazy";
     image.decoding = "async";
     image.referrerPolicy = "no-referrer";
-
     image.addEventListener(
       "load",
       () => {
-        visual.innerHTML = "";
+        visual.replaceChildren(image);
         visual.classList.add("has-cover");
-        visual.appendChild(image);
       },
       { once: true }
     );
@@ -120,8 +115,8 @@
   }
 
   const createLightbox = () => {
-    const existing = document.querySelector(".project-lightbox");
-    if (existing) return existing;
+    const current = document.querySelector(".project-lightbox");
+    if (current) return current;
 
     const lightbox = document.createElement("div");
     lightbox.className = "project-lightbox";
@@ -131,12 +126,8 @@
     lightbox.setAttribute("aria-labelledby", "project-lightbox-title");
     lightbox.innerHTML = `
       <div class="project-lightbox-backdrop" data-lightbox-close></div>
-      <button class="project-lightbox-close" type="button" aria-label="Galeriyi kapat" data-lightbox-close>
-        <span aria-hidden="true">×</span>
-      </button>
-      <button class="project-lightbox-arrow project-lightbox-prev" type="button" aria-label="Önceki projeyi göster">
-        <span aria-hidden="true">‹</span>
-      </button>
+      <button class="project-lightbox-close" type="button" aria-label="Galeriyi kapat" data-lightbox-close><span aria-hidden="true">×</span></button>
+      <button class="project-lightbox-arrow project-lightbox-prev" type="button" aria-label="Önceki projeyi göster"><span aria-hidden="true">‹</span></button>
       <article class="project-lightbox-panel">
         <div class="project-lightbox-media">
           <div class="project-lightbox-loading" aria-hidden="true"></div>
@@ -162,11 +153,8 @@
           </div>
         </div>
       </article>
-      <button class="project-lightbox-arrow project-lightbox-next" type="button" aria-label="Sonraki projeyi göster">
-        <span aria-hidden="true">›</span>
-      </button>
+      <button class="project-lightbox-arrow project-lightbox-next" type="button" aria-label="Sonraki projeyi göster"><span aria-hidden="true">›</span></button>
     `;
-
     document.body.appendChild(lightbox);
     return lightbox;
   };
@@ -210,21 +198,20 @@
     company.textContent = project.company;
     logo.textContent = project.logo;
 
-    const image = new Image();
-    image.decoding = "async";
-    image.referrerPolicy = "no-referrer";
-    image.onload = () => {
+    const preloader = new Image();
+    preloader.decoding = "async";
+    preloader.referrerPolicy = "no-referrer";
+    preloader.onload = () => {
       displayImage.src = project.image;
       lightbox.classList.remove("is-loading");
       loading.hidden = true;
     };
-    image.onerror = () => {
+    preloader.onerror = () => {
       lightbox.classList.remove("is-loading");
       loading.hidden = true;
       displayImage.alt = `${project.alt} yüklenemedi`;
     };
-    image.src = project.image;
-
+    preloader.src = project.image;
     updateArrowState();
   };
 
@@ -233,7 +220,6 @@
     lightbox.hidden = false;
     document.body.classList.add("project-lightbox-open");
     renderProject(index);
-
     requestAnimationFrame(() => {
       lightbox.classList.add("is-open");
       closeButton.focus({ preventScroll: true });
@@ -243,7 +229,6 @@
   const closeLightbox = () => {
     lightbox.classList.remove("is-open");
     document.body.classList.remove("project-lightbox-open");
-
     window.setTimeout(() => {
       lightbox.hidden = true;
       lastFocusedElement?.focus?.({ preventScroll: true });
@@ -263,7 +248,6 @@
     brandCard
       .querySelectorAll(".project-card-hitarea, .project-card-modal-trigger")
       .forEach((element) => element.remove());
-
     brandCard.style.position = "relative";
     brandCard.classList.add("has-project-modal");
 
@@ -287,22 +271,13 @@
     if (event.key === "Escape") {
       event.preventDefault();
       closeLightbox();
-      return;
-    }
-
-    if (event.key === "ArrowLeft") {
+    } else if (event.key === "ArrowLeft") {
       event.preventDefault();
       showPrevious();
-      return;
-    }
-
-    if (event.key === "ArrowRight") {
+    } else if (event.key === "ArrowRight") {
       event.preventDefault();
       showNext();
-      return;
-    }
-
-    if (event.key === "Tab") {
+    } else if (event.key === "Tab") {
       const focusable = [...lightbox.querySelectorAll("button:not([disabled])")].filter(
         (element) => !element.classList.contains("is-hidden")
       );
@@ -310,7 +285,6 @@
 
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
-
       if (event.shiftKey && document.activeElement === first) {
         event.preventDefault();
         last.focus();
