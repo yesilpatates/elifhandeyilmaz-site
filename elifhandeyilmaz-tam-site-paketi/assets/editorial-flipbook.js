@@ -61,7 +61,7 @@ const createModal = () => {
 
       <footer class="editorial-flipbook-toolbar">
         <button type="button" data-editorial-first>İlk sayfa</button>
-        <span class="editorial-flipbook-counter" aria-live="polite">1 / 21</span>
+        <span class="editorial-flipbook-counter" aria-live="polite">1 / 22</span>
         <button type="button" data-editorial-fullscreen>Tam ekran</button>
       </footer>
     </section>`;
@@ -95,6 +95,13 @@ const updateCounter = (index, total) => {
   const counter = modal?.querySelector(".editorial-flipbook-counter");
   if (!counter) return;
   counter.textContent = `${Math.min(index + 1, total)} / ${total}`;
+};
+
+const finishInitialization = (loading, total) => {
+  pageFlip?.update();
+  updateCounter(0, total);
+  loading.hidden = true;
+  initialized = true;
 };
 
 const renderPdfPages = async () => {
@@ -147,14 +154,20 @@ const renderPdfPages = async () => {
     drawShadow: true,
     flippingTime: 850,
     swipeDistance: 24,
-    clickEventForward: true
+    clickEventForward: true,
+    useMouseEvents: true,
+    showPageCorners: true,
+    disableFlipByClick: false
   });
 
   pageFlip.on("flip", (event) => updateCounter(Number(event.data), pdf.numPages));
-  pageFlip.loadFromHtml(pages);
-  updateCounter(0, pdf.numPages);
-  loading.hidden = true;
-  initialized = true;
+  pageFlip.on("init", () => finishInitialization(loading, pdf.numPages));
+
+  pageFlip.loadFromHTML(pages);
+
+  window.setTimeout(() => {
+    if (!initialized) finishInitialization(loading, pdf.numPages);
+  }, 160);
 };
 
 const showLoadError = (error) => {
@@ -193,6 +206,8 @@ async function openModal() {
     } catch (error) {
       showLoadError(error);
     }
+  } else if (initialized) {
+    window.setTimeout(() => pageFlip?.update(), 80);
   }
 }
 
