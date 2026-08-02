@@ -8,22 +8,48 @@
       liveUrl: "https://www.pilavyeri.com/",
       programs: ["WordPress", "Adobe Illustrator", "Adobe Photoshop"],
       roles: ["Logo ve Marka Kimliği Tasarımı", "UI Tasarımı", "WordPress Web Tasarımı", "İçerik Yazarlığı"],
-      images: [
-        {
-          src: "https://at.adobe.com/dVarBXG3yodZGyop",
-          alt: "PilavYeri responsive web sitesi masaüstü ana sayfa arayüz tasarımı"
-        },
-        {
-          src: "https://at.adobe.com/GZQ2KIgQJpcOmrph",
-          alt: "PilavYeri mobil uyumlu responsive web sitesi arayüz tasarımı"
-        }
-      ]
+      features: [
+        ["▣", "Responsive Tasarım"],
+        ["W", "WordPress"],
+        ["✎", "UI/UX Tasarımı"],
+        ["▯", "Mobil Uyumlu"]
+      ],
+      desktop: {
+        src: "https://at.adobe.com/dVarBXG3yodZGyop",
+        alt: "PilavYeri responsive web sitesi masaüstü ana sayfa arayüz tasarımı"
+      },
+      mobile: {
+        src: "https://at.adobe.com/GZQ2KIgQJpcOmrph",
+        alt: "PilavYeri mobil uyumlu responsive web sitesi arayüz tasarımı"
+      }
+    },
+    {
+      id: "sigortaguru",
+      title: "SigortaGuru – Sigorta Danışmanlığı Web Sitesi",
+      type: "Web & Arayüz Tasarımı",
+      description: "SigortaGuru için sigorta hizmetlerinin anlaşılır biçimde sunulduğu, kullanıcıların ihtiyaç duydukları poliçelere ulaşabildiği ve hızlı teklif talebi oluşturabildiği responsive bir web sitesi tasarladım. Arayüz tasarımı, sayfa yapısı, hizmet alanları ve kullanıcı yönlendirmeleri WordPress üzerinde oluşturuldu.",
+      liveUrl: "https://www.sigortaguru.com/",
+      programs: ["WordPress", "Kubio", "Adobe Photoshop", "Adobe Illustrator"],
+      roles: ["UI Tasarımı", "WordPress Web Tasarımı", "Sayfa Kurgusu", "İçerik Düzenleme", "Görsel Uygulama"],
+      features: [
+        ["▣", "Responsive Tasarım"],
+        ["W", "WordPress"],
+        ["✎", "UI/UX Tasarımı"],
+        ["▯", "Mobil Uyumlu"]
+      ],
+      desktop: {
+        src: "https://at.adobe.com/ht82Hb6OULgGRZOw",
+        alt: "SigortaGuru sigorta danışmanlığı web sitesi masaüstü arayüzü"
+      },
+      mobile: {
+        src: "https://at.adobe.com/xxF8uU9bB1wm2IBZ",
+        alt: "SigortaGuru sigorta danışmanlığı web sitesi mobil uyumlu arayüzü"
+      }
     }
   ];
 
   let modal = null;
   let activeProjectIndex = 0;
-  let activeImageIndex = 0;
   let lastFocused = null;
 
   const escapeHtml = (value = "") => String(value).replace(/[&<>"']/g, (character) => ({
@@ -56,32 +82,49 @@
         </header>
 
         <button class="web-project-nav prev" type="button" aria-label="Önceki web projesi">‹</button>
-        <div class="web-project-content">
-          <div class="web-project-media">
-            <div class="web-project-image-wrap">
-              <div class="web-project-image-loading">Görsel yükleniyor…</div>
-              <img class="web-project-image" alt="" referrerpolicy="no-referrer">
+
+        <div class="web-project-showcase">
+          <div class="web-project-device-stage">
+            <span class="device-label desktop-label">Masaüstü Görünüm</span>
+            <div class="web-laptop" aria-label="Masaüstü site görünümü">
+              <div class="web-laptop-camera" aria-hidden="true"></div>
+              <div class="web-laptop-screen">
+                <div class="web-device-loading">Görsel yükleniyor…</div>
+                <img class="web-project-desktop-image" alt="" referrerpolicy="no-referrer">
+              </div>
+              <div class="web-laptop-base" aria-hidden="true"><span></span></div>
             </div>
-            <div class="web-project-thumbnails" aria-label="Proje görselleri"></div>
+
+            <span class="device-label mobile-label">Mobil Uyumlu Görünüm</span>
+            <div class="web-phone" aria-label="Mobil site görünümü">
+              <div class="web-phone-speaker" aria-hidden="true"></div>
+              <div class="web-phone-screen">
+                <div class="web-device-loading">Görsel yükleniyor…</div>
+                <img class="web-project-mobile-image" alt="" referrerpolicy="no-referrer">
+              </div>
+            </div>
           </div>
 
-          <aside class="web-project-details">
-            <span class="web-project-counter" aria-live="polite"></span>
-            <section class="web-project-card">
-              <h3>Proje Hakkında</h3>
-              <p class="web-project-description"></p>
-            </section>
-            <section class="web-project-card">
-              <h3>Kullanılan Programlar</h3>
-              <div class="web-project-tags web-project-programs"></div>
-            </section>
-            <section class="web-project-card">
-              <h3>Projedeki Rolüm</h3>
-              <div class="web-project-tags web-project-roles"></div>
-            </section>
-            <a class="web-project-live" href="#" target="_blank" rel="noopener noreferrer">Canlı Siteyi Görüntüle <span aria-hidden="true">↗</span></a>
-          </aside>
+          <div class="web-feature-badges"></div>
         </div>
+
+        <div class="web-project-info">
+          <section class="web-project-card web-project-about">
+            <span class="web-project-counter" aria-live="polite"></span>
+            <h3>Proje Hakkında</h3>
+            <p class="web-project-description"></p>
+            <a class="web-project-live" href="#" target="_blank" rel="noopener noreferrer">Canlı Siteyi Görüntüle <span aria-hidden="true">↗</span></a>
+          </section>
+          <section class="web-project-card">
+            <h3>Kullanılan Programlar</h3>
+            <div class="web-project-tags web-project-programs"></div>
+          </section>
+          <section class="web-project-card">
+            <h3>Projedeki Rolüm</h3>
+            <div class="web-project-tags web-project-roles"></div>
+          </section>
+        </div>
+
         <button class="web-project-nav next" type="button" aria-label="Sonraki web projesi">›</button>
       </section>`;
 
@@ -91,29 +134,17 @@
       element.addEventListener("click", closeModal);
     });
 
-    modal.querySelector(".web-project-nav.prev")?.addEventListener("click", () => {
-      if (webProjects.length < 2) return;
-      renderProject(activeProjectIndex - 1);
-    });
-
-    modal.querySelector(".web-project-nav.next")?.addEventListener("click", () => {
-      if (webProjects.length < 2) return;
-      renderProject(activeProjectIndex + 1);
-    });
+    modal.querySelector(".web-project-nav.prev")?.addEventListener("click", () => renderProject(activeProjectIndex - 1));
+    modal.querySelector(".web-project-nav.next")?.addEventListener("click", () => renderProject(activeProjectIndex + 1));
 
     return modal;
   };
 
-  const renderImage = (index) => {
-    const project = webProjects[activeProjectIndex];
-    if (!project?.images?.length) return;
-
-    activeImageIndex = (index + project.images.length) % project.images.length;
-    const item = project.images[activeImageIndex];
-    const image = modal.querySelector(".web-project-image");
-    const loading = modal.querySelector(".web-project-image-loading");
-
+  const loadDeviceImage = (selector, item) => {
+    const image = modal.querySelector(selector);
+    const loading = image.closest(".web-laptop-screen, .web-phone-screen")?.querySelector(".web-device-loading");
     loading.hidden = false;
+    loading.textContent = "Görsel yükleniyor…";
     image.removeAttribute("src");
     image.alt = item.alt;
 
@@ -128,16 +159,10 @@
       loading.textContent = "Görsel yüklenemedi.";
     };
     preloader.src = item.src;
-
-    modal.querySelectorAll(".web-project-thumb").forEach((thumb, thumbIndex) => {
-      thumb.classList.toggle("is-active", thumbIndex === activeImageIndex);
-      thumb.setAttribute("aria-current", thumbIndex === activeImageIndex ? "true" : "false");
-    });
   };
 
   const renderProject = (index) => {
     activeProjectIndex = (index + webProjects.length) % webProjects.length;
-    activeImageIndex = 0;
     const project = webProjects[activeProjectIndex];
     const dialog = modal.querySelector(".web-project-dialog");
     dialog.scrollTop = 0;
@@ -147,36 +172,19 @@
     modal.querySelector(".web-project-description").textContent = project.description;
     modal.querySelector(".web-project-counter").textContent = `${activeProjectIndex + 1} / ${webProjects.length}`;
 
-    const programs = modal.querySelector(".web-project-programs");
-    programs.innerHTML = project.programs.map((program) => `<span>${escapeHtml(program)}</span>`).join("");
-
-    const roles = modal.querySelector(".web-project-roles");
-    roles.innerHTML = project.roles.map((role) => `<span>${escapeHtml(role)}</span>`).join("");
+    modal.querySelector(".web-project-programs").innerHTML = project.programs
+      .map((program) => `<span>${escapeHtml(program)}</span>`).join("");
+    modal.querySelector(".web-project-roles").innerHTML = project.roles
+      .map((role) => `<span>${escapeHtml(role)}</span>`).join("");
+    modal.querySelector(".web-feature-badges").innerHTML = project.features
+      .map(([icon, label]) => `<div class="web-feature-badge"><span aria-hidden="true">${escapeHtml(icon)}</span><strong>${escapeHtml(label)}</strong></div>`).join("");
 
     const liveLink = modal.querySelector(".web-project-live");
     liveLink.href = project.liveUrl;
     liveLink.hidden = !project.liveUrl;
 
-    const thumbnails = modal.querySelector(".web-project-thumbnails");
-    thumbnails.replaceChildren();
-    project.images.forEach((item, imageIndex) => {
-      const button = document.createElement("button");
-      button.className = "web-project-thumb";
-      button.type = "button";
-      button.setAttribute("aria-label", `${imageIndex + 1}. proje görselini göster`);
-      button.innerHTML = `<img src="${item.src}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">`;
-      button.addEventListener("click", () => renderImage(imageIndex));
-      thumbnails.appendChild(button);
-    });
-    thumbnails.hidden = project.images.length < 2;
-
-    const projectNavigationEnabled = webProjects.length > 1;
-    modal.querySelectorAll(".web-project-nav").forEach((button) => {
-      button.classList.toggle("is-hidden", !projectNavigationEnabled);
-      button.disabled = !projectNavigationEnabled;
-    });
-
-    renderImage(0);
+    loadDeviceImage(".web-project-desktop-image", project.desktop);
+    loadDeviceImage(".web-project-mobile-image", project.mobile);
   };
 
   function openModal(index = 0) {
@@ -212,8 +220,17 @@
     card.dataset.webProjectsBound = "true";
     card.style.position = "relative";
     card.classList.add("has-web-project-modal");
-    card.querySelectorAll(".web-project-card-trigger").forEach((element) => element.remove());
 
+    const visual = card.querySelector(".project-visual");
+    if (visual) {
+      visual.classList.add("web-category-preview");
+      visual.innerHTML = `
+        <div class="web-card-laptop"><img src="${webProjects[0].desktop.src}" alt="" referrerpolicy="no-referrer"></div>
+        <div class="web-card-phone"><img src="${webProjects[0].mobile.src}" alt="" referrerpolicy="no-referrer"></div>
+        <span class="web-card-count">${webProjects.length} proje</span>`;
+    }
+
+    card.querySelectorAll(".web-project-card-trigger").forEach((element) => element.remove());
     const trigger = document.createElement("button");
     trigger.className = "web-project-card-trigger";
     trigger.type = "button";
@@ -239,14 +256,12 @@
       closeModal();
       return;
     }
-
-    if (event.key === "ArrowLeft" && webProjects.length > 1) {
+    if (event.key === "ArrowLeft") {
       event.preventDefault();
       renderProject(activeProjectIndex - 1);
       return;
     }
-
-    if (event.key === "ArrowRight" && webProjects.length > 1) {
+    if (event.key === "ArrowRight") {
       event.preventDefault();
       renderProject(activeProjectIndex + 1);
       return;
