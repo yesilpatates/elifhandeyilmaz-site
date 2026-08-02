@@ -11,7 +11,11 @@
       images: [
         {
           src: "https://at.adobe.com/dVarBXG3yodZGyop",
-          alt: "PilavYeri responsive web sitesi ana sayfa arayüz tasarımı"
+          alt: "PilavYeri responsive web sitesi masaüstü ana sayfa arayüz tasarımı"
+        },
+        {
+          src: "https://at.adobe.com/GZQ2KIgQJpcOmrph",
+          alt: "PilavYeri mobil uyumlu responsive web sitesi arayüz tasarımı"
         }
       ]
     }
