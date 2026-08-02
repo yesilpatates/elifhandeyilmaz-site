@@ -47,7 +47,7 @@
     if (document.getElementById("web-projects-script")) return;
     const webScript = document.createElement("script");
     webScript.id = "web-projects-script";
-    webScript.src = "assets/web-projects.js?v=20260803-web-modal-v6";
+    webScript.src = "assets/web-projects.js?v=20260803-web-modal-v7";
     webScript.defer = true;
     document.body.appendChild(webScript);
   };
