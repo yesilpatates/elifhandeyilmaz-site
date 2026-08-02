@@ -1,3 +1,5 @@
+@import url("project-lightbox.css");
+
 /* Seven-category project collage */
 .projects .project-grid {
   display: grid;
