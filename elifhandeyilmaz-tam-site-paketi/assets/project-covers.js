@@ -1,47 +1,12 @@
 (() => {
   const covers = [
-    {
-      src: "https://at.adobe.com/ufiqB66wHJRAswSX",
-      alt: "Marka & Kurumsal Kimlik Tasarımı kapak görseli",
-      title: "Marka & Kurumsal Kimlik",
-      label: "BRAND"
-    },
-    {
-      src: "https://at.adobe.com/zvF3n3Q17egUXpiR",
-      alt: "Editoryal Tasarım kapak görseli",
-      title: "Editoryal Tasarım",
-      label: "EDITORIAL"
-    },
-    {
-      src: "https://at.adobe.com/hguOld174sEQhlKx",
-      alt: "Etkinlik & Organizasyon Tasarımı kapak görseli",
-      title: "Etkinlik & Organizasyon Tasarımı",
-      label: "EVENT"
-    },
-    {
-      src: "https://at.adobe.com/B3srmMwoUvQfru2c",
-      alt: "Tanıtım & İletişim Tasarımı kapak görseli",
-      title: "Tanıtım & İletişim Tasarımı",
-      label: "PROMO"
-    },
-    {
-      src: "https://at.adobe.com/ec8nszziADbmVHkt",
-      alt: "Sosyal Medya Tasarımı kapak görseli",
-      title: "Sosyal Medya Tasarımı",
-      label: "SOCIAL"
-    },
-    {
-      src: "https://at.adobe.com/vCPmsaZrLIa0TN9Q",
-      alt: "Web & Arayüz Tasarımı kapak görseli",
-      title: "Web & Arayüz Tasarımı",
-      label: "UI / WEB"
-    },
-    {
-      src: "https://at.adobe.com/TYb10FnMlNsmuouV",
-      alt: "Video & Animasyon Tasarımı kapak görseli",
-      title: "Video & Animasyon Tasarımı",
-      label: "MOTION"
-    }
+    { src: "https://at.adobe.com/ufiqB66wHJRAswSX", alt: "Marka & Kurumsal Kimlik Tasarımı kapak görseli", title: "Marka & Kurumsal Kimlik", label: "BRAND" },
+    { src: "https://at.adobe.com/zvF3n3Q17egUXpiR", alt: "Editoryal Tasarım kapak görseli", title: "Editoryal Tasarım", label: "EDITORIAL" },
+    { src: "https://at.adobe.com/hguOld174sEQhlKx", alt: "Etkinlik & Organizasyon Tasarımı kapak görseli", title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
+    { src: "https://at.adobe.com/B3srmMwoUvQfru2c", alt: "Tanıtım & İletişim Tasarımı kapak görseli", title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
+    { src: "https://at.adobe.com/ec8nszziADbmVHkt", alt: "Sosyal Medya Tasarımı kapak görseli", title: "Sosyal Medya Tasarımı", label: "SOCIAL" },
+    { src: "https://at.adobe.com/vCPmsaZrLIa0TN9Q", alt: "Web & Arayüz Tasarımı kapak görseli", title: "Web & Arayüz Tasarımı", label: "UI / WEB" },
+    { src: "https://at.adobe.com/TYb10FnMlNsmuouV", alt: "Video & Animasyon Tasarımı kapak görseli", title: "Video & Animasyon Tasarımı", label: "MOTION" }
   ];
 
   const brandProjects = [
@@ -156,6 +121,38 @@
       alt: "Velorie kadın giyim markası kimlik sunumu",
       company: `Velorie, modern kadının zarafetini ve özgüvenini yansıtan, şıklığı zamansız tasarımlarla buluşturan bir kadın giyim markasıdır. Kaliteli kumaşlar, özenli işçilik ve çağdaş çizgilerle hazırlanan koleksiyonlarıyla her stile estetik ve konfor sunmayı hedefler.`,
       logo: `Velorie logosu, markanın zarafet ve akıcılık anlayışını yansıtan modern bir tipografiyle tasarlanmıştır. “V” harfinden geçen dalga formu; kumaşın yumuşak hareketini, feminen zarafeti ve estetik akışı simgeler. Pudra ve rose gold tonları ise şıklığı, sıcaklığı ve lüksü temsil ederek markaya sofistike bir kimlik kazandırır.`
+    },
+    {
+      title: "DreamPix",
+      category: "Marka & Kurumsal Kimlik",
+      image: "https://at.adobe.com/ZdK6QBsmCqCePH2h",
+      alt: "DreamPix fotoğrafçılık markası kimlik sunumu",
+      company: `DreamPix, özel anları doğal, estetik ve zamansız fotoğraflara dönüştüren profesyonel bir fotoğrafçılık markasıdır. Düğün, nişan, özel gün, portre, aile, etkinlik ve kurumsal çekimlerde; her hikâyenin kendine özgü duygusunu ve atmosferini yansıtan çalışmalar gerçekleştirir. Doğru ışık, güçlü kompozisyon ve doğal anlatım anlayışıyla çalışan DreamPix, yalnızca görüntü kaydetmeyi değil; yaşanan anların duygusunu geleceğe taşımayı amaçlar. Her çekim, müşterinin beklentilerine ve çekimin karakterine uygun olarak özenle planlanır ve profesyonel bir yaklaşımla tamamlanır.`,
+      logo: `DreamPix logosu, fotoğraf makinesi diyaframından esinlenen dairesel bir amblem ile modern bir yazı karakterinden oluşur. Amblemde birbiri etrafında hareket eden parçalar; bakış açısını, doğru anı yakalamayı, yaratıcılığı ve fotoğrafın dinamik yapısını temsil eder. Merkezde oluşan boşluk ise fotoğrafçının odaklandığı kadrajı ve çekilen görüntünün merkezindeki hikâyeyi simgeler. “DREAM” kelimesinin güçlü yapısı markanın profesyonelliğini ve güvenilirliğini; daha ince kullanılan “PIX” bölümü ise fotoğrafın estetik, zarif ve modern yönünü ifade eder. Yeşil ve turkuaz tonları markaya doğal, sakin, güven veren ve çağdaş bir görünüm kazandırır.`
+    },
+    {
+      title: "Taze Masa",
+      category: "Marka & Kurumsal Kimlik",
+      image: "https://at.adobe.com/9tiuggslE5tRJQdC",
+      alt: "Taze Masa sağlıklı yemek markası kimlik sunumu",
+      company: `Taze Masa, sağlıklı ev yemeklerini günlük ve taze malzemelerle hazırlayan modern bir yemek markasıdır. Dengeli beslenmeyi lezzetle buluşturarak, her öğünde ev sıcaklığını ve doğal tatları müşterileriyle buluşturmayı hedefler.`,
+      logo: `Taze Masa logosu; kase, yaprak, kaşık ve masa figürlerini bir araya getirerek sağlıklı beslenme, doğallık ve ev yapımı lezzeti simgeler. Yeşil tonlar tazeliği ve doğal içerikleri, turuncu tonlar sıcaklığı, enerjiyi ve iştahı temsil eder. Masa altındaki kalp detayı ise yemeklerin özenle ve sevgiyle hazırlandığını vurgulayarak markanın samimi ve güvenilir kimliğini yansıtır.`
+    },
+    {
+      title: "Dentiva Plus",
+      category: "Marka & Kurumsal Kimlik",
+      image: "https://at.adobe.com/SVrf7LnIFv3hJVDK",
+      alt: "Dentiva Plus diş kliniği marka kimliği sunumu",
+      company: `Dentiva Plus, ağız ve diş sağlığı alanında modern, güvenilir ve hasta odaklı hizmet sunan bir diş kliniğidir. Uzman yaklaşımı, güncel tedavi yöntemleri ve konforlu hizmet anlayışıyla her yaştan danışanın sağlıklı ve estetik bir gülüşe kavuşmasını hedefler.`,
+      logo: `Dentiva Plus logosu, diş formundan ilham alan akıcı ve modern bir tasarıma sahiptir. Mavi tonlar güveni, sağlığı ve profesyonelliği; altın tonlar ise kaliteyi ve seçkin hizmet anlayışını temsil eder. Logonun dinamik çizgileri, sağlıklı ve güçlü bir gülüşü simgeler.`
+    },
+    {
+      title: "Louvreia Contemporary Art Cafe",
+      category: "Marka & Kurumsal Kimlik",
+      image: "https://at.adobe.com/SDb7cuviZyClNfyw",
+      alt: "Louvreia Contemporary Art Cafe marka kimliği sunumu",
+      company: `Louvreia Contemporary Art Cafe, sanat ve kahve deneyimini aynı atmosferde buluşturan çağdaş bir sanat kafesidir. Nitelikli kahve sunumlarını sergiler, yaratıcı etkinlikler ve sanat odaklı buluşmalarla birleştirerek ziyaretçilerine ilham veren sosyal bir alan sunar.`,
+      logo: `Louvreia logosu; resim paleti, fırça ve kahve fincanı öğelerini tek bir kompozisyonda birleştirir. Sanat ile kafe kültürünün birlikteliğini simgeleyen tasarımda kiremit ve yeşil tonlar yaratıcılığı, sıcaklığı ve seçkinliği; açık mavi ile siyah ise dinginliği ve çağdaş marka karakterini yansıtır.`
     }
   ];
 
@@ -180,20 +177,15 @@
     image.loading = index < 2 ? "eager" : "lazy";
     image.decoding = "async";
     image.referrerPolicy = "no-referrer";
-    image.addEventListener(
-      "load",
-      () => {
-        visual.replaceChildren(image);
-        visual.classList.add("has-cover");
-      },
-      { once: true }
-    );
+    image.addEventListener("load", () => {
+      visual.replaceChildren(image);
+      visual.classList.add("has-cover");
+    }, { once: true });
   });
 
   const projectIntro = document.querySelector("#projeler .section-heading p");
   if (projectIntro?.textContent.includes("Proje görselleri eklendiğinde")) {
-    projectIntro.textContent =
-      "Grafik tasarımın farklı alanlarında geliştirdiğim seçili çalışmalar ve uzmanlık kategorileri.";
+    projectIntro.textContent = "Grafik tasarımın farklı alanlarında geliştirdiğim seçili çalışmalar ve uzmanlık kategorileri.";
   }
 
   const createLightbox = () => {
@@ -327,9 +319,7 @@
 
   const brandCard = cards[0];
   if (brandCard) {
-    brandCard
-      .querySelectorAll(".project-card-hitarea, .project-card-modal-trigger")
-      .forEach((element) => element.remove());
+    brandCard.querySelectorAll(".project-card-hitarea, .project-card-modal-trigger").forEach((element) => element.remove());
     brandCard.style.position = "relative";
     brandCard.classList.add("has-project-modal");
 
@@ -343,9 +333,7 @@
 
   prevButton.addEventListener("click", showPrevious);
   nextButton.addEventListener("click", showNext);
-  lightbox.querySelectorAll("[data-lightbox-close]").forEach((element) => {
-    element.addEventListener("click", closeLightbox);
-  });
+  lightbox.querySelectorAll("[data-lightbox-close]").forEach((element) => element.addEventListener("click", closeLightbox));
 
   document.addEventListener("keydown", (event) => {
     if (lightbox.hidden) return;
@@ -360,9 +348,7 @@
       event.preventDefault();
       showNext();
     } else if (event.key === "Tab") {
-      const focusable = [...lightbox.querySelectorAll("button:not([disabled])")].filter(
-        (element) => !element.classList.contains("is-hidden")
-      );
+      const focusable = [...lightbox.querySelectorAll("button:not([disabled])")].filter((element) => !element.classList.contains("is-hidden"));
       if (!focusable.length) return;
 
       const first = focusable[0];
