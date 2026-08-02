@@ -1,0 +1,219 @@
+import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@6.1.200/build/pdf.mjs";
+import { PageFlip } from "https://cdn.jsdelivr.net/npm/page-flip@2.0.7/+esm";
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@6.1.200/build/pdf.worker.mjs";
+
+const editorialProject = {
+  title: "Edinburg Tarih, Kültür ve Zamansız Güzellik",
+  description: "Kültür Dergisi",
+  pdf: "assets/editorial/edinburg-tanitim.pdf"
+};
+
+let pdfPromise = null;
+let pageFlip = null;
+let modal = null;
+let initialized = false;
+let lastFocused = null;
+
+const getPdf = () => {
+  if (!pdfPromise) {
+    pdfPromise = pdfjsLib.getDocument({ url: editorialProject.pdf }).promise;
+  }
+  return pdfPromise;
+};
+
+const createModal = () => {
+  if (modal) return modal;
+  modal = document.createElement("div");
+  modal.className = "editorial-flipbook";
+  modal.hidden = true;
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.setAttribute("aria-labelledby", "editorial-flipbook-title");
+  modal.innerHTML = `
+    <div class="editorial-flipbook-backdrop" data-editorial-close></div>
+    <section class="editorial-flipbook-dialog">
+      <header class="editorial-flipbook-header">
+        <div>
+          <span class="editorial-flipbook-kicker">Editoryal Tasarım</span>
+          <h2 class="editorial-flipbook-title" id="editorial-flipbook-title">${editorialProject.title}</h2>
+          <p class="editorial-flipbook-description">${editorialProject.description}</p>
+        </div>
+        <button class="editorial-flipbook-close" type="button" aria-label="Dergiyi kapat" data-editorial-close>×</button>
+      </header>
+      <div class="editorial-flipbook-stage">
+        <button class="editorial-flipbook-nav editorial-flipbook-prev" type="button" aria-label="Önceki sayfa">‹</button>
+        <div class="editorial-book-shell"><div class="editorial-book" id="edinburg-book"></div></div>
+        <button class="editorial-flipbook-nav editorial-flipbook-next" type="button" aria-label="Sonraki sayfa">›</button>
+        <div class="editorial-flipbook-loading">Dergi hazırlanıyor…</div>
+      </div>
+      <footer class="editorial-flipbook-toolbar">
+        <button type="button" data-editorial-first>İlk sayfa</button>
+        <span class="editorial-flipbook-counter" aria-live="polite">1 / 21</span>
+        <button type="button" data-editorial-fullscreen>Tam ekran</button>
+      </footer>
+    </section>`;
+  document.body.appendChild(modal);
+
+  modal.querySelectorAll("[data-editorial-close]").forEach((element) => element.addEventListener("click", closeModal));
+  modal.querySelector(".editorial-flipbook-prev").addEventListener("click", () => pageFlip?.flipPrev("top"));
+  modal.querySelector(".editorial-flipbook-next").addEventListener("click", () => pageFlip?.flipNext("top"));
+  modal.querySelector("[data-editorial-first]").addEventListener("click", () => pageFlip?.turnToPage(0));
+  modal.querySelector("[data-editorial-fullscreen]").addEventListener("click", async () => {
+    const dialog = modal.querySelector(".editorial-flipbook-dialog");
+    if (!document.fullscreenElement) {
+      await dialog.requestFullscreen?.();
+    } else {
+      await document.exitFullscreen?.();
+    }
+  });
+
+  return modal;
+};
+
+const updateCounter = (index, total) => {
+  const counter = modal?.querySelector(".editorial-flipbook-counter");
+  if (!counter) return;
+  counter.textContent = `${Math.min(index + 1, total)} / ${total}`;
+};
+
+const renderPdfPages = async () => {
+  const pdf = await getPdf();
+  const book = modal.querySelector("#edinburg-book");
+  const loading = modal.querySelector(".editorial-flipbook-loading");
+  const pages = [];
+  const renderScale = Math.min(1.45, Math.max(1.05, window.devicePixelRatio || 1));
+
+  for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
+    const page = await pdf.getPage(pageNumber);
+    const viewport = page.getViewport({ scale: renderScale });
+    const pageElement = document.createElement("div");
+    pageElement.className = "editorial-page";
+    if (pageNumber === 1 || pageNumber === pdf.numPages) pageElement.dataset.density = "hard";
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d", { alpha: false });
+    canvas.width = Math.ceil(viewport.width);
+    canvas.height = Math.ceil(viewport.height);
+    canvas.setAttribute("aria-label", `${editorialProject.title}, sayfa ${pageNumber}`);
+    pageElement.appendChild(canvas);
+    book.appendChild(pageElement);
+    await page.render({ canvasContext: context, viewport }).promise;
+    pages.push(pageElement);
+    loading.textContent = `Dergi hazırlanıyor… ${pageNumber} / ${pdf.numPages}`;
+  }
+
+  pageFlip = new PageFlip(book, {
+    width: 595,
+    height: 842,
+    size: "stretch",
+    minWidth: 280,
+    maxWidth: 720,
+    minHeight: 396,
+    maxHeight: 1018,
+    maxShadowOpacity: 0.38,
+    showCover: true,
+    mobileScrollSupport: false,
+    usePortrait: true,
+    autoSize: true,
+    drawShadow: true,
+    flippingTime: 850,
+    swipeDistance: 24,
+    clickEventForward: true
+  });
+
+  pageFlip.on("flip", (event) => updateCounter(Number(event.data), pdf.numPages));
+  pageFlip.loadFromHtml(pages);
+  updateCounter(0, pdf.numPages);
+  loading.hidden = true;
+  initialized = true;
+};
+
+const showLoadError = (error) => {
+  const stage = modal.querySelector(".editorial-flipbook-stage");
+  const loading = modal.querySelector(".editorial-flipbook-loading");
+  loading.hidden = true;
+  const message = document.createElement("div");
+  message.className = "editorial-flipbook-error";
+  message.innerHTML = `PDF dosyası henüz yayın klasöründe bulunamadı.<code>${editorialProject.pdf}</code>`;
+  stage.appendChild(message);
+  console.error("Editoryal PDF yüklenemedi:", error);
+};
+
+async function openModal() {
+  createModal();
+  lastFocused = document.activeElement;
+  modal.hidden = false;
+  document.body.classList.add("editorial-flipbook-open");
+  requestAnimationFrame(() => {
+    modal.classList.add("is-open");
+    modal.querySelector(".editorial-flipbook-close")?.focus({ preventScroll: true });
+  });
+  if (!initialized) {
+    try {
+      await renderPdfPages();
+    } catch (error) {
+      showLoadError(error);
+    }
+  }
+}
+
+function closeModal() {
+  if (!modal) return;
+  modal.classList.remove("is-open");
+  document.body.classList.remove("editorial-flipbook-open");
+  window.setTimeout(() => {
+    modal.hidden = true;
+    lastFocused?.focus?.({ preventScroll: true });
+  }, 220);
+}
+
+const enhanceEditorialCard = async () => {
+  const cards = [...document.querySelectorAll(".project-card")];
+  const card = cards[1];
+  if (!card || card.dataset.editorialFlipbook === "true") return;
+  card.dataset.editorialFlipbook = "true";
+  card.classList.add("has-editorial-flipbook");
+  card.querySelectorAll(".editorial-card-modal-trigger").forEach((item) => item.remove());
+
+  const title = card.querySelector(".project-body h3");
+  const description = card.querySelector(".project-body p");
+  if (title) title.textContent = "Editoryal Tasarım";
+  if (description) description.textContent = `${editorialProject.title} — ${editorialProject.description}`;
+
+  const trigger = document.createElement("button");
+  trigger.type = "button";
+  trigger.className = "editorial-card-modal-trigger";
+  trigger.setAttribute("aria-label", `${editorialProject.title} çevirmeli dergisini aç`);
+  trigger.addEventListener("click", openModal);
+  card.appendChild(trigger);
+
+  try {
+    const pdf = await getPdf();
+    const page = await pdf.getPage(1);
+    const viewport = page.getViewport({ scale: 0.72 });
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.ceil(viewport.width);
+    canvas.height = Math.ceil(viewport.height);
+    await page.render({ canvasContext: canvas.getContext("2d", { alpha: false }), viewport }).promise;
+    const image = document.createElement("img");
+    image.className = "editorial-card-cover";
+    image.src = canvas.toDataURL("image/jpeg", 0.88);
+    image.alt = `${editorialProject.title} kapak görseli`;
+    card.querySelector(".project-visual")?.replaceChildren(image);
+  } catch (error) {
+    console.info("Editoryal kapak PDF yüklenince otomatik görünecek.", error);
+  }
+};
+
+document.addEventListener("keydown", (event) => {
+  if (!modal || modal.hidden) return;
+  if (event.key === "Escape") closeModal();
+  if (event.key === "ArrowLeft") pageFlip?.flipPrev("top");
+  if (event.key === "ArrowRight") pageFlip?.flipNext("top");
+});
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => window.setTimeout(enhanceEditorialCard, 450), { once: true });
+} else {
+  window.setTimeout(enhanceEditorialCard, 450);
+}
