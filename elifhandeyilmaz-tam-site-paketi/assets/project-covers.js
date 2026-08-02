@@ -129,6 +129,9 @@
     )
   ];
 
+  const sagligimBurada = brandProjects.shift();
+  if (sagligimBurada) brandProjects.push(sagligimBurada);
+
   const cards = [...document.querySelectorAll(".project-card")];
 
   cards.forEach((card, index) => {
