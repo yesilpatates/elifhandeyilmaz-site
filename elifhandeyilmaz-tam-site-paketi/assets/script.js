@@ -75,7 +75,7 @@
   disableEditorialSection();
 
   const brandImageScript = document.createElement("script");
-  brandImageScript.src = "assets/brand-image-urls.js?v=20260802-v1";
+  brandImageScript.src = "assets/brand-image-urls.js?v=20260803-brand-v2";
   brandImageScript.defer = true;
   brandImageScript.onload = loadCoreScript;
   brandImageScript.onerror = loadCoreScript;
