@@ -16,6 +16,8 @@ const editorialProjects = [
     id: "yat-haber-59",
     title: "Yat Haber Türkiye - Sayı 59",
     description: "Denizcilik ve Yatçılık Dergisi",
+    details: "Yat Haber Türkiye için hazırladığım dergi sayılarında; kapak, içindekiler, haber, röportaj ve sektörel içeriklerin sayfa tasarımlarını oluşturdum. Güçlü görselleri, dengeli tipografi ve düzenli bir grid sistemiyle bir araya getirerek denizcilik sektörüne uygun, modern ve profesyonel bir yayın dili geliştirdim.",
+    note: "Dergide yer alan çoğu firma reklamları ilgili markalar veya ajanslar tarafından hazır olarak iletilmiştir. Tarafımdan hazırlanan reklam sayfası tasarımları portfolyonun Tanıtım & İletişim kategorisinde ayrıca yer almaktadır.",
     cover: "https://at.adobe.com/kjH90ri75pZojf4I",
     pdf: "https://at.adobe.com/KGRtwYdVTEkdCIyp",
     pageCount: 68
@@ -147,6 +149,12 @@ const createFlipbookModal = () => {
         <div class="editorial-flipbook-loading">Dergi hazırlanıyor…</div>
       </div>
 
+      <details class="editorial-flipbook-project-info" hidden style="padding:10px 24px 12px;border-top:1px solid #e0d7cb;background:#fff;color:#4f5868;font-size:.84rem;line-height:1.58;overflow:auto;max-height:180px;">
+        <summary style="cursor:pointer;color:#078f99;font-weight:700;list-style-position:inside;">Proje açıklaması</summary>
+        <p class="editorial-flipbook-project-details" style="margin:10px 0 0;"></p>
+        <p class="editorial-flipbook-project-note" style="margin:9px 0 0;padding:9px 11px;border-left:3px solid #07beb8;background:#f4fbfa;color:#586170;"></p>
+      </details>
+
       <footer class="editorial-flipbook-toolbar">
         <button type="button" data-editorial-projects>Projeler</button>
         <button type="button" data-editorial-first>İlk sayfa</button>
@@ -196,8 +204,25 @@ const updateCounter = (index, total) => {
 const updateFlipbookHeader = (project) => {
   const title = flipbookModal?.querySelector(".editorial-flipbook-title");
   const description = flipbookModal?.querySelector(".editorial-flipbook-description");
+  const info = flipbookModal?.querySelector(".editorial-flipbook-project-info");
+  const details = flipbookModal?.querySelector(".editorial-flipbook-project-details");
+  const note = flipbookModal?.querySelector(".editorial-flipbook-project-note");
+
   if (title) title.textContent = project.title;
   if (description) description.textContent = project.description;
+
+  if (info) {
+    info.open = false;
+    info.hidden = !(project.details || project.note);
+  }
+  if (details) {
+    details.textContent = project.details || "";
+    details.hidden = !project.details;
+  }
+  if (note) {
+    note.textContent = project.note ? `Not: ${project.note}` : "";
+    note.hidden = !project.note;
+  }
 };
 
 const resetFlipbook = () => {
