@@ -30,7 +30,14 @@
       <article class="brand-project-card">
         <a href="sagligim-burada/" aria-label="Sağlığım Burada marka sunumunu incele">
           <div class="brand-project-cover">
-            <img src="../../images/projects/marka-kurumsal-kimlik/sagligim-burada-sunum.webp" alt="Sağlığım Burada marka kimliği sunumu" width="1500" height="2000">
+            <img
+              class="js-base64-image"
+              data-src="../../images/projects/marka-kurumsal-kimlik/sagligim-burada-sunum.webp.b64"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              alt="Sağlığım Burada marka kimliği sunumu"
+              width="320"
+              height="480"
+            >
           </div>
           <div class="brand-project-body">
             <div>
@@ -43,5 +50,20 @@
       </article>
     </section>
   </main>
+
+  <script>
+    (() => {
+      document.querySelectorAll(".js-base64-image").forEach(async (image) => {
+        try {
+          const response = await fetch(image.dataset.src, { cache: "force-cache" });
+          if (!response.ok) throw new Error("Görsel yüklenemedi");
+          const base64 = (await response.text()).trim();
+          image.src = `data:image/webp;base64,${base64}`;
+        } catch (error) {
+          image.alt = `${image.alt} (yüklenemedi)`;
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
