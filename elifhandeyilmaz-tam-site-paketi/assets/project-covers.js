@@ -48,7 +48,7 @@
     {
       title: "Sağlığım Burada",
       category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/S38mohytVzQkPjQS",
+      image: "https://at.adobe.com/KmkSnTLquMN2Nnuc",
       alt: "Sağlığım Burada marka kimliği sunumu",
       company:
         "Sağlığım Burada, bireylerin daha sağlıklı ve dengeli bir yaşam sürmesine destek olmak amacıyla hizmet veren modern bir sağlık ve danışmanlık markasıdır. Güvenilir bilgi, uzman yaklaşımı ve kolay erişilebilir çözümlerle sağlığı hayatın doğal bir parçası hâline getirmeyi hedefler.",
@@ -114,6 +114,36 @@
         "Minik Dünya Kreşi, çocukların güvenli, sevgi dolu ve destekleyici bir ortamda gelişimini önemseyen bir okul öncesi eğitim kurumudur. Oyun temelli eğitim yaklaşımıyla çocukların sosyal, duygusal ve zihinsel becerilerini destekleyerek keşfeden, öğrenen ve özgüvenli bireyler olmalarını hedefler.",
       logo:
         "Minik Dünya Kreşi logosu; doğayı, gelişimi ve çocukların güvenli dünyasını simgeleyen ağaç formu üzerine kurulmuştur. Ağaç içindeki çocuk figürleri oyun, öğrenme ve huzurlu gelişimi temsil eder. Yeşil tonlar doğallığı ve büyümeyi; kahverengi tonlar ise güveni, sıcaklığı ve sağlamlığı yansıtır."
+    },
+    {
+      title: "Coffee Point",
+      category: "Marka & Kurumsal Kimlik",
+      image: "https://at.adobe.com/UbWMtvB7cJ4Cbu0S",
+      alt: "Coffee Point kahve markası kimlik sunumu",
+      company:
+        "Coffee Point, kaliteli kahveyi sıcak bir atmosferle buluşturan modern bir kahve markasıdır. Özenle seçilen kahve çekirdekleri ve özenli sunum anlayışıyla her fincanda keyifli bir kahve deneyimi sunmayı hedefler. Günün her anında lezzetli molalar için misafirlerini samimi bir ortamda ağırlar.",
+      logo:
+        "Coffee Point logosu, buharı tüten kahve fincanını sade ve modern çizgilerle yorumlayarak tazelik, sıcaklık ve kaliteyi simgeler. Kahve tonları doğallığı, samimiyeti ve zengin aromayı temsil ederken, dairesel form birlikteliği ve keyifli buluşmaları ifade eder. Minimal tasarımıyla logo, markanın sıcak, modern ve davetkâr kimliğini yansıtır."
+    },
+    {
+      title: "Damla Doğal Kaynak Suyu",
+      category: "Marka & Kurumsal Kimlik",
+      image: "https://at.adobe.com/VXg1M1uOJVFw7wnQ",
+      alt: "Damla Doğal Kaynak Suyu marka kimliği sunumu",
+      company:
+        "Damla Doğal Kaynak Suyu, doğal kaynaklardan özenle elde edilen içme suyunu, saflığını ve doğal mineral dengesini koruyarak tüketicilere ulaştıran güvenilir bir su markasıdır. Kalite, hijyen ve sürdürülebilir üretim anlayışıyla her damlada doğanın tazeliğini sunmayı hedefler.",
+      logo:
+        "Damla logosu, su damlası formunu modern bir tasarımla birleştirerek saflığı, doğallığı ve yaşamı simgeler. Mavi tonlar temizliği, güveni ve ferahlığı temsil ederken, alttaki akış çizgisi doğal su kaynaklarının sürekliliğini ifade eder. Güçlü ve akıcı tipografiyle tamamlanan logo, markanın doğal, güvenilir ve kaliteli kimliğini yansıtır."
+    },
+    {
+      title: "SigortaGuru",
+      category: "Marka & Kurumsal Kimlik",
+      image: "https://at.adobe.com/tPz7taRsxvs8ju6n",
+      alt: "SigortaGuru sigorta danışmanlığı marka kimliği sunumu",
+      company:
+        "SigortaGuru, bireylerin ve işletmelerin sigorta ihtiyaçlarına güvenilir, hızlı ve doğru çözümler sunan profesyonel bir sigorta danışmanlık markasıdır. Trafik, kasko, konut, sağlık ve iş yeri sigortaları başta olmak üzere farklı branşlarda, ihtiyaçlara uygun poliçe seçenekleriyle müşterilerinin yanında yer alır.",
+      logo:
+        "SigortaGuru logosu, bilgeliği ve güveni simgeleyen baykuş figürünü modern bir tasarımla buluşturur. Baykuş, doğru yönlendirme ve uzman danışmanlığı temsil ederken; turkuaz tonları güveni, huzuru ve şeffaflığı, koyu mavi tonları ise profesyonelliği ve kurumsallığı ifade eder. Logo, markanın bilgiye dayalı, güven veren ve müşteri odaklı hizmet anlayışını yansıtır."
     }
   ];
 
