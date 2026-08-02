@@ -5,7 +5,7 @@ const issue58 = {
   details: "Yat Haber Türkiye için hazırladığım dergi sayılarında; kapak, içindekiler, haber, röportaj ve sektörel içeriklerin sayfa tasarımlarını oluşturdum. Güçlü görselleri, dengeli tipografi ve düzenli bir grid sistemiyle bir araya getirerek denizcilik sektörüne uygun, modern ve profesyonel bir yayın dili geliştirdim.",
   note: "Dergide yer alan çoğu firma reklamları ilgili markalar veya ajanslar tarafından hazır olarak iletilmiştir. Tarafımdan hazırlanan reklam sayfası tasarımları portfolyonun Tanıtım & İletişim kategorisinde ayrıca yer almaktadır.",
   cover: "https://platform-cs-jpn3.adobe.io/rendition/id/urn:aaid:sc:AP:fde4d66f-df5b-41d9-a8a0-4be4d6d777b6;size=600",
-  pdf: "https://platform-cs-jpn3.adobe.io/content/storage/id/urn:aaid:sc:AP:fde4d66f-df5b-41d9-a8a0-4be4d6d777b6",
+  externalUrl: "https://www.adobe.com/files/id/urn:aaid:sc:AP:fde4d66f-df5b-41d9-a8a0-4be4d6d777b6",
   pageCount: 76
 };
 
@@ -16,13 +16,13 @@ const netaSea81 = {
   details: "Neta Sea Sayı 81 için kapak, haber, özel dosya, röportaj ve sektörel içeriklerin sayfa tasarımlarını oluşturdum. Denizcilik ve savunma sanayii temalarını güçlü görseller, teknik bilgi hiyerarşisi, dengeli tipografi ve düzenli bir grid sistemiyle bir araya getirerek modern ve profesyonel bir yayın dili geliştirdim.",
   note: "Dergide yer alan çoğu firma reklamları ilgili markalar veya ajanslar tarafından hazır olarak iletilmiştir. Tarafımdan hazırlanan reklam sayfası tasarımları portfolyonun Tanıtım & İletişim kategorisinde ayrıca yer almaktadır.",
   cover: "assets/neta-sea-81-cover.svg",
-  externalUrl: "https://www.canva.com/d/WN4OceICOk0QqAj",
+  externalUrl: "https://www.adobe.com/files/id/urn:aaid:sc:AP:0a4955dc-a965-4b1d-80df-11053c1558ca",
   pageCount: 53
 };
 
 const extraProjects = [issue58, netaSea81];
 const sourceUrl = new URL("./editorial-flipbook.js", import.meta.url);
-sourceUrl.searchParams.set("v", "20260802-neta-sea-81");
+sourceUrl.searchParams.set("v", "20260802-editorial-links-fix");
 
 try {
   const response = await fetch(sourceUrl, { cache: "no-store" });
@@ -46,6 +46,15 @@ try {
     marker,
     `,\n${serializedProjects}\n];\n\nconst pdfPromises`
   );
+
+  const issue59PdfLine = '    pdf: "https://at.adobe.com/KGRtwYdVTEkdCIyp",';
+  const issue59ExternalLine = `${issue59PdfLine}\n    externalUrl: "https://www.adobe.com/files/id/urn:aaid:sc:AP:2a14247e-5214-4efc-9414-8cb63a5ff4f2",`;
+
+  if (!source.includes(issue59PdfLine)) {
+    throw new Error("Sayı 59 proje kaydı bulunamadı.");
+  }
+
+  source = source.replace(issue59PdfLine, issue59ExternalLine);
 
   source = source.replace(
     "<em>Çevirmeli dergiyi aç →</em>",
