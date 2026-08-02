@@ -9,8 +9,20 @@ const issue58 = {
   pageCount: 76
 };
 
+const netaSea81 = {
+  id: "neta-sea-81",
+  title: "Neta Sea - Sayı 81",
+  description: "Denizcilik ve Savunma Sanayii Dergisi",
+  details: "Neta Sea Sayı 81 için kapak, haber, özel dosya, röportaj ve sektörel içeriklerin sayfa tasarımlarını oluşturdum. Denizcilik ve savunma sanayii temalarını güçlü görseller, teknik bilgi hiyerarşisi, dengeli tipografi ve düzenli bir grid sistemiyle bir araya getirerek modern ve profesyonel bir yayın dili geliştirdim.",
+  note: "Dergide yer alan çoğu firma reklamları ilgili markalar veya ajanslar tarafından hazır olarak iletilmiştir. Tarafımdan hazırlanan reklam sayfası tasarımları portfolyonun Tanıtım & İletişim kategorisinde ayrıca yer almaktadır.",
+  cover: "assets/neta-sea-81-cover.svg",
+  externalUrl: "https://www.canva.com/d/WN4OceICOk0QqAj",
+  pageCount: 53
+};
+
+const extraProjects = [issue58, netaSea81];
 const sourceUrl = new URL("./editorial-flipbook.js", import.meta.url);
-sourceUrl.searchParams.set("v", "20260802-issue58");
+sourceUrl.searchParams.set("v", "20260802-neta-sea-81");
 
 try {
   const response = await fetch(sourceUrl, { cache: "no-store" });
@@ -23,15 +35,40 @@ try {
     throw new Error("Editoryal proje listesi bulunamadı.");
   }
 
-  const serializedProject = JSON.stringify(issue58, null, 2)
-    .split("\n")
-    .map((line) => `  ${line}`)
-    .join("\n");
+  const serializedProjects = extraProjects
+    .map((project) => JSON.stringify(project, null, 2)
+      .split("\n")
+      .map((line) => `  ${line}`)
+      .join("\n"))
+    .join(",\n");
 
   source = source.replace(
     marker,
-    `,\n${serializedProject}\n];\n\nconst pdfPromises`
+    `,\n${serializedProjects}\n];\n\nconst pdfPromises`
   );
+
+  source = source.replace(
+    "<em>Çevirmeli dergiyi aç →</em>",
+    '<em>${project.externalUrl ? "Dergiyi aç ↗" : "Çevirmeli dergiyi aç →"}</em>'
+  );
+
+  const defaultOpenBlock = `      returnToLibrary = true;
+      closeLibrary(false);
+      openFlipbook(project);`;
+
+  const externalOpenBlock = `      if (project.externalUrl) {
+        window.open(project.externalUrl, "_blank", "noopener,noreferrer");
+        return;
+      }
+      returnToLibrary = true;
+      closeLibrary(false);
+      openFlipbook(project);`;
+
+  if (!source.includes(defaultOpenBlock)) {
+    throw new Error("Proje açılış işleyicisi bulunamadı.");
+  }
+
+  source = source.replace(defaultOpenBlock, externalOpenBlock);
 
   const moduleUrl = URL.createObjectURL(
     new Blob([source], { type: "text/javascript" })
@@ -43,6 +80,6 @@ try {
     URL.revokeObjectURL(moduleUrl);
   }
 } catch (error) {
-  console.error("Sayı 58 editoryal flipbook yüklenemedi:", error);
+  console.error("Editoryal flipbook ek projeleri yüklenemedi:", error);
   await import(sourceUrl.href);
 }
