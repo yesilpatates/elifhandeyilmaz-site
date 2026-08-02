@@ -62,6 +62,7 @@
     document.body.appendChild(coreScript);
   };
 
+  addStylesheet("home-hero-polish", "assets/home-hero-polish.css?v=20260803-home-v1");
   disableEditorialSection();
 
   const brandImageScript = document.createElement("script");
