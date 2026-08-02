@@ -58,7 +58,7 @@
     {
       title: "La Douceur",
       category: "Marka & Kurumsal Kimlik",
-      image: "https://at.adobe.com/OrL3DusMqOQzH1QL",
+      image: "https://at.adobe.com/GsfR5p3nDymqlbfR",
       alt: "La Douceur butik tatlı markası kimlik sunumu",
       company:
         "La Douceur, Fransız pastacılık geleneğinden ilham alan butik bir tatlı markasıdır. Özenle hazırlanan tatlıları, kaliteli malzemeleri ve zarif sunum anlayışıyla her lokmayı unutulmaz bir lezzet deneyimine dönüştürmeyi hedefler.",
@@ -90,9 +90,7 @@
     if (placeholderLabel) placeholderLabel.textContent = cover.label;
   });
 
-  const visuals = [...document.querySelectorAll(".project-card .project-visual")];
-
-  visuals.forEach((visual, index) => {
+  [...document.querySelectorAll(".project-card .project-visual")].forEach((visual, index) => {
     const cover = covers[index];
     if (!cover) return;
 
@@ -122,8 +120,8 @@
   }
 
   const createLightbox = () => {
-    const existingLightbox = document.querySelector(".project-lightbox");
-    if (existingLightbox) return existingLightbox;
+    const existing = document.querySelector(".project-lightbox");
+    if (existing) return existing;
 
     const lightbox = document.createElement("div");
     lightbox.className = "project-lightbox";
@@ -133,21 +131,17 @@
     lightbox.setAttribute("aria-labelledby", "project-lightbox-title");
     lightbox.innerHTML = `
       <div class="project-lightbox-backdrop" data-lightbox-close></div>
-
       <button class="project-lightbox-close" type="button" aria-label="Galeriyi kapat" data-lightbox-close>
         <span aria-hidden="true">×</span>
       </button>
-
       <button class="project-lightbox-arrow project-lightbox-prev" type="button" aria-label="Önceki projeyi göster">
         <span aria-hidden="true">‹</span>
       </button>
-
       <article class="project-lightbox-panel">
         <div class="project-lightbox-media">
           <div class="project-lightbox-loading" aria-hidden="true"></div>
           <img class="project-lightbox-image" alt="">
         </div>
-
         <div class="project-lightbox-content">
           <div class="project-lightbox-heading">
             <div>
@@ -156,7 +150,6 @@
             </div>
             <span class="project-lightbox-counter" aria-live="polite"></span>
           </div>
-
           <div class="project-lightbox-copy-grid">
             <section>
               <h3>Firma Hakkında</h3>
@@ -169,7 +162,6 @@
           </div>
         </div>
       </article>
-
       <button class="project-lightbox-arrow project-lightbox-next" type="button" aria-label="Sonraki projeyi göster">
         <span aria-hidden="true">›</span>
       </button>
@@ -180,57 +172,56 @@
   };
 
   const lightbox = createLightbox();
-  const lightboxPanel = lightbox.querySelector(".project-lightbox-panel");
-  const lightboxImage = lightbox.querySelector(".project-lightbox-image");
-  const lightboxLoading = lightbox.querySelector(".project-lightbox-loading");
-  const lightboxTitle = lightbox.querySelector("#project-lightbox-title");
-  const lightboxCategory = lightbox.querySelector(".project-lightbox-category");
-  const lightboxCounter = lightbox.querySelector(".project-lightbox-counter");
-  const lightboxCompany = lightbox.querySelector(".project-lightbox-company");
-  const lightboxLogo = lightbox.querySelector(".project-lightbox-logo");
+  const panel = lightbox.querySelector(".project-lightbox-panel");
+  const displayImage = lightbox.querySelector(".project-lightbox-image");
+  const loading = lightbox.querySelector(".project-lightbox-loading");
+  const title = lightbox.querySelector("#project-lightbox-title");
+  const category = lightbox.querySelector(".project-lightbox-category");
+  const counter = lightbox.querySelector(".project-lightbox-counter");
+  const company = lightbox.querySelector(".project-lightbox-company");
+  const logo = lightbox.querySelector(".project-lightbox-logo");
   const prevButton = lightbox.querySelector(".project-lightbox-prev");
   const nextButton = lightbox.querySelector(".project-lightbox-next");
   const closeButton = lightbox.querySelector(".project-lightbox-close");
 
-  let activeProjectIndex = 0;
+  let activeIndex = 0;
   let lastFocusedElement = null;
 
   const updateArrowState = () => {
-    const hasMultipleProjects = brandProjects.length > 1;
-    prevButton.disabled = !hasMultipleProjects;
-    nextButton.disabled = !hasMultipleProjects;
-    prevButton.classList.toggle("is-hidden", !hasMultipleProjects);
-    nextButton.classList.toggle("is-hidden", !hasMultipleProjects);
+    const enabled = brandProjects.length > 1;
+    prevButton.disabled = !enabled;
+    nextButton.disabled = !enabled;
+    prevButton.classList.toggle("is-hidden", !enabled);
+    nextButton.classList.toggle("is-hidden", !enabled);
   };
 
   const renderProject = (index) => {
-    activeProjectIndex = (index + brandProjects.length) % brandProjects.length;
-    const project = brandProjects[activeProjectIndex];
+    activeIndex = (index + brandProjects.length) % brandProjects.length;
+    const project = brandProjects[activeIndex];
 
-    lightboxPanel.scrollTop = 0;
+    panel.scrollTop = 0;
     lightbox.classList.add("is-loading");
-    lightboxLoading.hidden = false;
-
-    lightboxImage.removeAttribute("src");
-    lightboxImage.alt = project.alt;
-    lightboxTitle.textContent = project.title;
-    lightboxCategory.textContent = project.category;
-    lightboxCounter.textContent = `${activeProjectIndex + 1} / ${brandProjects.length}`;
-    lightboxCompany.textContent = project.company;
-    lightboxLogo.textContent = project.logo;
+    loading.hidden = false;
+    displayImage.removeAttribute("src");
+    displayImage.alt = project.alt;
+    title.textContent = project.title;
+    category.textContent = project.category;
+    counter.textContent = `${activeIndex + 1} / ${brandProjects.length}`;
+    company.textContent = project.company;
+    logo.textContent = project.logo;
 
     const image = new Image();
     image.decoding = "async";
     image.referrerPolicy = "no-referrer";
     image.onload = () => {
-      lightboxImage.src = project.image;
+      displayImage.src = project.image;
       lightbox.classList.remove("is-loading");
-      lightboxLoading.hidden = true;
+      loading.hidden = true;
     };
     image.onerror = () => {
       lightbox.classList.remove("is-loading");
-      lightboxLoading.hidden = true;
-      lightboxImage.alt = `${project.alt} yüklenemedi`;
+      loading.hidden = true;
+      displayImage.alt = `${project.alt} yüklenemedi`;
     };
     image.src = project.image;
 
@@ -259,14 +250,12 @@
     }, 220);
   };
 
-  const showPreviousProject = () => {
-    if (brandProjects.length < 2) return;
-    renderProject(activeProjectIndex - 1);
+  const showPrevious = () => {
+    if (brandProjects.length > 1) renderProject(activeIndex - 1);
   };
 
-  const showNextProject = () => {
-    if (brandProjects.length < 2) return;
-    renderProject(activeProjectIndex + 1);
+  const showNext = () => {
+    if (brandProjects.length > 1) renderProject(activeIndex + 1);
   };
 
   const brandCard = cards[0];
@@ -286,8 +275,8 @@
     brandCard.appendChild(trigger);
   }
 
-  prevButton.addEventListener("click", showPreviousProject);
-  nextButton.addEventListener("click", showNextProject);
+  prevButton.addEventListener("click", showPrevious);
+  nextButton.addEventListener("click", showNext);
   lightbox.querySelectorAll("[data-lightbox-close]").forEach((element) => {
     element.addEventListener("click", closeLightbox);
   });
@@ -303,32 +292,31 @@
 
     if (event.key === "ArrowLeft") {
       event.preventDefault();
-      showPreviousProject();
+      showPrevious();
       return;
     }
 
     if (event.key === "ArrowRight") {
       event.preventDefault();
-      showNextProject();
+      showNext();
       return;
     }
 
     if (event.key === "Tab") {
-      const focusableElements = [...lightbox.querySelectorAll("button:not([disabled])")].filter(
+      const focusable = [...lightbox.querySelectorAll("button:not([disabled])")].filter(
         (element) => !element.classList.contains("is-hidden")
       );
+      if (!focusable.length) return;
 
-      if (!focusableElements.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
 
-      const firstElement = focusableElements[0];
-      const lastElement = focusableElements[focusableElements.length - 1];
-
-      if (event.shiftKey && document.activeElement === firstElement) {
+      if (event.shiftKey && document.activeElement === first) {
         event.preventDefault();
-        lastElement.focus();
-      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
         event.preventDefault();
-        firstElement.focus();
+        first.focus();
       }
     }
   });
