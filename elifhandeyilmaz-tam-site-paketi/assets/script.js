@@ -53,10 +53,11 @@
   disableEditorialSection();
 
   const coreScript = document.createElement("script");
-  coreScript.src = "https://cdn.jsdelivr.net/gh/yesilpatates/elifhandeyilmaz-site@b3008c81c72e3b72de0c51ad7f13d4f9da6a72a1/elifhandeyilmaz-tam-site-paketi/assets/script.js";
+  coreScript.src = "assets/core-script.js?v=20260802-local-v1";
+  coreScript.defer = true;
   coreScript.onload = loadEnhancements;
   coreScript.onerror = () => {
-    console.error("Ana site betiği yüklenemedi.");
+    console.error("Yerel ana site betiği yüklenemedi.");
     loadEnhancements();
   };
   document.body.appendChild(coreScript);
