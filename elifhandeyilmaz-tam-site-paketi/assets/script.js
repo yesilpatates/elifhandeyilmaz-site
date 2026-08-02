@@ -36,11 +36,11 @@
   };
 
   const loadWebProjects = () => {
-    addStylesheet("web-projects-styles", "assets/web-projects.css?v=20260803-web-modal-v5");
+    addStylesheet("web-projects-styles", "assets/web-projects.css?v=20260803-web-modal-v6");
     if (document.getElementById("web-projects-script")) return;
     const webScript = document.createElement("script");
     webScript.id = "web-projects-script";
-    webScript.src = "assets/web-projects.js?v=20260803-web-modal-v5";
+    webScript.src = "assets/web-projects.js?v=20260803-web-modal-v6";
     webScript.defer = true;
     document.body.appendChild(webScript);
   };
