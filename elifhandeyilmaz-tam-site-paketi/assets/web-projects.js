@@ -6,7 +6,6 @@
       type: "Web & Arayüz Tasarımı",
       description: "PilavYeri için logo tasarımından responsive web arayüzüne kadar bütüncül bir marka deneyimi oluşturdum. Sitenin görsel dili, masaüstü ve mobil uyarlamaları ile tüm metin içerikleri tarafımdan hazırlanarak WordPress üzerinde uygulandı.",
       liveUrl: "https://www.pilavyeri.com/",
-      programs: ["WordPress", "Adobe Illustrator", "Adobe Photoshop"],
       roles: ["Logo ve Marka Kimliği Tasarımı", "UI Tasarımı", "WordPress Web Tasarımı", "İçerik Yazarlığı"],
       images: [
         {
@@ -43,7 +42,7 @@
       <div class="web-project-backdrop" data-web-project-close></div>
       <section class="web-project-dialog">
         <header class="web-project-header">
-          <div>
+          <div class="web-project-heading">
             <span class="web-project-kicker">Web & Arayüz Tasarımı</span>
             <h2 class="web-project-title" id="web-project-title"></h2>
             <p class="web-project-type"></p>
@@ -63,19 +62,18 @@
 
           <aside class="web-project-details">
             <span class="web-project-counter" aria-live="polite"></span>
-            <section class="web-project-card">
+            <section class="web-project-about">
               <h3>Proje Hakkında</h3>
               <p class="web-project-description"></p>
             </section>
-            <section class="web-project-card">
-              <h3>Kullanılan Programlar</h3>
-              <div class="web-project-tags web-project-programs"></div>
-            </section>
-            <section class="web-project-card">
+            <section class="web-project-role-section">
               <h3>Projedeki Rolüm</h3>
-              <div class="web-project-tags web-project-roles"></div>
+              <ul class="web-project-roles"></ul>
             </section>
-            <a class="web-project-live" href="#" target="_blank" rel="noopener noreferrer">Canlı Siteyi Görüntüle <span aria-hidden="true">↗</span></a>
+            <a class="web-project-live" href="#" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.4 2.5 3.7 5.5 3.7 9S14.4 18.5 12 21M12 3C9.6 5.5 8.3 8.5 8.3 12S9.6 18.5 12 21"></path></svg>
+              <span>Canlı Siteyi Görüntüle</span>
+            </a>
           </aside>
         </div>
         <button class="web-project-nav next" type="button" aria-label="Sonraki web projesi">›</button>
@@ -122,8 +120,9 @@
     modal.querySelector(".web-project-type").textContent = project.type;
     modal.querySelector(".web-project-description").textContent = project.description;
     modal.querySelector(".web-project-counter").textContent = "1 / 1";
-    modal.querySelector(".web-project-programs").innerHTML = project.programs.map((program) => `<span>${escapeHtml(program)}</span>`).join("");
-    modal.querySelector(".web-project-roles").innerHTML = project.roles.map((role) => `<span>${escapeHtml(role)}</span>`).join("");
+    modal.querySelector(".web-project-roles").innerHTML = project.roles
+      .map((role) => `<li><span aria-hidden="true">✓</span>${escapeHtml(role)}</li>`)
+      .join("");
 
     const liveLink = modal.querySelector(".web-project-live");
     liveLink.href = project.liveUrl;
