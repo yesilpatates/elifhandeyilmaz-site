@@ -14,7 +14,7 @@
     const moduleScript = document.createElement("script");
     moduleScript.id = "editorial-flipbook-script";
     moduleScript.type = "module";
-    moduleScript.src = "assets/editorial-flipbook-loader.js";
+    moduleScript.src = "assets/editorial-flipbook-loader.js?v=20260802-neta-sea-81";
     document.body.appendChild(moduleScript);
   };
 
