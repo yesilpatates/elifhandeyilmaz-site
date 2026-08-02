@@ -1,6 +1,6 @@
 (() => {
   const covers = [
-    { src: "https://at.adobe.com/DDEbwEjf1YttiobF", alt: "Marka & Kurumsal Kimlik Tasarımı kapak görseli", title: "Marka & Kurumsal Kimlik", label: "BRAND" },
+    { src: "https://at.adobe.com/ufuVy8iyI5g5BVxR", alt: "Marka & Kurumsal Kimlik Tasarımı kapak görseli", title: "Marka & Kurumsal Kimlik", label: "BRAND" },
     { src: "https://at.adobe.com/zvF3n3Q17egUXpiR", alt: "Editoryal Tasarım kapak görseli", title: "Editoryal Tasarım", label: "EDITORIAL" },
     { src: "https://at.adobe.com/hguOld174sEQhlKx", alt: "Etkinlik & Organizasyon Tasarımı kapak görseli", title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
     { src: "https://at.adobe.com/B3srmMwoUvQfru2c", alt: "Tanıtım & İletişim Tasarımı kapak görseli", title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
