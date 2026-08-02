@@ -51,9 +51,9 @@
       image: "https://at.adobe.com/S38mohytVzQkPjQS",
       alt: "Sağlığım Burada marka kimliği sunumu",
       company:
-        "Firma hakkında kısa tanıtım metni henüz iletilmedi. Firmanın faaliyet alanı, hedef kitlesi ve marka ihtiyacı burada anlatılacak.",
+        "Sağlığım Burada, bireylerin daha sağlıklı ve dengeli bir yaşam sürmesine destek olmak amacıyla hizmet veren modern bir sağlık ve danışmanlık markasıdır. Güvenilir bilgi, uzman yaklaşımı ve kolay erişilebilir çözümlerle sağlığı hayatın doğal bir parçası hâline getirmeyi hedefler.",
       logo:
-        "Logo tanımı henüz iletilmedi. Logonun çıkış fikri, sembol yapısı, renk yaklaşımı ve tipografik tercihleri burada açıklanacak."
+        "Sağlığım Burada logosu; insan figürü, yaprak ve dairesel formları bir araya getirerek sağlıklı yaşamı, gelişimi ve bütüncül iyilik hâlini simgeler. Mavi tonlar güveni ve profesyonelliği, turkuaz ise yenilenmeyi, canlılığı ve sağlığı temsil eder. Akıcı yazı karakteri markaya samimi ve ulaşılabilir bir kimlik kazandırır."
     }
   ];
 
