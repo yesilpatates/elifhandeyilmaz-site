@@ -55,6 +55,15 @@
 
     if (title) title.textContent = cover.title;
     if (placeholderLabel) placeholderLabel.textContent = cover.label;
+
+    if (index === 0 && !card.querySelector(".project-card-hitarea")) {
+      card.style.position = "relative";
+      const link = document.createElement("a");
+      link.className = "project-card-hitarea";
+      link.href = "projeler/marka-kurumsal-kimlik/";
+      link.setAttribute("aria-label", "Marka ve Kurumsal Kimlik projelerini görüntüle");
+      card.appendChild(link);
+    }
   });
 
   const visuals = [...document.querySelectorAll(".project-card .project-visual")];
