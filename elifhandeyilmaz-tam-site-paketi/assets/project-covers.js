@@ -58,10 +58,29 @@
 
     if (index === 0 && !card.querySelector(".project-card-hitarea")) {
       card.style.position = "relative";
+      card.style.cursor = "pointer";
+
       const link = document.createElement("a");
       link.className = "project-card-hitarea";
       link.href = "projeler/marka-kurumsal-kimlik/";
-      link.setAttribute("aria-label", "Marka ve Kurumsal Kimlik projelerini görüntüle");
+      link.setAttribute("aria-label", "Marka & Kurumsal Kimlik projelerini görüntüle");
+      link.style.position = "absolute";
+      link.style.inset = "0";
+      link.style.zIndex = "20";
+      link.style.display = "block";
+      link.style.borderRadius = "inherit";
+      link.style.cursor = "pointer";
+
+      link.addEventListener("focus", () => {
+        card.style.outline = "3px solid rgba(24, 183, 197, 0.45)";
+        card.style.outlineOffset = "4px";
+      });
+
+      link.addEventListener("blur", () => {
+        card.style.outline = "";
+        card.style.outlineOffset = "";
+      });
+
       card.appendChild(link);
     }
   });
