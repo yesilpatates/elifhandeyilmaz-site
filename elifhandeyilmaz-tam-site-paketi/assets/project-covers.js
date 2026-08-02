@@ -74,6 +74,46 @@
         "Special Burger, kaliteli malzemeler ve özenle hazırlanan tarifleri bir araya getiren modern bir burger restoranıdır. Taptaze içerikler, doyurucu lezzetler ve hızlı servis anlayışıyla her misafirine keyifli bir burger deneyimi sunmayı hedefler.",
       logo:
         "Special Burger logosu, markanın temel ürünü olan hamburgeri modern ve akılda kalıcı bir simgeye dönüştürür. Burger formuna entegre edilen ‘S’ harfi, markanın kimliğini güçlü bir şekilde vurgularken; sıcak sarı tonları lezzeti, kahverengi güveni ve doğallığı, kırmızı ise iştahı ve enerjiyi temsil eder. Logo, lezzet, kalite ve samimiyeti yansıtan güçlü bir marka karakteri oluşturur."
+    },
+    {
+      title: "Pilavyeri",
+      category: "Marka & Kurumsal Kimlik",
+      image: "https://at.adobe.com/xmKGqJUsYPRsAOhe",
+      alt: "Pilavyeri restoran marka kimliği sunumu",
+      company:
+        "Pilavyeri, geleneksel pilav lezzetini modern sunum ve hızlı servis anlayışıyla buluşturan bir restoran markasıdır. Günlük ve taze malzemelerle hazırlanan özel pilav çeşitlerini, kaliteli hizmet anlayışıyla sunarak her öğünü lezzetli ve doyurucu bir deneyime dönüştürmeyi hedefler.",
+      logo:
+        "Pilavyeri logosu, markanın ana ürünü olan pilavı simgeleyen kaşık figürünü modern ve akılda kalıcı bir tasarımla bütünleştirir. Turkuaz renk tazeliği, güveni ve hijyeni temsil ederken; dinamik tipografi markanın samimi ve ulaşılabilir karakterini yansıtır. Logo, geleneksel lezzeti çağdaş bir marka kimliğiyle buluşturan özgün bir görsel dil oluşturur."
+    },
+    {
+      title: "Fikir Atölyesi",
+      category: "Marka & Kurumsal Kimlik",
+      image: "https://at.adobe.com/udOYRbgFbkkqvvmW",
+      alt: "Fikir Atölyesi yaratıcı iletişim ajansı marka kimliği sunumu",
+      company:
+        "Fikir Atölyesi, markaların hikâyelerini etkileyici senaryolar ve yaratıcı içeriklerle buluşturan bir yaratıcı iletişim ajansıdır. Televizyon reklamları, dijital kampanyalar, tanıtım filmleri ve kurumsal projeler için özgün fikirler geliştirir; senaryo yazımından yaratıcı konsept oluşturmaya kadar tüm süreci profesyonel bir yaklaşımla yönetir. Her projede hedef kitleye dokunan, akılda kalıcı ve güçlü anlatılar üretmeyi amaçlar.",
+      logo:
+        "Fikir Atölyesi logosu, yaratıcılığı ve hikâye anlatımını simgeleyen kalem tüyü ile fikirlerin sürekli gelişimini temsil eden dairesel formu bir araya getirir. Mavi ve mor tonları güveni, hayal gücünü ve üretkenliği yansıtırken, yıldız detayları ilhamın ve yaratıcı fikirlerin doğuşunu simgeler. Logo, markanın özgün senaryolar üreten, güçlü hikâyeler anlatan ve yaratıcı iletişim odaklı kimliğini yansıtır."
+    },
+    {
+      title: "Coko Pet Shop",
+      category: "Marka & Kurumsal Kimlik",
+      image: "https://at.adobe.com/D31xs4KCQZHVF6RA",
+      alt: "Coko Pet Shop marka kimliği sunumu",
+      company:
+        "Coko Pet Shop, evcil dostların sağlıklı, mutlu ve konforlu bir yaşam sürmesi için kaliteli ürünler ve güvenilir hizmet sunan modern bir pet shop markasıdır. Mama, oyuncak, bakım ürünleri ve temel ihtiyaçları özenle seçerek kedi, köpek ve diğer evcil hayvan sahiplerine güvenilir alışveriş deneyimi sunmayı hedefler.",
+      logo:
+        "Coko Pet Shop logosu, köpek, kedi ve tavşan figürlerini tek bir akıcı çizgide birleştirerek farklı evcil dostlara duyulan sevgi ve özeni simgeler. Turkuaz renk güveni, hijyeni ve canlılığı temsil ederken, modern tipografi markanın samimi ve ulaşılabilir karakterini yansıtır. Logo, evcil hayvanlarla kurulan güçlü bağı ve bakım odaklı hizmet anlayışını modern bir görsel kimlikle ifade eder."
+    },
+    {
+      title: "Minik Dünya Kreşi",
+      category: "Marka & Kurumsal Kimlik",
+      image: "https://at.adobe.com/PyD5VPTQRV0BRMTj",
+      alt: "Minik Dünya Kreşi marka kimliği sunumu",
+      company:
+        "Minik Dünya Kreşi, çocukların güvenli, sevgi dolu ve destekleyici bir ortamda gelişimini önemseyen bir okul öncesi eğitim kurumudur. Oyun temelli eğitim yaklaşımıyla çocukların sosyal, duygusal ve zihinsel becerilerini destekleyerek keşfeden, öğrenen ve özgüvenli bireyler olmalarını hedefler.",
+      logo:
+        "Minik Dünya Kreşi logosu; doğayı, gelişimi ve çocukların güvenli dünyasını simgeleyen ağaç formu üzerine kurulmuştur. Ağaç içindeki çocuk figürleri oyun, öğrenme ve huzurlu gelişimi temsil eder. Yeşil tonlar doğallığı ve büyümeyi; kahverengi tonlar ise güveni, sıcaklığı ve sağlamlığı yansıtır."
     }
   ];
 
