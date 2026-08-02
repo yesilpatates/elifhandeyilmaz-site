@@ -64,6 +64,16 @@
         "La Douceur, Fransız pastacılık geleneğinden ilham alan butik bir tatlı markasıdır. Özenle hazırlanan tatlıları, kaliteli malzemeleri ve zarif sunum anlayışıyla her lokmayı unutulmaz bir lezzet deneyimine dönüştürmeyi hedefler.",
       logo:
         "La Douceur logosu, zarafeti ve Fransız esintisini yansıtan akıcı kaligrafik bir tipografiyle tasarlanmıştır. Yumuşak pembe tonları tatlılığın ve şıklığın simgesi olurken, sıcak kahve tonları markanın kalite ve samimiyet anlayışını vurgular. Logo, butik lezzetleri estetik bir kimlikle buluşturan sofistike marka karakterini yansıtır."
+    },
+    {
+      title: "Special Burger",
+      category: "Marka & Kurumsal Kimlik",
+      image: "https://at.adobe.com/YMTwr3nEVRSyxIVN",
+      alt: "Special Burger marka kimliği sunumu",
+      company:
+        "Special Burger, kaliteli malzemeler ve özenle hazırlanan tarifleri bir araya getiren modern bir burger restoranıdır. Taptaze içerikler, doyurucu lezzetler ve hızlı servis anlayışıyla her misafirine keyifli bir burger deneyimi sunmayı hedefler.",
+      logo:
+        "Special Burger logosu, markanın temel ürünü olan hamburgeri modern ve akılda kalıcı bir simgeye dönüştürür. Burger formuna entegre edilen ‘S’ harfi, markanın kimliğini güçlü bir şekilde vurgularken; sıcak sarı tonları lezzeti, kahverengi güveni ve doğallığı, kırmızı ise iştahı ve enerjiyi temsil eder. Logo, lezzet, kalite ve samimiyeti yansıtan güçlü bir marka karakteri oluşturur."
     }
   ];
 
