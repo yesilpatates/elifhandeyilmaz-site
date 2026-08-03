@@ -334,3 +334,214 @@ body.project-lightbox-open {
     animation: none;
   }
 }
+
+/* Marka projelerini Web & Arayüz proje penceresiyle aynı düzene taşır. */
+.project-lightbox {
+  z-index: 12000;
+  padding: 24px;
+}
+
+.project-lightbox-backdrop {
+  background: rgba(7, 16, 27, 0.74);
+  backdrop-filter: blur(10px);
+}
+
+.project-lightbox-panel {
+  width: min(1240px, calc(100vw - 144px));
+  max-height: 88vh;
+  border: 1px solid rgba(9, 32, 45, 0.1);
+  border-radius: 24px;
+  background: #fffdf9;
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.3);
+}
+
+.project-lightbox-heading {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  align-items: flex-start;
+  padding: 20px 28px 16px;
+  border-bottom: 1px solid #ebe4dc;
+  background: rgba(255, 253, 249, 0.97);
+  backdrop-filter: blur(12px);
+}
+
+.project-lightbox-category {
+  margin-bottom: 7px;
+  color: #078f99;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+}
+
+.project-lightbox-heading h2 {
+  font-size: clamp(1.55rem, 2.2vw, 2.25rem);
+  line-height: 1.14;
+  letter-spacing: -0.025em;
+}
+
+.project-lightbox-heading p {
+  margin: 7px 0 0;
+  color: #727a85;
+  font-size: 0.84rem;
+}
+
+.project-lightbox-close {
+  position: static;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  color: #0b1726;
+  background: transparent;
+  box-shadow: none;
+  font: 300 28px/1 Arial, sans-serif;
+  backdrop-filter: none;
+}
+
+.project-lightbox-close:hover {
+  color: #078f99;
+  background: transparent;
+  transform: rotate(5deg);
+}
+
+.project-lightbox-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(290px, 0.58fr);
+  align-items: stretch;
+  padding: 0 28px 24px;
+}
+
+.project-lightbox-media {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  align-items: center;
+  padding: 22px 28px 0 0;
+  background: #fffdf9;
+}
+
+.project-lightbox-image {
+  width: 100%;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: contain;
+}
+
+.project-lightbox.is-loading .project-lightbox-image {
+  min-height: 0;
+}
+
+.project-lightbox-loading {
+  border-color: rgba(11, 23, 38, 0.14);
+  border-top-color: #078f99;
+}
+
+.project-lightbox-details {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-self: stretch;
+  padding: 24px 0 0 28px;
+  border-left: 1px solid #e8e1da;
+}
+
+.project-lightbox-details section {
+  padding: 0 0 18px;
+  border-bottom: 1px solid #e8e1da;
+}
+
+.project-lightbox-details section + section {
+  padding-top: 18px;
+}
+
+.project-lightbox-details h3 {
+  margin: 0 0 13px;
+  color: #0b1726;
+  font-size: 0.95rem;
+}
+
+.project-lightbox-details p {
+  margin: 0;
+  color: #616b78;
+  font-size: 0.84rem;
+  line-height: 1.62;
+}
+
+.project-lightbox-counter {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  padding: 0;
+  border: 0;
+  color: #818894;
+  background: transparent;
+  font-size: 0.72rem;
+}
+
+.project-lightbox-roles {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-lightbox-roles li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #4f5a67;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.project-lightbox-roles li > span {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  border: 1px solid #0ba5ac;
+  border-radius: 50%;
+  color: #078f99;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+.project-lightbox-arrow {
+  z-index: 5;
+  width: 42px;
+  height: 42px;
+  font-size: 26px;
+}
+
+.project-lightbox-prev { left: calc(50% - min(620px, 50vw - 72px) - 54px); }
+.project-lightbox-next { right: calc(50% - min(620px, 50vw - 72px) - 54px); }
+
+@media (max-width: 900px) {
+  .project-lightbox { padding: 12px; }
+  .project-lightbox-panel { width: 100%; max-height: 95vh; border-radius: 20px; }
+  .project-lightbox-heading { padding: 18px 20px 15px; }
+  .project-lightbox-body { grid-template-columns: 1fr; padding: 0 18px 18px; }
+  .project-lightbox-media { display: block; padding: 18px 0 0; }
+  .project-lightbox-details { padding: 18px 0 0; border-top: 1px solid #e8e1da; border-left: 0; }
+  .project-lightbox-counter { position: static; order: -1; margin-bottom: 12px; text-align: right; }
+  .project-lightbox-prev { left: 18px; }
+  .project-lightbox-next { right: 18px; }
+}
+
+@media (max-width: 560px) {
+  .project-lightbox { padding: 0; }
+  .project-lightbox-panel { height: 100%; max-height: 100vh; border-radius: 0; }
+  .project-lightbox-heading { padding: 16px 16px 13px; }
+  .project-lightbox-heading h2 { font-size: 1.22rem; }
+  .project-lightbox-body { padding: 0 14px 14px; }
+  .project-lightbox-details h3 { font-size: 0.94rem; }
+  .project-lightbox-details p { font-size: 0.82rem; }
+  .project-lightbox-roles li { font-size: 0.8rem; }
+  .project-lightbox-arrow { width: 36px; height: 36px; font-size: 22px; }
+  .project-lightbox-prev { left: 6px; }
+  .project-lightbox-next { right: 6px; }
+}
