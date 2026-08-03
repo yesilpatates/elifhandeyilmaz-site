@@ -43,11 +43,11 @@
   };
 
   const loadWebProjects = () => {
-    addStylesheet("web-projects-styles", "assets/web-projects.css?v=20260803-web-modal-v6");
+    addStylesheet("web-projects-styles", "assets/web-projects.css?v=20260803-arrows-outside-v7");
     if (document.getElementById("web-projects-script")) return;
     const webScript = document.createElement("script");
     webScript.id = "web-projects-script";
-    webScript.src = "assets/web-projects.js?v=20260803-web-modal-v7";
+    webScript.src = "assets/web-projects.js?v=20260803-touch-swipe-v9";
     webScript.defer = true;
     document.body.appendChild(webScript);
   };
@@ -75,7 +75,7 @@
   disableEditorialSection();
 
   const brandImageScript = document.createElement("script");
-  brandImageScript.src = "assets/brand-image-urls.js?v=20260803-brand-v2";
+  brandImageScript.src = "assets/brand-image-urls.js?v=20260803-brand-local-v1";
   brandImageScript.defer = true;
   brandImageScript.onload = loadCoreScript;
   brandImageScript.onerror = loadCoreScript;
