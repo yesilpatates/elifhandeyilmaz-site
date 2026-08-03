@@ -8,7 +8,7 @@ const loadStylesheet = (id, href) => {
   document.head.appendChild(stylesheet);
 };
 
-loadStylesheet("project-cover-styles", "assets/project-covers.css");
+loadStylesheet("project-cover-styles", "assets/project-covers.css?v=20260803-fixed-height-v3");
 loadStylesheet("hero-title-font", "https://fonts.googleapis.com/css2?family=Rochester&display=swap");
 loadStylesheet("hero-title-styles", "assets/hero-title.css");
 loadStylesheet("service-icons-styles", "assets/service-icons.css");
