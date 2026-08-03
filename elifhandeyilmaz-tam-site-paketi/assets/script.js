@@ -43,7 +43,7 @@
   };
 
   const loadWebProjects = () => {
-    addStylesheet("web-projects-styles", "assets/web-projects.css?v=20260803-arrows-outside-v7");
+    addStylesheet("web-projects-styles", "assets/web-projects.css?v=20260803-fixed-height-v8");
     if (document.getElementById("web-projects-script")) return;
     const webScript = document.createElement("script");
     webScript.id = "web-projects-script";
