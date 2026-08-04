@@ -52,10 +52,21 @@
     document.body.appendChild(webScript);
   };
 
+  const loadEventProjects = () => {
+    addStylesheet("event-projects-styles", "assets/event-projects.css?v=20260804-event-v1");
+    if (document.getElementById("event-projects-script")) return;
+    const eventScript = document.createElement("script");
+    eventScript.id = "event-projects-script";
+    eventScript.src = "assets/event-projects.js?v=20260804-event-v1";
+    eventScript.defer = true;
+    document.body.appendChild(eventScript);
+  };
+
   const loadEnhancements = () => {
     formatHeroTitle();
     disableEditorialSection();
     window.setTimeout(loadWebProjects, 450);
+    window.setTimeout(loadEventProjects, 550);
   };
 
   const loadCoreScript = () => {
