@@ -53,11 +53,11 @@
   };
 
   const loadEventProjects = () => {
-    addStylesheet("event-projects-styles", "assets/event-projects.css?v=20260805-event-v2");
+    addStylesheet("event-projects-styles", "assets/event-projects.css?v=20260805-carousel-v3");
     if (document.getElementById("event-projects-script")) return;
     const eventScript = document.createElement("script");
     eventScript.id = "event-projects-script";
-    eventScript.src = "assets/event-projects.js?v=20260804-event-v1";
+    eventScript.src = "assets/event-projects.js?v=20260805-carousel-v3";
     eventScript.defer = true;
     document.body.appendChild(eventScript);
   };
