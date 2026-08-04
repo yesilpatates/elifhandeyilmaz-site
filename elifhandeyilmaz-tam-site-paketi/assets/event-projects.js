@@ -94,13 +94,11 @@
       <div class="event-project-detail-view" hidden>
         <div class="event-gallery">
           <div class="event-gallery-stage">
-            <div class="event-gallery-loading" aria-hidden="true"></div>
-            <img class="event-gallery-image" alt="">
-            <button class="event-gallery-arrow prev" type="button" aria-label="Önceki görsel">‹</button>
-            <button class="event-gallery-arrow next" type="button" aria-label="Sonraki görsel">›</button>
-            <span class="event-gallery-counter" aria-live="polite"></span>
+            <div class="event-gallery-track" aria-label="Proje görselleri"></div>
           </div>
-          <div class="event-gallery-thumbs" aria-label="Proje görselleri"></div>
+          <button class="event-gallery-arrow prev" type="button" aria-label="Önceki görsel">‹</button>
+          <button class="event-gallery-arrow next" type="button" aria-label="Sonraki görsel">›</button>
+          <span class="event-gallery-counter" aria-live="polite"></span>
         </div>
         <div class="event-project-copy">
           <section class="event-project-about"><h3>Organizasyon Hakkında</h3><div class="event-project-description"></div></section>
@@ -109,6 +107,10 @@
         </div>
       </div>
     </article>
+    <div class="event-gallery-lightbox" hidden role="dialog" aria-modal="true" aria-label="Büyük proje görseli">
+      <button class="event-gallery-lightbox-close" type="button" aria-label="Büyük görseli kapat">×</button>
+      <img class="event-gallery-lightbox-image" alt="">
+    </div>
   `;
   document.body.appendChild(modal);
 
@@ -121,10 +123,11 @@
   const backButton = modal.querySelector(".event-project-back");
   const closeButton = modal.querySelector(".event-project-close");
   const galleryStage = modal.querySelector(".event-gallery-stage");
-  const galleryImage = modal.querySelector(".event-gallery-image");
-  const galleryLoading = modal.querySelector(".event-gallery-loading");
+  const galleryTrack = modal.querySelector(".event-gallery-track");
   const galleryCounter = modal.querySelector(".event-gallery-counter");
-  const galleryThumbs = modal.querySelector(".event-gallery-thumbs");
+  const lightbox = modal.querySelector(".event-gallery-lightbox");
+  const lightboxImage = modal.querySelector(".event-gallery-lightbox-image");
+  const lightboxClose = modal.querySelector(".event-gallery-lightbox-close");
   const description = modal.querySelector(".event-project-description");
   const works = modal.querySelector(".event-project-works");
   const role = modal.querySelector(".event-project-role");
@@ -133,7 +136,8 @@
   let activeProject = null;
   let activeImageIndex = 0;
   let lastFocused = null;
-  let swipeStart = null;
+  let dragStart = null;
+  let suppressGalleryClick = false;
 
   const renderCards = () => {
     grid.replaceChildren(...eventProjects.map((project, index) => {
@@ -172,50 +176,39 @@
     }));
   };
 
-  const renderImage = (index) => {
+  const updateGalleryState = (index) => {
     if (!activeProject) return;
-    activeImageIndex = (index + activeProject.images.length) % activeProject.images.length;
-    const image = activeProject.images[activeImageIndex];
-    galleryLoading.hidden = false;
-    galleryImage.classList.add("is-loading");
-    galleryImage.alt = image.alt;
-    const preloader = new Image();
-    preloader.decoding = "async";
-    preloader.onload = () => {
-      galleryImage.src = image.src;
-      galleryImage.classList.remove("is-loading");
-      galleryLoading.hidden = true;
-    };
-    preloader.onerror = () => {
-      galleryImage.classList.remove("is-loading");
-      galleryLoading.hidden = true;
-      galleryImage.removeAttribute("src");
-      galleryImage.alt = `${image.alt} yüklenemedi`;
-    };
-    preloader.src = image.src;
+    activeImageIndex = Math.max(0, Math.min(index, activeProject.images.length - 1));
     galleryCounter.textContent = `${activeImageIndex + 1} / ${activeProject.images.length}`;
-    [...galleryThumbs.children].forEach((thumb, thumbIndex) => {
-      const selected = thumbIndex === activeImageIndex;
-      thumb.classList.toggle("is-active", selected);
-      thumb.setAttribute("aria-current", selected ? "true" : "false");
-      if (selected) thumb.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
-    });
+    previousButton.disabled = activeImageIndex === 0;
+    nextButton.disabled = activeImageIndex === activeProject.images.length - 1;
   };
 
-  const renderThumbnails = () => {
-    galleryThumbs.replaceChildren(...activeProject.images.map((image, index) => {
+  const openLightbox = (image) => {
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+    lightbox.hidden = false;
+    lightboxClose.focus({ preventScroll: true });
+  };
+
+  const renderGallery = () => {
+    galleryTrack.replaceChildren(...activeProject.images.map((image, index) => {
       const button = document.createElement("button");
-      button.className = "event-gallery-thumb";
+      button.className = "event-gallery-slide";
       button.type = "button";
-      button.setAttribute("aria-label", `${index + 1}. görseli göster`);
-      const thumb = document.createElement("img");
-      thumb.src = image.src;
-      thumb.alt = "";
-      thumb.loading = "lazy";
-      button.appendChild(thumb);
-      button.addEventListener("click", () => renderImage(index));
+      button.dataset.index = index;
+      button.setAttribute("aria-label", `${index + 1}. görseli büyük aç`);
+      const picture = document.createElement("img");
+      picture.src = image.src;
+      picture.alt = image.alt;
+      picture.loading = index < 2 ? "eager" : "lazy";
+      picture.draggable = false;
+      button.appendChild(picture);
+      button.addEventListener("click", () => openLightbox(image));
       return button;
     }));
+    galleryStage.scrollLeft = 0;
+    updateGalleryState(0);
   };
 
   const openProject = (project) => {
@@ -241,8 +234,7 @@
       return item;
     }));
     role.textContent = project.role;
-    renderThumbnails();
-    renderImage(0);
+    renderGallery();
     detailView.scrollTop = 0;
   };
 
@@ -276,8 +268,14 @@
     }, 220);
   };
 
-  const showPreviousImage = () => activeProject && renderImage(activeImageIndex - 1);
-  const showNextImage = () => activeProject && renderImage(activeImageIndex + 1);
+  const scrollToImage = (index) => {
+    if (!activeProject) return;
+    const targetIndex = Math.max(0, Math.min(index, activeProject.images.length - 1));
+    galleryTrack.children[targetIndex]?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+    updateGalleryState(targetIndex);
+  };
+  const showPreviousImage = () => scrollToImage(activeImageIndex - 1);
+  const showNextImage = () => scrollToImage(activeImageIndex + 1);
 
   eventCard.style.position = "relative";
   eventCard.classList.add("has-event-project-modal");
@@ -292,29 +290,58 @@
   backButton.addEventListener("click", showList);
   previousButton.addEventListener("click", showPreviousImage);
   nextButton.addEventListener("click", showNextImage);
+  lightboxClose.addEventListener("click", () => { lightbox.hidden = true; });
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.hidden = true;
+  });
   modal.querySelectorAll("[data-event-close]").forEach((element) => element.addEventListener("click", closeModal));
 
-  galleryStage.addEventListener("touchstart", (event) => {
-    if (event.touches.length !== 1) return;
-    const touch = event.touches[0];
-    swipeStart = { x: touch.clientX, y: touch.clientY };
+  galleryStage.addEventListener("scroll", () => {
+    const slides = [...galleryTrack.children];
+    if (!slides.length) return;
+    const stageLeft = galleryStage.getBoundingClientRect().left;
+    const nearest = slides.reduce((best, slide, index) => {
+      const distance = Math.abs(slide.getBoundingClientRect().left - stageLeft);
+      return distance < best.distance ? { index, distance } : best;
+    }, { index: 0, distance: Infinity });
+    updateGalleryState(nearest.index);
   }, { passive: true });
-  galleryStage.addEventListener("touchend", (event) => {
-    if (!swipeStart || event.changedTouches.length !== 1) return;
-    const touch = event.changedTouches[0];
-    const deltaX = touch.clientX - swipeStart.x;
-    const deltaY = touch.clientY - swipeStart.y;
-    swipeStart = null;
-    if (Math.abs(deltaX) < 50 || Math.abs(deltaX) <= Math.abs(deltaY) * 1.2) return;
-    deltaX > 0 ? showPreviousImage() : showNextImage();
-  }, { passive: true });
-  galleryStage.addEventListener("touchcancel", () => { swipeStart = null; }, { passive: true });
+
+  galleryStage.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "touch") return;
+    dragStart = { x: event.clientX, scrollLeft: galleryStage.scrollLeft, moved: false };
+    galleryStage.setPointerCapture(event.pointerId);
+    galleryStage.classList.add("is-dragging");
+  });
+  galleryStage.addEventListener("pointermove", (event) => {
+    if (!dragStart) return;
+    const delta = event.clientX - dragStart.x;
+    if (Math.abs(delta) > 5) dragStart.moved = true;
+    galleryStage.scrollLeft = dragStart.scrollLeft - delta;
+  });
+  galleryStage.addEventListener("pointerup", (event) => {
+    if (!dragStart) return;
+    if (dragStart.moved) {
+      event.preventDefault();
+      suppressGalleryClick = true;
+      scrollToImage(activeImageIndex);
+    }
+    dragStart = null;
+    galleryStage.classList.remove("is-dragging");
+  });
+  galleryStage.addEventListener("click", (event) => {
+    if (!suppressGalleryClick) return;
+    event.preventDefault();
+    event.stopPropagation();
+    suppressGalleryClick = false;
+  }, true);
 
   document.addEventListener("keydown", (event) => {
     if (modal.hidden) return;
     if (event.key === "Escape") {
       event.preventDefault();
-      activeProject ? showList() : closeModal();
+      if (!lightbox.hidden) lightbox.hidden = true;
+      else activeProject ? showList() : closeModal();
     } else if (activeProject && event.key === "ArrowLeft") {
       event.preventDefault();
       showPreviousImage();
