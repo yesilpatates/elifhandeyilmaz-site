@@ -17,7 +17,7 @@ loadStylesheet("education-separation-styles", "assets/education-separation.css")
 
 if (!document.getElementById("project-cover-script")) {
   const projectCoverScript = document.createElement("script");
-  projectCoverScript.src = "assets/project-covers.js?v=20260803-touch-swipe-v2";
+  projectCoverScript.src = "assets/project-covers.js?v=20260804-featured-project-v3";
   projectCoverScript.defer = true;
   projectCoverScript.id = "project-cover-script";
   document.body.appendChild(projectCoverScript);

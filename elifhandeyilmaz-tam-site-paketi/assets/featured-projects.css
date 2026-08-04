@@ -1,0 +1,89 @@
+/* Homepage featured work: real portfolio thumbnails and responsive browsing. */
+.home-overview .featured .mini-project-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-content: start;
+}
+
+.home-overview .featured .mini-project {
+  min-width: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.home-overview .featured .mini-art {
+  position: relative;
+  min-height: 0;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #f3efe7;
+}
+
+.home-overview .featured .mini-art img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.38s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.home-overview .featured .mini-project-editorial .mini-art {
+  background: #e9e4dd;
+}
+
+.home-overview .featured .mini-project-editorial .mini-art img {
+  object-fit: contain;
+}
+
+.home-overview .featured .mini-project:hover .mini-art img {
+  transform: scale(1.035);
+}
+
+.home-overview .featured .mini-project > div:last-child {
+  min-height: 68px;
+  align-content: center;
+}
+
+.home-overview .featured .mini-project strong,
+.home-overview .featured .mini-project small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .home-overview .featured .mini-project-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(210px, 76vw);
+    gap: 14px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scrollbar-width: thin;
+    padding: 2px 2px 12px;
+  }
+
+  .home-overview .featured .mini-project {
+    display: flex;
+    grid-template-columns: none;
+    scroll-snap-align: start;
+  }
+
+  .home-overview .featured .mini-art {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-overview .featured .mini-art img {
+    transition: none;
+  }
+}
