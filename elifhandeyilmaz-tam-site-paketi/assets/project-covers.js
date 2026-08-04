@@ -328,6 +328,12 @@
     brandCard.appendChild(trigger);
   }
 
+  document.querySelectorAll("[data-brand-project]").forEach((trigger) => {
+    const projectIndex = brandProjects.findIndex((item) => item.title === trigger.dataset.brandProject);
+    if (projectIndex < 0) return;
+    trigger.addEventListener("click", () => openLightbox(projectIndex));
+  });
+
   prevButton.addEventListener("click", showPrevious);
   nextButton.addEventListener("click", showNext);
   lightbox.querySelectorAll("[data-lightbox-close]").forEach((element) => element.addEventListener("click", closeLightbox));

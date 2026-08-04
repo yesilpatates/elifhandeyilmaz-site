@@ -47,7 +47,7 @@
     if (document.getElementById("web-projects-script")) return;
     const webScript = document.createElement("script");
     webScript.id = "web-projects-script";
-    webScript.src = "assets/web-projects.js?v=20260803-touch-swipe-v9";
+    webScript.src = "assets/web-projects.js?v=20260804-featured-project-v10";
     webScript.defer = true;
     document.body.appendChild(webScript);
   };
