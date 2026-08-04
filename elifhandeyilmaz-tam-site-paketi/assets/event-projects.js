@@ -29,7 +29,29 @@
         { src: "assets/event-projects/turkiye-denizcilik-zirvesi/07-gala-neta-sea.webp", alt: "5. Türkiye Denizcilik Zirvesi gala alanı ve Neta Sea dergisi" }
       ]
     },
-    { id: "denizci-kadinlar-gunu", title: "Denizci Kadınlar Günü", available: false },
+    {
+      id: "uluslararasi-denizci-kadinlar-gunu",
+      title: "Uluslararası Denizci Kadınlar Günü",
+      available: true,
+      cover: "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/01-ana-mockup.webp",
+      description: [
+        "Uluslararası Denizci Kadınlar Günü, Uluslararası Denizcilik Örgütü (IMO) tarafından her yıl 18 Mayıs’ta kutlanmaktadır.",
+        "Bu özel gün; denizcilik sektöründe görev alan kadınların görünürlüğünü artırmak, kadın istihdamını ve sektörde kalıcı biçimde yer almalarını desteklemek amacıyla düzenlenmektedir. Aynı zamanda IMO’nun Birleşmiş Milletler Sürdürülebilir Kalkınma Hedefi 5 kapsamındaki toplumsal cinsiyet eşitliği çalışmalarına dikkat çekmektedir.",
+        "IMO üye devletleri, denizcilik kuruluşları ve sektörün tüm paydaşları bu anlamlı günü desteklemeye ve kutlamaya davet edilmektedir."
+      ],
+      works: [
+        "Organizasyon kapsamında kullanılan tüm basılı ürünlerin tasarımı"
+      ],
+      role: "Organizasyonda kullanılan tüm basılı materyallerin tasarlanması, farklı ölçü ve uygulamalara uyarlanması ve baskıya hazır hâle getirilmesi.",
+      images: [
+        { src: "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/01-ana-mockup.webp", alt: "Uluslararası Denizci Kadınlar Günü ana organizasyon mockup sunumu" },
+        { src: "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/02-genel-gorunum.webp", alt: "Uluslararası Denizci Kadınlar Günü etkinlik alanı genel görünümü" },
+        { src: "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/03-toplanti.webp", alt: "Uluslararası Denizci Kadınlar Günü toplantı alanı" },
+        { src: "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/04-konusmacilar.webp", alt: "Uluslararası Denizci Kadınlar Günü konuşmacılar ve sahne görünümü" },
+        { src: "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/05-katilimcilar.webp", alt: "Uluslararası Denizci Kadınlar Günü katılımcı grup fotoğrafı" },
+        { src: "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/06-etkinlik-alani.webp", alt: "Uluslararası Denizci Kadınlar Günü açık etkinlik alanı" }
+      ]
+    },
     { id: "yesil-donusum-zirvesi", title: "II. Yeşil Dönüşüm Zirvesi", available: false },
     { id: "ulusal-gemi-yat-tasarim-yarismasi", title: "XIV. Ulusal Gemi ve Yat Tasarım Yarışması", available: false },
     { id: "denizci-fenerbahceliler-dernegi", title: "Denizci Fenerbahçeliler Derneği", available: false }
