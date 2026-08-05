@@ -298,6 +298,12 @@ body.event-showcase-open { overflow: hidden; }
   transform: translateY(-50%) scale(.96);
 }
 
+.event-showcase-nav:disabled {
+  opacity: .45;
+  cursor: wait;
+  pointer-events: none;
+}
+
 .event-showcase-nav--prev { left: 18px; }
 .event-showcase-nav--next { right: 18px; }
 
@@ -464,6 +470,33 @@ body.event-showcase-open { overflow: hidden; }
   .event-project-facts { grid-template-columns: 1fr; gap: 15px; }
   .event-project-details p { font-size: .8rem; }
   .event-project-scope li { font-size: .78rem; }
+}
+
+/* Telefon yatay konumdayken sabit grid yüksekliği metinleri üst üste bindirmesin. */
+@media (max-width: 960px) and (max-height: 600px) {
+  .event-project-details {
+    height: auto;
+    display: block;
+    padding: 25px 18px 32px;
+    overflow: visible;
+  }
+
+  .event-project-details__section,
+  .event-project-details__identity,
+  .event-project-details__about,
+  .event-project-details__role,
+  .event-project-details__approach {
+    padding: 0 0 22px;
+    border: 0;
+  }
+
+  .event-project-details__section + .event-project-details__section {
+    padding-top: 22px;
+    border-top: 1px solid #e7e0d7;
+  }
+
+  .event-project-details__approach { padding-bottom: 0; }
+  .event-project-facts { grid-template-columns: 1fr; gap: 15px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

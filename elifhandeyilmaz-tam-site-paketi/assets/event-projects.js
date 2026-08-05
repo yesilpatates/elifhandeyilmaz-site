@@ -215,6 +215,27 @@
     }))
   ];
 
+  // Doğal görsel ölçüleri yükleme tamamlanmadan yer ayırır; açılışta sıra ve boşluk kaymasını önler.
+  const applyPhotoSizes = (photos, sizes) => photos.forEach((photo, index) => {
+    [photo.width, photo.height] = sizes[index];
+  });
+
+  applyPhotoSizes(summitPhotos, [
+    [1672, 941], [1152, 2048], [2048, 1365], [1536, 1024], [795, 1127],
+    [1536, 1024], [675, 1200], [675, 1200], [1800, 1013], [1536, 1024],
+    [800, 1200], [1536, 1024], [675, 1200], [1536, 1024], [1536, 864],
+    [1536, 1024], [675, 1200], [1536, 1024], [675, 1200], [1536, 864],
+    [675, 1200], [1536, 864], [1536, 1024], [1536, 1024], [1536, 1024],
+    [1536, 1024], [1536, 1024], [1536, 1024], [1536, 1024], [1536, 1024],
+    [1536, 1024], [1536, 1024], [1536, 1024], [1800, 1200], [1536, 865],
+    [960, 1200], [1536, 348]
+  ]);
+
+  applyPhotoSizes(womenDayPhotos, [
+    [1536, 1024], [1536, 658], [1536, 1152], [1536, 1152], [1536, 1152],
+    [1536, 1152], [1152, 1536], [1536, 1152], [1536, 1152]
+  ]);
+
   const projectDetailsMarkup = {
     'turkiye-denizcilik-zirvesi': `
       <section class="event-project-details__section event-project-details__identity">
@@ -397,6 +418,8 @@
       class="event-showcase-image"
       src="${photo.src}"
       alt="${copy === 1 ? photo.alt : ''}"
+      width="${photo.width}"
+      height="${photo.height}"
       data-photo-index="${index}"
       data-photo-copy="${copy}"
       ${copy === 1 ? '' : 'aria-hidden="true"'}
@@ -407,8 +430,10 @@
   let activePhotos = summitPhotos;
   let slides = [];
   let imagesReady = Promise.resolve();
+  let renderVersion = 0;
 
   const renderCarousel = (photos) => {
+    renderVersion += 1;
     activePhotos = photos;
     // Üç aynı set, her iki yönde de son fotoğraftan ilk fotoğrafa kesintisiz geçiş sağlar.
     track.innerHTML = [0, 1, 2].map((copy) => (
@@ -424,14 +449,23 @@
           })
     )));
     setWidth = 0;
+    activePhotoIndex = 0;
+    carouselReady = false;
+    navigationSlideIndex = null;
+    counter.textContent = `1 / ${activePhotos.length}`;
+    previousButton.disabled = true;
+    nextButton.disabled = true;
+    return renderVersion;
   };
 
   let setWidth = 0;
   let activePhotoIndex = 0;
-  let isLoopJump = false;
+  let carouselReady = false;
+  let isRepositioning = false;
   let scrollRaf = 0;
   let scrollSettleTimer = 0;
-  let requestedSlideIndex = null;
+  let resizeTimer = 0;
+  let navigationSlideIndex = null;
 
   const updateCounter = (index) => {
     const normalizedIndex = (index + activePhotos.length) % activePhotos.length;
@@ -451,16 +485,26 @@
     slide.offsetLeft - Math.max(0, (frame.clientWidth - slide.offsetWidth) / 2)
   );
 
-  const centerSlide = (slide, behavior = 'smooth') => {
-    if (!slide) return;
-    requestedSlideIndex = behavior === 'smooth' ? slides.indexOf(slide) : null;
-    frame.scrollTo({ left: getCenteredLeft(slide), behavior });
-    updateCounter(Number(slide.dataset.photoIndex));
+  const releaseRepositioning = () => {
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      isRepositioning = false;
+    }));
   };
 
-  const resetCarousel = () => {
+  const centerSlide = (slide, behavior = 'smooth', update = true) => {
+    if (!slide) return;
+    if (behavior === 'auto') isRepositioning = true;
+    frame.scrollTo({ left: getCenteredLeft(slide), behavior });
+    if (update) updateCounter(Number(slide.dataset.photoIndex));
+    if (behavior === 'auto') releaseRepositioning();
+  };
+
+  const resetCarousel = (index = 0) => {
     const middleSetStart = measureCarousel();
-    centerSlide(middleSetStart, 'auto');
+    const target = index === 0
+      ? middleSetStart
+      : track.querySelector(`[data-photo-copy="1"][data-photo-index="${index}"]`);
+    centerSlide(target, 'auto');
   };
 
   const getNearestSlideIndex = () => {
@@ -479,28 +523,28 @@
   };
 
   const moveCarousel = (direction) => {
-    const startIndex = requestedSlideIndex ?? getNearestSlideIndex();
-    const targetIndex = Math.max(0, Math.min(slides.length - 1, startIndex + direction));
-    centerSlide(slides[targetIndex]);
+    if (!carouselReady || !slides.length) return;
+    const startIndex = navigationSlideIndex ?? getNearestSlideIndex();
+    const targetIndex = startIndex + direction;
+    if (!slides[targetIndex]) return;
+    navigationSlideIndex = targetIndex;
+    updateCounter(activePhotoIndex + direction);
+    centerSlide(slides[targetIndex], 'smooth', false);
   };
 
-  const maintainInfiniteLoop = () => {
-    if (!setWidth || isLoopJump) return;
-    const lowerLimit = setWidth * .35;
-    const upperLimit = setWidth * 1.65;
-    let destination = null;
-    if (frame.scrollLeft < lowerLimit) destination = frame.scrollLeft + setWidth;
-    if (frame.scrollLeft > upperLimit) destination = frame.scrollLeft - setWidth;
-    if (destination === null) return;
-
-    isLoopJump = true;
-    frame.scrollTo({ left: destination, behavior: 'auto' });
-    requestAnimationFrame(() => { isLoopJump = false; });
+  const normalizeLoopPosition = (slide) => {
+    if (!slide || slide.dataset.photoCopy === '1') return;
+    const middleSlide = track.querySelector(
+      `[data-photo-copy="1"][data-photo-index="${slide.dataset.photoIndex}"]`
+    );
+    centerSlide(middleSlide, 'auto', false);
   };
 
   frame.addEventListener('scroll', () => {
+    if (!carouselReady || isRepositioning) return;
     cancelAnimationFrame(scrollRaf);
     scrollRaf = requestAnimationFrame(() => {
+      if (navigationSlideIndex !== null) return;
       const nearestSlide = slides[getNearestSlideIndex()];
       if (nearestSlide) updateCounter(Number(nearestSlide.dataset.photoIndex));
     });
@@ -512,19 +556,25 @@
 
       const distanceToCenter = Math.abs(frame.scrollLeft - getCenteredLeft(nearestSlide));
       if (distanceToCenter > 2) {
-        centerSlide(nearestSlide);
+        centerSlide(nearestSlide, 'smooth', navigationSlideIndex === null);
         return;
       }
 
-      requestedSlideIndex = null;
-      maintainInfiniteLoop();
-    }, 140);
+      if (navigationSlideIndex !== null) {
+        updateCounter(Number(nearestSlide.dataset.photoIndex));
+      }
+      navigationSlideIndex = null;
+      normalizeLoopPosition(nearestSlide);
+    }, 180);
   }, { passive: true });
 
-  const releaseRequestedSlide = () => { requestedSlideIndex = null; };
-  frame.addEventListener('pointerdown', releaseRequestedSlide, { passive: true });
-  frame.addEventListener('touchstart', releaseRequestedSlide, { passive: true });
-  frame.addEventListener('wheel', releaseRequestedSlide, { passive: true });
+  const beginManualNavigation = () => {
+    navigationSlideIndex = null;
+    window.clearTimeout(scrollSettleTimer);
+  };
+  frame.addEventListener('pointerdown', beginManualNavigation, { passive: true });
+  frame.addEventListener('touchstart', beginManualNavigation, { passive: true });
+  frame.addEventListener('wheel', beginManualNavigation, { passive: true });
 
   track.addEventListener('click', (event) => {
     const selectedSlide = event.target.closest('.event-showcase-image');
@@ -543,13 +593,34 @@
   window.addEventListener('resize', () => {
     if (modal.hidden || detailView.hidden) return;
     const currentIndex = activePhotoIndex;
-    requestAnimationFrame(() => {
-      measureCarousel();
-      centerSlide(track.querySelector(`[data-photo-copy="1"][data-photo-index="${currentIndex}"]`), 'auto');
-    });
+    carouselReady = false;
+    navigationSlideIndex = null;
+    window.clearTimeout(scrollSettleTimer);
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(() => {
+      requestAnimationFrame(() => {
+        if (modal.hidden || detailView.hidden) return;
+        resetCarousel(currentIndex);
+        updateCounter(currentIndex);
+        carouselReady = true;
+      });
+    }, 160);
   });
 
+  const stopCarousel = () => {
+    renderVersion += 1;
+    carouselReady = false;
+    isRepositioning = false;
+    navigationSlideIndex = null;
+    cancelAnimationFrame(scrollRaf);
+    window.clearTimeout(scrollSettleTimer);
+    window.clearTimeout(resizeTimer);
+    previousButton.disabled = true;
+    nextButton.disabled = true;
+  };
+
   const showList = () => {
+    stopCarousel();
     detailView.hidden = true;
     listView.hidden = false;
     backButton.hidden = true;
@@ -569,15 +640,18 @@
     projectDetails.innerHTML = gallery.details || '';
     projectDetails.hidden = !gallery.details;
     projectDetails.setAttribute('aria-label', `${gallery.title} proje bilgileri`);
-    renderCarousel(gallery.photos);
+    const currentRender = renderCarousel(gallery.photos);
     dialog.scrollTop = 0;
-    activePhotoIndex = 0;
-    counter.textContent = `1 / ${activePhotos.length}`;
     requestAnimationFrame(() => {
-      resetCarousel();
+      if (currentRender === renderVersion) resetCarousel(0);
     });
     imagesReady.then(() => requestAnimationFrame(() => {
-      if (!detailView.hidden && activePhotoIndex === 0) resetCarousel();
+      if (currentRender !== renderVersion || detailView.hidden || modal.hidden) return;
+      resetCarousel(0);
+      updateCounter(0);
+      carouselReady = true;
+      previousButton.disabled = false;
+      nextButton.disabled = false;
     }));
   };
 
