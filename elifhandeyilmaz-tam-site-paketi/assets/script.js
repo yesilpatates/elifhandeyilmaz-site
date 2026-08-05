@@ -57,7 +57,7 @@
     if (document.getElementById("event-projects-script")) return;
     const eventScript = document.createElement("script");
     eventScript.id = "event-projects-script";
-    eventScript.src = "assets/event-projects.js?v=20260805-latest-image-scroll-v4";
+    eventScript.src = "assets/event-projects.js?v=20260805-card-click-fix-v5";
     eventScript.defer = true;
     document.body.appendChild(eventScript);
   };
@@ -71,7 +71,7 @@
 
   const loadCoreScript = () => {
     const coreScript = document.createElement("script");
-    coreScript.src = "assets/core-script.js?v=20260802-local-v2";
+    coreScript.src = "assets/core-script.js?v=20260805-card-mapping-fix-v3";
     coreScript.defer = true;
     coreScript.onload = loadEnhancements;
     coreScript.onerror = () => {

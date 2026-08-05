@@ -145,15 +145,25 @@
   if (sagligimBurada) brandProjects.push(sagligimBurada);
 
   const cards = [...document.querySelectorAll(".project-card")];
+  const coverByVisualClass = {
+    "visual-brand": covers[0],
+    "visual-editorial": covers[1],
+    "visual-event": covers[2],
+    "visual-promo": covers[3],
+    "visual-social": covers[4],
+    "visual-ui": covers[5],
+    "visual-motion": covers[6]
+  };
 
   cards.forEach((card, index) => {
-    const cover = covers[index];
+    const visual = card.querySelector(".project-visual");
+    const visualClass = [...(visual?.classList || [])].find((className) => className.startsWith("visual-"));
+    const cover = coverByVisualClass[visualClass] || covers[index];
     if (!cover) return;
     const title = card.querySelector(".project-body h3");
     const label = card.querySelector(".project-visual strong");
     if (title) title.textContent = cover.title;
     if (label) label.textContent = cover.label;
-    const visual = card.querySelector(".project-visual");
     if (!visual) return;
     const image = new Image();
     image.className = "project-cover-image";
