@@ -31,6 +31,24 @@
     </article>`;
   document.body.appendChild(modal);
 
+  const frame = modal.querySelector('.event-showcase-frame');
+  const imagesReady = Promise.all([...frame.images].map((image) => (
+    image.complete
+      ? Promise.resolve()
+      : new Promise((resolve) => {
+          image.addEventListener('load', resolve, { once: true });
+          image.addEventListener('error', resolve, { once: true });
+        })
+  )));
+  const alignToLatestImage = () => {
+    const overflow = frame.scrollWidth - frame.clientWidth;
+    if (overflow <= 0) return;
+    frame.scrollTo({
+      left: overflow,
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+    });
+  };
+
   const trigger = document.createElement('button');
   trigger.className = 'event-showcase-trigger';
   trigger.type = 'button';
@@ -45,6 +63,7 @@
     requestAnimationFrame(() => {
       modal.classList.add('is-open');
       modal.querySelector('.event-showcase-close').focus({ preventScroll: true });
+      imagesReady.then(() => requestAnimationFrame(alignToLatestImage));
     });
   };
   const close = () => {

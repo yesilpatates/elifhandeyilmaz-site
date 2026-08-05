@@ -57,7 +57,7 @@
     if (document.getElementById("event-projects-script")) return;
     const eventScript = document.createElement("script");
     eventScript.id = "event-projects-script";
-    eventScript.src = "assets/event-projects.js?v=20260805-three-images-v3";
+    eventScript.src = "assets/event-projects.js?v=20260805-latest-image-scroll-v4";
     eventScript.defer = true;
     document.body.appendChild(eventScript);
   };
