@@ -46,6 +46,158 @@
     }
   ];
 
+  // Yeni fotoğraflar bu dizinin sonuna eklenir; mevcut sıra korunur.
+  const summitPhotos = [
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/01-ana-mockup.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi organizasyon tasarımlarının toplu mockup sunumu'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/02-neta-sea-etkinlik.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik alanında sergilenen Neta Sea Kabotaj özel sayısı'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/03-zirve-katilimcilari.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi katılımcıları etkinlik salonunda'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/04-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 4'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/05-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 5'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/06-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 6'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/07-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 7'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/08-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 8'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/09-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 9'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/10-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 10'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/11-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 11'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/12-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 12'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/13-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 13'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/14-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 14'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/15-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 15'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/16-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 16'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/17-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 17'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/18-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 18'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/19-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 19'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/20-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 20'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/21-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 21'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/22-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 22'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/23-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 23'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/24-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 24'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/25-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 25'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/26-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 26'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/27-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 27'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/28-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 28'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/29-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 29'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/30-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 30'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/31-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 31'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/32-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 32'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/33-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 33'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/34-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 34'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/35-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 35'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/36-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 36'
+    },
+    {
+      src: 'assets/event-projects/turkiye-denizcilik-zirvesi/37-etkinlik-fotografi.webp',
+      alt: '5. Türkiye Denizcilik Zirvesi etkinlik fotoğrafı 37'
+    }
+  ];
+
   card.dataset.eventShowcaseReady = 'true';
   card.classList.add('has-event-showcase');
 
@@ -96,10 +248,17 @@
       </div>
 
       <div class="event-showcase-detail-view" data-event-detail-view hidden>
-        <div class="event-showcase-frame" aria-label="5. Türkiye Denizcilik Zirvesi proje görselleri">
-          <img class="event-showcase-image" src="assets/event-projects/turkiye-denizcilik-zirvesi/01-ana-mockup.webp" alt="5. Türkiye Denizcilik Zirvesi organizasyon tasarımlarının toplu mockup sunumu">
-          <img class="event-showcase-image" src="assets/event-projects/turkiye-denizcilik-zirvesi/02-neta-sea-etkinlik.webp" alt="5. Türkiye Denizcilik Zirvesi etkinlik alanında sergilenen Neta Sea Kabotaj özel sayısı">
-          <img class="event-showcase-image" src="assets/event-projects/turkiye-denizcilik-zirvesi/03-zirve-katilimcilari.webp" alt="5. Türkiye Denizcilik Zirvesi katılımcıları etkinlik salonunda">
+        <div class="event-showcase-carousel" data-event-carousel>
+          <button class="event-showcase-nav event-showcase-nav--prev" type="button" aria-label="Önceki fotoğraf" data-event-prev>
+            <span aria-hidden="true">‹</span>
+          </button>
+          <div class="event-showcase-frame" tabindex="0" aria-label="5. Türkiye Denizcilik Zirvesi proje görselleri; kaydırarak gezinebilirsiniz">
+            <div class="event-showcase-track"></div>
+          </div>
+          <button class="event-showcase-nav event-showcase-nav--next" type="button" aria-label="Sonraki fotoğraf" data-event-next>
+            <span aria-hidden="true">›</span>
+          </button>
+          <span class="event-showcase-counter" aria-live="polite" aria-atomic="true"></span>
         </div>
       </div>
     </article>`;
@@ -111,7 +270,30 @@
   const backButton = modal.querySelector('[data-event-showcase-back]');
   const closeButton = modal.querySelector('.event-showcase-close');
   const frame = modal.querySelector('.event-showcase-frame');
+  const track = modal.querySelector('.event-showcase-track');
+  const previousButton = modal.querySelector('[data-event-prev]');
+  const nextButton = modal.querySelector('[data-event-next]');
+  const counter = modal.querySelector('.event-showcase-counter');
   const dialog = modal.querySelector('.event-showcase-dialog');
+
+  const photoMarkup = (photo, index, copy) => `
+    <img
+      class="event-showcase-image"
+      src="${photo.src}"
+      alt="${copy === 1 ? photo.alt : ''}"
+      data-photo-index="${index}"
+      data-photo-copy="${copy}"
+      ${copy === 1 ? '' : 'aria-hidden="true"'}
+      decoding="async"
+      draggable="false"
+    >`;
+
+  // Üç aynı set, her iki yönde de son fotoğraftan ilk fotoğrafa kesintisiz geçiş sağlar.
+  track.innerHTML = [0, 1, 2].map((copy) => (
+    summitPhotos.map((photo, index) => photoMarkup(photo, index, copy)).join('')
+  )).join('');
+
+  const slides = [...track.querySelectorAll('.event-showcase-image')];
   const imagesReady = Promise.all([...frame.querySelectorAll('img')].map((image) => (
     image.complete
       ? Promise.resolve()
@@ -120,6 +302,99 @@
           image.addEventListener('error', resolve, { once: true });
         })
   )));
+
+  let setWidth = 0;
+  let activePhotoIndex = 0;
+  let isLoopJump = false;
+  let scrollRaf = 0;
+
+  const updateCounter = (index) => {
+    const normalizedIndex = (index + summitPhotos.length) % summitPhotos.length;
+    if (normalizedIndex === activePhotoIndex && counter.textContent) return;
+    activePhotoIndex = normalizedIndex;
+    counter.textContent = `${activePhotoIndex + 1} / ${summitPhotos.length}`;
+  };
+
+  const measureCarousel = () => {
+    const firstSetStart = track.querySelector('[data-photo-copy="0"][data-photo-index="0"]');
+    const middleSetStart = track.querySelector('[data-photo-copy="1"][data-photo-index="0"]');
+    setWidth = middleSetStart.offsetLeft - firstSetStart.offsetLeft;
+    return middleSetStart;
+  };
+
+  const centerSlide = (slide, behavior = 'smooth') => {
+    if (!slide) return;
+    const left = slide.offsetLeft - Math.max(0, (frame.clientWidth - slide.offsetWidth) / 2);
+    frame.scrollTo({ left, behavior });
+    updateCounter(Number(slide.dataset.photoIndex));
+  };
+
+  const resetCarousel = () => {
+    const middleSetStart = measureCarousel();
+    centerSlide(middleSetStart, 'auto');
+  };
+
+  const getNearestSlideIndex = () => {
+    const frameCenter = frame.scrollLeft + frame.clientWidth / 2;
+    let nearestIndex = 0;
+    let nearestDistance = Infinity;
+    slides.forEach((slide, index) => {
+      const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+      const distance = Math.abs(slideCenter - frameCenter);
+      if (distance < nearestDistance) {
+        nearestDistance = distance;
+        nearestIndex = index;
+      }
+    });
+    return nearestIndex;
+  };
+
+  const moveCarousel = (direction) => {
+    const nearestIndex = getNearestSlideIndex();
+    const targetIndex = Math.max(0, Math.min(slides.length - 1, nearestIndex + direction));
+    centerSlide(slides[targetIndex]);
+  };
+
+  const maintainInfiniteLoop = () => {
+    if (!setWidth || isLoopJump) return;
+    const lowerLimit = setWidth * .35;
+    const upperLimit = setWidth * 1.65;
+    let destination = null;
+    if (frame.scrollLeft < lowerLimit) destination = frame.scrollLeft + setWidth;
+    if (frame.scrollLeft > upperLimit) destination = frame.scrollLeft - setWidth;
+    if (destination === null) return;
+
+    isLoopJump = true;
+    frame.scrollTo({ left: destination, behavior: 'auto' });
+    requestAnimationFrame(() => { isLoopJump = false; });
+  };
+
+  frame.addEventListener('scroll', () => {
+    cancelAnimationFrame(scrollRaf);
+    scrollRaf = requestAnimationFrame(() => {
+      maintainInfiniteLoop();
+      const nearestSlide = slides[getNearestSlideIndex()];
+      if (nearestSlide) updateCounter(Number(nearestSlide.dataset.photoIndex));
+    });
+  }, { passive: true });
+
+  previousButton.addEventListener('click', () => moveCarousel(-1));
+  nextButton.addEventListener('click', () => moveCarousel(1));
+
+  frame.addEventListener('keydown', (event) => {
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    event.preventDefault();
+    moveCarousel(event.key === 'ArrowLeft' ? -1 : 1);
+  });
+
+  window.addEventListener('resize', () => {
+    if (modal.hidden || detailView.hidden) return;
+    const currentIndex = activePhotoIndex;
+    requestAnimationFrame(() => {
+      measureCarousel();
+      centerSlide(track.querySelector(`[data-photo-copy="1"][data-photo-index="${currentIndex}"]`), 'auto');
+    });
+  });
 
   const showList = () => {
     detailView.hidden = true;
@@ -136,7 +411,7 @@
     title.textContent = '5. Türkiye Denizcilik Zirvesi';
     dialog.scrollTop = 0;
     imagesReady.then(() => requestAnimationFrame(() => {
-      frame.scrollTo({ left: 0, behavior: 'auto' });
+      resetCarousel();
     }));
   };
 
@@ -172,13 +447,15 @@
   backButton.addEventListener('click', showList);
   modal.querySelectorAll('[data-event-showcase-close]').forEach((item) => item.addEventListener('click', close));
   document.addEventListener('keydown', (event) => {
-    if (modal.hidden || event.key !== 'Escape') return;
-    event.preventDefault();
-    if (!detailView.hidden) {
-      showList();
-      backButton.focus({ preventScroll: true });
-      return;
+    if (modal.hidden) return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      if (!detailView.hidden) {
+        showList();
+        backButton.focus({ preventScroll: true });
+        return;
+      }
+      close();
     }
-    close();
   });
 })();
