@@ -260,6 +260,48 @@
           </button>
           <span class="event-showcase-counter" aria-live="polite" aria-atomic="true"></span>
         </div>
+
+        <div class="event-project-details" aria-label="5. Türkiye Denizcilik Zirvesi proje bilgileri">
+          <section class="event-project-details__section event-project-details__identity">
+            <h3>Proje Künyesi</h3>
+            <dl class="event-project-facts">
+              <div>
+                <dt>Müşteri / Kurum</dt>
+                <dd>T.C. Ulaştırma ve Altyapı Bakanlığı / Denizcilik Genel Müdürlüğü</dd>
+              </div>
+              <div>
+                <dt>Tarih</dt>
+                <dd>2–3 Temmuz 2026</dd>
+              </div>
+              <div>
+                <dt>Lokasyon</dt>
+                <dd>Tersane İstanbul, Taşkızak Etkinlik Alanı</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="event-project-details__section event-project-details__about">
+            <h3>Etkinlik Hakkında</h3>
+            <p>T.C. Ulaştırma ve Altyapı Bakanlığı / Denizcilik Genel Müdürlüğü tarafından düzenlenen 5. Türkiye Denizcilik Zirvesi; kamu, özel sektör ve uluslararası denizcilik temsilcilerini bir araya getiren kapsamlı bir organizasyondur. Kabotaj Kanunu’nun 100. yılına denk gelen zirvede; küresel deniz ticareti, sürdürülebilirlik, limancılık ve sektörün geleceğine yönelik stratejik yaklaşımlar ele alınmıştır.</p>
+          </section>
+
+          <section class="event-project-details__section event-project-details__role">
+            <h3>Rolüm ve Tasarım Kapsamı</h3>
+            <ul class="event-project-scope">
+              <li><strong>Logo ve Kurumsal Kimlik:</strong> Zirve logosunun ve kurumsal kimlik kılavuzunun hazırlanması</li>
+              <li><strong>Tema ve İllüstrasyon:</strong> Kabotaj Kanunu’nun 100. yılına özel desenlerin ve vektörel motiflerin tasarlanması</li>
+              <li><strong>Mekân Giydirme:</strong> Giriş takları, yönlendirme totemleri, karşılama bankoları, backdrop ve sahne uygulamalarının tasarlanması</li>
+              <li><strong>Basılı Materyaller:</strong> Yaka kartları, menüler, bayraklar, pankartlar, ödüller ve VIP hediyelerine yönelik tasarımların hazırlanması</li>
+              <li><strong>Dijital Materyaller:</strong> Dijital davetiyeler, sosyal medya içerikleri ve ekran görsellerinin tasarlanması</li>
+            </ul>
+            <p class="event-project-summary">Projenin logo ve görsel konsept geliştirme aşamasından etkinlik alanındaki fiziksel uygulamalara kadar uzanan tüm görsel iletişim sürecini üstlendim. Basılı ve dijital materyallerin tasarımını hazırlayarak üretim ve uygulama süreçlerinin görsel bütünlük içinde ilerlemesini sağladım.</p>
+          </section>
+
+          <section class="event-project-details__section event-project-details__approach">
+            <h3>Tasarım Yaklaşımı</h3>
+            <p>Kabotaj Kanunu’nun 100. yılına özel geliştirilen görsel konseptte, geleneksel denizcilik motifleri modern geometrik grid sistemiyle bir araya getirildi. Lacivert ve altın tonlarından oluşan prestijli renk paletiyle zirvenin kurumsal ve protokol ağırlıklı yapısı vurgulanırken, çağdaş ve yenilikçi bir görsel dil oluşturuldu.</p>
+          </section>
+        </div>
       </div>
     </article>`;
   document.body.appendChild(modal);
