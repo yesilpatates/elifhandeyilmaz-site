@@ -26,6 +26,7 @@
       <div class="event-showcase-frame" aria-label="Proje görselleri">
         <img class="event-showcase-image" src="assets/event-projects/turkiye-denizcilik-zirvesi/01-ana-mockup.webp" alt="5. Türkiye Denizcilik Zirvesi organizasyon tasarımlarının toplu mockup sunumu">
         <img class="event-showcase-image" src="assets/event-projects/turkiye-denizcilik-zirvesi/02-neta-sea-etkinlik.webp" alt="5. Türkiye Denizcilik Zirvesi etkinlik alanında sergilenen Neta Sea Kabotaj özel sayısı">
+        <img class="event-showcase-image" src="assets/event-projects/turkiye-denizcilik-zirvesi/03-zirve-katilimcilari.webp" alt="5. Türkiye Denizcilik Zirvesi katılımcıları etkinlik salonunda">
       </div>
     </article>`;
   document.body.appendChild(modal);
