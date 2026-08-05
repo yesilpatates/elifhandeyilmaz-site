@@ -57,7 +57,7 @@
     if (document.getElementById("event-projects-script")) return;
     const eventScript = document.createElement("script");
     eventScript.id = "event-projects-script";
-    eventScript.src = "assets/event-projects.js?v=20260805-women-day-v1";
+    eventScript.src = "assets/event-projects.js?v=20260805-women-day-details-v1";
     eventScript.defer = true;
     document.body.appendChild(eventScript);
   };
