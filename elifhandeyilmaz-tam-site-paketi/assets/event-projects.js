@@ -423,6 +423,7 @@
       data-photo-index="${index}"
       data-photo-copy="${copy}"
       ${copy === 1 ? '' : 'aria-hidden="true"'}
+      loading="${copy === 1 && index === 0 ? 'eager' : 'lazy'}"
       decoding="async"
       draggable="false"
     >`;
@@ -440,14 +441,8 @@
       activePhotos.map((photo, index) => photoMarkup(photo, index, copy)).join('')
     )).join('');
     slides = [...track.querySelectorAll('.event-showcase-image')];
-    imagesReady = Promise.all([...frame.querySelectorAll('img')].map((image) => (
-      image.complete
-        ? Promise.resolve()
-        : new Promise((resolve) => {
-            image.addEventListener('load', resolve, { once: true });
-            image.addEventListener('error', resolve, { once: true });
-          })
-    )));
+    // Ölçüler HTML'de hazır; uzak kopyaların yüklenmesini beklemeden kontrolü açabiliriz.
+    imagesReady = Promise.resolve();
     setWidth = 0;
     activePhotoIndex = 0;
     carouselReady = false;
