@@ -1,5 +1,6 @@
 (() => {
-  const card = [...document.querySelectorAll('.project-card')].find((item) => {
+  const card = document.querySelector('.project-card .project-visual.visual-event')?.closest('.project-card')
+    || [...document.querySelectorAll('.project-card')].find((item) => {
     const title = item.querySelector('.project-body h3')?.textContent?.toLocaleLowerCase('tr-TR') || '';
     return title.includes('etkinlik') && title.includes('organizasyon');
   });
