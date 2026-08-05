@@ -493,8 +493,17 @@
 
   const centerSlide = (slide, behavior = 'smooth', update = true) => {
     if (!slide) return;
-    if (behavior === 'auto') isRepositioning = true;
-    frame.scrollTo({ left: getCenteredLeft(slide), behavior });
+    const targetLeft = getCenteredLeft(slide);
+    if (behavior === 'auto') {
+      isRepositioning = true;
+      // CSS scroll-behavior:smooth, "auto" konumlandırmayı da animasyona çevirmesin.
+      const previousScrollBehavior = frame.style.scrollBehavior;
+      frame.style.scrollBehavior = 'auto';
+      frame.scrollLeft = targetLeft;
+      requestAnimationFrame(() => { frame.style.scrollBehavior = previousScrollBehavior; });
+    } else {
+      frame.scrollTo({ left: targetLeft, behavior });
+    }
     if (update) updateCounter(Number(slide.dataset.photoIndex));
     if (behavior === 'auto') releaseRepositioning();
   };

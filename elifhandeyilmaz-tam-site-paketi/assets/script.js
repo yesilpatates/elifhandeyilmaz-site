@@ -53,11 +53,11 @@
   };
 
   const loadEventShowcase = () => {
-    addStylesheet("event-projects-styles", "assets/event-projects.css?v=20260805-gallery-state-v2");
+    addStylesheet("event-projects-styles", "assets/event-projects.css?v=20260805-gallery-state-v3");
     if (document.getElementById("event-projects-script")) return;
     const eventScript = document.createElement("script");
     eventScript.id = "event-projects-script";
-    eventScript.src = "assets/event-projects.js?v=20260805-gallery-state-v2";
+    eventScript.src = "assets/event-projects.js?v=20260805-gallery-state-v3";
     eventScript.defer = true;
     document.body.appendChild(eventScript);
   };
