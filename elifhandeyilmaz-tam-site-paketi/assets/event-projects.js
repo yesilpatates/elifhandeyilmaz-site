@@ -533,7 +533,9 @@
     if (!slides[targetIndex]) return;
     navigationSlideIndex = targetIndex;
     updateCounter(activePhotoIndex + direction);
-    centerSlide(slides[targetIndex], 'smooth', false);
+    // Ok komutları devam eden doğal kaydırma animasyonunda kaybolmasın.
+    centerSlide(slides[targetIndex], 'auto', false);
+    navigationSlideIndex = null;
   };
 
   const normalizeLoopPosition = (slide) => {
