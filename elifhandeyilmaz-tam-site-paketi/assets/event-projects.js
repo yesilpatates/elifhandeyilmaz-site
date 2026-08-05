@@ -23,8 +23,9 @@
         </div>
         <button class="event-showcase-close" type="button" aria-label="Pencereyi kapat" data-event-showcase-close>×</button>
       </header>
-      <div class="event-showcase-frame" aria-label="Proje görseli">
+      <div class="event-showcase-frame" aria-label="Proje görselleri">
         <img class="event-showcase-image" src="assets/event-projects/turkiye-denizcilik-zirvesi/01-ana-mockup.webp" alt="5. Türkiye Denizcilik Zirvesi organizasyon tasarımlarının toplu mockup sunumu">
+        <img class="event-showcase-image" src="assets/event-projects/turkiye-denizcilik-zirvesi/02-neta-sea-etkinlik.webp" alt="5. Türkiye Denizcilik Zirvesi etkinlik alanında sergilenen Neta Sea Kabotaj özel sayısı">
       </div>
     </article>`;
   document.body.appendChild(modal);

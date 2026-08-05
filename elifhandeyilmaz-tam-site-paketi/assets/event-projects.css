@@ -37,6 +37,7 @@ body.event-showcase-open { overflow: hidden; }
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
+  gap: 14px;
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0;
