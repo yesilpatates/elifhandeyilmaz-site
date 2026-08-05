@@ -237,10 +237,14 @@ body.event-showcase-open { overflow: hidden; }
   overscroll-behavior-x: contain;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  scroll-padding-inline: 50%;
   scrollbar-width: none;
   touch-action: pan-x pan-y pinch-zoom;
+  cursor: grab;
   -webkit-overflow-scrolling: touch;
 }
+
+.event-showcase-frame:active { cursor: grabbing; }
 
 .event-showcase-frame::-webkit-scrollbar { display: none; }
 
@@ -260,6 +264,7 @@ body.event-showcase-open { overflow: hidden; }
   object-fit: contain;
   object-position: center;
   scroll-snap-align: center;
+  scroll-snap-stop: always;
   user-select: none;
   -webkit-user-drag: none;
 }
@@ -287,6 +292,11 @@ body.event-showcase-open { overflow: hidden; }
 .event-showcase-nav:hover {
   background: #078f99;
   transform: translateY(-50%) scale(1.06);
+}
+
+.event-showcase-nav:active {
+  background: #067b84;
+  transform: translateY(-50%) scale(.96);
 }
 
 .event-showcase-nav--prev { left: 18px; }
