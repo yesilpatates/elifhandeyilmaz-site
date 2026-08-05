@@ -430,6 +430,8 @@
   let activePhotoIndex = 0;
   let isLoopJump = false;
   let scrollRaf = 0;
+  let scrollSettleTimer = 0;
+  let requestedSlideIndex = null;
 
   const updateCounter = (index) => {
     const normalizedIndex = (index + activePhotos.length) % activePhotos.length;
@@ -445,10 +447,14 @@
     return middleSetStart;
   };
 
+  const getCenteredLeft = (slide) => (
+    slide.offsetLeft - Math.max(0, (frame.clientWidth - slide.offsetWidth) / 2)
+  );
+
   const centerSlide = (slide, behavior = 'smooth') => {
     if (!slide) return;
-    const left = slide.offsetLeft - Math.max(0, (frame.clientWidth - slide.offsetWidth) / 2);
-    frame.scrollTo({ left, behavior });
+    requestedSlideIndex = behavior === 'smooth' ? slides.indexOf(slide) : null;
+    frame.scrollTo({ left: getCenteredLeft(slide), behavior });
     updateCounter(Number(slide.dataset.photoIndex));
   };
 
@@ -473,8 +479,8 @@
   };
 
   const moveCarousel = (direction) => {
-    const nearestIndex = getNearestSlideIndex();
-    const targetIndex = Math.max(0, Math.min(slides.length - 1, nearestIndex + direction));
+    const startIndex = requestedSlideIndex ?? getNearestSlideIndex();
+    const targetIndex = Math.max(0, Math.min(slides.length - 1, startIndex + direction));
     centerSlide(slides[targetIndex]);
   };
 
@@ -495,11 +501,35 @@
   frame.addEventListener('scroll', () => {
     cancelAnimationFrame(scrollRaf);
     scrollRaf = requestAnimationFrame(() => {
-      maintainInfiniteLoop();
       const nearestSlide = slides[getNearestSlideIndex()];
       if (nearestSlide) updateCounter(Number(nearestSlide.dataset.photoIndex));
     });
+
+    window.clearTimeout(scrollSettleTimer);
+    scrollSettleTimer = window.setTimeout(() => {
+      const nearestSlide = slides[getNearestSlideIndex()];
+      if (!nearestSlide) return;
+
+      const distanceToCenter = Math.abs(frame.scrollLeft - getCenteredLeft(nearestSlide));
+      if (distanceToCenter > 2) {
+        centerSlide(nearestSlide);
+        return;
+      }
+
+      requestedSlideIndex = null;
+      maintainInfiniteLoop();
+    }, 140);
   }, { passive: true });
+
+  const releaseRequestedSlide = () => { requestedSlideIndex = null; };
+  frame.addEventListener('pointerdown', releaseRequestedSlide, { passive: true });
+  frame.addEventListener('touchstart', releaseRequestedSlide, { passive: true });
+  frame.addEventListener('wheel', releaseRequestedSlide, { passive: true });
+
+  track.addEventListener('click', (event) => {
+    const selectedSlide = event.target.closest('.event-showcase-image');
+    if (selectedSlide) centerSlide(selectedSlide);
+  });
 
   previousButton.addEventListener('click', () => moveCarousel(-1));
   nextButton.addEventListener('click', () => moveCarousel(1));
