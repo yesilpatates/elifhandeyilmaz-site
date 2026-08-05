@@ -410,8 +410,13 @@
     backButton.hidden = false;
     title.textContent = '5. Türkiye Denizcilik Zirvesi';
     dialog.scrollTop = 0;
-    imagesReady.then(() => requestAnimationFrame(() => {
+    activePhotoIndex = 0;
+    counter.textContent = `1 / ${summitPhotos.length}`;
+    requestAnimationFrame(() => {
       resetCarousel();
+    });
+    imagesReady.then(() => requestAnimationFrame(() => {
+      if (!detailView.hidden && activePhotoIndex === 0) resetCarousel();
     }));
   };
 
