@@ -21,7 +21,9 @@
       number: '02',
       title: 'Uluslararası Denizci Kadınlar Günü',
       short: 'UDKG',
-      tone: 'coral'
+      tone: 'coral',
+      image: 'assets/event-projects/uluslararasi-denizci-kadinlar-gunu/01-ana-mockup.webp',
+      available: true
     },
     {
       id: 'yesil-donusum-zirvesi',
@@ -198,6 +200,34 @@
     }
   ];
 
+  const womenDayPhotos = [
+    {
+      src: 'assets/event-projects/uluslararasi-denizci-kadinlar-gunu/01-ana-mockup.webp',
+      alt: 'Uluslararası Denizci Kadınlar Günü organizasyon tasarımlarının toplu mockup sunumu'
+    },
+    {
+      src: 'assets/event-projects/uluslararasi-denizci-kadinlar-gunu/02-ana-tasarim.webp',
+      alt: 'Uluslararası Denizci Kadınlar Günü ana etkinlik tasarımı'
+    },
+    ...Array.from({ length: 7 }, (_, index) => ({
+      src: `assets/event-projects/uluslararasi-denizci-kadinlar-gunu/${String(index + 3).padStart(2, '0')}-etkinlik-fotografi.webp`,
+      alt: `Uluslararası Denizci Kadınlar Günü etkinlik fotoğrafı ${index + 1}`
+    }))
+  ];
+
+  const projectGalleries = {
+    'turkiye-denizcilik-zirvesi': {
+      title: '5. Türkiye Denizcilik Zirvesi',
+      photos: summitPhotos,
+      showDetails: true
+    },
+    'uluslararasi-denizci-kadinlar-gunu': {
+      title: 'Uluslararası Denizci Kadınlar Günü',
+      photos: womenDayPhotos,
+      showDetails: false
+    }
+  };
+
   card.dataset.eventShowcaseReady = 'true';
   card.classList.add('has-event-showcase');
 
@@ -317,6 +347,7 @@
   const nextButton = modal.querySelector('[data-event-next]');
   const counter = modal.querySelector('.event-showcase-counter');
   const dialog = modal.querySelector('.event-showcase-dialog');
+  const projectDetails = modal.querySelector('.event-project-details');
 
   const photoMarkup = (photo, index, copy) => `
     <img
@@ -330,20 +361,27 @@
       draggable="false"
     >`;
 
-  // Üç aynı set, her iki yönde de son fotoğraftan ilk fotoğrafa kesintisiz geçiş sağlar.
-  track.innerHTML = [0, 1, 2].map((copy) => (
-    summitPhotos.map((photo, index) => photoMarkup(photo, index, copy)).join('')
-  )).join('');
+  let activePhotos = summitPhotos;
+  let slides = [];
+  let imagesReady = Promise.resolve();
 
-  const slides = [...track.querySelectorAll('.event-showcase-image')];
-  const imagesReady = Promise.all([...frame.querySelectorAll('img')].map((image) => (
-    image.complete
-      ? Promise.resolve()
-      : new Promise((resolve) => {
-          image.addEventListener('load', resolve, { once: true });
-          image.addEventListener('error', resolve, { once: true });
-        })
-  )));
+  const renderCarousel = (photos) => {
+    activePhotos = photos;
+    // Üç aynı set, her iki yönde de son fotoğraftan ilk fotoğrafa kesintisiz geçiş sağlar.
+    track.innerHTML = [0, 1, 2].map((copy) => (
+      activePhotos.map((photo, index) => photoMarkup(photo, index, copy)).join('')
+    )).join('');
+    slides = [...track.querySelectorAll('.event-showcase-image')];
+    imagesReady = Promise.all([...frame.querySelectorAll('img')].map((image) => (
+      image.complete
+        ? Promise.resolve()
+        : new Promise((resolve) => {
+            image.addEventListener('load', resolve, { once: true });
+            image.addEventListener('error', resolve, { once: true });
+          })
+    )));
+    setWidth = 0;
+  };
 
   let setWidth = 0;
   let activePhotoIndex = 0;
@@ -351,10 +389,10 @@
   let scrollRaf = 0;
 
   const updateCounter = (index) => {
-    const normalizedIndex = (index + summitPhotos.length) % summitPhotos.length;
+    const normalizedIndex = (index + activePhotos.length) % activePhotos.length;
     if (normalizedIndex === activePhotoIndex && counter.textContent) return;
     activePhotoIndex = normalizedIndex;
-    counter.textContent = `${activePhotoIndex + 1} / ${summitPhotos.length}`;
+    counter.textContent = `${activePhotoIndex + 1} / ${activePhotos.length}`;
   };
 
   const measureCarousel = () => {
@@ -446,14 +484,20 @@
     dialog.scrollTop = 0;
   };
 
-  const showProject = () => {
+  const showProject = (event) => {
+    const projectId = event.currentTarget.dataset.eventProject;
+    const gallery = projectGalleries[projectId];
+    if (!gallery) return;
     listView.hidden = true;
     detailView.hidden = false;
     backButton.hidden = false;
-    title.textContent = '5. Türkiye Denizcilik Zirvesi';
+    title.textContent = gallery.title;
+    frame.setAttribute('aria-label', `${gallery.title} proje görselleri; kaydırarak gezinebilirsiniz`);
+    projectDetails.hidden = !gallery.showDetails;
+    renderCarousel(gallery.photos);
     dialog.scrollTop = 0;
     activePhotoIndex = 0;
-    counter.textContent = `1 / ${summitPhotos.length}`;
+    counter.textContent = `1 / ${activePhotos.length}`;
     requestAnimationFrame(() => {
       resetCarousel();
     });
@@ -490,7 +534,7 @@
   };
 
   trigger.addEventListener('click', open);
-  modal.querySelector('[data-event-project="turkiye-denizcilik-zirvesi"]')?.addEventListener('click', showProject);
+  modal.querySelectorAll('[data-event-project]').forEach((projectCard) => projectCard.addEventListener('click', showProject));
   backButton.addEventListener('click', showList);
   modal.querySelectorAll('[data-event-showcase-close]').forEach((item) => item.addEventListener('click', close));
   document.addEventListener('keydown', (event) => {
