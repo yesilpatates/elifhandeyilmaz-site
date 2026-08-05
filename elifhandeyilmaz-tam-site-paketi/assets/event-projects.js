@@ -215,16 +215,99 @@
     }))
   ];
 
+  const projectDetailsMarkup = {
+    'turkiye-denizcilik-zirvesi': `
+      <section class="event-project-details__section event-project-details__identity">
+        <h3>Proje Künyesi</h3>
+        <dl class="event-project-facts">
+          <div>
+            <dt>Müşteri / Kurum</dt>
+            <dd>T.C. Ulaştırma ve Altyapı Bakanlığı / Denizcilik Genel Müdürlüğü</dd>
+          </div>
+          <div>
+            <dt>Tarih</dt>
+            <dd>2–3 Temmuz 2026</dd>
+          </div>
+          <div>
+            <dt>Lokasyon</dt>
+            <dd>Tersane İstanbul, Taşkızak Etkinlik Alanı</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="event-project-details__section event-project-details__about">
+        <h3>Etkinlik Hakkında</h3>
+        <p>T.C. Ulaştırma ve Altyapı Bakanlığı / Denizcilik Genel Müdürlüğü tarafından düzenlenen 5. Türkiye Denizcilik Zirvesi; kamu, özel sektör ve uluslararası denizcilik temsilcilerini bir araya getiren kapsamlı bir organizasyondur. Kabotaj Kanunu’nun 100. yılına denk gelen zirvede; küresel deniz ticareti, sürdürülebilirlik, limancılık ve sektörün geleceğine yönelik stratejik yaklaşımlar ele alınmıştır.</p>
+      </section>
+
+      <section class="event-project-details__section event-project-details__role">
+        <h3>Rolüm ve Tasarım Kapsamı</h3>
+        <ul class="event-project-scope">
+          <li><strong>Logo ve Kurumsal Kimlik:</strong> Zirve logosunun ve kurumsal kimlik kılavuzunun hazırlanması</li>
+          <li><strong>Tema ve İllüstrasyon:</strong> Kabotaj Kanunu’nun 100. yılına özel desenlerin ve vektörel motiflerin tasarlanması</li>
+          <li><strong>Mekân Giydirme:</strong> Giriş takları, yönlendirme totemleri, karşılama bankoları, backdrop ve sahne uygulamalarının tasarlanması</li>
+          <li><strong>Basılı Materyaller:</strong> Yaka kartları, menüler, bayraklar, pankartlar, ödüller ve VIP hediyelerine yönelik tasarımların hazırlanması</li>
+          <li><strong>Dijital Materyaller:</strong> Dijital davetiyeler, sosyal medya içerikleri ve ekran görsellerinin tasarlanması</li>
+        </ul>
+        <p class="event-project-summary">Projenin logo ve görsel konsept geliştirme aşamasından etkinlik alanındaki fiziksel uygulamalara kadar uzanan tüm görsel iletişim sürecini üstlendim. Basılı ve dijital materyallerin tasarımını hazırlayarak üretim ve uygulama süreçlerinin görsel bütünlük içinde ilerlemesini sağladım.</p>
+      </section>
+
+      <section class="event-project-details__section event-project-details__approach">
+        <h3>Tasarım Yaklaşımı</h3>
+        <p>Kabotaj Kanunu’nun 100. yılına özel geliştirilen görsel konseptte, geleneksel denizcilik motifleri modern geometrik grid sistemiyle bir araya getirildi. Lacivert ve altın tonlarından oluşan prestijli renk paletiyle zirvenin kurumsal ve protokol ağırlıklı yapısı vurgulanırken, çağdaş ve yenilikçi bir görsel dil oluşturuldu.</p>
+      </section>`,
+    'uluslararasi-denizci-kadinlar-gunu': `
+      <section class="event-project-details__section event-project-details__identity">
+        <h3>Proje Künyesi</h3>
+        <dl class="event-project-facts">
+          <div>
+            <dt>Müşteri / Kurum</dt>
+            <dd>T.C. Ulaştırma ve Altyapı Bakanlığı / Denizcilik Genel Müdürlüğü</dd>
+          </div>
+          <div>
+            <dt>Tarih</dt>
+            <dd>18 Mayıs 2026</dd>
+          </div>
+          <div>
+            <dt>Lokasyon</dt>
+            <dd>Karayolları Sosyal Tesisleri, Ortaköy – İstanbul</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="event-project-details__section event-project-details__about">
+        <h3>Etkinlik Hakkında</h3>
+        <p>“Denizcilikte İz Bırakan Kadınlar” temasıyla gerçekleştirilen etkinlik, teknik operasyonlardan yönetim kademelerine kadar sektörün her alanındaki kadın emeğine ve başarılarına dikkat çeken kapsayıcı bir buluşmadır. Program; genç kadınları denizcilik kariyerlerine teşvik etmek, sektörde fırsat eşitliğini desteklemek ve sürdürülebilir gelişim vizyonunu paylaşmak amacıyla düzenlenmiştir.</p>
+      </section>
+
+      <section class="event-project-details__section event-project-details__role">
+        <h3>Rolüm ve Tasarım Kapsamı</h3>
+        <ul class="event-project-scope">
+          <li><strong>Konsept ve İllüstrasyon:</strong> Etkinlik temasına özel ana illüstrasyonun ve tamamlayıcı görsel motiflerin hazırlanması</li>
+          <li><strong>Görsel Kimlik:</strong> Etkinlik genelinde kullanılan renk, tipografi ve görsel iletişim standartlarının oluşturulması</li>
+          <li><strong>Mekân Giydirme:</strong> Ana sahne backdrop’u, roll-up banner’lar ve alan yönlendirmelerinin tasarlanması</li>
+          <li><strong>Basılı Materyaller:</strong> Etkinlik broşürü, program akışı, yaka kartları ve masaüstü bilgilendirme kartlarının hazırlanması</li>
+          <li><strong>Katılımcı Materyalleri:</strong> Hediye kartı ve katılımcı teşekkür kartlarının tasarlanması</li>
+        </ul>
+        <p class="event-project-summary">Projenin görsel konsept geliştirme aşamasından etkinlik alanındaki fiziksel uygulamalara kadar uzanan tüm görsel iletişim sürecini üstlendim. Basılı ve dijital materyallerin tasarımını hazırlayarak üretim ve uygulama süreçlerinin bütüncül bir görsel dil içerisinde ilerlemesini sağladım.</p>
+      </section>
+
+      <section class="event-project-details__section event-project-details__approach">
+        <h3>Tasarım Yaklaşımı</h3>
+        <p>Görsel konsept, kadınların denizcilik sektöründeki güçlü varlığını ve vizyonunu temsil eden özgün bir illüstrasyon etrafında geliştirildi. Turkuaz ve mavi tonlarından oluşan renk paleti; denizcilik motifleri ve serif tipografiyle bir araya getirilerek ilham verici, güçlü ve kurumsal bir görsel dil oluşturuldu.</p>
+      </section>`
+  };
+
   const projectGalleries = {
     'turkiye-denizcilik-zirvesi': {
       title: '5. Türkiye Denizcilik Zirvesi',
       photos: summitPhotos,
-      showDetails: true
+      details: projectDetailsMarkup['turkiye-denizcilik-zirvesi']
     },
     'uluslararasi-denizci-kadinlar-gunu': {
       title: 'Uluslararası Denizci Kadınlar Günü',
       photos: womenDayPhotos,
-      showDetails: false
+      details: projectDetailsMarkup['uluslararasi-denizci-kadinlar-gunu']
     }
   };
 
@@ -291,47 +374,7 @@
           <span class="event-showcase-counter" aria-live="polite" aria-atomic="true"></span>
         </div>
 
-        <div class="event-project-details" aria-label="5. Türkiye Denizcilik Zirvesi proje bilgileri">
-          <section class="event-project-details__section event-project-details__identity">
-            <h3>Proje Künyesi</h3>
-            <dl class="event-project-facts">
-              <div>
-                <dt>Müşteri / Kurum</dt>
-                <dd>T.C. Ulaştırma ve Altyapı Bakanlığı / Denizcilik Genel Müdürlüğü</dd>
-              </div>
-              <div>
-                <dt>Tarih</dt>
-                <dd>2–3 Temmuz 2026</dd>
-              </div>
-              <div>
-                <dt>Lokasyon</dt>
-                <dd>Tersane İstanbul, Taşkızak Etkinlik Alanı</dd>
-              </div>
-            </dl>
-          </section>
-
-          <section class="event-project-details__section event-project-details__about">
-            <h3>Etkinlik Hakkında</h3>
-            <p>T.C. Ulaştırma ve Altyapı Bakanlığı / Denizcilik Genel Müdürlüğü tarafından düzenlenen 5. Türkiye Denizcilik Zirvesi; kamu, özel sektör ve uluslararası denizcilik temsilcilerini bir araya getiren kapsamlı bir organizasyondur. Kabotaj Kanunu’nun 100. yılına denk gelen zirvede; küresel deniz ticareti, sürdürülebilirlik, limancılık ve sektörün geleceğine yönelik stratejik yaklaşımlar ele alınmıştır.</p>
-          </section>
-
-          <section class="event-project-details__section event-project-details__role">
-            <h3>Rolüm ve Tasarım Kapsamı</h3>
-            <ul class="event-project-scope">
-              <li><strong>Logo ve Kurumsal Kimlik:</strong> Zirve logosunun ve kurumsal kimlik kılavuzunun hazırlanması</li>
-              <li><strong>Tema ve İllüstrasyon:</strong> Kabotaj Kanunu’nun 100. yılına özel desenlerin ve vektörel motiflerin tasarlanması</li>
-              <li><strong>Mekân Giydirme:</strong> Giriş takları, yönlendirme totemleri, karşılama bankoları, backdrop ve sahne uygulamalarının tasarlanması</li>
-              <li><strong>Basılı Materyaller:</strong> Yaka kartları, menüler, bayraklar, pankartlar, ödüller ve VIP hediyelerine yönelik tasarımların hazırlanması</li>
-              <li><strong>Dijital Materyaller:</strong> Dijital davetiyeler, sosyal medya içerikleri ve ekran görsellerinin tasarlanması</li>
-            </ul>
-            <p class="event-project-summary">Projenin logo ve görsel konsept geliştirme aşamasından etkinlik alanındaki fiziksel uygulamalara kadar uzanan tüm görsel iletişim sürecini üstlendim. Basılı ve dijital materyallerin tasarımını hazırlayarak üretim ve uygulama süreçlerinin görsel bütünlük içinde ilerlemesini sağladım.</p>
-          </section>
-
-          <section class="event-project-details__section event-project-details__approach">
-            <h3>Tasarım Yaklaşımı</h3>
-            <p>Kabotaj Kanunu’nun 100. yılına özel geliştirilen görsel konseptte, geleneksel denizcilik motifleri modern geometrik grid sistemiyle bir araya getirildi. Lacivert ve altın tonlarından oluşan prestijli renk paletiyle zirvenin kurumsal ve protokol ağırlıklı yapısı vurgulanırken, çağdaş ve yenilikçi bir görsel dil oluşturuldu.</p>
-          </section>
-        </div>
+        <div class="event-project-details"></div>
       </div>
     </article>`;
   document.body.appendChild(modal);
@@ -493,7 +536,9 @@
     backButton.hidden = false;
     title.textContent = gallery.title;
     frame.setAttribute('aria-label', `${gallery.title} proje görselleri; kaydırarak gezinebilirsiniz`);
-    projectDetails.hidden = !gallery.showDetails;
+    projectDetails.innerHTML = gallery.details || '';
+    projectDetails.hidden = !gallery.details;
+    projectDetails.setAttribute('aria-label', `${gallery.title} proje bilgileri`);
     renderCarousel(gallery.photos);
     dialog.scrollTop = 0;
     activePhotoIndex = 0;
