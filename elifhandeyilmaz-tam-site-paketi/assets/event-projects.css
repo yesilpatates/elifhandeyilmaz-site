@@ -237,7 +237,6 @@ body.event-showcase-open { overflow: hidden; }
   overscroll-behavior-x: contain;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  scroll-padding-inline: 50%;
   scrollbar-width: none;
   touch-action: pan-x pan-y pinch-zoom;
   cursor: grab;
