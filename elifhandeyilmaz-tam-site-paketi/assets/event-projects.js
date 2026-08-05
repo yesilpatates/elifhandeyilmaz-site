@@ -33,7 +33,7 @@
   document.body.appendChild(modal);
 
   const frame = modal.querySelector('.event-showcase-frame');
-  const imagesReady = Promise.all([...frame.images].map((image) => (
+  const imagesReady = Promise.all([...frame.querySelectorAll('img')].map((image) => (
     image.complete
       ? Promise.resolve()
       : new Promise((resolve) => {
