@@ -28,9 +28,11 @@
     {
       id: 'yesil-donusum-zirvesi',
       number: '03',
-      title: 'II. Yeşil Dönüşüm Zirvesi',
+      title: 'II. Denizcilikte Yeşil Dönüşüm Zirvesi',
       short: 'YDZ',
-      tone: 'green'
+      tone: 'green',
+      image: 'assets/event-projects/yesil-donusum-zirvesi/01-ana-mockup.webp',
+      available: true
     },
     {
       id: 'gemi-yat-tasarim-yarismasi',
@@ -215,6 +217,13 @@
     }))
   ];
 
+  const greenTransformationPhotos = [
+    {
+      src: 'assets/event-projects/yesil-donusum-zirvesi/01-ana-mockup.webp',
+      alt: 'II. Denizcilikte Yeşil Dönüşüm Zirvesi organizasyon tasarımlarının toplu mockup sunumu'
+    }
+  ];
+
   // Doğal görsel ölçüleri yükleme tamamlanmadan yer ayırır; açılışta sıra ve boşluk kaymasını önler.
   const applyPhotoSizes = (photos, sizes) => photos.forEach((photo, index) => {
     [photo.width, photo.height] = sizes[index];
@@ -234,6 +243,10 @@
   applyPhotoSizes(womenDayPhotos, [
     [1536, 1024], [1536, 658], [1536, 1152], [1536, 1152], [1536, 1152],
     [1536, 1152], [1152, 1536], [1536, 1152], [1536, 1152]
+  ]);
+
+  applyPhotoSizes(greenTransformationPhotos, [
+    [1535, 1024]
   ]);
 
   const projectDetailsMarkup = {
@@ -316,6 +329,46 @@
       <section class="event-project-details__section event-project-details__approach">
         <h3>Tasarım Yaklaşımı</h3>
         <p>Görsel konsept, kadınların denizcilik sektöründeki güçlü varlığını ve vizyonunu temsil eden özgün bir illüstrasyon etrafında geliştirildi. Turkuaz ve mavi tonlarından oluşan renk paleti; denizcilik motifleri ve serif tipografiyle bir araya getirilerek ilham verici, güçlü ve kurumsal bir görsel dil oluşturuldu.</p>
+      </section>`,
+    'yesil-donusum-zirvesi': `
+      <section class="event-project-details__section event-project-details__identity">
+        <h3>Proje Künyesi</h3>
+        <dl class="event-project-facts">
+          <div>
+            <dt>Müşteri / Kurum</dt>
+            <dd>İMEAK Deniz Ticaret Odası</dd>
+          </div>
+          <div>
+            <dt>Tarih</dt>
+            <dd>24 Aralık 2025</dd>
+          </div>
+          <div>
+            <dt>Lokasyon</dt>
+            <dd>Piri Reis Üniversitesi, İstanbul</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="event-project-details__section event-project-details__about">
+        <h3>Etkinlik Hakkında</h3>
+        <p>Deniz sektörünün küresel çevre standartlarına uyumunu ve yeşil dönüşüm vizyonunu odağına alan zirve; akademisyenleri, sektör temsilcilerini ve kurum liderlerini Piri Reis Üniversitesi’nde bir araya getirdi. Etkinlik, deniz ticaretinde ekolojik farkındalığın artırılmasını ve sürdürülebilir politikaların geliştirilmesini amaçladı.</p>
+      </section>
+
+      <section class="event-project-details__section event-project-details__role">
+        <h3>Rolüm ve Tasarım Kapsamı</h3>
+        <ul class="event-project-scope">
+          <li><strong>Konsept Geliştirme:</strong> Denizcilik ile çevre bilincini buluşturan ana görsel yaklaşımın oluşturulması</li>
+          <li><strong>Görsel Kimlik:</strong> Etkinlik logosu, renk paleti, tipografi ve tamamlayıcı grafik dilinin hazırlanması</li>
+          <li><strong>Mekân Giydirme:</strong> Ana backdrop, yönlendirme panoları, roll-up ve bayrak uygulamalarının tasarlanması</li>
+          <li><strong>Basılı Materyaller:</strong> Yaka kartı, kürsü önü, masa önü ve etkinlik alanı uygulamalarının hazırlanması</li>
+          <li><strong>Uygulama Bütünlüğü:</strong> Farklı ölçü ve yüzeylerde kullanılan tüm materyallerin görsel uyumunun korunması</li>
+        </ul>
+        <p class="event-project-summary">Projenin görsel konseptinden etkinlik alanındaki fiziksel uygulamalara kadar uzanan tasarım sürecini üstlendim. Tüm materyalleri ortak bir sistem içinde hazırlayarak kurumsal, anlaşılır ve çevre odaklı bir görsel bütünlük oluşturdum.</p>
+      </section>
+
+      <section class="event-project-details__section event-project-details__approach">
+        <h3>Tasarım Yaklaşımı</h3>
+        <p>Tasarım dilinde denizcilik sektörünün kurumsal yapısı çevre bilinciyle buluşturuldu. Okyanus mavisi; doğayı ve dönüşümü temsil eden yeşil tonlarıyla birleştirildi. Yaprak formları, döngüsel oklar, çıpa ve kalkan öğeleriyle sürdürülebilirlik, güven ve denizcilik kavramlarını aynı görsel sistemde bir araya getiren ekolojik bir konsept oluşturuldu.</p>
       </section>`
   };
 
@@ -329,6 +382,11 @@
       title: 'Uluslararası Denizci Kadınlar Günü',
       photos: womenDayPhotos,
       details: projectDetailsMarkup['uluslararasi-denizci-kadinlar-gunu']
+    },
+    'yesil-donusum-zirvesi': {
+      title: 'II. Denizcilikte Yeşil Dönüşüm Zirvesi',
+      photos: greenTransformationPhotos,
+      details: projectDetailsMarkup['yesil-donusum-zirvesi']
     }
   };
 
