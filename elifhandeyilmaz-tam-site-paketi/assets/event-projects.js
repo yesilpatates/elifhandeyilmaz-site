@@ -221,6 +221,34 @@
     {
       src: 'assets/event-projects/yesil-donusum-zirvesi/01-ana-mockup.webp',
       alt: 'II. Denizcilikte Yeşil Dönüşüm Zirvesi organizasyon tasarımlarının toplu mockup sunumu'
+    },
+    {
+      src: 'assets/event-projects/yesil-donusum-zirvesi/02-genel-sahne.webp',
+      alt: 'II. Denizcilikte Yeşil Dönüşüm Zirvesi sahnesinde katılımcıların toplu fotoğrafı'
+    },
+    {
+      src: 'assets/event-projects/yesil-donusum-zirvesi/03-karsilama-alani.webp',
+      alt: 'II. Denizcilikte Yeşil Dönüşüm Zirvesi karşılama ve kayıt alanı tasarımı'
+    },
+    {
+      src: 'assets/event-projects/yesil-donusum-zirvesi/04-fotograf-duvari.webp',
+      alt: 'II. Denizcilikte Yeşil Dönüşüm Zirvesi kurumsal fotoğraf duvarı uygulaması'
+    },
+    {
+      src: 'assets/event-projects/yesil-donusum-zirvesi/05-odul-toreni.webp',
+      alt: 'II. Denizcilikte Yeşil Dönüşüm Zirvesi ödül töreni ve sahne uygulamaları'
+    },
+    {
+      src: 'assets/event-projects/yesil-donusum-zirvesi/06-oturum-ekrani.webp',
+      alt: 'II. Denizcilikte Yeşil Dönüşüm Zirvesi oturum ekranı tasarımı'
+    },
+    {
+      src: 'assets/event-projects/yesil-donusum-zirvesi/07-panel-sahnesi.webp',
+      alt: 'II. Denizcilikte Yeşil Dönüşüm Zirvesi panel sahnesi ve dijital ekran uygulamaları'
+    },
+    {
+      src: 'assets/event-projects/yesil-donusum-zirvesi/08-yaka-karti.webp',
+      alt: 'II. Denizcilikte Yeşil Dönüşüm Zirvesi katılımcı yaka kartı tasarımı'
     }
   ];
 
@@ -246,7 +274,8 @@
   ]);
 
   applyPhotoSizes(greenTransformationPhotos, [
-    [1535, 1024]
+    [1535, 1024], [1536, 825], [2000, 1333], [1600, 1066],
+    [1600, 1066], [1536, 960], [1600, 1066], [864, 1536]
   ]);
 
   const projectDetailsMarkup = {
