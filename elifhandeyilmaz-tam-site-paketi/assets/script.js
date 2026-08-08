@@ -62,11 +62,22 @@
     document.body.appendChild(eventScript);
   };
 
+  const loadMotionProjects = () => {
+    addStylesheet("motion-projects-styles", "assets/motion-projects.css?v=20260808-alfa-v1");
+    if (document.getElementById("motion-projects-script")) return;
+    const motionScript = document.createElement("script");
+    motionScript.id = "motion-projects-script";
+    motionScript.src = "assets/motion-projects.js?v=20260808-alfa-v1";
+    motionScript.defer = true;
+    document.body.appendChild(motionScript);
+  };
+
   const loadEnhancements = () => {
     formatHeroTitle();
     disableEditorialSection();
     window.setTimeout(loadWebProjects, 450);
     window.setTimeout(loadEventShowcase, 500);
+    window.setTimeout(loadMotionProjects, 550);
   };
 
   const loadCoreScript = () => {
