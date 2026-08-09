@@ -18,7 +18,11 @@
   border: 1px solid var(--line);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.94);
+  color: inherit;
+  font: inherit;
   text-align: center;
+  cursor: pointer;
+  appearance: none;
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
@@ -26,6 +30,11 @@
   transform: translateY(-3px);
   border-color: rgba(24, 183, 197, 0.24);
   box-shadow: 0 14px 30px rgba(15, 26, 40, 0.08);
+}
+
+.service-mini-grid > .service-mini-card:focus-visible {
+  outline: 3px solid rgba(7, 190, 184, 0.45);
+  outline-offset: 3px;
 }
 
 /* Reset legacy span boxes and stars */
