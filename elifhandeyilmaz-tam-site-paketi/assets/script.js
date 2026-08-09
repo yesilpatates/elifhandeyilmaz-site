@@ -103,3 +103,73 @@
   brandImageScript.onerror = loadCoreScript;
   document.body.appendChild(brandImageScript);
 })();
+
+(() => {
+  const modal = document.querySelector("#contact-modal");
+  const form = modal?.querySelector(".contact-form");
+  if (!modal || !form) return;
+
+  const closeButton = modal.querySelector(".contact-modal-close");
+  const submitButton = form.querySelector(".contact-form-submit");
+  const status = form.querySelector(".contact-form-status");
+  let lastFocused = null;
+
+  const openModal = () => {
+    lastFocused = document.activeElement;
+    modal.hidden = false;
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("contact-modal-open");
+    status.textContent = "";
+    status.className = "contact-form-status";
+    requestAnimationFrame(() => {
+      modal.classList.add("is-open");
+      form.querySelector("input:not([type='hidden'])")?.focus();
+    });
+  };
+
+  const closeModal = () => {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("contact-modal-open");
+    window.setTimeout(() => {
+      modal.hidden = true;
+      lastFocused?.focus?.({ preventScroll: true });
+    }, 220);
+  };
+
+  document.querySelectorAll("[data-contact-modal-open]").forEach((button) => button.addEventListener("click", openModal));
+  modal.querySelectorAll("[data-contact-modal-close]").forEach((button) => button.addEventListener("click", closeModal));
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Gönderiliyor…";
+    status.textContent = "";
+    status.className = "contact-form-status";
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      });
+      if (!response.ok) throw new Error("Form gönderilemedi");
+
+      form.reset();
+      status.textContent = "Mesajınız başarıyla gönderildi. Teşekkürler!";
+      status.classList.add("is-success");
+    } catch (error) {
+      status.textContent = "Mesaj gönderilemedi. Lütfen WhatsApp seçeneğini deneyin.";
+      status.classList.add("is-error");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = "Mesajı Gönder";
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !modal.hidden) closeModal();
+  });
+})();

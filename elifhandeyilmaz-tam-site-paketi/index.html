@@ -79,9 +79,9 @@
             <a class="button button-primary" href="#projeler">
               <span aria-hidden="true">◉</span> Portfolyomu İncele
             </a>
-            <a class="button button-secondary" href="mailto:elifhandegulyilmaz@icloud.com">
+            <button class="button button-secondary" type="button" data-contact-modal-open>
               <span aria-hidden="true">✦</span> E-posta Gönder
-            </a>
+            </button>
             <a class="button button-whatsapp" href="https://wa.me/905432321853?text=Merhaba%20Elif%20Han%C4%B1m%2C%20web%20siteniz%20%C3%BCzerinden%20size%20ula%C5%9F%C4%B1yorum." target="_blank" rel="noopener noreferrer">
               <span aria-hidden="true">◉</span> WhatsApp
             </a>
@@ -407,7 +407,7 @@
         </div>
 
         <div class="contact-actions">
-          <a class="button button-primary" href="mailto:elifhandegulyilmaz@icloud.com">E-posta Gönder</a>
+          <button class="button button-primary" type="button" data-contact-modal-open>E-posta Gönder</button>
           <a class="button button-whatsapp" href="https://wa.me/905432321853?text=Merhaba%20Elif%20Han%C4%B1m%2C%20web%20siteniz%20%C3%BCzerinden%20size%20ula%C5%9F%C4%B1yorum." target="_blank" rel="noopener noreferrer">WhatsApp’tan Yazın</a>
           <a class="contact-link" href="https://www.linkedin.com/in/elifhandegulyilmaz" target="_blank" rel="noopener">
             LinkedIn <span>↗</span>
@@ -419,6 +419,42 @@
       </div>
     </section>
   </main>
+
+  <div class="contact-modal" id="contact-modal" hidden aria-hidden="true">
+    <div class="contact-modal-backdrop" data-contact-modal-close></div>
+    <section class="contact-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+      <button class="contact-modal-close" type="button" aria-label="İletişim penceresini kapat" data-contact-modal-close>×</button>
+      <span class="eyebrow">İletişime Geçin</span>
+      <h2 id="contact-modal-title">Birlikte güzel işler üretelim.</h2>
+      <p class="contact-modal-intro">Projenizden kısaca bahsedin, size en kısa sürede dönüş yapayım.</p>
+
+      <form class="contact-form" action="https://formsubmit.co/ajax/elifhandegulyilmaz@icloud.com" method="POST">
+        <input type="hidden" name="_subject" value="elifhandeyilmaz.com üzerinden yeni mesaj">
+        <input class="contact-form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="contact-form-row">
+          <label>Adınız ve soyadınız
+            <input type="text" name="Ad Soyad" autocomplete="name" required>
+          </label>
+          <label>E-posta adresiniz
+            <input type="email" name="E-posta" autocomplete="email" required>
+          </label>
+        </div>
+
+        <label>Konu
+          <input type="text" name="Konu" required>
+        </label>
+        <label>Mesajınız
+          <textarea name="Mesaj" rows="5" required></textarea>
+        </label>
+
+        <div class="contact-form-footer">
+          <p class="contact-form-status" aria-live="polite"></p>
+          <button class="button button-primary contact-form-submit" type="submit">Mesajı Gönder</button>
+        </div>
+      </form>
+    </section>
+  </div>
 
   <footer class="site-footer">
     <div class="container footer-wrap">
