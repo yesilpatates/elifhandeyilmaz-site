@@ -156,6 +156,24 @@
       background-size: cover;
     }
 
+    .cover-4 {
+      background-image: url("../images/blog/topics/04-vektorel-ve-bitmap-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .cover-5 {
+      background-image: url("../images/blog/topics/05-renk-bilgisi-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .cover-6 {
+      background-image: url("../images/blog/topics/06-tipografi-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
     .card-body {
       padding: 21px 21px 23px;
     }
@@ -246,6 +264,12 @@
       color: var(--ink);
       font-size: clamp(1.08rem, 2vw, 1.35rem);
       line-height: 1.3;
+    }
+    .article h5 {
+      margin: 20px 0 8px;
+      color: var(--accent-dark);
+      font-size: 0.98rem;
+      line-height: 1.35;
     }
     .article ul { margin: 12px 0 20px; padding-left: 20px; color: var(--muted); }
     .article li { margin-bottom: 7px; }
@@ -616,45 +640,117 @@
           </div>
         </article>
 
-        <article class="article" id="vektorel-ve-bitmap-tasarim">
+        <article class="article article-full" id="vektorel-ve-bitmap-tasarim">
           <div class="article-cover"><div class="cover cover-4" role="img" aria-label="Vektörel ve Bitmap Tasarım"></div></div>
-          <div>
+          <div class="article-content">
             <span class="article-number">04</span>
             <h3>Vektörel ve Bitmap Tasarım Arasındaki Farklar</h3>
-            <p>Vektörel grafikler matematiksel yollar ve noktalarla, bitmap görseller ise piksellerle oluşur. Kullanılacak yapı tasarımın amacı, ölçek ihtiyacı ve çıktı ortamına göre seçilmelidir.</p>
+            <p class="article-lead">Grafik tasarıma yeni başlayanların en çok karıştırdığı konulardan biri vektörel ve bitmap görsellerdir. İlk bakışta ikisi de bir resim gibi görünse de çalışma mantıkları tamamen farklıdır.</p>
+            <p>Hangi görselin hangi amaçla kullanılacağını bilmek, hem baskı hem de dijital tasarım süreçlerinde büyük önem taşır.</p>
+            <p>Bu yazıda vektörel ve bitmap görseller arasındaki farkları, avantajlarını ve hangi durumlarda tercih edilmeleri gerektiğini inceleyeceğiz.</p>
+
+            <h4>Vektörel Görsel Nedir?</h4>
+            <p>Vektörel görseller matematiksel çizgiler, eğriler ve şekillerden oluşur. Bu nedenle ne kadar büyütülürse büyütülsün kalite kaybı yaşamaz.</p>
             <ul>
-              <li>Logo ve ikonlarda ölçeklenebilir vektörel formatlar tercih edilir.</li>
-              <li>Fotoğraf ve detaylı görseller bitmap yapıdadır.</li>
-              <li>Baskı ve ekran kullanımında çözünürlük kontrol edilmelidir.</li>
+              <li>Logo tasarımları</li><li>İkonlar</li><li>İllüstrasyonlar</li><li>Teknik çizimler</li><li>Kurumsal kimlik çalışmaları</li>
             </ul>
+
+            <h4>Bitmap (Piksel Tabanlı) Görsel Nedir?</h4>
+            <p>Bitmap görseller binlerce veya milyonlarca pikselden oluşur. Büyütüldüklerinde pikseller belirginleşir ve görüntü kalitesi düşebilir.</p>
+            <ul><li>Fotoğraflar</li><li>Kamera görüntüleri</li><li>Dijital resimler</li><li>Taranmış belgeler</li></ul>
+
+            <h4>En Büyük Fark Nedir?</h4>
+            <p>Vektörel görseller kalite kaybetmeden ölçeklenebilir. Bitmap görseller ise büyütüldükçe netliğini kaybedebilir.</p>
+
+            <h4>Avantajları ve Dezavantajları</h4>
+            <h5>Vektörel Tasarım</h5>
+            <ul><li>İstenilen boyutta kullanılabilir.</li><li>Dosya boyutu genellikle küçüktür.</li><li>Baskı için idealdir.</li><li>Düzenlenmesi kolaydır.</li></ul>
+            <h5>Bitmap Tasarım</h5>
+            <ul><li>Gerçekçi fotoğraflar içerir.</li><li>Zengin renk geçişleri sunar.</li><li>Detay seviyesi yüksektir.</li><li>Büyütüldüğünde kalite kaybı yaşayabilir.</li></ul>
+
+            <h4>Hangi Durumda Hangisini Kullanmalıyız?</h4>
+            <h5>Vektörel</h5>
+            <ul><li>Logo</li><li>Kartvizit</li><li>Kurumsal kimlik</li><li>Afiş</li><li>Tabela</li><li>Ambalaj</li><li>İkon</li></ul>
+            <h5>Bitmap</h5>
+            <ul><li>Fotoğraf düzenleme</li><li>Sosyal medya fotoğrafları</li><li>Dijital sanat</li><li>Portre düzenleme</li><li>Ürün fotoğrafları</li></ul>
+
+            <h4>En Sık Kullanılan Dosya Formatları</h4>
+            <h5>Vektörel</h5>
+            <ul><li>AI</li><li>EPS</li><li>SVG</li><li>PDF</li><li>CDR</li></ul>
+            <h5>Bitmap</h5>
+            <ul><li>JPG</li><li>PNG</li><li>TIFF</li><li>PSD</li><li>BMP</li></ul>
+
+            <h4>Neden Bu Ayrımı Bilmek Önemlidir?</h4>
+            <p>Yanlış dosya türünü kullanmak baskı ve dijital projelerde kalite sorunlarına neden olabilir. Örneğin küçük bir JPG logo büyük bir reklam panosunda bulanık görünürken, aynı logo vektörel formatta her ölçekte netliğini korur.</p>
+
+            <img class="article-info-image" src="../images/blog/topics/04-vektorel-ve-bitmap-mbk.png" alt="Logoların AI, SVG veya EPS gibi vektörel formatlarda arşivlenmesinin önemini anlatan mini bilgi kutusu">
+
+            <h4>Sonuç</h4>
+            <p>Vektörel ve bitmap görseller farklı amaçlar için geliştirilmiştir. Hangi dosya türünü ne zaman kullanacağınızı bilmek hem tasarım sürecini kolaylaştırır hem de daha kaliteli sonuçlar elde etmenizi sağlar.</p>
+            <h4>Sık Sorulan Sorular</h4>
+            <div class="faq-item"><strong>Logo tasarımında neden vektörel dosya kullanılır?</strong><p>Çünkü kalite kaybı olmadan her boyutta kullanılabilir.</p></div>
+            <div class="faq-item"><strong>Fotoğraflar neden bitmap olarak kaydedilir?</strong><p>Çünkü milyonlarca renk tonunu ayrıntılı şekilde saklayabilir.</p></div>
+            <div class="faq-item"><strong>PNG dosyası vektörel midir?</strong><p>Hayır. PNG bitmap tabanlı bir dosya formatıdır.</p></div>
           </div>
         </article>
 
-        <article class="article" id="renk-bilgisi">
+        <article class="article article-full" id="renk-bilgisi">
           <div class="article-cover"><div class="cover cover-5" role="img" aria-label="Renk Bilgisi RGB ve CMYK"></div></div>
-          <div>
+          <div class="article-content">
             <span class="article-number">05</span>
             <h3>Renk Bilgisi: RGB, CMYK ve Renklerin Gücü</h3>
-            <p>RGB ışıkla çalışan ekranlar, CMYK ise mürekkeple üretilen baskı işleri için kullanılan renk modelidir. Doğru renk sistemi seçimi, tasarımın beklenen sonucu vermesi için gereklidir.</p>
+            <p class="article-lead">Renkler, grafik tasarımın en güçlü iletişim araçlarından biridir. Bir tasarımın dikkat çekmesini, bir markanın akılda kalmasını ve insanların belirli duygular hissetmesini büyük ölçüde renkler sağlar.</p>
+            <p>Ancak grafik tasarımda renk seçimi yalnızca estetik bir tercih değildir. Kullanılacak ortam, baskı tekniği ve hedef kitle de doğru renk sisteminin belirlenmesinde önemli rol oynar.</p>
+            <p>Bu yazıda renklerin temel yapısını, RGB ve CMYK renk sistemlerini, Pantone sistemini ve renklerin insanlar üzerindeki etkilerini inceleyeceğiz.</p>
+
+            <h4>Renk Nedir?</h4><p>Renk, ışığın gözümüz tarafından algılanma biçimidir. Grafik tasarımda renkler yalnızca estetik görünüm sağlamak için değil, aynı zamanda dikkat çekmek, bilgi vermek ve duygu oluşturmak için kullanılır.</p>
+            <h4>RGB Renk Sistemi</h4><p>RGB; Red (Kırmızı), Green (Yeşil) ve Blue (Mavi) renklerinden oluşur. Bu sistem ekranlarda kullanılan ışık tabanlı renk modelidir.</p>
+            <ul><li>Web siteleri</li><li>Telefon ve tablet ekranları</li><li>Bilgisayar monitörleri</li><li>Televizyonlar</li></ul>
+            <h4>CMYK Renk Sistemi</h4><p>CMYK; Cyan, Magenta, Yellow ve Black renklerinden oluşur. Baskı teknolojilerinde kullanılan standart renk sistemidir.</p>
+            <ul><li>Kartvizit</li><li>Broşür</li><li>Katalog</li><li>Dergi</li><li>Afiş</li><li>Ambalaj</li></ul>
+            <h4>RGB ile CMYK Arasındaki Fark</h4><p>RGB dijital ekranlar için, CMYK ise baskı ürünleri için kullanılır. Baskıya gönderilecek çalışmaların CMYK renk modunda hazırlanması önerilir.</p>
+            <h4>Pantone Renk Sistemi</h4><p>Pantone, her renge özel kod veren uluslararası bir renk standardıdır. Kurumsal kimlik ve marka çalışmalarında aynı rengin her baskıda tutarlı görünmesini sağlar.</p>
+            <h4>Ana ve Ara Renkler</h4>
+            <ul><li>Ana renkler: Kırmızı, Mavi, Sarı</li><li>Kırmızı + Sarı = Turuncu</li><li>Mavi + Sarı = Yeşil</li><li>Kırmızı + Mavi = Mor</li></ul>
+            <h4>Tamamlayıcı Renkler</h4><ul><li>Mavi – Turuncu</li><li>Kırmızı – Yeşil</li><li>Sarı – Mor</li></ul>
+            <h4>Renk Psikolojisi</h4>
+            <ul><li>Mavi: Güven ve profesyonellik</li><li>Kırmızı: Enerji ve heyecan</li><li>Yeşil: Doğa ve huzur</li><li>Sarı: Dikkat ve canlılık</li><li>Siyah: Güç ve prestij</li><li>Beyaz: Temizlik ve sadelik</li></ul>
+            <h4>Renk Seçerken Nelere Dikkat Edilmelidir?</h4>
             <ul>
-              <li>Dijital içerikler RGB renk modunda hazırlanır.</li>
-              <li>Matbaa işleri CMYK renk moduna göre kontrol edilir.</li>
-              <li>Renk seçimi marka algısını ve mesajın duygusunu etkiler.</li>
+              <li>Tasarımın kullanılacağı ortam</li><li>Hedef kitle</li><li>Marka kimliği</li><li>Okunabilirlik</li><li>Renk uyumu</li><li>Baskı veya dijital kullanım amacı</li>
             </ul>
+            <img class="article-info-image" src="../images/blog/topics/05-renk-bilgisi-mbk.png" alt="Coca-Cola, IKEA ve McDonald's markalarının renk tercihlerinin psikolojik etkilerini anlatan mini bilgi kutusu">
+            <h4>Sonuç</h4><p>Doğru renk sistemi ve doğru renk seçimi sayesinde tasarımlar hem daha estetik görünür hem de hedef kitlesi üzerinde daha güçlü bir etki bırakır.</p>
+            <h4>Sık Sorulan Sorular</h4>
+            <div class="faq-item"><strong>RGB ile hazırlanan dosya baskıya gönderilebilir mi?</strong><p>Gönderilebilir; ancak baskı öncesinde CMYK'ya dönüştürülmesi önerilir.</p></div>
+            <div class="faq-item"><strong>Pantone neden kullanılır?</strong><p>Baskılarda renk tutarlılığı sağlamak için kullanılır.</p></div>
+            <div class="faq-item"><strong>Logo tasarımında hangi renk sistemi tercih edilir?</strong><p>Dijital kullanım için RGB, baskı için CMYK ve gerektiğinde Pantone hazırlanmalıdır.</p></div>
           </div>
         </article>
 
-        <article class="article" id="tipografi">
+        <article class="article article-full" id="tipografi">
           <div class="article-cover"><div class="cover cover-6" role="img" aria-label="Tipografi Yazının Tasarımdaki Gücü"></div></div>
-          <div>
+          <div class="article-content">
             <span class="article-number">06</span>
             <h3>Tipografi: Yazının Tasarımdaki Gücü</h3>
-            <p>Tipografi; yazı karakteri, punto, satır aralığı, harf aralığı, hizalama ve hiyerarşi kararlarının bütünüdür. İyi tipografi mesajı okunabilir, anlaşılır ve karakterli hâle getirir.</p>
+            <p class="article-lead">Yazılar, bir tasarımın en önemli iletişim araçlarından biridir. Doğru tipografi kullanımı okunabilirliği artırır ve tasarımın profesyonel görünmesini sağlar.</p>
+            <h4>Tipografi Nedir?</h4><p>Tipografi; yazı karakterlerinin seçimi, düzenlenmesi ve okunabilir biçimde yerleştirilmesi sanatıdır.</p>
+            <h4>Font ve Yazı Karakteri</h4><p>Yazı karakteri (typeface) bir tasarım ailesini ifade eder. Font ise bu ailenin belirli ağırlık ve stilidir.</p>
+            <h4>Serif ve Sans Serif</h4><ul><li>Serif: Harf uçlarında küçük çıkıntılar bulunur.</li><li>Sans Serif: Daha sade ve modern görünür.</li></ul>
+            <h4>Punto</h4><p>Punto, yazının büyüklüğünü ifade eder.</p>
+            <h4>Satır Aralığı (Leading)</h4><p>Satırlar arasındaki boşluğu belirler ve okunabilirliği doğrudan etkiler.</p>
+            <h4>Harf Aralığı (Tracking ve Kerning)</h4><p>Harfler arasındaki mesafenin ayarlanmasını sağlar.</p>
+            <h4>Okunabilirlik</h4>
             <ul>
-              <li>Başlık ve gövde metni arasında net hiyerarşi kurulmalıdır.</li>
-              <li>Yazı karakteri tasarımın amacı ve hedef kitlesiyle uyumlu olmalıdır.</li>
-              <li>Fazla yazı tipi kullanımı görsel bütünlüğü zayıflatır.</li>
+              <li>Yeterli kontrast kullanın.</li><li>Çok fazla font kullanmayın.</li><li>Uygun satır uzunluğu tercih edin.</li>
             </ul>
+            <h4>Font Eşleştirme</h4><p>Bir başlık ve bir gövde yazısı olmak üzere iki uyumlu font kullanmak çoğu tasarım için yeterlidir.</p>
+            <img class="article-info-image" src="../images/blog/topics/06-tipografi-mbk.png" alt="Helvetica yazı karakterinin 1957 yılından beri global markalar tarafından kullanıldığını anlatan mini bilgi kutusu">
+            <h4>Sonuç</h4><p>Başarılı tipografi, mesajın daha hızlı ve daha doğru algılanmasını sağlar.</p>
+            <h4>Sık Sorulan Sorular</h4>
+            <div class="faq-item"><strong>Kaç font kullanılmalı?</strong><p>Genellikle aynı tasarımda iki veya üç font yeterlidir.</p></div>
+            <div class="faq-item"><strong>Serif mi Sans Serif mi?</strong><p>Kullanım amacına göre değişir; dijitalde çoğunlukla Sans Serif tercih edilir.</p></div>
+            <div class="faq-item"><strong>Tipografi neden önemlidir?</strong><p>Okunabilirliği ve kullanıcı deneyimini doğrudan etkiler.</p></div>
           </div>
         </article>
 
