@@ -110,6 +110,12 @@
 .guide-card:nth-child(6)::before { background-position: 100% 50% !important; }
 .guide-card:nth-child(7)::before { background-position: 0% 100% !important; }
 
+.guide-card:nth-child(1)::before {
+  background-image: url("../images/blog/topics/01-grafik-tasarim-nedir-kapak.jpg") !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
 .guide-card:hover {
   transform: translateY(-4px);
   border-color: rgba(24, 183, 197, 0.28);

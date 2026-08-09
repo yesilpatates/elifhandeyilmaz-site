@@ -138,6 +138,12 @@
     .cover-6 { background-position: 100% 50%; }
     .cover-7 { background-position: 0% 100%; }
 
+    .cover-1 {
+      background-image: url("../images/blog/topics/01-grafik-tasarim-nedir-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
     .card-body {
       padding: 21px 21px 23px;
     }
@@ -223,8 +229,65 @@
     }
 
     .article p { margin: 0 0 14px; color: var(--muted); }
-    .article ul { margin: 18px 0 0; padding-left: 20px; color: var(--muted); }
+    .article h4 {
+      margin: 30px 0 12px;
+      color: var(--ink);
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      line-height: 1.3;
+    }
+    .article ul { margin: 12px 0 20px; padding-left: 20px; color: var(--muted); }
     .article li { margin-bottom: 7px; }
+
+    .article-content {
+      min-width: 0;
+    }
+
+    .article.article-full {
+      grid-template-columns: 1fr;
+    }
+
+    .article.article-full .article-cover {
+      width: 100%;
+      max-width: none;
+    }
+
+    .article.article-full .article-content {
+      width: min(100%, 860px);
+      margin-inline: auto;
+    }
+
+    .article-lead {
+      color: var(--ink) !important;
+      font-size: 1.02rem;
+    }
+
+    .article-info-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 14px 0 28px;
+      border: 1px solid #eadfcd;
+      border-radius: 18px;
+      box-shadow: 0 16px 35px rgba(15, 26, 40, 0.08);
+    }
+
+    .faq-item {
+      margin-bottom: 18px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fbf8f2;
+    }
+
+    .faq-item strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--ink);
+    }
+
+    .faq-item p {
+      margin: 0;
+    }
 
     footer {
       padding: 28px 0;
@@ -350,17 +413,77 @@
           <p>Her içerik, yeni başlayanların tasarım kararlarını daha bilinçli vermesine yardımcı olacak temel bilgileri özetler.</p>
         </div>
 
-        <article class="article" id="grafik-tasarim-nedir">
+        <article class="article article-full" id="grafik-tasarim-nedir">
           <div class="article-cover"><div class="cover cover-1" role="img" aria-label="Grafik Tasarım Nedir"></div></div>
-          <div>
+          <div class="article-content">
             <span class="article-number">01</span>
             <h3>Grafik Tasarım Nedir?</h3>
-            <p>Grafik tasarım; bilgi, fikir ve duyguları görsel öğeler aracılığıyla anlaşılır ve etkili biçimde aktarma sürecidir. Tasarım yalnızca estetik üretmek değil, belirli bir iletişim sorununa işlevsel çözüm geliştirmektir.</p>
+            <p class="article-lead">Her gün yüzlerce tasarımla karşılaşıyoruz. Telefonumuzdaki uygulamalar, marketten aldığımız ürünlerin ambalajları, izlediğimiz reklamlar, sosyal medya paylaşımları ve hatta yol tabelaları… Bunların büyük bir kısmı grafik tasarımın ürünüdür.</p>
+            <p>Peki, grafik tasarım tam olarak nedir? Sadece güzel görünen görseller hazırlamak mı, yoksa bundan çok daha fazlası mı?</p>
+            <p>Bu yazıda grafik tasarımın ne olduğunu, neden önemli olduğunu ve hayatımızın neredeyse her alanında nasıl yer aldığını birlikte inceleyeceğiz.</p>
+
+            <h4>Grafik Tasarım Nedir?</h4>
+            <p>Grafik tasarım; bir mesajı, bilgiyi veya fikri görsel ögeler kullanarak en anlaşılır ve en etkili şekilde aktarma sanatıdır.</p>
+            <p>Bu süreçte yazılar, renkler, şekiller, fotoğraflar, çizimler ve boşluklar bilinçli bir şekilde bir araya getirilir. Amaç yalnızca estetik bir görüntü oluşturmak değil, aynı zamanda izleyicinin dikkatini çekmek, mesajı doğru şekilde iletmek ve istenilen etkiyi oluşturmaktır.</p>
+            <p><strong>Kısacası grafik tasarım, görsel iletişimdir.</strong></p>
+
+            <h4>Grafik Tasarım Neden Önemlidir?</h4>
             <ul>
-              <li>Mesajı hedef kitle için anlaşılır hâle getirir.</li>
-              <li>Markaların görsel kimliğini ve iletişim dilini oluşturur.</li>
-              <li>Baskıdan dijital arayüzlere kadar geniş bir alanda kullanılır.</li>
+              <li>Dikkat çeker.</li>
+              <li>Mesajın daha kolay anlaşılmasını sağlar.</li>
+              <li>Marka güvenilirliğini artırır.</li>
+              <li>Bilgiyi daha düzenli sunar.</li>
+              <li>İnsanların aklında kalmayı kolaylaştırır.</li>
             </ul>
+            <p>Bu yüzden başarılı bir tasarım yalnızca güzel görünmek için değil, aynı zamanda etkili iletişim kurmak için hazırlanır.</p>
+
+            <h4>Grafik Tasarım Günlük Hayatta Nerelerde Karşımıza Çıkar?</h4>
+            <ul>
+              <li>Logo ve kurumsal kimlikler</li>
+              <li>Telefon uygulamaları</li>
+              <li>Sosyal medya gönderileri</li>
+              <li>Kitap ve dergi kapakları</li>
+              <li>Ürün ambalajları</li>
+              <li>Web siteleri</li>
+              <li>Reklam panoları</li>
+              <li>Kartvizitler</li>
+            </ul>
+
+            <h4>Grafik Tasarımcı Ne İş Yapar?</h4>
+            <p>Grafik tasarımcı; hedef kitleyi analiz eder ve verilmek istenen mesajı en doğru şekilde aktaracak görsel dili oluşturur.</p>
+            <ul>
+              <li>Logo tasarlar.</li>
+              <li>Kurumsal kimlik oluşturur.</li>
+              <li>Sosyal medya görselleri hazırlar.</li>
+              <li>Afiş, broşür ve katalog tasarlar.</li>
+              <li>Ambalaj tasarımı yapar.</li>
+              <li>Dergi ve kitap sayfalarını düzenler.</li>
+              <li>Web sitesi ve mobil uygulama arayüzleri tasarlar.</li>
+              <li>Dijital reklam görselleri üretir.</li>
+            </ul>
+
+            <h4>Grafik Tasarım Sanat mıdır?</h4>
+            <p>Grafik tasarım, sanattan ilham alsa da temel amacı bir problemi çözmek ve iletişim kurmaktır. Bir ressam duygularını ifade etmek için eser üretirken, grafik tasarımcı belirli bir hedef doğrultusunda çözüm üretir. Bu nedenle grafik tasarım; yaratıcılığı, estetik anlayışı ve iletişim becerisini bir araya getiren uygulamalı bir tasarım disiplinidir.</p>
+
+            <h4>Mini Bilgi Kutusu</h4>
+            <img class="article-info-image" src="../images/blog/topics/01-grafik-tasarim-nedir-mbk.png" alt="Graphic Design teriminin ilk kez 1922 yılında William Addison Dwiggins tarafından kullanıldığını anlatan mini bilgi kutusu">
+
+            <h4>Sonuç</h4>
+            <p>Grafik tasarım, yalnızca güzel görünen görseller hazırlamak değildir. Asıl amacı, bir mesajı doğru kişiye, doğru zamanda ve en etkili şekilde ulaştırmaktır. Bugün kullandığımız uygulamalardan satın aldığımız ürünlere kadar neredeyse her alanda grafik tasarımın izlerini görmek mümkündür.</p>
+
+            <h4>Sık Sorulan Sorular</h4>
+            <div class="faq-item">
+              <strong>Grafik tasarım öğrenmek zor mudur?</strong>
+              <p>Hayır. Doğru kaynaklarla ve düzenli pratik yaparak herkes grafik tasarımın temel prensiplerini öğrenebilir.</p>
+            </div>
+            <div class="faq-item">
+              <strong>Grafik tasarımcı olmak için çizim yapmak gerekir mi?</strong>
+              <p>Hayır. Çizim bilmek avantaj sağlayabilir ancak zorunlu değildir.</p>
+            </div>
+            <div class="faq-item">
+              <strong>Grafik tasarım hangi alanlarda kullanılır?</strong>
+              <p>Marka kimliği, reklam, sosyal medya, web tasarımı, mobil uygulamalar, ambalaj, yayıncılık ve daha birçok alanda kullanılır.</p>
+            </div>
           </div>
         </article>
 
