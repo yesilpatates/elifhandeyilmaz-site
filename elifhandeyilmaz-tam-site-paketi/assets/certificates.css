@@ -37,6 +37,9 @@
 }
 
 .certificate-panel .certificate-card > img {
+  height: 46px;
+  aspect-ratio: auto;
+  object-fit: cover;
   border-bottom: 0;
 }
 
@@ -256,6 +259,10 @@ body.certificate-lightbox-open {
 
   .certificate-card-body {
     min-height: 76px;
+  }
+
+  .certificate-panel .certificate-card > img {
+    height: 40px;
   }
 
   .certificate-lightbox {
