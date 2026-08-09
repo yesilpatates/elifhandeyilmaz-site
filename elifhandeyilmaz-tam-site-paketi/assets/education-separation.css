@@ -116,6 +116,18 @@
   background-size: cover !important;
 }
 
+.guide-card:nth-child(2)::before {
+  background-image: url("../images/blog/topics/02-grafik-tasarimin-temel-unsurlari-kapak.jpg") !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+.guide-card:nth-child(3)::before {
+  background-image: url("../images/blog/topics/03-grafik-tasarimin-temel-ilkeleri-kapak.jpg") !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
 .guide-card:hover {
   transform: translateY(-4px);
   border-color: rgba(24, 183, 197, 0.28);
