@@ -12,6 +12,58 @@
   color: #75d8df;
 }
 
+.certificate-panel-intro {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.certificate-panel .certificates-grid {
+  margin-top: 16px;
+}
+
+.certificate-panel .certificate-card {
+  border-color: rgba(255, 255, 255, 0.14);
+  border-radius: 7px;
+  box-shadow: none;
+}
+
+.certificate-panel .certificate-card:hover,
+.certificate-panel .certificate-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: #75d8df;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-panel .certificate-card > img {
+  border-bottom: 0;
+}
+
+.certificate-panel .certificate-card-body {
+  display: none;
+}
+
+.certificate-panel .certificates-actions {
+  justify-content: flex-start;
+  margin-top: 16px;
+}
+
+.certificate-panel .certificates-toggle {
+  padding: 10px 15px;
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.7rem;
+}
+
+.certificate-panel .certificates-toggle:hover,
+.certificate-panel .certificates-toggle:focus-visible {
+  border-color: #75d8df;
+  color: var(--ink);
+  background: #75d8df;
+}
+
 .certificates-section {
   background: #fff;
   padding-top: clamp(52px, 7vw, 86px);
