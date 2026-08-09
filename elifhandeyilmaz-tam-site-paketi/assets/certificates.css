@@ -21,6 +21,8 @@
 
 .certificate-panel .certificates-grid {
   margin-top: 16px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
 }
 
 .certificate-panel .certificate-card {
@@ -246,6 +248,10 @@ body.certificate-lightbox-open {
   .certificates-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .certificate-panel .certificates-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 700px) {
@@ -257,6 +263,11 @@ body.certificate-lightbox-open {
   .certificates-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
+  }
+
+  .certificate-panel .certificates-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
   }
 
   .certificate-card-body {
