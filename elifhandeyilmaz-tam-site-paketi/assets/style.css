@@ -760,10 +760,11 @@ a {
 }
 
 .education-grid {
-  display: grid;
-  grid-template-columns: 1fr 0.92fr;
-  gap: clamp(40px, 6vw, 100px);
-  align-items: start;
+  display: block;
+}
+
+.education-grid > div {
+  max-width: 780px;
 }
 
 .education-list {
@@ -795,10 +796,8 @@ a {
 }
 
 .certificate-panel {
-  position: sticky;
-  top: 128px;
-  padding: 38px;
-  border-radius: var(--radius);
+  padding: 24px 26px;
+  border-radius: 18px;
   background: var(--ink);
   color: #fff;
   box-shadow: var(--shadow);
@@ -810,7 +809,7 @@ a {
 
 .certificate-panel h3 {
   margin: 0;
-  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
   line-height: 1.15;
 }
 

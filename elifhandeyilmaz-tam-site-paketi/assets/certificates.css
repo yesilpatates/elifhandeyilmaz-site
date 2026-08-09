@@ -14,6 +14,8 @@
 
 .certificates-section {
   background: #fff;
+  padding-top: clamp(52px, 7vw, 86px);
+  padding-bottom: clamp(52px, 7vw, 86px);
 }
 
 .certificates-heading {
@@ -21,7 +23,7 @@
   grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.65fr);
   gap: clamp(28px, 6vw, 90px);
   align-items: end;
-  margin-bottom: 42px;
+  margin-bottom: 26px;
 }
 
 .certificates-heading .section-heading {
@@ -37,8 +39,12 @@
 
 .certificates-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.certificates-grid:not(.is-expanded) .certificate-card:nth-child(n + 6) {
+  display: none;
 }
 
 .certificate-card {
@@ -46,13 +52,13 @@
   overflow: hidden;
   padding: 0;
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 11px;
   color: var(--ink);
   background: #fff;
   text-align: left;
   font: inherit;
   cursor: zoom-in;
-  box-shadow: 0 10px 30px rgba(14, 34, 61, 0.05);
+  box-shadow: 0 6px 18px rgba(14, 34, 61, 0.05);
   transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
 }
 
@@ -78,23 +84,48 @@
 }
 
 .certificate-card-body {
-  min-height: 108px;
+  min-height: 78px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 13px;
-  padding: 19px 20px 18px;
+  gap: 8px;
+  padding: 11px 12px 10px;
 }
 
 .certificate-card-body strong {
-  font-size: 0.98rem;
+  font-size: 0.74rem;
   line-height: 1.42;
 }
 
 .certificate-card-body small {
   color: var(--muted);
-  font-size: 0.76rem;
+  font-size: 0.64rem;
   font-weight: 500;
+}
+
+.certificates-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.certificates-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 20px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  color: #fff;
+  background: var(--ink);
+  font: 600 0.78rem/1 Poppins, sans-serif;
+  cursor: pointer;
+}
+
+.certificates-toggle:hover,
+.certificates-toggle:focus-visible {
+  color: var(--ink);
+  background: var(--accent);
 }
 
 .certificate-lightbox {
@@ -156,7 +187,7 @@ body.certificate-lightbox-open {
 
 @media (max-width: 980px) {
   .certificates-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -167,12 +198,12 @@ body.certificate-lightbox-open {
   }
 
   .certificates-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 
   .certificate-card-body {
-    min-height: 96px;
+    min-height: 76px;
   }
 
   .certificate-lightbox {

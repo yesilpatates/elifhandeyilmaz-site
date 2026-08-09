@@ -1,4 +1,15 @@
 (() => {
+  const grid = document.querySelector(".certificates-grid");
+  const toggle = document.querySelector(".certificates-toggle");
+
+  toggle?.addEventListener("click", () => {
+    const expanded = grid?.classList.toggle("is-expanded") ?? false;
+    toggle.setAttribute("aria-expanded", String(expanded));
+    toggle.innerHTML = expanded
+      ? 'Daha Az Göster <span aria-hidden="true">↑</span>'
+      : 'Tüm Sertifikaları Gör <span aria-hidden="true">↓</span>';
+  });
+
   const dialog = document.getElementById("certificate-lightbox");
   if (!dialog || typeof dialog.showModal !== "function") return;
 
