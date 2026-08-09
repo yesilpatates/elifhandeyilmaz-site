@@ -28,11 +28,11 @@ const originalHeroTitle = document.querySelector(".hero-copy h1");
 if (originalHeroTitle && !originalHeroTitle.classList.contains("hero-title")) {
   originalHeroTitle.className = "hero-title";
   originalHeroTitle.innerHTML = `
-    <span class="hero-title-line">Fikirleri güçlü ve tutarlı</span>
+    <span class="hero-title-line">Markalara karakter kazandıran</span>
     <span class="hero-title-script-reveal">
-      <span class="hero-title-script">görsel deneyimlere</span>
+      <span class="hero-title-script">görsel kimlikler</span>
     </span>
-    <span class="hero-title-line">dönüştürüyorum.</span>
+    <span class="hero-title-line">tasarlıyorum.</span>
   `;
 }
 
