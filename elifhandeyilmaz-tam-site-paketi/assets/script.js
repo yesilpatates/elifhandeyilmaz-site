@@ -12,7 +12,7 @@
     const title = document.querySelector(".hero-copy h1");
     if (!title || title.dataset.formatted === "true") return;
     title.dataset.formatted = "true";
-    title.innerHTML = '<span class="hero-title-first">Fikirleri güçlü ve tutarlı</span><span class="hero-title-second">görsel deneyimlere dönüştürüyorum.</span>';
+    title.innerHTML = '<span class="hero-title-first">Markalara karakter kazandıran</span><span class="hero-title-second">görsel kimlikler tasarlıyorum.</span>';
   };
 
   const disableEditorialSection = () => {
