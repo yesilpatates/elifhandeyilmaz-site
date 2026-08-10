@@ -8,7 +8,7 @@ const loadStylesheet = (id, href) => {
   document.head.appendChild(stylesheet);
 };
 
-loadStylesheet("project-cover-styles", "assets/project-covers.css?v=20260803-fixed-height-v3");
+loadStylesheet("project-cover-styles", "assets/project-covers.css?v=20260810-social-project-removed-v1");
 loadStylesheet("hero-title-font", "https://fonts.googleapis.com/css2?family=Rochester&display=swap");
 loadStylesheet("hero-title-styles", "assets/hero-title.css");
 loadStylesheet("service-icons-styles", "assets/service-icons.css");
@@ -17,7 +17,7 @@ loadStylesheet("education-separation-styles", "assets/education-separation.css")
 
 if (!document.getElementById("project-cover-script")) {
   const projectCoverScript = document.createElement("script");
-  projectCoverScript.src = "assets/project-covers.js?v=20260810-editorial-empty-v1";
+  projectCoverScript.src = "assets/project-covers.js?v=20260810-social-project-removed-v1";
   projectCoverScript.defer = true;
   projectCoverScript.id = "project-cover-script";
   document.body.appendChild(projectCoverScript);
@@ -53,7 +53,7 @@ const serviceIconEntries = [
     svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="13" rx="2"></rect><path d="M3.5 8.5h17"></path><circle class="fill-accent" cx="6.4" cy="6.8" r="0.7"></circle><circle class="fill-accent" cx="8.5" cy="6.8" r="0.7"></circle><circle class="fill-accent" cx="10.6" cy="6.8" r="0.7"></circle><path d="M7.2 12.2h4.2"></path><path d="M7.2 14.8h2.7"></path><rect x="13.2" y="11.2" width="4.2" height="4.2" rx="0.8"></rect></svg>'
   },
   {
-    target: "sosyal",
+    target: null,
     title: "Sosyal Medya<br>Tasarımı",
     svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4.5" width="14" height="14" rx="3"></rect><circle cx="12" cy="11.5" r="3.1"></circle><circle class="fill-accent" cx="16.3" cy="7.4" r="0.8"></circle><path d="M7.4 18.5 6.4 20l2.2-.2"></path></svg>'
   },
@@ -74,14 +74,17 @@ const serviceGrid = document.querySelector(".service-mini-grid");
 if (serviceGrid && serviceGrid.dataset.enhanced !== "true") {
   serviceGrid.dataset.enhanced = "true";
   serviceGrid.innerHTML = serviceIconEntries
-    .map(
-      (item) => `
+    .map((item) => item.target ? `
         <button class="service-mini-card" type="button" data-service-target="${item.target}" aria-label="${item.title.replace(/<br>/g, " ")} çalışmalarını aç">
           <span class="service-mini-icon" aria-hidden="true">${item.svg}</span>
           <span class="service-mini-title">${item.title}</span>
         </button>
-      `
-    )
+      ` : `
+        <span class="service-mini-card is-static">
+          <span class="service-mini-icon" aria-hidden="true">${item.svg}</span>
+          <span class="service-mini-title">${item.title}</span>
+        </span>
+      `)
     .join("");
 }
 
@@ -89,7 +92,6 @@ const serviceProjectMatchers = {
   marka: (title) => title.includes("marka") && title.includes("kurumsal"),
   editoryal: (title) => title.includes("editoryal"),
   web: (title) => title.includes("web") && title.includes("arayüz"),
-  sosyal: (title) => title.includes("sosyal medya"),
   video: (title) => title.includes("video") && title.includes("animasyon"),
   etkinlik: (title) => title.includes("etkinlik") && title.includes("organizasyon")
 };

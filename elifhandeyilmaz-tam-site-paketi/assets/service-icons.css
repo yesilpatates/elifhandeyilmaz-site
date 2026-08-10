@@ -32,6 +32,16 @@
   box-shadow: 0 14px 30px rgba(15, 26, 40, 0.08);
 }
 
+.service-mini-grid > .service-mini-card.is-static {
+  cursor: default;
+}
+
+.service-mini-grid > .service-mini-card.is-static:hover {
+  transform: none;
+  border-color: var(--line);
+  box-shadow: none;
+}
+
 .service-mini-grid > .service-mini-card:focus-visible {
   outline: 3px solid rgba(7, 190, 184, 0.45);
   outline-offset: 3px;

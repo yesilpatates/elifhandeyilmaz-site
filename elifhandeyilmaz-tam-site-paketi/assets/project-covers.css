@@ -1,6 +1,6 @@
 @import url("project-lightbox.css?v=20260803-fixed-height-v3");
 
-/* Seven-category project collage */
+/* Six-category project collage */
 .projects .project-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -25,9 +25,8 @@
 .projects .project-card:nth-child(2) { grid-column: span 3; grid-row: span 4; }
 .projects .project-card:nth-child(3) { grid-column: span 3; grid-row: span 4; }
 .projects .project-card:nth-child(4) { grid-column: 1 / span 6; grid-row: 3 / span 2; }
-.projects .project-card:nth-child(5) { grid-column: span 4; grid-row: span 3; }
-.projects .project-card:nth-child(6) { grid-column: span 4; grid-row: span 3; }
-.projects .project-card:nth-child(7) { grid-column: span 4; grid-row: span 3; }
+.projects .project-card:nth-child(5) { grid-column: span 6; grid-row: span 3; }
+.projects .project-card:nth-child(6) { grid-column: span 6; grid-row: span 3; }
 
 /* Override the old 290px minimum that caused the collage to overflow. */
 .projects .project-card .project-visual {
@@ -67,8 +66,7 @@
 }
 
 .projects .project-card:nth-child(5) .project-visual > strong,
-.projects .project-card:nth-child(6) .project-visual > strong,
-.projects .project-card:nth-child(7) .project-visual > strong {
+.projects .project-card:nth-child(6) .project-visual > strong {
   font-size: clamp(1.85rem, 3.15vw, 3.75rem);
 }
 
