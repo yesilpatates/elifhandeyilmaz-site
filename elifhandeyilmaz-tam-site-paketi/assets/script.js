@@ -30,7 +30,7 @@
     if (document.getElementById("event-projects-script")) return;
     const eventScript = document.createElement("script");
     eventScript.id = "event-projects-script";
-    eventScript.src = "assets/event-projects.js?v=20260810-dfd-gallery-v3";
+    eventScript.src = "assets/event-projects.js?v=20260810-gemi-yat-gallery-v1";
     eventScript.defer = true;
     document.body.appendChild(eventScript);
   };

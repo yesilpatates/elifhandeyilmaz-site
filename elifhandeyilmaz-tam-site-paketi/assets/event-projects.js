@@ -39,7 +39,9 @@
       number: '04',
       title: 'XIV. Ulusal Gemi ve Yat Tasarım Yarışması',
       short: 'GYTY',
-      tone: 'sand'
+      tone: 'sand',
+      image: 'assets/event-projects/gemi-yat-tasarim-yarismasi/01-ana-mockup.webp',
+      available: true
     },
     {
       id: 'denizci-fenerbahceliler-dernegi',
@@ -254,6 +256,17 @@
     }
   ];
 
+  const designCompetitionPhotos = [
+    {
+      src: 'assets/event-projects/gemi-yat-tasarim-yarismasi/01-ana-mockup.webp',
+      alt: 'XIV. Ulusal Gemi ve Yat Tasarım Yarışması organizasyon tasarımlarının toplu mockup sunumu'
+    },
+    ...Array.from({ length: 7 }, (_, index) => ({
+      src: `assets/event-projects/gemi-yat-tasarim-yarismasi/${String(index + 2).padStart(2, '0')}-etkinlik-fotografi.webp`,
+      alt: `XIV. Ulusal Gemi ve Yat Tasarım Yarışması etkinlik fotoğrafı ${index + 1}`
+    }))
+  ];
+
   const denizciFenerbahcelilerPhotos = [
     ...Array.from({ length: 9 }, (_, index) => ({
       src: `assets/event-projects/denizci-fenerbahceliler-dernegi/${String(index + 3).padStart(2, '0')}-etkinlik-fotografi.webp`,
@@ -285,6 +298,11 @@
   applyPhotoSizes(greenTransformationPhotos, [
     [1535, 1024], [1536, 825], [2000, 1333], [1600, 1066],
     [1600, 1066], [1536, 960], [1600, 1066], [864, 1536]
+  ]);
+
+  applyPhotoSizes(designCompetitionPhotos, [
+    [1536, 1024], [1536, 864], [1150, 1536], [864, 1536],
+    [1536, 864], [899, 1599], [864, 1536], [1536, 864]
   ]);
 
   applyPhotoSizes(denizciFenerbahcelilerPhotos, [
@@ -431,6 +449,11 @@
       title: 'II. Denizcilikte Yeşil Dönüşüm Zirvesi',
       photos: greenTransformationPhotos,
       details: projectDetailsMarkup['yesil-donusum-zirvesi']
+    },
+    'gemi-yat-tasarim-yarismasi': {
+      title: 'XIV. Ulusal Gemi ve Yat Tasarım Yarışması',
+      photos: designCompetitionPhotos,
+      details: ''
     },
     'denizci-fenerbahceliler-dernegi': {
       title: 'Denizci Fenerbahçeliler Derneği – Geleneksel İftar Programı',
