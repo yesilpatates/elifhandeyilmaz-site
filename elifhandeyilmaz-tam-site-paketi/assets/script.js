@@ -36,11 +36,11 @@
   };
 
   const loadMotionProjects = () => {
-    addStylesheet("motion-projects-styles", "assets/motion-projects.css?v=20260808-alfa-v1");
+    addStylesheet("motion-projects-styles", "assets/motion-projects.css?v=20260810-alfa-gallery-v2");
     if (document.getElementById("motion-projects-script")) return;
     const motionScript = document.createElement("script");
     motionScript.id = "motion-projects-script";
-    motionScript.src = "assets/motion-projects.js?v=20260808-alfa-v1";
+    motionScript.src = "assets/motion-projects.js?v=20260810-alfa-gallery-v2";
     motionScript.defer = true;
     document.body.appendChild(motionScript);
   };
