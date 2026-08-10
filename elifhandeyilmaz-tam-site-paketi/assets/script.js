@@ -54,7 +54,7 @@
 
   const loadCoreScript = () => {
     const coreScript = document.createElement("script");
-    coreScript.src = "assets/core-script.js?v=20260810-promo-gallery-v4";
+    coreScript.src = "assets/core-script.js?v=20260811-promo-gallery-v5";
     coreScript.defer = true;
     coreScript.onload = loadEnhancements;
     coreScript.onerror = () => {

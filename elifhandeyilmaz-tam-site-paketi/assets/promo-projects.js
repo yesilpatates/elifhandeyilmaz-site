@@ -158,6 +158,81 @@
         'Ödül görselleştirmesi',
         'Mockup sunumu'
       ]
+    },
+    {
+      title: 'Organik Zeytinyağı – Etiket ve Ambalaj Tasarımı',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Şişe Etiketi ve Ürün Ambalajı',
+      image: 'assets/promo-projects/organik-zeytinyagi-etiket-ambalaj.webp',
+      alt: 'Organik zeytinyağı için hazırlanan şişe etiketi ve kutu ambalajı mockupı',
+      about: 'Organik zeytinyağı ürünü için hazırlanan etiket ve ambalaj çalışması; ürünün doğal, yerel ve seçkin karakterini satış noktasında güçlü biçimde yansıtmak üzere kurgulandı. Şişe ve kutu yüzeyleri ortak bir görsel sistem içinde ele alındı.',
+      approach: 'Koyu zeytin yeşili zemin, altın tonlu çizgiler ve klasik çerçeve yapısı premium bir ürün algısı oluşturur. Zeytin illüstrasyonu ana odakta tutulurken marka, ürün türü ve hacim bilgileri kolay okunacak dengeli bir hiyerarşiyle düzenlendi.',
+      roles: [
+        'Etiket ve ambalaj konsepti',
+        'Tipografi ve bilgi hiyerarşisi',
+        'İllüstrasyon ve renk sistemi',
+        'Mockup sunumu'
+      ]
+    },
+    {
+      title: 'Dalından Reçel Ailesi – Kavanoz Etiketleri',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Gıda Ambalajı ve Ürün Serisi',
+      image: 'assets/promo-projects/dalindan-recel-kavanoz-etiketleri.webp',
+      alt: 'Dalından Reçel Ailesi için hazırlanan kayısı ve çilek reçeli kavanoz etiketleri mockupı',
+      about: 'Dalından Reçel Ailesi için hazırlanan kavanoz etiketi serisi; farklı reçel çeşitlerini aynı marka çatısı altında ayırt edilebilir ve tutarlı bir ürün ailesi olarak sunar. Tasarım, raf görünürlüğünü ve ürün çeşidinin hızlı algılanmasını hedefler.',
+      approach: 'Her çeşit için meyveye özgü sıcak renkler kullanıldı; geometrik çerçeve ve beyaz bilgi alanı tüm seri boyunca korundu. Meyve illüstrasyonları ürün ayrımını güçlendirirken marka adı, çeşit ve net miktar bilgileri merkezde net bir hiyerarşiyle konumlandırıldı.',
+      roles: [
+        'Ürün ailesi görsel sistemi',
+        'Kavanoz etiketi tasarımı',
+        'İllüstrasyon ve renk kodlaması',
+        'Mockup sunumu'
+      ]
+    },
+    {
+      title: 'Burgers Cafe & Bar – A3 Amerikan Servis',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Menü ve Masa Üstü İletişimi',
+      image: 'assets/promo-projects/burgers-a3-amerikan-servis.webp',
+      alt: 'Burgers Cafe and Bar için hazırlanan A3 Amerikan servis menü tasarımı mockupı',
+      about: 'Burgers Cafe & Bar için hazırlanan A3 Amerikan servis; menü içeriğini doğrudan masa üzerinde sunarken mekânın marka dilini de güçlendiren işlevsel bir iletişim materyalidir. Ürün kategorileri ve seçenekler sipariş sürecini kolaylaştıracak biçimde düzenlenmiştir.',
+      approach: 'Siyah zemin ve turuncu vurgu rengi güçlü, enerjik bir restoran kimliği oluşturur. Dairesel fotoğraf alanları ürünleri öne çıkarırken başlıklar, kategori isimleri ve menü maddeleri geniş yüzey üzerinde dengeli sütunlarla kolay taranabilir hâle getirildi.',
+      roles: [
+        'Menü konsepti ve görsel dil',
+        'A3 Amerikan servis sayfa düzeni',
+        'Fotoğraf maskeleme ve tipografi',
+        'Mockup sunumu'
+      ]
+    },
+    {
+      title: 'Theatre Magazine – Dergi Kapağı',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Editoryal Kapak ve Magazin Yayını',
+      image: 'assets/promo-projects/theatre-magazine-dergi-kapagi.webp',
+      alt: 'Theatre Magazine için hazırlanan Alessandra Ambrosio temalı dergi kapağı mockupı',
+      about: 'Theatre Magazine için hazırlanan kapak çalışması; ana dosya konusunu, röportaj başlıklarını ve sayı bilgilerini çağdaş bir magazin diliyle tek yüzeyde birleştirir. Kapak, haber rafında güçlü bir görsel etki ve hızlı içerik algısı oluşturmak üzere tasarlandı.',
+      approach: 'Siyah, beyaz ve kırmızıdan oluşan yüksek kontrastlı palet editoryal dinamizmi destekler. Portre görseli geometrik alanlarla parçalanarak başlıkların arasına yerleştirildi; büyük masthead, dikey tipografi ve vurgu kutuları kontrollü bir asimetri içinde dengelendi.',
+      roles: [
+        'Kapak konsepti ve art direction',
+        'Editoryal tipografi ve hiyerarşi',
+        'Fotoğraf düzenleme ve kompozisyon',
+        'Mockup sunumu'
+      ]
+    },
+    {
+      title: 'Magazin Dünyası – Kapak ve İç Sayfa Tasarımı',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Magazin Dergisi ve Editoryal Uygulama',
+      image: 'assets/promo-projects/magazin-dunyasi-dergi-tasarimi.webp',
+      alt: 'Magazin Dünyası için hazırlanan kapak ve açık iç sayfa tasarımı mockupı',
+      about: 'Magazin Dünyası için hazırlanan çalışma; dergi kapağı ile gezi ve kırmızı halı içeriklerini taşıyan iç sayfa düzenini bütünlüklü bir yayın kimliği içinde sunar. Kapak ve içerik sayfaları, farklı haber türlerinde ortak bir editoryal dil kuracak şekilde tasarlandı.',
+      approach: 'Büyük beyaz masthead ve tam sayfa kapak fotoğrafı güçlü bir raf görünürlüğü sağlar. Sarı ve siyah vurgu alanları kapak haberlerini ayrıştırırken iç sayfalarda geniş fotoğraflar, kısa metin blokları ve renkli etiketler akıcı bir okuma ritmi oluşturur.',
+      roles: [
+        'Dergi görsel kimliği ve kapak tasarımı',
+        'İç sayfa mizanpajı',
+        'Tipografi ve içerik hiyerarşisi',
+        'Mockup sunumu'
+      ]
     }
   ];
 
