@@ -47,7 +47,7 @@
       title: 'Denizci Fenerbahçeliler Derneği',
       short: 'DFD',
       tone: 'yellow',
-      image: 'assets/event-projects/denizci-fenerbahceliler-dernegi/01-ana-mockup.webp',
+      image: 'assets/event-projects/denizci-fenerbahceliler-dernegi/03-etkinlik-fotografi.webp',
       available: true
     }
   ];
@@ -255,10 +255,6 @@
   ];
 
   const denizciFenerbahcelilerPhotos = [
-    {
-      src: 'assets/event-projects/denizci-fenerbahceliler-dernegi/01-ana-mockup.webp',
-      alt: 'Denizci Fenerbahçeliler Derneği Geleneksel İftar Programı organizasyon tasarımlarının toplu mockup sunumu'
-    },
     ...Array.from({ length: 9 }, (_, index) => ({
       src: `assets/event-projects/denizci-fenerbahceliler-dernegi/${String(index + 3).padStart(2, '0')}-etkinlik-fotografi.webp`,
       alt: `Denizci Fenerbahçeliler Derneği Geleneksel İftar Programı etkinlik fotoğrafı ${index + 1}`
@@ -292,7 +288,7 @@
   ]);
 
   applyPhotoSizes(denizciFenerbahcelilerPhotos, [
-    [2556, 1179], [678, 452], [2400, 1611], [2400, 1501],
+    [678, 452], [2400, 1611], [2400, 1501],
     [2400, 1217], [2400, 1424], [1290, 1241], [2400, 1600], [2400, 1600],
     [1600, 1066]
   ]);
