@@ -17,7 +17,7 @@ loadStylesheet("education-separation-styles", "assets/education-separation.css")
 
 if (!document.getElementById("project-cover-script")) {
   const projectCoverScript = document.createElement("script");
-  projectCoverScript.src = "assets/project-covers.js?v=20260805-card-mapping-fix-v4";
+  projectCoverScript.src = "assets/project-covers.js?v=20260810-editorial-empty-v1";
   projectCoverScript.defer = true;
   projectCoverScript.id = "project-cover-script";
   document.body.appendChild(projectCoverScript);
