@@ -53,6 +53,51 @@
         'Portre kolajı ve tipografik düzen',
         'Mockup sunumu'
       ]
+    },
+    {
+      title: 'Haydarpaşa Liman Hizmetleri – Dergi Reklamı',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Kurumsal İlan ve Hizmet Tanıtımı',
+      image: 'assets/promo-projects/haydarpasa-liman-dergi-reklami.webp',
+      alt: 'Haydarpaşa Liman Hizmetleri için hazırlanan tam sayfa dergi reklamı mockupı',
+      about: 'Haydarpaşa Liman Hizmetleri için hazırlanan tam sayfa dergi ilanı; kurumun liman, acentelik, gümrük ve lojistik hizmetlerini tek bir kurumsal iletişim yüzeyinde sunar. Çalışma, denizcilik sektörüne yönelik yayınlarda marka güvenini ve hizmet çeşitliliğini görünür kılmak üzere tasarlanmıştır.',
+      approach: 'Lacivert, beyaz ve mavi renk paleti kurumsal güven algısını destekler. Liman operasyonunu gösteren ana fotoğraf güçlü bir odak oluştururken dairesel detay görselleri hizmet kapsamını zenginleştirir; başlık, hizmet listesi ve iletişim alanları kolay taranabilir bir hiyerarşiyle düzenlenmiştir.',
+      roles: [
+        'Konsept ve kurumsal görsel dil geliştirme',
+        'Dergi ilanı ve sayfa düzeni',
+        'Fotoğraf seçimi ve kompozisyon',
+        'Mockup sunumu'
+      ]
+    },
+    {
+      title: 'Yacht News – Yeni Sayı Dijital Tanıtımı',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Web Sitesi ve Sosyal Medya Duyurusu',
+      image: 'assets/promo-projects/yacht-news-yeni-sayi-dijital-tanitim.webp',
+      alt: 'Yacht News yeni sayı kapağının web sitesi ve sosyal medya uygulamalarını gösteren mockup',
+      about: 'Yacht News Türkiye için hazırlanan çalışma, yeni sayının dergi kapağını web sitesi ve sosyal medya kanallarında eş zamanlı duyurmak üzere kurgulandı. Kapak tasarımının farklı ekranlarda tutarlı ve güçlü görünmesi amaçlandı.',
+      approach: 'Koyu ahşap, bordo ve altın tonlarındaki premium ortam derginin yatçılık ve iş dünyası kimliğini destekler. Dizüstü bilgisayar ana kapak sunumunu öne çıkarırken telefon uygulaması sosyal medya paylaşımını gösterir; iki mecra ortak bir görsel dil içinde dengelenmiştir.',
+      roles: [
+        'Dijital kampanya görseli kurgusu',
+        'Web ve sosyal medya uyarlamaları',
+        'Kapak sunumu ve görsel hiyerarşi',
+        'Mockup sunumu'
+      ]
+    },
+    {
+      title: 'Neta Sea – Yeni Sayı Dijital Tanıtımı',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Web Sitesi, Feed ve Hikâye Uygulamaları',
+      image: 'assets/promo-projects/neta-sea-yeni-sayi-dijital-tanitim.webp',
+      alt: 'Neta Sea 82. sayı için hazırlanan web sitesi, sosyal medya gönderisi ve hikâye uygulamaları mockupı',
+      about: 'Neta Sea 82. sayı için hazırlanan dijital tanıtım seti; yeni sayı duyurusunu web sitesi, sosyal medya gönderisi ve hikâye formatlarında bütünlüklü biçimde sunar. Her mecra için içerik ölçeği korunurken ortak marka algısı sürdürülmüştür.',
+      approach: 'Markanın lacivert ve mavi renkleri tüm ekranlara taşınarak güçlü bir dijital bütünlük oluşturuldu. Dergi kapağı ana odakta tutuldu; büyük sayı başlığı, kısa açıklamalar ve platforma özgü bilgi alanları net bir okuma sırasına göre yerleştirildi.',
+      roles: [
+        'Dijital iletişim konsepti',
+        'Web kapak görseli tasarımı',
+        'Feed ve hikâye uyarlamaları',
+        'Mockup sunumu'
+      ]
     }
   ];
 

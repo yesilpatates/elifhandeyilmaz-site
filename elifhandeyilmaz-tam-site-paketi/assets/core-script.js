@@ -18,7 +18,7 @@ loadStylesheet("education-separation-styles", "assets/education-separation.css")
 const loadPromoProjects = () => {
   if (document.getElementById("promo-projects-script")) return;
   const promoScript = document.createElement("script");
-  promoScript.src = "assets/promo-projects.js?v=20260810-promo-gallery-v2";
+  promoScript.src = "assets/promo-projects.js?v=20260810-promo-gallery-v3";
   promoScript.defer = true;
   promoScript.id = "promo-projects-script";
   document.body.appendChild(promoScript);
