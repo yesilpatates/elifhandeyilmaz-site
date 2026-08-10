@@ -11,6 +11,42 @@
       title: "Alfa Sigorta – Dijital Başvuru Rehberi",
       description: "Dijital başvuru sürecini anlaşılır ve akıcı bir görsel anlatımla aktaran dikey bilgilendirme videosu.",
       tags: ["Dijital Rehber", "Motion Graphics", "Sosyal Medya"]
+    },
+    {
+      id: "3e48OmyYAjU",
+      title: "Alfa Sigorta – Konut Sigortası",
+      description: "Konut sigortasının kapsamını ve güvence avantajlarını hareketli grafiklerle anlatan dikey tanıtım videosu.",
+      tags: ["Konut Sigortası", "Motion Graphics", "Sosyal Medya"]
+    },
+    {
+      id: "kd289H4ML2s",
+      title: "Alfa Sigorta – 8 Mart Emekçi Kadınlar Günü",
+      description: "8 Mart Emekçi Kadınlar Günü için hazırlanan, marka iletişimini destekleyen dikey özel gün videosu.",
+      tags: ["Özel Gün", "Kurumsal İletişim", "Sosyal Medya"]
+    },
+    {
+      id: "_D2ra94My-Q",
+      title: "Baytekin Sigorta – 19 Mayıs Atatürk’ü Anma, Gençlik ve Spor Bayramı",
+      description: "19 Mayıs Atatürk’ü Anma, Gençlik ve Spor Bayramı için hazırlanan kurumsal kutlama videosu.",
+      tags: ["Özel Gün", "Motion Design", "Sosyal Medya"]
+    },
+    {
+      id: "fw5GfijbMjE",
+      title: "Baytekin Sigorta – 1 Mayıs İşçi ve Emekçi Bayramı",
+      description: "1 Mayıs İşçi ve Emekçi Bayramı için hazırlanan, Baytekin Sigorta’nın kurumsal diline uyarlanmış dikey video.",
+      tags: ["Özel Gün", "Kurumsal İletişim", "Sosyal Medya"]
+    },
+    {
+      id: "zAMDZXLemEk",
+      title: "Baytekin Sigorta – 8 Mart Emekçi Kadınlar Günü",
+      description: "8 Mart Emekçi Kadınlar Günü için hazırlanan, kurumsal mesajı hareketli görsel anlatımla aktaran dikey video.",
+      tags: ["Özel Gün", "Motion Graphics", "Sosyal Medya"]
+    },
+    {
+      id: "3WO1q8CLIRI",
+      title: "Skala Ajans – Logo Intro",
+      description: "Ajans logosunu dinamik geçişler ve hareketlerle görünür kılan kısa logo intro animasyonu.",
+      tags: ["Logo Animasyonu", "Intro", "Motion Design"]
     }
   ];
 
@@ -46,7 +82,7 @@
     visual.innerHTML = `
       <div class="motion-project-cover">
         <div class="motion-project-cover-grid">
-          ${videos.map((video) => `
+          ${videos.slice(0, 4).map((video) => `
             <div class="motion-project-cover-panel">
               <img
                 src="${thumbnail(video.id)}"
