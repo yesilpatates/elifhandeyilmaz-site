@@ -54,7 +54,7 @@
 
   const loadCoreScript = () => {
     const coreScript = document.createElement("script");
-    coreScript.src = "assets/core-script.js?v=20260805-card-mapping-fix-v3";
+    coreScript.src = "assets/core-script.js?v=20260810-promo-gallery-v1";
     coreScript.defer = true;
     coreScript.onload = loadEnhancements;
     coreScript.onerror = () => {
