@@ -15,12 +15,24 @@ loadStylesheet("service-icons-styles", "assets/service-icons.css");
 loadStylesheet("site-optimizations", "assets/optimizations.css");
 loadStylesheet("education-separation-styles", "assets/education-separation.css");
 
+const loadPromoProjects = () => {
+  if (document.getElementById("promo-projects-script")) return;
+  const promoScript = document.createElement("script");
+  promoScript.src = "assets/promo-projects.js?v=20260810-promo-gallery-v2";
+  promoScript.defer = true;
+  promoScript.id = "promo-projects-script";
+  document.body.appendChild(promoScript);
+};
+
 if (!document.getElementById("project-cover-script")) {
   const projectCoverScript = document.createElement("script");
-  projectCoverScript.src = "assets/project-covers.js?v=20260810-social-project-removed-v1";
+  projectCoverScript.src = "assets/project-covers.js?v=20260810-promo-gallery-v1";
   projectCoverScript.defer = true;
   projectCoverScript.id = "project-cover-script";
+  projectCoverScript.addEventListener("load", loadPromoProjects, { once: true });
   document.body.appendChild(projectCoverScript);
+} else {
+  loadPromoProjects();
 }
 
 const originalHeroTitle = document.querySelector(".hero-copy h1");
