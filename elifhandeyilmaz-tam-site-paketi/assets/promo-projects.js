@@ -98,6 +98,66 @@
         'Feed ve hikâye uyarlamaları',
         'Mockup sunumu'
       ]
+    },
+    {
+      title: 'Turizm – Üç Kırımlı Tanıtım Broşürü',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Basılı Tanıtım ve Seyahat İletişimi',
+      image: 'assets/promo-projects/turizm-tanitim-brosuru.webp',
+      alt: 'Turizm firması için hazırlanan üç kırımlı tanıtım broşürünün masa üstü mockupı',
+      about: 'Turizm hizmetleri için hazırlanan üç kırımlı broşür; konaklama, gezi programı ve paket kapsamını tek bir basılı iletişim materyalinde düzenli biçimde sunar. Çalışma, potansiyel misafirlerin temel bilgileri hızlıca inceleyebilmesi amacıyla kurgulanmıştır.',
+      approach: 'Lacivert, turuncu ve beyaz renk paleti güven veren ve enerjik bir seyahat dili oluşturur. Dalga biçimli geçişler deniz ve rota hissini desteklerken fotoğraflar, hizmet maddeleri ve iletişim bilgileri katlama düzenine uygun net bir hiyerarşiyle yerleştirilmiştir.',
+      roles: [
+        'Broşür konsepti ve görsel dil',
+        'Üç kırımlı sayfa düzeni',
+        'Tipografi ve bilgi hiyerarşisi',
+        'Mockup sunumu'
+      ]
+    },
+    {
+      title: 'HeliPLAT – 10. Yıl Dijital Davetiyesi',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Etkinlik Davetiyesi ve Dijital Uyarlamalar',
+      image: 'assets/promo-projects/heliplat-10-yil-dijital-davetiye.webp',
+      alt: 'HeliPLAT 10. yıl kutlama davetiyesinin e-posta, web ve sosyal medya uygulamaları mockupı',
+      about: 'HeliPLAT’ın 10. yıl kutlama kokteyli için hazırlanan dijital davetiye; etkinlik mesajını e-posta, web sitesi ve sosyal medya kanallarında tutarlı biçimde duyurur. Tasarım, kurumsal davet niteliğini korurken yıl dönümünün özel karakterini görünür kılar.',
+      approach: 'Markanın kırmızı, siyah ve beyaz renkleri sade bir çerçeve sistemiyle kullanıldı. Helikopter görseli düşük yoğunlukta arka plana taşınırken etkinlik adı, tarih, konum ve LCV bilgileri tüm ekranlarda kolay okunacak ortak bir hiyerarşiyle düzenlendi.',
+      roles: [
+        'Dijital davetiye konsepti',
+        'E-posta ve web uyarlaması',
+        'Sosyal medya gönderisi ve hikâye uyarlaması',
+        'Mockup sunumu'
+      ]
+    },
+    {
+      title: 'Ayşe & Yusuf – Nikâh Davetiyesi',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Özel Gün Davetiyesi ve Basılı İletişim',
+      image: 'assets/promo-projects/ayse-yusuf-nikah-davetiyesi.webp',
+      alt: 'Ayşe ve Yusuf için hazırlanan çiçek desenli nikâh davetiyesi mockupı',
+      about: 'Ayşe ve Yusuf’un nikâh töreni için hazırlanan davetiye; tören bilgilerini zarif ve kişisel bir görsel dille sunar. Çalışma, basılı davetiyenin hatıra niteliğini güçlendirecek sade ve zamansız bir estetik üzerine kurulmuştur.',
+      approach: 'Kırık beyaz dokulu kâğıt, altın yaldız etkisi ve ince botanik çizimler premium bir görünüm oluşturur. İsimler kaligrafik tipografiyle öne çıkarılırken tarih, aile ve konum bilgileri dengeli bir merkez yerleşimiyle okunabilir tutulmuştur.',
+      roles: [
+        'Davet konsepti ve görsel dil',
+        'Botanik illüstrasyon düzeni',
+        'Tipografi ve baskı yüzeyi kurgusu',
+        'Mockup sunumu'
+      ]
+    },
+    {
+      title: 'XV. Ulusal Gemi ve Yat Tasarım Yarışması – Afiş Tasarımı',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Yarışma Duyurusu ve Kurumsal Afiş',
+      image: 'assets/promo-projects/xv-ulusal-gemi-yat-tasarim-yarismasi-afis.webp',
+      alt: 'XV. Ulusal Gemi ve Yat Tasarım Yarışması için hazırlanan afişin ışıklı pano mockupı',
+      about: 'XV. Ulusal Gemi ve Yat Tasarım Yarışması için hazırlanan afiş; yarışma konusunu, son başvuru tarihini, ödülleri ve destekleyen kurumları tek bir duyuru yüzeyinde bir araya getirir. Çalışma, sektör profesyonelleri ve tasarım öğrencilerine yönelik açık çağrıyı görünür kılmak üzere tasarlanmıştır.',
+      approach: 'Turkuaz, lacivert ve beyaz renk paleti denizcilik temasını kurumsal bir dille taşır. Yarışma logosu üst odakta konumlandırıldı; ödül sıralaması metalik madalya görselleriyle belirginleştirildi ve kurum logoları ile yasal bilgiler alt bölümde düzenli bir sistem içinde toplandı.',
+      roles: [
+        'Afiş konsepti ve kurumsal görsel dil',
+        'Bilgi ve logo hiyerarşisi',
+        'Ödül görselleştirmesi',
+        'Mockup sunumu'
+      ]
     }
   ];
 
