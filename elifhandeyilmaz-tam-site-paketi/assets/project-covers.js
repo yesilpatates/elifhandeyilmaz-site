@@ -3,7 +3,7 @@
     { src: "https://at.adobe.com/ufuVy8iyI5g5BVxR", alt: "Marka & Kurumsal Kimlik Tasarımı kapak görseli", title: "Marka & Kurumsal Kimlik", label: "BRAND" },
     null,
     { src: "https://at.adobe.com/hguOld174sEQhlKx", alt: "Etkinlik & Organizasyon Tasarımı kapak görseli", title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
-    { src: "https://at.adobe.com/B3srmMwoUvQfru2c", alt: "Tanıtım & İletişim Tasarımı kapak görseli", title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
+    { src: "assets/promo-projects/grand-seyahat-afis.webp", alt: "Grand Seyahat afiş tasarımı havaalanı reklam panosu mockupı", title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
     { src: "https://at.adobe.com/vCPmsaZrLIa0TN9Q", alt: "Web & Arayüz Tasarımı kapak görseli", title: "Web & Arayüz Tasarımı", label: "UI / WEB" },
     { src: "https://at.adobe.com/TYb10FnMlNsmuouV", alt: "Video & Animasyon Tasarımı kapak görseli", title: "Video & Animasyon Tasarımı", label: "MOTION" }
   ];
