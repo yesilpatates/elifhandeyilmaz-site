@@ -11,7 +11,7 @@ const loadStylesheet = (id, href) => {
 loadStylesheet("project-cover-styles", "assets/project-covers.css?v=20260810-social-project-removed-v1");
 loadStylesheet("hero-title-font", "https://fonts.googleapis.com/css2?family=Rochester&display=swap");
 loadStylesheet("hero-title-styles", "assets/hero-title.css");
-loadStylesheet("service-icons-styles", "assets/service-icons.css");
+loadStylesheet("service-icons-styles", "assets/service-icons.css?v=20260811-social-service-removed-v1");
 loadStylesheet("site-optimizations", "assets/optimizations.css");
 loadStylesheet("education-separation-styles", "assets/education-separation.css");
 
@@ -63,11 +63,6 @@ const serviceIconEntries = [
     target: "web",
     title: "Web ve<br>Arayüz",
     svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="13" rx="2"></rect><path d="M3.5 8.5h17"></path><circle class="fill-accent" cx="6.4" cy="6.8" r="0.7"></circle><circle class="fill-accent" cx="8.5" cy="6.8" r="0.7"></circle><circle class="fill-accent" cx="10.6" cy="6.8" r="0.7"></circle><path d="M7.2 12.2h4.2"></path><path d="M7.2 14.8h2.7"></path><rect x="13.2" y="11.2" width="4.2" height="4.2" rx="0.8"></rect></svg>'
-  },
-  {
-    target: null,
-    title: "Sosyal Medya<br>Tasarımı",
-    svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4.5" width="14" height="14" rx="3"></rect><circle cx="12" cy="11.5" r="3.1"></circle><circle class="fill-accent" cx="16.3" cy="7.4" r="0.8"></circle><path d="M7.4 18.5 6.4 20l2.2-.2"></path></svg>'
   },
   {
     target: "video",
