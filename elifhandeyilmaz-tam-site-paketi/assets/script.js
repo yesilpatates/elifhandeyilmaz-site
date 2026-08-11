@@ -30,7 +30,7 @@
     if (document.getElementById("event-projects-script")) return;
     const eventScript = document.createElement("script");
     eventScript.id = "event-projects-script";
-    eventScript.src = "assets/event-projects.js?v=20260810-dfd-cover-v1";
+    eventScript.src = "assets/event-projects.js?v=20260811-featured-links-v1";
     eventScript.defer = true;
     document.body.appendChild(eventScript);
   };
@@ -40,7 +40,7 @@
     if (document.getElementById("motion-projects-script")) return;
     const motionScript = document.createElement("script");
     motionScript.id = "motion-projects-script";
-    motionScript.src = "assets/motion-projects.js?v=20260810-alfa-gallery-v3";
+    motionScript.src = "assets/motion-projects.js?v=20260811-featured-links-v1";
     motionScript.defer = true;
     document.body.appendChild(motionScript);
   };

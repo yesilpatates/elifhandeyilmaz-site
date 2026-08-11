@@ -768,8 +768,10 @@
     dialog.scrollTop = 0;
   };
 
-  const showProject = (event) => {
-    const projectId = event.currentTarget.dataset.eventProject;
+  const showProject = (eventOrProjectId) => {
+    const projectId = typeof eventOrProjectId === 'string'
+      ? eventOrProjectId
+      : eventOrProjectId.currentTarget.dataset.eventProject;
     const gallery = projectGalleries[projectId];
     if (!gallery) return;
     listView.hidden = true;
@@ -802,11 +804,12 @@
   card.appendChild(trigger);
 
   let lastFocused = null;
-  const open = () => {
+  const open = (projectId = null) => {
     lastFocused = document.activeElement;
     showList();
     modal.hidden = false;
     document.body.classList.add('event-showcase-open');
+    if (projectId) showProject(projectId);
     requestAnimationFrame(() => {
       modal.classList.add('is-open');
       closeButton.focus({ preventScroll: true });
@@ -822,7 +825,10 @@
     }, 220);
   };
 
-  trigger.addEventListener('click', open);
+  trigger.addEventListener('click', () => open());
+  document.querySelectorAll('[data-featured-event-project]').forEach((featuredTrigger) => {
+    featuredTrigger.addEventListener('click', () => open(featuredTrigger.dataset.featuredEventProject));
+  });
   modal.querySelectorAll('[data-event-project]').forEach((projectCard) => projectCard.addEventListener('click', showProject));
   backButton.addEventListener('click', showList);
   modal.querySelectorAll('[data-event-showcase-close]').forEach((item) => item.addEventListener('click', close));

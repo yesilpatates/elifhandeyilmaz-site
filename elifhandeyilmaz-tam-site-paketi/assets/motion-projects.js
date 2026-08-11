@@ -174,9 +174,10 @@
     `;
   };
 
-  const openModal = () => {
+  const openModal = (videoId = videos[0].id) => {
     lastFocus = document.activeElement;
-    activeIndex = 0;
+    const requestedIndex = videos.findIndex((video) => video.id === videoId);
+    activeIndex = requestedIndex >= 0 ? requestedIndex : 0;
     renderVideo();
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
@@ -197,12 +198,15 @@
     renderVideo();
   };
 
-  card.addEventListener("click", openModal);
+  card.addEventListener("click", () => openModal());
   card.addEventListener("keydown", (event) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       openModal();
     }
+  });
+  document.querySelectorAll("[data-featured-motion-project]").forEach((featuredTrigger) => {
+    featuredTrigger.addEventListener("click", () => openModal(featuredTrigger.dataset.featuredMotionProject));
   });
   closeButton.addEventListener("click", closeModal);
   previousButton.addEventListener("click", () => showVideo(-1));
