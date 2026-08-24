@@ -15,6 +15,16 @@
     title.innerHTML = '<span class="hero-title-first">Markalara karakter kazandıran</span><span class="hero-title-second">görsel kimlikler tasarlıyorum.</span>';
   };
 
+  const loadEditorialProjects = () => {
+    addStylesheet("editorial-projects-styles", "assets/editorial-projects.css?v=20260825-issue57-v1");
+    if (document.getElementById("editorial-projects-script")) return;
+    const editorialScript = document.createElement("script");
+    editorialScript.id = "editorial-projects-script";
+    editorialScript.src = "assets/editorial-projects.js?v=20260825-issue57-v1";
+    editorialScript.defer = true;
+    document.body.appendChild(editorialScript);
+  };
+
   const loadWebProjects = () => {
     addStylesheet("web-projects-styles", "assets/web-projects.css?v=20260803-fixed-height-v8");
     if (document.getElementById("web-projects-script")) return;
@@ -47,6 +57,7 @@
 
   const loadEnhancements = () => {
     formatHeroTitle();
+    window.setTimeout(loadEditorialProjects, 425);
     window.setTimeout(loadWebProjects, 450);
     window.setTimeout(loadEventShowcase, 500);
     window.setTimeout(loadMotionProjects, 550);
