@@ -85,16 +85,41 @@
   trigger.setAttribute("aria-label", "Editoryal tasarım projelerini görüntüle");
   card.appendChild(trigger);
 
-  const modal = document.createElement("div");
-  modal.className = "editorial-modal";
-  modal.hidden = true;
-  modal.setAttribute("role", "dialog");
-  modal.setAttribute("aria-modal", "true");
-  modal.setAttribute("aria-labelledby", "editorial-modal-title");
-  modal.innerHTML = `
-    <div class="editorial-backdrop" data-editorial-close></div>
+  const libraryModal = document.createElement("div");
+  libraryModal.className = "editorial-modal editorial-library-modal";
+  libraryModal.hidden = true;
+  libraryModal.setAttribute("role", "dialog");
+  libraryModal.setAttribute("aria-modal", "true");
+  libraryModal.setAttribute("aria-labelledby", "editorial-library-title");
+  libraryModal.innerHTML = `
+    <div class="editorial-backdrop" data-editorial-library-close></div>
+    <section class="editorial-library-dialog">
+      <header class="editorial-library-header">
+        <div>
+          <span class="editorial-kicker">Editoryal Tasarım</span>
+          <h2 id="editorial-library-title">Dergiler</h2>
+        </div>
+        <button class="editorial-close" type="button" aria-label="Pencereyi kapat" data-editorial-library-close>×</button>
+      </header>
+      <div class="editorial-library-grid">
+        ${projects.map((project) => `
+          <button class="editorial-library-card" type="button" data-editorial-project="${project.id}" aria-label="${project.title} yayınını görüntüle">
+            <img src="${project.cover}" alt="${project.title} dergi kapağı" loading="lazy" decoding="async">
+          </button>`).join("")}
+      </div>
+    </section>`;
+  document.body.appendChild(libraryModal);
+
+  const detailModal = document.createElement("div");
+  detailModal.className = "editorial-modal";
+  detailModal.hidden = true;
+  detailModal.setAttribute("role", "dialog");
+  detailModal.setAttribute("aria-modal", "true");
+  detailModal.setAttribute("aria-labelledby", "editorial-modal-title");
+  detailModal.innerHTML = `
+    <div class="editorial-backdrop" data-editorial-detail-close></div>
     <section class="editorial-dialog">
-      <button class="editorial-close" type="button" aria-label="Pencereyi kapat" data-editorial-close>×</button>
+      <button class="editorial-close" type="button" aria-label="Pencereyi kapat" data-editorial-detail-close>×</button>
       <div class="editorial-grid">
         <div class="editorial-cover-wrap"><img class="editorial-cover" alt=""></div>
         <div class="editorial-copy">
@@ -103,72 +128,76 @@
           <p class="editorial-issue"></p>
           <p class="editorial-description"></p>
           <div class="editorial-meta"></div>
-          <div class="editorial-project-picker" aria-label="Yayın seçimi"></div>
           <a class="button button-primary editorial-pdf-link" target="_blank" rel="noopener">PDF'yi Görüntüle <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>`;
-  document.body.appendChild(modal);
+  document.body.appendChild(detailModal);
 
   let activeProject = projects[0];
-  const picker = modal.querySelector(".editorial-project-picker");
-  picker.innerHTML = projects.map((project) =>
-    `<button type="button" data-editorial-project="${project.id}">${project.title.replace("Yacht News Türkiye - ", "")}</button>`
-  ).join("");
-
   const renderProject = (project) => {
     activeProject = project;
-    modal.querySelector(".editorial-cover").src = project.cover;
-    modal.querySelector(".editorial-cover").alt = `${project.title} dergi kapağı`;
-    modal.querySelector("#editorial-modal-title").textContent = project.title;
-    modal.querySelector(".editorial-issue").textContent = project.issue;
-    modal.querySelector(".editorial-description").textContent = project.description;
-    modal.querySelector(".editorial-meta").textContent = project.pages;
-    modal.querySelector(".editorial-pdf-link").href = project.pdf;
-    picker.querySelectorAll("[data-editorial-project]").forEach((button) => {
-      const selected = button.dataset.editorialProject === project.id;
-      button.classList.toggle("is-active", selected);
-      button.setAttribute("aria-pressed", String(selected));
-    });
+    detailModal.querySelector(".editorial-cover").src = project.cover;
+    detailModal.querySelector(".editorial-cover").alt = `${project.title} dergi kapağı`;
+    detailModal.querySelector("#editorial-modal-title").textContent = project.title;
+    detailModal.querySelector(".editorial-issue").textContent = project.issue;
+    detailModal.querySelector(".editorial-description").textContent = project.description;
+    detailModal.querySelector(".editorial-meta").textContent = project.pages;
+    detailModal.querySelector(".editorial-pdf-link").href = project.pdf;
   };
 
-  picker.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-editorial-project]");
-    const project = projects.find((item) => item.id === button?.dataset.editorialProject);
-    if (project) renderProject(project);
-  });
-
-  const pdfLink = modal.querySelector(".editorial-pdf-link");
-  pdfLink.addEventListener("click", async (event) => {
-    event.preventDefault();
-    close();
-    await import("./editorial-flipbook.js?v=20260827-fit-v3");
-    window.setTimeout(() => window.openEditorialFlipbook?.(activeProject), 230);
-  });
-  renderProject(activeProject);
-
   let lastFocused = null;
-  const open = () => {
-    lastFocused = document.activeElement;
+  const showModal = (modal) => {
     modal.hidden = false;
     document.body.classList.add("editorial-open");
     requestAnimationFrame(() => {
       modal.classList.add("is-open");
-      modal.querySelector(".editorial-close").focus({ preventScroll: true });
+      modal.querySelector(".editorial-close")?.focus({ preventScroll: true });
     });
   };
-  const close = () => {
+  const hideModal = (modal, onHidden) => {
     modal.classList.remove("is-open");
-    document.body.classList.remove("editorial-open");
-    setTimeout(() => {
+    window.setTimeout(() => {
       modal.hidden = true;
-      lastFocused?.focus?.({ preventScroll: true });
+      onHidden?.();
     }, 220);
   };
+  const openLibrary = (rememberFocus = true) => {
+    if (rememberFocus) lastFocused = document.activeElement;
+    showModal(libraryModal);
+  };
+  const closeLibrary = () => {
+    hideModal(libraryModal, () => {
+      document.body.classList.remove("editorial-open");
+      lastFocused?.focus?.({ preventScroll: true });
+    });
+  };
+  const openDetail = (project) => {
+    renderProject(project);
+    hideModal(libraryModal, () => showModal(detailModal));
+  };
+  const closeDetail = () => hideModal(detailModal, () => showModal(libraryModal));
 
-  trigger.addEventListener("click", open);
-  modal.querySelectorAll("[data-editorial-close]").forEach((item) => item.addEventListener("click", close));
+  libraryModal.querySelector(".editorial-library-grid").addEventListener("click", (event) => {
+    const button = event.target.closest("[data-editorial-project]");
+    const project = projects.find((item) => item.id === button?.dataset.editorialProject);
+    if (project) openDetail(project);
+  });
+
+  const pdfLink = detailModal.querySelector(".editorial-pdf-link");
+  pdfLink.addEventListener("click", async (event) => {
+    event.preventDefault();
+    hideModal(detailModal, () => document.body.classList.remove("editorial-open"));
+    await import("./editorial-flipbook.js?v=20260827-fit-v3");
+    window.setTimeout(() => window.openEditorialFlipbook?.(activeProject), 230);
+  });
+
+  trigger.addEventListener("click", () => openLibrary());
+  libraryModal.querySelectorAll("[data-editorial-library-close]").forEach((item) => item.addEventListener("click", closeLibrary));
+  detailModal.querySelectorAll("[data-editorial-detail-close]").forEach((item) => item.addEventListener("click", closeDetail));
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !modal.hidden) close();
+    if (event.key !== "Escape") return;
+    if (!detailModal.hidden) closeDetail();
+    else if (!libraryModal.hidden) closeLibrary();
   });
 })();
