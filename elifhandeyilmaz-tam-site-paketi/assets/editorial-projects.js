@@ -117,6 +117,17 @@
             ${projects.filter((project) => project.id.startsWith("neta-sea")).map((project) => `
               <button class="editorial-library-card" type="button" data-editorial-project="${project.id}" aria-label="${project.title} yayınını görüntüle">
                 <img src="${project.cover}" alt="${project.title} dergi kapağı" loading="lazy" decoding="async">
+            </button>`).join("")}
+          </div>
+        </section>
+        <section class="editorial-library-group editorial-library-group-other" aria-labelledby="other-editorial-title">
+          <h3 id="other-editorial-title">Diğer Editoryal Tasarımlar</h3>
+          <div class="editorial-library-covers">
+            ${projects.filter((project) =>
+              !project.id.startsWith("yacht-news") && !project.id.startsWith("neta-sea")
+            ).map((project) => `
+              <button class="editorial-library-card" type="button" data-editorial-project="${project.id}" aria-label="${project.title} yayınını görüntüle">
+                <img src="${project.cover}" alt="${project.title} kapak görseli" loading="lazy" decoding="async">
               </button>`).join("")}
           </div>
         </section>
