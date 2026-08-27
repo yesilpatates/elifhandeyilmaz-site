@@ -284,6 +284,7 @@ const ensurePagesAround = async (pageIndex, radius = 4) => {
 const finishInitialization = (loading, total) => {
   pageFlip?.update();
   updateCounter(0, total);
+  flipbookModal?.querySelector(".editorial-flipbook-dialog")?.classList.add("is-cover-view");
   loading.hidden = true;
   initialized = true;
 };
@@ -326,11 +327,8 @@ const renderPdfPages = async (project) => {
     pages.push(pageElement);
   }
 
-  const initialEnd = Math.min(activePdf.numPages, longDocument ? 6 : 8);
-  for (let pageNumber = 1; pageNumber <= initialEnd; pageNumber += 1) {
-    loading.textContent = `Dergi hazırlanıyor… ${pageNumber} / ${initialEnd}`;
-    await renderPage(pageNumber);
-  }
+  loading.textContent = "Kapak hazırlanıyor…";
+  await renderPage(1);
 
   const sourceWidth = Math.round(baseViewport.width);
   const sourceHeight = Math.round(baseViewport.height);
@@ -360,6 +358,9 @@ const renderPdfPages = async (project) => {
 
   pageFlip.on("flip", (event) => {
     const index = Number(event.data);
+    flipbookModal
+      ?.querySelector(".editorial-flipbook-dialog")
+      ?.classList.toggle("is-cover-view", index === 0);
     updateCounter(index, activePdf.numPages);
     ensurePagesAround(index).catch((error) => console.info("Sayfa ön yükleme hatası:", error));
   });
