@@ -52,7 +52,14 @@
   modal.querySelector(".editorial-issue").textContent = project.issue;
   modal.querySelector(".editorial-description").textContent = project.description;
   modal.querySelector(".editorial-meta").textContent = project.pages;
-  modal.querySelector(".editorial-pdf-link").href = project.pdf;
+  const pdfLink = modal.querySelector(".editorial-pdf-link");
+  pdfLink.href = project.pdf;
+  pdfLink.addEventListener("click", async (event) => {
+    event.preventDefault();
+    close();
+    await import("./editorial-flipbook.js?v=20260827-spread-v2");
+    window.setTimeout(() => window.openEditorialFlipbook?.(), 230);
+  });
 
   let lastFocused = null;
   const open = () => {

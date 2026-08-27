@@ -17,6 +17,7 @@
 
   const loadEditorialProjects = () => {
     addStylesheet("editorial-projects-styles", "assets/editorial-projects.css?v=20260825-issue57-v1");
+    addStylesheet("editorial-flipbook-styles", "assets/editorial-flipbook.css?v=20260827-spread-v2");
     if (document.getElementById("editorial-projects-script")) return;
     const editorialScript = document.createElement("script");
     editorialScript.id = "editorial-projects-script";
