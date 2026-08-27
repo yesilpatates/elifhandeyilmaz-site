@@ -35,6 +35,15 @@
       cover: "assets/editorial-projects/yacht-news-turkiye-57-2026-ocak-subat.webp",
       pdf: "assets/editorial-pdfs/yacht-news-turkiye-57-2026-ocak-subat.pdf",
       description: "Yacht News Türkiye'nin 57. sayısı için hazırlanan editoryal tasarım; yatçılık, denizcilik ve sektör içeriklerini güçlü görsel hiyerarşi, dengeli sayfa düzeni ve premium yayın diliyle bir araya getiriyor."
+    },
+    {
+      id: "neta-sea-80",
+      title: "Neta Sea Türkçe - 80. Sayı",
+      issue: "Ocak - Şubat 2026",
+      pages: "80 sayfa",
+      cover: "assets/editorial-projects/neta-sea-turkce-80-2026-ocak-subat.jpg",
+      pdf: "assets/editorial-pdfs/neta-sea-turkce-80-2026-ocak-subat.pdf",
+      description: "Neta Sea Türkçe'nin 80. sayısı için hazırlanan editoryal tasarım; denizcilik ihracatı, yeşil dönüşüm, tersaneler, limanlar ve sektör röportajlarını düzenli bir yayın hiyerarşisiyle bir araya getiriyor."
     }
   ];
 
