@@ -451,7 +451,7 @@ async function openFlipbook(project) {
   }
 }
 
-window.openEditorialFlipbook = () => openFlipbook(editorialProjects[0]);
+window.openEditorialFlipbook = (project = editorialProjects[0]) => openFlipbook(project);
 
 function closeFlipbook(openProjects = false) {
   if (!flipbookModal) return;

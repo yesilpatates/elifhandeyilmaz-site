@@ -15,6 +15,9 @@
 .editorial-issue { margin: 0 0 28px; color: #58747a; font-weight: 600; }
 .editorial-description { margin: 0 0 26px; color: #405e65; line-height: 1.75; }
 .editorial-meta { margin-bottom: 32px; font-size: .9rem; font-weight: 700; color: #173f48; }
+.editorial-project-picker { display: flex; flex-wrap: wrap; gap: 8px; margin: -12px 0 24px; }
+.editorial-project-picker button { padding: 8px 12px; border: 1px solid #cddfe1; border-radius: 999px; background: #fff; color: #31575e; font: inherit; font-size: .78rem; font-weight: 600; cursor: pointer; }
+.editorial-project-picker button.is-active { border-color: #0d9aa5; background: #0d9aa5; color: #fff; }
 .editorial-pdf-link { display: inline-flex; gap: 10px; align-items: center; }
 body.editorial-open { overflow: hidden; }
 @media (max-width: 760px) {
