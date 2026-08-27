@@ -16,12 +16,12 @@
   };
 
   const loadEditorialProjects = () => {
-    addStylesheet("editorial-projects-styles", "assets/editorial-projects.css?v=20260827-cover-library-v1");
+    addStylesheet("editorial-projects-styles", "assets/editorial-projects.css?v=20260827-grouped-covers-v2");
     addStylesheet("editorial-flipbook-styles", "assets/editorial-flipbook.css?v=20260827-fit-v3");
     if (document.getElementById("editorial-projects-script")) return;
     const editorialScript = document.createElement("script");
     editorialScript.id = "editorial-projects-script";
-    editorialScript.src = "assets/editorial-projects.js?v=20260827-cover-library-v1";
+    editorialScript.src = "assets/editorial-projects.js?v=20260827-grouped-covers-v2";
     editorialScript.defer = true;
     document.body.appendChild(editorialScript);
   };

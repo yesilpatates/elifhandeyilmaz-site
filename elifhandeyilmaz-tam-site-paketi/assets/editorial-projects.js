@@ -102,10 +102,24 @@
         <button class="editorial-close" type="button" aria-label="Pencereyi kapat" data-editorial-library-close>×</button>
       </header>
       <div class="editorial-library-grid">
-        ${projects.map((project) => `
-          <button class="editorial-library-card" type="button" data-editorial-project="${project.id}" aria-label="${project.title} yayınını görüntüle">
-            <img src="${project.cover}" alt="${project.title} dergi kapağı" loading="lazy" decoding="async">
-          </button>`).join("")}
+        <section class="editorial-library-group" aria-labelledby="yacht-news-issues-title">
+          <h3 id="yacht-news-issues-title">Yacht News Sayıları</h3>
+          <div class="editorial-library-covers">
+            ${projects.filter((project) => project.id.startsWith("yacht-news")).map((project) => `
+              <button class="editorial-library-card" type="button" data-editorial-project="${project.id}" aria-label="${project.title} yayınını görüntüle">
+                <img src="${project.cover}" alt="${project.title} dergi kapağı" loading="lazy" decoding="async">
+              </button>`).join("")}
+          </div>
+        </section>
+        <section class="editorial-library-group" aria-labelledby="neta-sea-issues-title">
+          <h3 id="neta-sea-issues-title">Neta Sea Sayıları</h3>
+          <div class="editorial-library-covers">
+            ${projects.filter((project) => project.id.startsWith("neta-sea")).map((project) => `
+              <button class="editorial-library-card" type="button" data-editorial-project="${project.id}" aria-label="${project.title} yayınını görüntüle">
+                <img src="${project.cover}" alt="${project.title} dergi kapağı" loading="lazy" decoding="async">
+              </button>`).join("")}
+          </div>
+        </section>
       </div>
     </section>`;
   document.body.appendChild(libraryModal);
