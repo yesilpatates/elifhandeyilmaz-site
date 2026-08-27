@@ -71,6 +71,15 @@
       cover: "assets/editorial-projects/neta-sea-turkce-80-2026-ocak-subat.jpg",
       pdf: "assets/editorial-pdfs/neta-sea-turkce-80-2026-ocak-subat.pdf",
       description: "Neta Sea Türkçe'nin 80. sayısı için hazırlanan editoryal tasarım; denizcilik ihracatı, yeşil dönüşüm, tersaneler, limanlar ve sektör röportajlarını düzenli bir yayın hiyerarşisiyle bir araya getiriyor."
+    },
+    {
+      id: "edinburgh-sehir-rehberi",
+      title: "Edinburgh Şehir Tanıtım Rehberi",
+      issue: "Şehir Tanıtım Rehberi",
+      pages: "28 sayfa",
+      cover: "assets/editorial-projects/edinburgh-sehir-tanitim-rehberi.jpg",
+      pdf: "assets/editorial-pdfs/edinburgh-sehir-tanitim-rehberi.pdf",
+      description: "Edinburgh'un tarihî dokusunu, mimarisini ve kent atmosferini güçlü fotoğraflar, rafine tipografi ve dengeli sayfa düzeniyle bir araya getiren şehir tanıtım rehberi."
     }
   ];
 

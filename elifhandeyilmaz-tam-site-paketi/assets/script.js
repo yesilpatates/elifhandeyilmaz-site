@@ -21,7 +21,7 @@
     if (document.getElementById("editorial-projects-script")) return;
     const editorialScript = document.createElement("script");
     editorialScript.id = "editorial-projects-script";
-    editorialScript.src = "assets/editorial-projects.js?v=20260827-back-button-v4";
+    editorialScript.src = "assets/editorial-projects.js?v=20260827-edinburgh-v5";
     editorialScript.defer = true;
     document.body.appendChild(editorialScript);
   };
