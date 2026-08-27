@@ -57,7 +57,7 @@
   pdfLink.addEventListener("click", async (event) => {
     event.preventDefault();
     close();
-    await import("./editorial-flipbook.js?v=20260827-spread-v2");
+    await import("./editorial-flipbook.js?v=20260827-fit-v3");
     window.setTimeout(() => window.openEditorialFlipbook?.(), 230);
   });
 

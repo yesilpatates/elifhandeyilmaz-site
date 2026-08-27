@@ -333,15 +333,26 @@ const renderPdfPages = async (project) => {
   const sourceWidth = Math.round(baseViewport.width);
   const sourceHeight = Math.round(baseViewport.height);
   const ratio = sourceHeight / sourceWidth;
+  const stage = flipbookModal.querySelector(".editorial-flipbook-stage");
+  const mobileView = window.matchMedia("(max-width: 820px)").matches;
+  const availableHeight = Math.max(320, (stage?.clientHeight || 760) - 28);
+  const availableWidth = Math.max(
+    260,
+    mobileView
+      ? (stage?.clientWidth || 620) - 24
+      : ((stage?.clientWidth || 1400) - 156) / 2
+  );
+  const fittedPageWidth = Math.floor(Math.min(740, availableWidth, availableHeight / ratio));
+  const fittedPageHeight = Math.floor(fittedPageWidth * ratio);
 
   pageFlip = new PageFlip(book, {
     width: sourceWidth,
     height: sourceHeight,
     size: "stretch",
     minWidth: 260,
-    maxWidth: 740,
+    maxWidth: fittedPageWidth,
     minHeight: Math.round(260 * ratio),
-    maxHeight: Math.round(740 * ratio),
+    maxHeight: fittedPageHeight,
     maxShadowOpacity: 0.38,
     showCover: true,
     mobileScrollSupport: false,
