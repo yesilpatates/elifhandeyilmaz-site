@@ -37,6 +37,15 @@
       description: "Yacht News Türkiye'nin 57. sayısı için hazırlanan editoryal tasarım; yatçılık, denizcilik ve sektör içeriklerini güçlü görsel hiyerarşi, dengeli sayfa düzeni ve premium yayın diliyle bir araya getiriyor."
     },
     {
+      id: "neta-sea-82-en",
+      title: "Neta Sea İngilizce - 82. Sayı",
+      issue: "Mayıs - Haziran 2026",
+      pages: "53 sayfa",
+      cover: "assets/editorial-projects/neta-sea-ingilizce-82-2026-mayis-haziran.jpg",
+      pdf: "assets/editorial-pdfs/neta-sea-ingilizce-82-2026-mayis-haziran.pdf",
+      description: "Neta Sea İngilizce'nin 82. sayısı için hazırlanan editoryal tasarım; Posidonia 2026, denizcilik, gemi inşa, röportajlar ve uluslararası sektör gündemini İngilizce yayın diliyle sunuyor."
+    },
+    {
       id: "neta-sea-81",
       title: "Neta Sea Türkçe - 81. Sayı",
       issue: "Mart - Nisan 2026",
