@@ -1,6 +1,15 @@
 (() => {
   const projects = [
     {
+      id: "yacht-news-60",
+      title: "Yacht News Türkiye - 60. Sayı",
+      issue: "Temmuz - Ağustos 2026",
+      pages: "72 sayfa",
+      cover: "assets/editorial-projects/yacht-news-turkiye-60-2026-temmuz-agustos.jpg",
+      pdf: "assets/editorial-pdfs/yacht-news-turkiye-60-2026-temmuz-agustos.pdf",
+      description: "Yacht News Türkiye'nin 60. sayısı için hazırlanan editoryal tasarım; küresel süperyat sektörü, yat tasarımı, festival ve zirve içeriklerini güçlü görseller ve dengeli bir yayın düzeniyle sunuyor."
+    },
+    {
       id: "yacht-news-59",
       title: "Yacht News Türkiye - 59. Sayı",
       issue: "Mayıs - Haziran 2026",
