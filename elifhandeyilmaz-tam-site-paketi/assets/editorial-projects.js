@@ -144,6 +144,7 @@
   detailModal.innerHTML = `
     <div class="editorial-backdrop" data-editorial-detail-close></div>
     <section class="editorial-dialog">
+      <button class="editorial-back" type="button" aria-label="Tüm dergilere dön" data-editorial-detail-back>← <span>Tüm Dergiler</span></button>
       <button class="editorial-close" type="button" aria-label="Pencereyi kapat" data-editorial-detail-close>×</button>
       <div class="editorial-grid">
         <div class="editorial-cover-wrap"><img class="editorial-cover" alt=""></div>
@@ -220,6 +221,7 @@
   trigger.addEventListener("click", () => openLibrary());
   libraryModal.querySelectorAll("[data-editorial-library-close]").forEach((item) => item.addEventListener("click", closeLibrary));
   detailModal.querySelectorAll("[data-editorial-detail-close]").forEach((item) => item.addEventListener("click", closeDetail));
+  detailModal.querySelector("[data-editorial-detail-back]")?.addEventListener("click", closeDetail);
   document.addEventListener("keydown", (event) => {
     if (event.key !== "Escape") return;
     if (!detailModal.hidden) closeDetail();
