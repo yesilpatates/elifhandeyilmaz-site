@@ -37,6 +37,15 @@
       description: "Yacht News Türkiye'nin 57. sayısı için hazırlanan editoryal tasarım; yatçılık, denizcilik ve sektör içeriklerini güçlü görsel hiyerarşi, dengeli sayfa düzeni ve premium yayın diliyle bir araya getiriyor."
     },
     {
+      id: "neta-sea-83-kabotaj",
+      title: "Neta Sea Kabotaj Özel - 83. Sayı",
+      issue: "Temmuz - Ağustos 2026",
+      pages: "51 sayfa",
+      cover: "assets/editorial-projects/neta-sea-kabotaj-ozel-83-2026-temmuz-agustos.jpg",
+      pdf: "assets/editorial-pdfs/neta-sea-kabotaj-ozel-83-2026-temmuz-agustos.pdf",
+      description: "Neta Sea'nın Kabotaj Özel 83. sayısı için hazırlanan editoryal tasarım; Kabotaj Kanunu'nun 100. yılı, Türk denizciliği, sektör temsilcileri ve Türkiye Denizcilik Zirvesi içeriklerini özel yayın diliyle sunuyor."
+    },
+    {
       id: "neta-sea-82-en",
       title: "Neta Sea İngilizce - 82. Sayı",
       issue: "Mayıs - Haziran 2026",
