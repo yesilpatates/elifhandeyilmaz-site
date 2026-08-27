@@ -21,7 +21,7 @@
     if (document.getElementById("editorial-projects-script")) return;
     const editorialScript = document.createElement("script");
     editorialScript.id = "editorial-projects-script";
-    editorialScript.src = "assets/editorial-projects.js?v=20260827-neta80-v1";
+    editorialScript.src = "assets/editorial-projects.js?v=20260827-neta81-v1";
     editorialScript.defer = true;
     document.body.appendChild(editorialScript);
   };
