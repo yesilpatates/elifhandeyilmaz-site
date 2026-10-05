@@ -233,6 +233,67 @@
         'Tipografi ve içerik hiyerarşisi',
         'Mockup sunumu'
       ]
+    },
+
+    {
+      title: 'Canvera – Kurumsal Kartvizit Tasarımı',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Sağlık Sektörü / Kurumsal İletişim',
+      image: 'assets/promo-projects/canvera-kartvizit.avif',
+      alt: 'Canvera için hazırlanan kurumsal kartvizit tasarımı',
+      about: 'Canvera için hazırlanan kartvizit çalışması; sağlık sektörünün güven, profesyonellik ve erişilebilirlik beklentilerini iki yüzlü bir kurumsal iletişim materyaline taşır. Marka kimliği, iletişim bilgileri ve dijital temas noktaları kompakt ve kolay taranabilir bir yapıda bir araya getirildi.',
+      approach: 'Mavi-beyaz renk sistemi güven ve sağlık algısını güçlendirirken logodaki turuncu vurgu görsel odağı destekliyor. İkonlar, QR alanı ve tipografik hiyerarşi bilgiye hızlı erişim sağlayacak biçimde düzenlendi; sunum, klinik ve kurumsal bağlamı destekleyen sade bir masaüstü mockup üzerinde tamamlandı.',
+      roles: [
+        'Kartvizit tasarımı ve mizanpajı',
+        'Kurumsal renk ve tipografi uygulaması',
+        'Bilgi hiyerarşisi ve ikonografi',
+        'Mockup sunumu'
+      ]
+    },
+    {
+      title: 'Pilavyeri – Kurumsal Kartvizit Tasarımı',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Yeme-İçme / Kurumsal İletişim',
+      image: 'assets/promo-projects/pilavyeri-kartvizit.avif',
+      alt: 'Pilavyeri için hazırlanan kurumsal kartvizit tasarımı',
+      about: 'Pilavyeri için hazırlanan çift yönlü kartvizit tasarımı; markanın hızlı servis ve sıcak yemek odağını kurumsal bir iletişim materyaline dönüştürüyor. Marka görünürlüğü ile iletişim bilgilerinin dengeli biçimde sunulması hedeflendi.',
+      approach: 'Siyah zemin ve dokulu yüzey, gastronomi markasına güçlü ve premium bir karakter kazandırırken turkuaz vurgu rengi logoyu öne çıkarıyor. İnce çizgisel mutfak illüstrasyonları yüzeye hareket katıyor; tipografi ve iletişim ikonları yüksek kontrastla okunaklı tutuldu. Mockup, ürün kategorisini doğrudan çağrıştıran sofra atmosferiyle desteklendi.',
+      roles: [
+        'Kartvizit tasarımı ve mizanpajı',
+        'Kurumsal renk ve tipografi uygulaması',
+        'İllüstratif yüzey dili ve bilgi hiyerarşisi',
+        'Mockup sunumu'
+      ]
+    },
+    {
+      title: 'Coko Pet Shop – Kurumsal Kartvizit Tasarımı',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Pet Shop / Kurumsal İletişim',
+      image: 'assets/promo-projects/coko-pet-shop-kartvizit.avif',
+      alt: 'Coko Pet Shop için hazırlanan kurumsal kartvizit tasarımı',
+      about: 'Coko Pet Shop için hazırlanan kartvizit çalışması; evcil hayvan sahiplerine hitap eden sıcak, güvenilir ve kolay iletişim kurulabilir bir marka deneyimi oluşturmayı amaçlıyor. İletişim bilgileri ve marka imzası iki yüzlü kart yapısında açık bir hiyerarşiyle ele alındı.',
+      approach: 'Kırık beyaz zemin ile turkuaz tonlar ferah ve dost canlısı bir görünüm oluşturuyor. Köpek, kedi ve tavşan figürlerinden oluşan çizgisel illüstrasyonlar; pati ve kalp ikonlarıyla birlikte kategoriye özgü görsel dili güçlendiriyor. Geniş boşluklar ve sade tipografi okunabilirliği korurken pet ürünleriyle kurulan mockup sahnesi tasarımın kullanım bağlamını görünür kılıyor.',
+      roles: [
+        'Kartvizit tasarımı ve mizanpajı',
+        'İllüstratif görsel dilin uygulanması',
+        'Tipografi ve bilgi hiyerarşisi',
+        'Mockup sunumu'
+      ]
+    },
+    {
+      title: 'KÖK Kahve Atölyesi – Üç Kırımlı Tanıtım Broşürü',
+      category: 'Tanıtım & İletişim Tasarımı',
+      subtitle: 'Kahve Markası / Basılı Tanıtım',
+      image: 'assets/promo-projects/kok-kahve-atolyesi-brosur.avif',
+      alt: 'KÖK Kahve Atölyesi için hazırlanan üç kırımlı tanıtım broşürü',
+      about: 'KÖK Kahve Atölyesi için hazırlanan üç kırımlı broşür; markanın yaklaşımını, çekirdek kökenlerini, V60 demleme bilgisini, atölye ve tadım içeriklerini tek bir basılı iletişim materyalinde bir araya getiriyor. Amaç, hem marka hikâyesini anlatan hem de ziyaretçiyi deneyime davet eden işlevsel bir tanıtım aracı oluşturmaktı.',
+      approach: 'Krem, koyu kahve ve terracotta tonlarından oluşan palet kahvenin doğal ve zanaatkâr karakterini destekliyor. Katlama yüzeyleri ayrı bilgi blokları olarak ele alındı; güçlü başlıklar, fotoğraf kullanımı, botanik çizimler ve kısa yönlendirme metinleriyle editoryal bir akış kuruldu. İç ve dış yüzlerde görsel ritim korunarak yoğun bilgi okunabilir bir sisteme dönüştürüldü.',
+      roles: [
+        'Üç kırımlı broşür tasarımı ve mizanpajı',
+        'Editoryal bilgi hiyerarşisi',
+        'Renk, tipografi ve görsel dil uygulaması',
+        'Mockup sunumu'
+      ]
     }
   ];
 
