@@ -3,7 +3,7 @@
     {
       title: "Marka & Kurumsal Kimlik",
       label: "BRAND",
-      src: "assets/project-covers/brand-identity-camla.png",
+      src: "assets/project-covers/brand-identity-camla-transparent.png",
       alt: "Damla marka kimliği eskizi, renk paleti ve kırtasiye sunumu"
     },
     { title: "Editoryal Tasarım", label: "EDITORIAL" },
