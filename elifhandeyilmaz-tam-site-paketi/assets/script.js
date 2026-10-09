@@ -58,7 +58,7 @@
 
   const loadCoreScript = () => {
     const coreScript = document.createElement("script");
-    coreScript.src = "assets/core-script.js?v=20261009-overview-equal-height-v2";
+    coreScript.src = "assets/core-script.js?v=20261009-overview-layout-v3";
     coreScript.defer = true;
     coreScript.onload = loadEnhancements;
     coreScript.onerror = () => {
