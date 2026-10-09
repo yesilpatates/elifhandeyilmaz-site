@@ -13,7 +13,7 @@ loadStylesheet("service-icons-styles", "assets/service-icons.css?v=20261009-site
 loadStylesheet("site-optimizations", "assets/optimizations.css?v=20261009-header-alignment-v1");
 loadStylesheet("education-separation-styles", "assets/education-separation.css");
 loadStylesheet("site-design-system", "assets/site-design-system.css?v=20261009-typography-v1");
-loadStylesheet("home-overview-styles", "assets/home-overview.css?v=20261010-service-columns-v1");
+loadStylesheet("home-overview-styles", "assets/home-overview.css?v=20261009-overview-layout-v4");
 
 const loadPromoProjects = () => {
   if (document.getElementById("promo-projects-script")) return;
@@ -48,7 +48,7 @@ const serviceIconEntries = [
   },
   {
     target: "web",
-    title: "Web &amp; Arayüz<br>Tasarımı",
+    title: "Web &<br>Arayüz",
     svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="13" rx="2"></rect><path d="M3.5 8.5h17"></path><circle class="fill-accent" cx="6.4" cy="6.8" r="0.7"></circle><circle class="fill-accent" cx="8.5" cy="6.8" r="0.7"></circle><circle class="fill-accent" cx="10.6" cy="6.8" r="0.7"></circle><path d="M7.2 12.2h4.2"></path><path d="M7.2 14.8h2.7"></path><rect x="13.2" y="11.2" width="4.2" height="4.2" rx="0.8"></rect></svg>'
   },
   {
@@ -67,20 +67,19 @@ const serviceGrid = document.querySelector(".service-mini-grid");
 
 if (serviceGrid && serviceGrid.dataset.enhanced !== "true") {
   serviceGrid.dataset.enhanced = "true";
-  const renderServiceCard = (item) => `
+  serviceGrid.innerHTML = serviceIconEntries
+    .map((item) => item.target ? `
         <button class="service-mini-card" type="button" data-service-target="${item.target}" aria-label="${item.title.replace(/<br>/g, " ")} çalışmalarını aç">
           <span class="service-mini-icon" aria-hidden="true">${item.svg}</span>
           <span class="service-mini-title">${item.title}</span>
         </button>
-      `;
-  serviceGrid.innerHTML = `
-    <div class="service-mini-column service-mini-column-primary">
-      ${serviceIconEntries.slice(0, 3).map(renderServiceCard).join("")}
-    </div>
-    <div class="service-mini-column service-mini-column-secondary">
-      ${serviceIconEntries.slice(3).map(renderServiceCard).join("")}
-    </div>
-  `;
+      ` : `
+        <span class="service-mini-card is-static">
+          <span class="service-mini-icon" aria-hidden="true">${item.svg}</span>
+          <span class="service-mini-title">${item.title}</span>
+        </span>
+      `)
+    .join("");
 }
 
 const serviceProjectMatchers = {
