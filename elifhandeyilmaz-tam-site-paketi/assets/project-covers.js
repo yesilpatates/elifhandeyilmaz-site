@@ -1,11 +1,11 @@
 (() => {
   const covers = [
-    { src: "assets/project-covers/brand.png", alt: "Marka ve kurumsal kimlik tasarımını tanıtan kapak görseli", title: "Marka & Kurumsal Kimlik", label: "BRAND" },
-    { src: "assets/project-covers/editorial.png", alt: "Editoryal tasarım kategorisi için dergi sayfa düzeni çizimi", title: "Editoryal Tasarım", label: "EDITORIAL" },
-    { src: "assets/project-covers/event.png", alt: "Etkinlik ve organizasyon tasarımı için sahne ve yönlendirme görseli", title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
-    { src: "assets/project-covers/promo.png", alt: "Tanıtım ve iletişim tasarımını tanıtan kapak görseli", title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
-    { src: "assets/project-covers/web.png", alt: "Web ve arayüz tasarımını tanıtan kapak görseli", title: "Web & Arayüz Tasarımı", label: "UI / WEB" },
-    { src: "assets/project-covers/motion.png", alt: "Video ve hareketli grafik tasarımını tanıtan kapak görseli", title: "Video & Animasyon Tasarımı", label: "MOTION" }
+    { src: "https://at.adobe.com/ufuVy8iyI5g5BVxR", alt: "Marka & Kurumsal Kimlik Tasarımı kapak görseli", title: "Marka & Kurumsal Kimlik", label: "BRAND" },
+    null,
+    { src: "https://at.adobe.com/hguOld174sEQhlKx", alt: "Etkinlik & Organizasyon Tasarımı kapak görseli", title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
+    { src: "assets/promo-projects/grand-seyahat-afis.webp", alt: "Grand Seyahat afiş tasarımı havaalanı reklam panosu mockupı", title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
+    { src: "https://at.adobe.com/vCPmsaZrLIa0TN9Q", alt: "Web & Arayüz Tasarımı kapak görseli", title: "Web & Arayüz Tasarımı", label: "UI / WEB" },
+    { src: "https://at.adobe.com/TYb10FnMlNsmuouV", alt: "Video & Animasyon Tasarımı kapak görseli", title: "Video & Animasyon Tasarımı", label: "MOTION" }
   ];
 
   const project = (title, image, company, logo) => ({
