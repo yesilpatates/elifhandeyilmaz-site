@@ -252,3 +252,17 @@
     font-size: 0.88rem;
   }
 }
+
+
+/* Keep project cards clear while preserving their established artwork area. */
+.projects .project-card .project-visual > * {
+  visibility: hidden;
+}
+
+.projects .project-card .project-visual.has-cover {
+  background: transparent;
+}
+
+.projects .project-card .project-cover-image {
+  display: none !important;
+}
