@@ -66,7 +66,7 @@
 
   const loadCoreScript = () => {
     const coreScript = document.createElement("script");
-    coreScript.src = "assets/core-script.js?v=20261009-project-card-fit-v3";
+    coreScript.src = "assets/core-script.js?v=20261009-project-card-fit-v4";
     coreScript.defer = true;
     coreScript.onload = loadEnhancements;
     coreScript.onerror = () => {
