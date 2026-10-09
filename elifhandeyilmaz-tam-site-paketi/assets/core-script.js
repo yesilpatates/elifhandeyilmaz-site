@@ -8,7 +8,7 @@ const loadStylesheet = (id, href) => {
   document.head.appendChild(stylesheet);
 };
 
-loadStylesheet("project-cover-styles", "assets/project-covers.css?v=20261009-project-card-fit-v7");
+loadStylesheet("project-cover-styles", "assets/project-covers.css?v=20261009-project-card-fit-v8");
 loadStylesheet("service-icons-styles", "assets/service-icons.css?v=20261009-site-design-v1");
 loadStylesheet("site-optimizations", "assets/optimizations.css?v=20261009-header-alignment-v1");
 loadStylesheet("education-separation-styles", "assets/education-separation.css");
