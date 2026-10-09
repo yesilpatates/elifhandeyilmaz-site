@@ -1,0 +1,143 @@
+/* Shared visual rules for the Turkish and English pages. */
+:root {
+  --type-hero: clamp(2.7rem, 4.2vw, 4.1rem);
+  --type-section: clamp(2rem, 3.35vw, 3.5rem);
+  --type-compact: clamp(1.2rem, 1.55vw, 1.5rem);
+  --type-card: clamp(1rem, 1.2vw, 1.15rem);
+  --measure-copy: 68ch;
+}
+
+body {
+  line-height: 1.68;
+}
+
+.hero-copy h1 {
+  max-width: 100%;
+  font-size: var(--type-hero);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.hero-copy h1 em {
+  color: var(--accent-dark);
+  font-style: normal;
+}
+
+.hero-copy p,
+.section-heading:not(.compact) p,
+.contact-panel p {
+  max-width: var(--measure-copy);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.section-heading:not(.compact) h2,
+.contact-panel h2 {
+  font-size: var(--type-section);
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.section-heading.compact h2 {
+  font-size: var(--type-compact);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.project-body h3,
+.education-card h3,
+.timeline-item h3 {
+  font-size: var(--type-card);
+  line-height: 1.35;
+}
+
+.service-mini-grid .service-mini-title {
+  max-width: 15ch;
+  font-size: clamp(0.76rem, 0.8vw, 0.9rem) !important;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+/* The article pages use the same type scale as the main site. */
+.guide-page .hero h1,
+.guide-page .articles-heading h2 {
+  font-size: var(--type-section) !important;
+  line-height: 1.14 !important;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.article h3 {
+  font-size: clamp(1.55rem, 2.4vw, 2.25rem) !important;
+  line-height: 1.22 !important;
+}
+
+.article h4 {
+  font-size: clamp(1.05rem, 1.45vw, 1.25rem) !important;
+  line-height: 1.35 !important;
+}
+
+.article p,
+.article li {
+  max-width: 72ch;
+  line-height: 1.72;
+}
+
+.project-page h1 {
+  font-size: var(--type-section);
+  line-height: 1.14;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.project-page h2 {
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  line-height: 1.3;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --type-hero: clamp(2.45rem, 9.2vw, 3.2rem);
+    --type-section: clamp(1.9rem, 7.2vw, 2.6rem);
+    --type-compact: clamp(1.2rem, 5vw, 1.45rem);
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .section-tight {
+    padding: 28px 0 42px;
+  }
+
+  .home-overview .overview-block,
+  .home-overview .overview-block:first-child,
+  .home-overview .overview-block:last-child {
+    padding-top: 24px;
+  }
+
+  .home-overview .overview-block:first-child {
+    padding-top: 0;
+  }
+
+  .home-overview .service-mini-grid > .service-mini-card {
+    aspect-ratio: auto;
+    min-height: 112px;
+    padding: 16px 11px;
+    gap: 10px;
+  }
+
+  .service-mini-grid .service-mini-title {
+    font-size: 0.78rem !important;
+  }
+
+  .hero-copy p,
+  .section-heading:not(.compact) p,
+  .contact-panel p {
+    font-size: 0.96rem;
+  }
+}

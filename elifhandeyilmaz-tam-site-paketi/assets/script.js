@@ -8,13 +8,6 @@
     document.head.appendChild(link);
   };
 
-  const formatHeroTitle = () => {
-    const title = document.querySelector(".hero-copy h1");
-    if (!title || title.dataset.formatted === "true") return;
-    title.dataset.formatted = "true";
-    title.innerHTML = '<span class="hero-title-first">Markalara karakter kazandıran</span><span class="hero-title-second">görsel kimlikler tasarlıyorum.</span>';
-  };
-
   const loadEditorialProjects = () => {
     addStylesheet("editorial-projects-styles", "assets/editorial-projects.css?v=20260827-back-button-v4");
     addStylesheet("editorial-flipbook-styles", "assets/editorial-flipbook.css?v=20260827-fit-v3");
@@ -57,7 +50,6 @@
   };
 
   const loadEnhancements = () => {
-    formatHeroTitle();
     window.setTimeout(loadEditorialProjects, 425);
     window.setTimeout(loadWebProjects, 450);
     window.setTimeout(loadEventShowcase, 500);
@@ -66,7 +58,7 @@
 
   const loadCoreScript = () => {
     const coreScript = document.createElement("script");
-    coreScript.src = "assets/core-script.js?v=20261009-project-card-fit-v6";
+    coreScript.src = "assets/core-script.js?v=20261009-design-system-v1";
     coreScript.defer = true;
     coreScript.onload = loadEnhancements;
     coreScript.onerror = () => {
@@ -77,8 +69,6 @@
   };
 
   addStylesheet("home-hero-polish", "assets/home-hero-polish.css?v=20260803-home-v3");
-  formatHeroTitle();
-
   const brandImageScript = document.createElement("script");
   brandImageScript.src = "assets/brand-image-urls.js?v=20260803-brand-local-v1";
   brandImageScript.defer = true;

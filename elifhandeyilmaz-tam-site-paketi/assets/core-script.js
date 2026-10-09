@@ -9,11 +9,10 @@ const loadStylesheet = (id, href) => {
 };
 
 loadStylesheet("project-cover-styles", "assets/project-covers.css?v=20261009-project-card-fit-v6");
-loadStylesheet("hero-title-font", "https://fonts.googleapis.com/css2?family=Rochester&display=swap");
-loadStylesheet("hero-title-styles", "assets/hero-title.css");
-loadStylesheet("service-icons-styles", "assets/service-icons.css?v=20260811-social-service-removed-v1");
+loadStylesheet("service-icons-styles", "assets/service-icons.css?v=20261009-site-design-v1");
 loadStylesheet("site-optimizations", "assets/optimizations.css");
 loadStylesheet("education-separation-styles", "assets/education-separation.css");
+loadStylesheet("site-design-system", "assets/site-design-system.css?v=20261009-typography-v1");
 
 const loadPromoProjects = () => {
   if (document.getElementById("promo-projects-script")) return;
@@ -35,23 +34,10 @@ if (!document.getElementById("project-cover-script")) {
   loadPromoProjects();
 }
 
-const originalHeroTitle = document.querySelector(".hero-copy h1");
-
-if (originalHeroTitle && !originalHeroTitle.classList.contains("hero-title")) {
-  originalHeroTitle.className = "hero-title";
-  originalHeroTitle.innerHTML = `
-    <span class="hero-title-line">Markalara karakter kazandıran</span>
-    <span class="hero-title-script-reveal">
-      <span class="hero-title-script">görsel kimlikler</span>
-    </span>
-    <span class="hero-title-line">tasarlıyorum.</span>
-  `;
-}
-
 const serviceIconEntries = [
   {
     target: "marka",
-    title: "Marka ve<br>Kurumsal Kimlik",
+    title: "Marka &<br>Kurumsal Kimlik",
     svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 16.7 8v4.4c0 3.5-2 6.4-4.7 8.1-2.7-1.7-4.7-4.6-4.7-8.1V8L12 3.5Z"></path><path d="M12 7.4v7.1"></path><path d="M9.9 10.6h4.2"></path><circle class="fill-accent" cx="7" cy="8" r="1.1"></circle><circle class="fill-accent" cx="17" cy="8" r="1.1"></circle></svg>'
   },
   {
@@ -61,7 +47,7 @@ const serviceIconEntries = [
   },
   {
     target: "web",
-    title: "Web ve<br>Arayüz",
+    title: "Web &<br>Arayüz",
     svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="13" rx="2"></rect><path d="M3.5 8.5h17"></path><circle class="fill-accent" cx="6.4" cy="6.8" r="0.7"></circle><circle class="fill-accent" cx="8.5" cy="6.8" r="0.7"></circle><circle class="fill-accent" cx="10.6" cy="6.8" r="0.7"></circle><path d="M7.2 12.2h4.2"></path><path d="M7.2 14.8h2.7"></path><rect x="13.2" y="11.2" width="4.2" height="4.2" rx="0.8"></rect></svg>'
   },
   {
@@ -71,7 +57,7 @@ const serviceIconEntries = [
   },
   {
     target: "etkinlik",
-    title: "Etkinlik ve<br>Organizasyon",
+    title: "Etkinlik &<br>Organizasyon",
     svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="10" y="4" width="4" height="4" rx="1"></rect><rect x="4" y="15" width="4" height="4" rx="1"></rect><rect x="10" y="15" width="4" height="4" rx="1"></rect><rect x="16" y="15" width="4" height="4" rx="1"></rect><path d="M12 8v3.2"></path><path d="M6 15v-1.8h12V15"></path></svg>'
   }
 ];
