@@ -8,7 +8,7 @@ const loadStylesheet = (id, href) => {
   document.head.appendChild(stylesheet);
 };
 
-loadStylesheet("project-cover-styles", "assets/project-covers.css?v=20261009-project-card-fit-v4");
+loadStylesheet("project-cover-styles", "assets/project-covers.css?v=20261009-project-card-fit-v5");
 loadStylesheet("hero-title-font", "https://fonts.googleapis.com/css2?family=Rochester&display=swap");
 loadStylesheet("hero-title-styles", "assets/hero-title.css");
 loadStylesheet("service-icons-styles", "assets/service-icons.css?v=20260811-social-service-removed-v1");
