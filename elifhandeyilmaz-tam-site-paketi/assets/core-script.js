@@ -9,10 +9,25 @@ const loadStylesheet = (id, href) => {
 };
 
 loadStylesheet("project-cover-styles", "assets/project-covers.css?v=20261009-project-card-fit-v6");
+loadStylesheet("hero-title-font", "https://fonts.googleapis.com/css2?family=Rochester&display=swap");
+loadStylesheet("hero-title-styles", "assets/hero-title.css?v=20261009-handwritten-hero-v1");
 loadStylesheet("service-icons-styles", "assets/service-icons.css?v=20261009-site-design-v1");
 loadStylesheet("site-optimizations", "assets/optimizations.css");
 loadStylesheet("education-separation-styles", "assets/education-separation.css");
 loadStylesheet("site-design-system", "assets/site-design-system.css?v=20261009-typography-v1");
+
+const originalHeroTitle = document.querySelector(".hero-copy h1");
+
+if (originalHeroTitle && !originalHeroTitle.classList.contains("hero-title")) {
+  originalHeroTitle.className = "hero-title";
+  originalHeroTitle.innerHTML = `
+    <span class="hero-title-line">Markalara karakter kazandıran</span>
+    <span class="hero-title-script-reveal">
+      <span class="hero-title-script">görsel kimlikler</span>
+    </span>
+    <span class="hero-title-line">tasarlıyorum.</span>
+  `;
+}
 
 const loadPromoProjects = () => {
   if (document.getElementById("promo-projects-script")) return;
