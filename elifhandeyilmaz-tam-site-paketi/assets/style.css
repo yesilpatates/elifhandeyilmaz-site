@@ -536,6 +536,10 @@ a {
   background: var(--surface-soft);
 }
 
+.about.section {
+  padding: clamp(72px, 7vw, 92px) 0;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 0.86fr 1.14fr;
@@ -550,11 +554,13 @@ a {
   margin-top: 0;
   color: var(--ink);
   font-size: clamp(1.25rem, 2vw, 1.85rem);
+  font-weight: 500;
   line-height: 1.45;
 }
 
 .about-content p:not(.lead) {
   color: var(--muted);
+  font-size: 0.94rem;
 }
 
 .skill-tags,
@@ -1213,6 +1219,10 @@ body.contact-modal-open {
     grid-template-columns: 1fr;
   }
 
+  .about.section {
+    padding: 68px 0;
+  }
+
   .project-grid {
     grid-template-columns: 1fr;
   }
@@ -1225,6 +1235,10 @@ body.contact-modal-open {
 @media (max-width: 700px) {
   .section {
     padding: 70px 0;
+  }
+
+  .about.section {
+    padding: 58px 0;
   }
 
   .section-tight {
