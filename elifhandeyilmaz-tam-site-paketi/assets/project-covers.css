@@ -85,6 +85,13 @@
   display: none;
 }
 
+.project-cover-image.is-loading {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .project-cover-image {
   width: 100%;
   height: 100%;
