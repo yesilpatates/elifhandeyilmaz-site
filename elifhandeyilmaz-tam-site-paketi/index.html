@@ -29,7 +29,15 @@
   <link id="service-icons-styles" rel="stylesheet" href="assets/service-icons.css?v=20261009-site-design-v1">
   <link id="site-design-system" rel="stylesheet" href="assets/site-design-system.css?v=20261009-header-alignment-v1">
   <style>
-    #projeler .project-card:first-child .project-cover-featured { transform: scale(1.14); }
+    #projeler .project-card:first-child .project-cover-featured {
+      transform: scale(1.42) translateX(-4%);
+      transform-origin: center;
+    }
+    @media (max-width: 700px) {
+      #projeler .project-card:first-child .project-cover-featured {
+        transform: scale(1.08) translateX(-1.5%);
+      }
+    }
   </style>
 
   <script type="application/ld+json">

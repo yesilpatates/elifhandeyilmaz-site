@@ -32,7 +32,15 @@
   <link rel="stylesheet" href="../assets/site-design-system.css?v=20261009-header-alignment-v1">
   <link rel="stylesheet" href="../assets/home-overview.css?v=20261009-overview-layout-v4">
   <style>
-    #portfolio .project-card:first-child .project-cover-featured { transform: scale(1.14); }
+    #portfolio .project-card:first-child .project-cover-featured {
+      transform: scale(1.42) translateX(-4%);
+      transform-origin: center;
+    }
+    @media (max-width: 700px) {
+      #portfolio .project-card:first-child .project-cover-featured {
+        transform: scale(1.08) translateX(-1.5%);
+      }
+    }
   </style>
 
   <script type="application/ld+json">
