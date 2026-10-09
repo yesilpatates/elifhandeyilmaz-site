@@ -1,11 +1,11 @@
 (() => {
   const covers = [
-    { src: "assets/project-covers/brand.png", alt: "Marka tasarımı çizimi: logo sembolü, ızgara ve kelime işareti", title: "Marka & Kurumsal Kimlik", label: "BRAND" },
-    { src: "assets/project-covers/editorial.png", alt: "Editoryal tasarım çizimi: dergi sayfaları ve tipografik hiyerarşi", title: "Editoryal Tasarım", label: "EDITORIAL" },
-    { src: "assets/project-covers/event.png", alt: "Etkinlik tasarımı çizimi: marka alanı ve dikey yönlendirme panoları", title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
-    { src: "assets/project-covers/promo.png", alt: "Tanıtım tasarımı çizimi: kartvizit ve basılı materyal düzeni", title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
-    { src: "assets/project-covers/web.png", alt: "Web tasarımı çizimi: gezinme, ana görsel ve içerik blokları içeren arayüz", title: "Web & Arayüz Tasarımı", label: "UI / WEB" },
-    { src: "assets/project-covers/video.png", alt: "Video tasarımı çizimi: video oynatıcı, storyboard ve hareket anahtar kareleri", title: "Video & Animasyon Tasarımı", label: "MOTION" }
+    { title: "Marka & Kurumsal Kimlik", label: "BRAND" },
+    { title: "Editoryal Tasarım", label: "EDITORIAL" },
+    { title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
+    { title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
+    { title: "Web & Arayüz Tasarımı", label: "UI / WEB" },
+    { title: "Video & Animasyon Tasarımı", label: "MOTION" }
   ];
 
   const project = (title, image, company, logo) => ({
