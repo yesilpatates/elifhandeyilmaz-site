@@ -97,11 +97,11 @@
 /* One clean, equal title strip under every cover. */
 .projects .project-card .project-body {
   position: relative;
-  min-height: 82px;
-  flex: 0 0 82px;
+  min-height: 64px;
+  flex: 0 0 64px;
   display: flex;
   align-items: center;
-  padding: 14px 46px 14px 17px;
+  padding: 10px 46px 10px 17px;
   background: var(--bg);
 }
 
