@@ -11,6 +11,12 @@ body {
   line-height: 1.68;
 }
 
+/* The English home hero uses a clean start without decorative rules. */
+.english-static .hero-copy::before {
+  content: none;
+  display: none;
+}
+
 .hero-copy h1 {
   max-width: 100%;
   font-size: var(--type-hero);

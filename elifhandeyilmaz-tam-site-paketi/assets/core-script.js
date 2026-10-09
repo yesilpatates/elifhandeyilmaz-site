@@ -10,7 +10,7 @@ const loadStylesheet = (id, href) => {
 
 loadStylesheet("project-cover-styles", "assets/project-covers.css?v=20261009-project-card-fit-v6");
 loadStylesheet("service-icons-styles", "assets/service-icons.css?v=20261009-site-design-v1");
-loadStylesheet("site-optimizations", "assets/optimizations.css");
+loadStylesheet("site-optimizations", "assets/optimizations.css?v=20261009-header-alignment-v1");
 loadStylesheet("education-separation-styles", "assets/education-separation.css");
 loadStylesheet("site-design-system", "assets/site-design-system.css?v=20261009-typography-v1");
 

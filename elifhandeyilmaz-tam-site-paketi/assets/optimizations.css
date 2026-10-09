@@ -350,3 +350,76 @@
     display: none;
   }
 }
+
+/* Keep matching header landmarks across Turkish and English navigation. */
+@media (min-width: 901px) {
+  .nav-wrap {
+    display: grid;
+    grid-template-columns: clamp(230px, 25vw, 340px) minmax(0, 1fr) 58px;
+    gap: clamp(20px, 2.4vw, 36px);
+    min-height: 112px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+  }
+
+  .brand {
+    width: 100%;
+    flex: none;
+  }
+
+  .brand img {
+    height: 88px;
+    object-position: left center;
+  }
+
+  .main-nav {
+    display: grid;
+    grid-template-columns: 82px 87px 72px 85px 44px 72px;
+    column-gap: clamp(8px, 1vw, 14px);
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  .main-nav a {
+    justify-self: start;
+  }
+
+  .language-switch {
+    width: 58px;
+    min-width: 58px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    min-height: 84px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+  }
+
+  .brand {
+    width: 250px;
+    flex: 0 1 250px;
+  }
+
+  .brand img {
+    height: 78px;
+  }
+
+  .language-switch {
+    width: 58px;
+    min-width: 58px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .brand {
+    width: 210px;
+    flex-basis: 210px;
+  }
+}
