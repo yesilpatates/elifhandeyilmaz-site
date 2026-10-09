@@ -13,6 +13,7 @@ loadStylesheet("service-icons-styles", "assets/service-icons.css?v=20261009-site
 loadStylesheet("site-optimizations", "assets/optimizations.css?v=20261009-header-alignment-v1");
 loadStylesheet("education-separation-styles", "assets/education-separation.css");
 loadStylesheet("site-design-system", "assets/site-design-system.css?v=20261009-typography-v1");
+loadStylesheet("home-overview-styles", "assets/home-overview.css?v=20261009-overview-redesign-v2");
 
 const loadPromoProjects = () => {
   if (document.getElementById("promo-projects-script")) return;
@@ -192,8 +193,7 @@ if (educationPreview && educationPreview.dataset.blogPreview !== "true") {
 
   if (previewCard) {
     previewCard.innerHTML = `
-      <div class="education-icon" aria-hidden="true">Aa</div>
-      <div>
+      <div class="education-card-content">
         <h3>Mesleğe Yeni Başlayanlar İçin</h3>
         <p>Grafik tasarımın temel kavramlarını sade, görsel ve uygulanabilir içeriklerle anlatan başlangıç rehberi.</p>
         <ul>

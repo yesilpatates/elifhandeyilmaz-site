@@ -502,17 +502,6 @@ a {
   background: var(--surface);
 }
 
-.education-icon {
-  width: 92px;
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  color: var(--accent-dark);
-  background: #d9f3f4;
-  font-size: 2.3rem;
-}
-
 .education-card h3 {
   margin: 0 0 4px;
   font-size: 1.02rem;
@@ -1304,10 +1293,6 @@ body.contact-modal-open {
 
   .education-card {
     grid-template-columns: 1fr;
-  }
-
-  .education-icon {
-    width: 74px;
   }
 
   .education-card ul {
