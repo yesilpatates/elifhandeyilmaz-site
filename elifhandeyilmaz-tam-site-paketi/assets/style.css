@@ -1554,3 +1554,8 @@ body.contact-modal-open {
   object-position: center;
   background: #fdfbf8;
 }
+
+#projeler .project-card:first-child .project-cover-featured,
+#portfolio .project-card:first-child .project-cover-featured {
+  transform: scale(1.14);
+}
