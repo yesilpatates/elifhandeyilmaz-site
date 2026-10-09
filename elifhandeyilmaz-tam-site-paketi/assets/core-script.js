@@ -13,7 +13,7 @@ loadStylesheet("service-icons-styles", "assets/service-icons.css?v=20261009-site
 loadStylesheet("site-optimizations", "assets/optimizations.css?v=20261009-header-alignment-v1");
 loadStylesheet("education-separation-styles", "assets/education-separation.css");
 loadStylesheet("site-design-system", "assets/site-design-system.css?v=20261009-typography-v1");
-loadStylesheet("home-overview-styles", "assets/home-overview.css?v=20261009-about-overview-v1");
+loadStylesheet("home-overview-styles", "assets/home-overview.css?v=20261009-overview-height-v1");
 
 const loadPromoProjects = () => {
   if (document.getElementById("promo-projects-script")) return;
