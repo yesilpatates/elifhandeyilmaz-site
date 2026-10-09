@@ -1,11 +1,11 @@
 (() => {
   const covers = [
-    { src: "https://at.adobe.com/ufuVy8iyI5g5BVxR", alt: "Marka & Kurumsal Kimlik Tasarımı kapak görseli", title: "Marka & Kurumsal Kimlik", label: "BRAND" },
-    null,
-    { src: "https://at.adobe.com/hguOld174sEQhlKx", alt: "Etkinlik & Organizasyon Tasarımı kapak görseli", title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
-    { src: null, alt: "Tanıtım ve iletişim tasarımı kategorisi", title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
-    { src: "https://at.adobe.com/vCPmsaZrLIa0TN9Q", alt: "Web & Arayüz Tasarımı kapak görseli", title: "Web & Arayüz Tasarımı", label: "UI / WEB" },
-    { src: null, alt: "Video ve animasyon tasarımı kategorisi", title: "Video & Animasyon Tasarımı", label: "MOTION" }
+    { src: "assets/project-covers/brand.png", alt: "Marka tasarımı çizimi: logo sembolü, ızgara ve kelime işareti", title: "Marka & Kurumsal Kimlik", label: "BRAND" },
+    { src: "assets/project-covers/editorial.png", alt: "Editoryal tasarım çizimi: dergi sayfaları ve tipografik hiyerarşi", title: "Editoryal Tasarım", label: "EDITORIAL" },
+    { src: "assets/project-covers/event.png", alt: "Etkinlik tasarımı çizimi: marka alanı ve dikey yönlendirme panoları", title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
+    { src: "assets/project-covers/promo.png", alt: "Tanıtım tasarımı çizimi: kartvizit ve basılı materyal düzeni", title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
+    { src: "assets/project-covers/web.png", alt: "Web tasarımı çizimi: gezinme, ana görsel ve içerik blokları içeren arayüz", title: "Web & Arayüz Tasarımı", label: "UI / WEB" },
+    { src: "assets/project-covers/video.png", alt: "Video tasarımı çizimi: video oynatıcı, storyboard ve hareket anahtar kareleri", title: "Video & Animasyon Tasarımı", label: "MOTION" }
   ];
 
   const project = (title, image, company, logo) => ({

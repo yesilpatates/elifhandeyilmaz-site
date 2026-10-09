@@ -1531,3 +1531,27 @@ body.contact-modal-open {
 #portfolio .project-visual {
   color: #17202a;
 }
+
+.project-visual.has-cover {
+  min-height: 0;
+  aspect-ratio: 16 / 10;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+  background: #fdfbf8;
+}
+
+.project-visual.has-cover::before,
+.project-visual.has-cover::after {
+  display: none;
+}
+
+.project-cover-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: #fdfbf8;
+}
