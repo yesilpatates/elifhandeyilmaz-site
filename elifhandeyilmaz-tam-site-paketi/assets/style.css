@@ -1479,3 +1479,41 @@ body.contact-modal-open {
   }
 }
 /* Cursor Magic Effect: END */
+
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--accent-dark);
+  background: var(--surface);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.language-switch:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+.project-page-actions,
+.blog-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.english-static .home-overview .featured .mini-project {
+  cursor: default;
+}
+
+.english-static .home-overview .featured .mini-project:hover {
+  transform: none;
+  box-shadow: none;
+}

@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Graphic Design Guide | Elif Handegül Yılmaz</title>
+  <meta name="description" content="A practical graphic design guide covering visual communication, design principles, color, typography and file formats.">
+  <link rel="canonical" href="https://elifhandeyilmaz.com/en/blog/">
+  <link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/">
+  <link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/">
+  <link rel="icon" type="image/png" href="../../images/ehy-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbf8f2;
+      --surface: #fff;
+      --ink: #0b1624;
+      --muted: #68717d;
+      --line: #e7ded2;
+      --accent: #07beb8;
+      --accent-dark: #087d88;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: "Poppins", Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+
+    .container {
+      width: min(calc(100% - 40px), 1180px);
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid var(--line);
+      background: rgba(251, 248, 242, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand img {
+      width: 280px;
+      height: 70px;
+      display: block;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    .back-link {
+      color: var(--accent-dark);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 88px 0 58px;
+    }
+
+    .eyebrow,
+    .category {
+      color: var(--accent-dark);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 12px 0 20px;
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      line-height: 1.04;
+      font-weight: 500;
+      letter-spacing: -0.05em;
+    }
+
+    .hero > .container > p {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      padding: 12px 0 92px;
+    }
+
+    .card {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--surface);
+      transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(7, 190, 184, 0.32);
+      box-shadow: 0 20px 44px rgba(15, 26, 40, 0.09);
+    }
+
+    .cover {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-image: url("../../images/blog/blog-covers-sprite.webp");
+      background-repeat: no-repeat;
+      background-size: 300% 300%;
+      background-color: #f3eee7;
+    }
+
+    .cover-1 { background-position: 0% 0%; }
+    .cover-2 { background-position: 50% 0%; }
+    .cover-3 { background-position: 100% 0%; }
+    .cover-4 { background-position: 0% 50%; }
+    .cover-5 { background-position: 50% 50%; }
+    .cover-6 { background-position: 100% 50%; }
+    .cover-7 { background-position: 0% 100%; }
+
+    .cover-1 {
+      background-image: url("../../images/blog/topics/01-grafik-tasarim-nedir-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .cover-2 {
+      background-image: url("../../images/blog/topics/02-grafik-tasarimin-temel-unsurlari-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .cover-3 {
+      background-image: url("../../images/blog/topics/03-grafik-tasarimin-temel-ilkeleri-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .cover-4 {
+      background-image: url("../../images/blog/topics/04-vektorel-ve-bitmap-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .cover-5 {
+      background-image: url("../../images/blog/topics/05-renk-bilgisi-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .cover-6 {
+      background-image: url("../../images/blog/topics/06-tipografi-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .card-body {
+      padding: 21px 21px 23px;
+    }
+
+    .card h2 {
+      margin: 8px 0 10px;
+      font-size: 1.08rem;
+      line-height: 1.38;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .card p {
+      margin: 0 0 17px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.65;
+    }
+
+    .read-more {
+      color: var(--accent-dark);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .articles {
+      padding: 88px 0 100px;
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .articles-heading {
+      max-width: 760px;
+      margin-bottom: 44px;
+    }
+
+    .articles-heading h2 {
+      margin: 10px 0 12px;
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.08;
+      font-weight: 500;
+      letter-spacing: -0.045em;
+    }
+
+    .articles-heading p { margin: 0; color: var(--muted); }
+
+    .article {
+      scroll-margin-top: 110px;
+      display: grid;
+      grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
+      gap: clamp(28px, 5vw, 68px);
+      align-items: start;
+      padding: 54px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .article-cover {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 16px 35px rgba(15, 26, 40, 0.07);
+    }
+
+    .article-number {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 17px;
+      border-radius: 50%;
+      color: var(--accent-dark);
+      background: #d9f3f4;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .article h3 {
+      margin: 0 0 14px;
+      font-size: clamp(1.6rem, 3vw, 2.55rem);
+      line-height: 1.18;
+      font-weight: 500;
+      letter-spacing: -0.035em;
+    }
+
+    .article p { margin: 0 0 14px; color: var(--muted); }
+    .article h4 {
+      margin: 30px 0 12px;
+      color: var(--ink);
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      line-height: 1.3;
+    }
+    .article h5 {
+      margin: 20px 0 8px;
+      color: var(--accent-dark);
+      font-size: 0.98rem;
+      line-height: 1.35;
+    }
+    .article ul { margin: 12px 0 20px; padding-left: 20px; color: var(--muted); }
+    .article li { margin-bottom: 7px; }
+
+    .article-content {
+      min-width: 0;
+    }
+
+    .article.article-full {
+      grid-template-columns: 1fr;
+    }
+
+    .article.article-full .article-cover {
+      width: 100%;
+      max-width: none;
+    }
+
+    .article.article-full .article-content {
+      width: min(100%, 860px);
+      margin-inline: auto;
+    }
+
+    .article-lead {
+      color: var(--ink) !important;
+      font-size: 1.02rem;
+    }
+
+    .article-info-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 14px 0 28px;
+      border: 1px solid #eadfcd;
+      border-radius: 18px;
+      box-shadow: 0 16px 35px rgba(15, 26, 40, 0.08);
+    }
+
+    .faq-item {
+      margin-bottom: 18px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fbf8f2;
+    }
+
+    .faq-item strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--ink);
+    }
+
+    .faq-item p {
+      margin: 0;
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      background: var(--bg);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 950px) {
+      .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .article { grid-template-columns: 1fr; }
+      .article-cover { max-width: 720px; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(calc(100% - 28px), 1180px); }
+      .brand img { width: 215px; height: 62px; }
+      .header-inner { min-height: 74px; }
+      .hero { padding: 60px 0 42px; }
+      .card-grid { grid-template-columns: 1fr; gap: 19px; padding-bottom: 70px; }
+      .articles { padding: 66px 0 78px; }
+      .article { padding: 42px 0; gap: 24px; }
+    }
+  .blog-header-actions { display: flex; align-items: center; gap: 18px; }
+    @media (max-width: 560px) { .blog-header-actions { gap: 10px; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../" aria-label="Back to portfolio home">
+        <img src="../../images/ehy-logo.png" alt="Elif Handegül Yılmaz">
+      </a>
+      <div class="blog-header-actions"><a class="back-link" href="../#education">← Back to portfolio</a><a class="language-switch" href="../../blog/" lang="tr" aria-label="Türkçe bloga geç">TR</a></div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Learning resources</span>
+        <h1>Graphic Design Guide</h1>
+        <p>A beginner-friendly series that brings together essential design concepts, practical methods and technical knowledge in a clear, visual and useful format.</p>
+      </div>
+    </section>
+
+    <section class="container card-grid" aria-label="Graphic design articles">
+      <a class="card" href="#what-is-graphic-design"><div class="cover cover-1" role="img" aria-label="What is graphic design? cover"></div><div class="card-body"><span class="category">Getting Started</span><h2>What Is Graphic Design?</h2><p>Its purpose, role in communication and everyday applications.</p><span class="read-more">Read article →</span></div></a>
+      <a class="card" href="#design-elements"><div class="cover cover-2" role="img" aria-label="The basic elements of graphic design cover"></div><div class="card-body"><span class="category">Design Basics</span><h2>The Elements of Graphic Design</h2><p>Line, shape, form, color, texture, typography and space.</p><span class="read-more">Read article →</span></div></a>
+      <a class="card" href="#design-principles"><div class="cover cover-3" role="img" aria-label="The principles of graphic design cover"></div><div class="card-body"><span class="category">Design Basics</span><h2>The Principles of Graphic Design</h2><p>Balance, hierarchy, emphasis, rhythm, unity and contrast.</p><span class="read-more">Read article →</span></div></a>
+      <a class="card" href="#vector-and-raster"><div class="cover cover-4" role="img" aria-label="Vector and raster design cover"></div><div class="card-body"><span class="category">Digital Images</span><h2>Vector vs. Raster Graphics</h2><p>How the two image types differ and when to use each.</p><span class="read-more">Read article →</span></div></a>
+      <a class="card" href="#color"><div class="cover cover-5" role="img" aria-label="Color systems and color psychology cover"></div><div class="card-body"><span class="category">Color</span><h2>RGB, CMYK and the Power of Color</h2><p>Screen and print color systems, plus the psychology of color.</p><span class="read-more">Read article →</span></div></a>
+      <a class="card" href="#typography"><div class="cover cover-6" role="img" aria-label="Typography in design cover"></div><div class="card-body"><span class="category">Typography</span><h2>Typography: The Power of Type</h2><p>Typeface choice, readability, hierarchy and typographic layout.</p><span class="read-more">Read article →</span></div></a>
+      <a class="card" href="#file-formats"><div class="cover cover-7" role="img" aria-label="Graphic design file formats cover"></div><div class="card-body"><span class="category">Technical Guide</span><h2>A Guide to Design File Formats</h2><p>When to use AI, EPS, PDF, SVG, JPG, PNG, TIFF and GIF.</p><span class="read-more">Read article →</span></div></a>
+    </section>
+
+    <section class="articles"><div class="container">
+      <div class="articles-heading"><span class="eyebrow">A beginner’s series</span><h2>Essential graphic design knowledge</h2><p>Each article introduces practical ideas to help new designers make more thoughtful decisions.</p></div>
+
+      <article class="article article-full" id="what-is-graphic-design"><div class="article-cover"><div class="cover cover-1" role="img" aria-label="What is graphic design"></div></div><div class="article-content"><span class="article-number">01</span><h3>What Is Graphic Design?</h3><p class="article-lead">We encounter hundreds of designs every day: apps on our phones, product packaging, advertisements, social posts and even road signs. Many are the result of graphic design.</p><p>Graphic design is the practice of communicating a message, piece of information or idea clearly and effectively through visual elements. Type, color, shape, photography, illustration and space are brought together with intention.</p><p>The goal is not simply to make something attractive. Good design captures attention, makes information easier to understand and helps create the desired response. In short, graphic design is visual communication.</p><h4>Why does graphic design matter?</h4><ul><li>It attracts attention.</li><li>It makes messages easier to understand.</li><li>It helps build trust in a brand.</li><li>It presents information in an organized way.</li><li>It makes ideas more memorable.</li></ul><p>Graphic design appears in brand identities, apps, social media, books and magazines, packaging, websites, billboards and business cards. Designers study the audience and shape a visual language that communicates the intended message.</p><h4>Is graphic design art?</h4><p>Graphic design can draw inspiration from art, but its central purpose is to solve a problem and communicate. It combines creativity and aesthetics with a specific goal.</p><img class="article-info-image" src="../../images/blog/topics/01-grafik-tasarim-nedir-mbk.png" alt="Graphic design terminology and its early history"><h4>Frequently asked questions</h4><div class="faq-item"><strong>Do I need to know how to draw?</strong><p>No. Drawing can help, but it is not required to learn the principles of graphic design.</p></div><div class="faq-item"><strong>Where is graphic design used?</strong><p>Branding, advertising, social media, web and app design, packaging, publishing and many other fields.</p></div></div></article>
+
+      <article class="article article-full" id="design-elements"><div class="article-cover"><div class="cover cover-2" role="img" aria-label="The elements of graphic design"></div></div><div class="article-content"><span class="article-number">02</span><h3>The Elements of Graphic Design</h3><p class="article-lead">A strong design does more than look good: it communicates the right message. Its foundation is a set of basic visual elements.</p><p>Just as a building is made from materials such as brick and steel, a design is built from points, lines, shapes, color, texture and space. Used thoughtfully, these elements create work that is both attractive and useful.</p><h4>Point and line</h4><p>A point can attract attention or establish a focal point. A line connects elements, guides the eye, suggests movement and organizes a layout.</p><h4>Shape and form</h4><p>Lines create shapes such as squares, circles and triangles. Shapes help organize information. Form gives those shapes a three-dimensional quality, as in a cube, sphere or cylinder.</p><h4>Color and texture</h4><p>Color can create a mood, reinforce a brand and direct attention. Texture describes how a surface looks or feels; in digital design it is usually suggested visually.</p><h4>Space and value</h4><p>Negative space is the area around and between objects. It gives a design room to breathe and improves readability. Value describes how light or dark a color is, adding contrast, depth and emphasis.</p><p>These elements work together. Learning how to balance them is one of the best ways to build a strong foundation in graphic design.</p><h4>Frequently asked questions</h4><div class="faq-item"><strong>Is one element more important than the others?</strong><p>No. Effective designs use the elements in balance, according to the message and purpose.</p></div><div class="faq-item"><strong>Why is negative space important?</strong><p>It makes layouts feel clearer and helps important information stand out.</p></div></div></article>
+
+      <article class="article article-full" id="design-principles"><div class="article-cover"><div class="cover cover-3" role="img" aria-label="The principles of graphic design"></div></div><div class="article-content"><span class="article-number">03</span><h3>The Principles of Graphic Design</h3><p class="article-lead">A design’s success depends on more than appearance. It also needs to feel organized, clear and balanced.</p><p>Design principles describe how visual elements work together. They help make a composition easier to read, more effective and more professional.</p><h4>Balance and contrast</h4><p>Balance gives the elements on a page a sense of visual stability. Contrast uses differences in color, size, weight, shape or space to make important details stand out.</p><h4>Emphasis and visual hierarchy</h4><p>Every design has a focal point. Size, color and imagery can create emphasis. Visual hierarchy then guides the viewer through a deliberate order, from headline to supporting text.</p><h4>Alignment and proximity</h4><p>Alignment places elements along a shared structure, making a layout feel polished. Proximity groups related information and separates unrelated content.</p><h4>Repetition and unity</h4><p>Repeating colors, type styles and visual elements creates consistency. Unity makes all parts of a design feel like they belong together.</p><img class="article-info-image" src="../../images/blog/topics/03-grafik-tasarimin-temel-ilkeleri-mbk.png" alt="Balance, contrast, alignment and hierarchy in visual design"><h4>Why do these principles matter?</h4><ul><li>They make information easier to scan.</li><li>They strengthen the visual impact.</li><li>They help create a consistent experience.</li></ul><h4>Frequently asked question</h4><div class="faq-item"><strong>Do I need to follow every principle in every design?</strong><p>Use them as tools, not rigid rules. Choose the principles that best support the audience and message.</p></div></div></article>
+
+      <article class="article article-full" id="vector-and-raster"><div class="article-cover"><div class="cover cover-4" role="img" aria-label="Vector and raster graphics"></div></div><div class="article-content"><span class="article-number">04</span><h3>Vector vs. Raster Graphics</h3><p class="article-lead">Choosing the right image type affects quality, editing and how a design can be used.</p><h4>What is a vector graphic?</h4><p>Vector artwork is built from mathematical paths, points and curves. It can be scaled up or down without losing sharpness, which makes it ideal for logos, icons and illustrations.</p><h4>What is a raster graphic?</h4><p>Raster images are made of pixels. Photographs are the most common example. Enlarging them beyond their original resolution can make them look blurry or pixelated.</p><h4>Common formats</h4><ul><li><strong>AI, EPS and SVG:</strong> editable vector artwork.</li><li><strong>JPG:</strong> photographs and compact web images.</li><li><strong>PNG:</strong> digital graphics that need transparency.</li><li><strong>PDF:</strong> sharing and print-ready documents.</li><li><strong>TIFF:</strong> high-quality print and archiving.</li></ul><p>Keep a vector master of important logos and choose export settings based on the final use. This protects quality and prevents avoidable production issues.</p><img class="article-info-image" src="../../images/blog/topics/04-vektorel-ve-bitmap-mbk.png" alt="Why logos should be kept in vector formats"><h4>Frequently asked questions</h4><div class="faq-item"><strong>Can I make a small JPG logo larger?</strong><p>You can, but it may become blurry. A vector file is the better choice for large-format use.</p></div><div class="faq-item"><strong>Which format supports transparency?</strong><p>PNG is a common choice for transparent digital graphics; SVG can also preserve transparency for vector artwork.</p></div></div></article>
+
+      <article class="article article-full" id="color"><div class="article-cover"><div class="cover cover-5" role="img" aria-label="Color systems and color psychology"></div></div><div class="article-content"><span class="article-number">05</span><h3>RGB, CMYK and the Power of Color</h3><p class="article-lead">Color does more than make a design look appealing. It can attract attention, communicate information and create emotion.</p><h4>RGB for screens</h4><p>RGB stands for red, green and blue. It is an additive, light-based color model used by screens. Combining the three channels at full intensity creates white.</p><h4>CMYK for print</h4><p>CMYK stands for cyan, magenta, yellow and black. It is the standard process-color model for printing. Print artwork is generally prepared in CMYK, though the final result also depends on paper, ink and the printer.</p><h4>Pantone and color relationships</h4><p>Pantone provides standardized color references that help brands keep colors consistent across print runs. Designers also use primary, secondary and complementary color relationships to create harmony or contrast.</p><ul><li>Primary colors: red, blue and yellow.</li><li>Blue and orange, red and green, and yellow and purple are complementary pairs.</li></ul><h4>Color psychology</h4><ul><li>Blue often suggests trust and professionalism.</li><li>Red can express energy and excitement.</li><li>Green is associated with nature and calm.</li><li>Yellow can feel bright and draw attention.</li><li>Black can communicate strength and prestige.</li><li>White can suggest simplicity and cleanliness.</li></ul><p>Consider the brand, audience, context, readability and output medium when choosing colors. Color meanings vary by culture and context, so use them as guidance rather than fixed rules.</p><img class="article-info-image" src="../../images/blog/topics/05-renk-bilgisi-mbk.png" alt="Color choices and brand perception"><h4>Frequently asked questions</h4><div class="faq-item"><strong>Can an RGB file be sent to print?</strong><p>It can, but it is usually best to convert and review it in the printer’s requested color profile first.</p></div><div class="faq-item"><strong>Why use Pantone?</strong><p>It helps specify and reproduce a consistent spot color across print jobs.</p></div></div></article>
+
+      <article class="article article-full" id="typography"><div class="article-cover"><div class="cover cover-6" role="img" aria-label="Typography in graphic design"></div></div><div class="article-content"><span class="article-number">06</span><h3>Typography: The Power of Type</h3><p class="article-lead">Type is one of a design’s most important communication tools. Thoughtful typography improves readability and gives the work a more considered feel.</p><h4>Typeface and font</h4><p>A typeface is a family of letterforms. A font is a particular style, weight or file within that family.</p><h4>Serif and sans serif</h4><ul><li><strong>Serif:</strong> letterforms have small finishing strokes.</li><li><strong>Sans serif:</strong> letterforms have no finishing strokes and often feel clean and contemporary.</li></ul><h4>Size, leading and spacing</h4><p>Type size determines how large text appears. Leading is the space between lines. Tracking adjusts spacing across a range of letters, while kerning adjusts the space between a specific pair.</p><h4>Readability and pairing</h4><p>Use enough contrast, keep line lengths comfortable and avoid too many typefaces. For many layouts, one typeface for headings and another for body copy is enough.</p><img class="article-info-image" src="../../images/blog/topics/06-tipografi-mbk.png" alt="The long-standing use of Helvetica by global brands"><p>Successful typography helps readers understand a message quickly and accurately.</p><h4>Frequently asked questions</h4><div class="faq-item"><strong>How many typefaces should I use?</strong><p>Two complementary typefaces are enough for most designs; a third can work when there is a clear reason.</p></div><div class="faq-item"><strong>Should I choose serif or sans serif?</strong><p>Choose based on the purpose, audience and tone. Both can work well on screen and in print.</p></div></div></article>
+
+      <article class="article" id="file-formats"><div class="article-cover"><div class="cover cover-7" role="img" aria-label="A guide to design file formats"></div></div><div><span class="article-number">07</span><h3>A Guide to Design File Formats</h3><p>Each file format serves a different purpose. Choosing the right one helps preserve quality, keep file sizes manageable and avoid compatibility problems.</p><h4>Quick guide</h4><ul><li>Use AI, EPS or SVG for editable vector artwork.</li><li>Use JPG for photographs and PNG for graphics that need a transparent background.</li><li>Use PDF to share or send a document to print.</li><li>Use TIFF for high-quality print or long-term image archiving.</li><li>Use GIF for simple, short web animations.</li></ul><p>Keep the editable source file and export a copy for each final use. Always confirm technical requirements with the printer, platform or production team.</p><h4>Frequently asked questions</h4><div class="faq-item"><strong>Which format should I use for a logo?</strong><p>Keep a vector master such as AI, EPS or SVG, then export the formats needed for print and digital use.</p></div></div></article>
+    </div></section>
+  </main>
+  <footer><div class="container">© Elif Handegül Yılmaz · Graphic Design Guide</div></footer>
+</body>
+</html>
