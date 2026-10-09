@@ -164,16 +164,21 @@
     if (label) label.textContent = cover.label;
     if (!visual || !cover.src) return;
     const image = new Image();
-    image.className = "project-cover-image";
-    image.src = cover.src;
+    image.className = "project-cover-image is-loading";
     image.alt = cover.alt;
+    image.setAttribute("aria-hidden", "true");
     image.loading = index < 2 ? "eager" : "lazy";
     image.decoding = "async";
     image.referrerPolicy = "no-referrer";
     image.addEventListener("load", () => {
+      image.classList.remove("is-loading");
+      image.removeAttribute("aria-hidden");
       visual.replaceChildren(image);
       visual.classList.add("has-cover");
     }, { once: true });
+    image.addEventListener("error", () => image.remove(), { once: true });
+    visual.appendChild(image);
+    image.src = cover.src;
   });
 
   const projectIntro = document.querySelector("#projeler .section-heading p");
