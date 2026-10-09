@@ -196,12 +196,6 @@ if (educationPreview && educationPreview.dataset.blogPreview !== "true") {
       <div class="education-card-content">
         <h3>Mesleğe Yeni Başlayanlar İçin</h3>
         <p>Grafik tasarımın temel kavramlarını sade, görsel ve uygulanabilir içeriklerle anlatan başlangıç rehberi.</p>
-        <ul>
-          <li>Tasarım temelleri</li>
-          <li>Renk bilgisi</li>
-          <li>Tipografi</li>
-          <li>Dosya formatları</li>
-        </ul>
       </div>
     `;
   }

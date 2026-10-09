@@ -41,6 +41,37 @@
   background: rgba(255, 255, 255, 0.86);
 }
 
+.academic-history .education-item {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.34fr) 1fr;
+  column-gap: 24px;
+  align-items: start;
+  padding: 28px 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+}
+
+.academic-history .education-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.academic-history .education-item > span {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.academic-history .education-item > h3,
+.academic-history .education-item > p {
+  grid-column: 2;
+}
+
+.academic-history .education-item > h3 {
+  margin: 0 0 5px;
+  font-size: 1.3rem;
+}
+
 .guide-section {
   background: var(--surface);
 }
@@ -102,6 +133,12 @@
 .guide-card:nth-child(6)::before { background-position: 100% 50% !important; }
 .guide-card:nth-child(7)::before { background-position: 0% 100% !important; }
 
+.guide-card:nth-child(7)::before {
+  background-image: url("../images/blog/topics/07-dosya-formatlari-kapak.svg") !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
 .guide-card:nth-child(1)::before {
   background-image: url("../images/blog/topics/01-grafik-tasarim-nedir-kapak.jpg") !important;
   background-position: center !important;
@@ -136,6 +173,20 @@
   background-image: url("../images/blog/topics/06-tipografi-kapak.jpg") !important;
   background-position: center !important;
   background-size: cover !important;
+}
+
+@media (max-width: 700px) {
+  .academic-history .education-item {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+
+  .academic-history .education-item > span,
+  .academic-history .education-item > h3,
+  .academic-history .education-item > p {
+    grid-column: 1;
+    grid-row: auto;
+  }
 }
 
 .guide-card:hover {
