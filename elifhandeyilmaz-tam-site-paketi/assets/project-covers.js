@@ -1,6 +1,11 @@
 (() => {
   const covers = [
-    { title: "Marka & Kurumsal Kimlik", label: "BRAND" },
+    {
+      title: "Marka & Kurumsal Kimlik",
+      label: "BRAND",
+      src: "assets/project-covers/brand-identity-camla.png",
+      alt: "Damla marka kimliği eskizi, renk paleti ve kırtasiye sunumu"
+    },
     { title: "Editoryal Tasarım", label: "EDITORIAL" },
     { title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
     { title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
@@ -164,7 +169,7 @@
     if (label) label.textContent = cover.label;
     if (!visual || !cover.src) return;
     const image = new Image();
-    image.className = "project-cover-image is-loading";
+    image.className = `project-cover-image${index === 0 ? " project-cover-featured" : ""} is-loading`;
     image.alt = cover.alt;
     image.setAttribute("aria-hidden", "true");
     image.loading = index < 2 ? "eager" : "lazy";
