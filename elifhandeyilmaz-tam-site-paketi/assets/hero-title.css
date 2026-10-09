@@ -12,7 +12,7 @@
   display: block;
   font-size: clamp(2.95rem, 4vw, 4.15rem);
   line-height: 1.02;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .hero-title-script-reveal {
