@@ -8,7 +8,7 @@
 .home-overview .overview-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: start;
+  align-items: stretch;
   gap: clamp(16px, 2vw, 26px);
 }
 
@@ -55,7 +55,7 @@
 }
 
 .home-overview .featured .mini-project > div:last-child {
-  min-height: 48px;
+  min-height: 56px;
   padding: 6px 7px;
 }
 
@@ -70,6 +70,10 @@
 }
 
 @media (min-width: 1101px) {
+  .home-overview .featured .mini-art {
+    aspect-ratio: 1 / 1;
+  }
+
   .home-overview .featured .mini-project small {
     display: none;
   }
@@ -92,20 +96,20 @@
 .home-overview .services-preview .service-mini-grid > .service-mini-card {
   grid-column: span 2;
   aspect-ratio: auto;
-  min-height: 80px;
-  gap: 6px;
-  padding: 8px 5px;
+  min-height: 72px;
+  gap: 5px;
+  padding: 6px 4px;
   border-radius: 14px;
 }
 
 .home-overview .services-preview .service-mini-icon {
-  width: 20px !important;
-  height: 20px !important;
+  width: 18px !important;
+  height: 18px !important;
 }
 
 .home-overview .services-preview .service-mini-title {
-  font-size: 0.66rem !important;
-  line-height: 1.25;
+  font-size: 0.62rem !important;
+  line-height: 1.2;
 }
 
 .home-overview .services-preview .service-mini-grid > .service-mini-card:nth-child(4) {
@@ -174,7 +178,7 @@
   }
 
   .home-overview .featured .mini-project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
