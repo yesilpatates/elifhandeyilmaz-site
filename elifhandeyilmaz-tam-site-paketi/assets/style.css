@@ -1517,3 +1517,17 @@ body.contact-modal-open {
   transform: none;
   box-shadow: none;
 }
+
+#projeler .project-card,
+#portfolio .project-card,
+#projeler .project-visual,
+#portfolio .project-visual,
+#projeler .project-body,
+#portfolio .project-body {
+  background: #fdfbf8;
+}
+
+#projeler .project-visual,
+#portfolio .project-visual {
+  color: #17202a;
+}
