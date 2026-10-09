@@ -36,6 +36,15 @@
       transform: scale(1.42) translateX(-4%);
       transform-origin: center;
     }
+    @media (min-width: 1101px) {
+      #portfolio .project-card:first-child {
+        background-color: #fdfbf8;
+        background-image:
+          radial-gradient(circle at 27% 40%, transparent 0 32px, rgba(24, 183, 197, 0.075) 32.5px 33.5px, transparent 34px),
+          radial-gradient(circle at 27% 40%, transparent 0 60px, rgba(24, 183, 197, 0.075) 60.5px 61.5px, transparent 62px),
+          radial-gradient(circle at 27% 40%, transparent 0 88px, rgba(24, 183, 197, 0.075) 88.5px 89.5px, transparent 90px);
+      }
+    }
     @media (max-width: 700px) {
       #portfolio .project-card:first-child .project-cover-featured {
         transform: scale(1.08) translateX(-1.5%);
