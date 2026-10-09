@@ -1,6 +1,6 @@
 /* A clearer hierarchy for the homepage overview panels. */
 .home-overview.section-tight {
-  padding: clamp(34px, 4vw, 56px) 0;
+  padding: clamp(26px, 3vw, 42px) 0;
   border-top: 0;
   background: var(--surface-soft);
 }
@@ -8,7 +8,7 @@
 .home-overview .overview-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: stretch;
+  align-items: start;
   gap: clamp(16px, 2vw, 26px);
 }
 
@@ -19,7 +19,7 @@
   min-width: 0;
   flex-direction: column;
   grid-column: auto;
-  padding: clamp(20px, 2.4vw, 32px);
+  padding: clamp(14px, 1.4vw, 20px);
   border: 1px solid var(--line);
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.92);
@@ -35,19 +35,19 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 16px;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
 }
 
 .home-overview .featured .mini-project-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   min-height: 0;
-  gap: 12px;
+  gap: 8px;
 }
 
 .home-overview .featured .mini-project {
   height: auto;
   min-width: 0;
-  border-radius: 15px;
+  border-radius: 12px;
 }
 
 .home-overview .featured .mini-art {
@@ -55,30 +55,57 @@
 }
 
 .home-overview .featured .mini-project > div:last-child {
-  min-height: 56px;
-  padding: 8px 10px;
+  min-height: 48px;
+  padding: 6px 7px;
 }
 
 .home-overview .featured .mini-project strong {
-  font-size: 0.82rem;
+  font-size: 0.68rem;
+  line-height: 1.25;
 }
 
 .home-overview .featured .mini-project small {
-  font-size: 0.72rem;
+  font-size: 0.58rem;
+  line-height: 1.3;
+}
+
+@media (min-width: 1101px) {
+  .home-overview .featured .mini-project small {
+    display: none;
+  }
+}
+
+.home-overview .featured .mini-project strong,
+.home-overview .featured .mini-project small {
+  overflow: visible;
+  overflow-wrap: anywhere;
+  text-overflow: clip;
+  white-space: normal;
 }
 
 .home-overview .services-preview .service-mini-grid {
   grid-template-columns: repeat(6, minmax(0, 1fr));
   align-content: start;
-  gap: 12px;
+  gap: 8px;
 }
 
 .home-overview .services-preview .service-mini-grid > .service-mini-card {
   grid-column: span 2;
   aspect-ratio: auto;
-  min-height: 126px;
-  padding: 18px 12px;
-  border-radius: 17px;
+  min-height: 80px;
+  gap: 6px;
+  padding: 8px 5px;
+  border-radius: 14px;
+}
+
+.home-overview .services-preview .service-mini-icon {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.home-overview .services-preview .service-mini-title {
+  font-size: 0.66rem !important;
+  line-height: 1.25;
 }
 
 .home-overview .services-preview .service-mini-grid > .service-mini-card:nth-child(4) {
@@ -113,9 +140,9 @@
 
 .home-overview .education-card p {
   max-width: 58ch;
-  margin: 0 0 16px;
+  margin: 0 0 8px;
   font-size: 0.88rem;
-  line-height: 1.65;
+  line-height: 1.45;
 }
 
 .home-overview .education-card ul {
@@ -124,11 +151,11 @@
 }
 
 .home-overview .education-card li {
-  padding: 9px 11px;
+  padding: 6px 7px;
   border: 1px solid var(--line);
   border-radius: 11px;
   background: var(--surface-soft);
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   line-height: 1.35;
 }
 
@@ -139,6 +166,7 @@
 @media (max-width: 1100px) {
   .home-overview .overview-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
   }
 
   .home-overview .overview-block.featured {
@@ -152,7 +180,7 @@
 
 @media (max-width: 700px) {
   .home-overview.section-tight {
-    padding: 30px 0 38px;
+    padding: 26px 0 32px;
   }
 
   .home-overview .overview-grid {
@@ -223,5 +251,12 @@
   .home-overview .education-card ul {
     grid-template-columns: minmax(0, 1fr);
     gap: 7px;
+  }
+}
+
+@media (min-width: 1101px) {
+  .home-overview .education-card ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
   }
 }
