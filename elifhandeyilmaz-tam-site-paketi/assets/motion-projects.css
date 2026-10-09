@@ -7,13 +7,6 @@
   outline-offset: 4px;
 }
 
-.motion-project-card .project-visual {
-  min-height: 420px;
-  align-items: stretch;
-  padding: 0;
-  background: #111929;
-}
-
 .motion-project-cover {
   position: relative;
   width: 100%;
@@ -307,7 +300,6 @@ body.motion-modal-open {
 }
 
 @media (max-width: 760px) {
-  .motion-project-card .project-visual,
   .motion-project-cover,
   .motion-project-cover img {
     min-height: 360px;

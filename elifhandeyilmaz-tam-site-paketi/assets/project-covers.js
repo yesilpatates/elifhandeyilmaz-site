@@ -3,9 +3,9 @@
     { src: "https://at.adobe.com/ufuVy8iyI5g5BVxR", alt: "Marka & Kurumsal Kimlik Tasarımı kapak görseli", title: "Marka & Kurumsal Kimlik", label: "BRAND" },
     null,
     { src: "https://at.adobe.com/hguOld174sEQhlKx", alt: "Etkinlik & Organizasyon Tasarımı kapak görseli", title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
-    { src: "assets/promo-projects/grand-seyahat-afis.webp", alt: "Grand Seyahat afiş tasarımı havaalanı reklam panosu mockupı", title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
+    { src: null, alt: "Tanıtım ve iletişim tasarımı kategorisi", title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
     { src: "https://at.adobe.com/vCPmsaZrLIa0TN9Q", alt: "Web & Arayüz Tasarımı kapak görseli", title: "Web & Arayüz Tasarımı", label: "UI / WEB" },
-    { src: "https://at.adobe.com/TYb10FnMlNsmuouV", alt: "Video & Animasyon Tasarımı kapak görseli", title: "Video & Animasyon Tasarımı", label: "MOTION" }
+    { src: null, alt: "Video ve animasyon tasarımı kategorisi", title: "Video & Animasyon Tasarımı", label: "MOTION" }
   ];
 
   const project = (title, image, company, logo) => ({
@@ -162,7 +162,7 @@
     const label = card.querySelector(".project-visual strong");
     if (title) title.textContent = cover.title;
     if (label) label.textContent = cover.label;
-    if (!visual) return;
+    if (!visual || !cover.src) return;
     const image = new Image();
     image.className = "project-cover-image";
     image.src = cover.src;

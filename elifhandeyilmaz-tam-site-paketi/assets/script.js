@@ -47,11 +47,11 @@
   };
 
   const loadMotionProjects = () => {
-    addStylesheet("motion-projects-styles", "assets/motion-projects.css?v=20260810-alfa-gallery-v2");
+    addStylesheet("motion-projects-styles", "assets/motion-projects.css?v=20261009-promo-motion-card-fix-v1");
     if (document.getElementById("motion-projects-script")) return;
     const motionScript = document.createElement("script");
     motionScript.id = "motion-projects-script";
-    motionScript.src = "assets/motion-projects.js?v=20260811-featured-links-v1";
+    motionScript.src = "assets/motion-projects.js?v=20261009-promo-motion-card-fix-v1";
     motionScript.defer = true;
     document.body.appendChild(motionScript);
   };
@@ -66,7 +66,7 @@
 
   const loadCoreScript = () => {
     const coreScript = document.createElement("script");
-    coreScript.src = "assets/core-script.js?v=20260811-social-service-removed-v1";
+    coreScript.src = "assets/core-script.js?v=20261009-promo-motion-card-fix-v1";
     coreScript.defer = true;
     coreScript.onload = loadEnhancements;
     coreScript.onerror = () => {

@@ -58,8 +58,6 @@
     '"': "&quot;"
   })[character]);
 
-  const thumbnail = (videoId) => `https://i.ytimg.com/vi/${videoId}/hq720.jpg`;
-  const fallbackThumbnail = (videoId) => `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
   const card = [...document.querySelectorAll(".project-card")].find((item) => {
     const title = item.querySelector(".project-body h3")?.textContent?.toLocaleLowerCase("tr-TR") || "";
     return title.includes("video") && title.includes("animasyon");
@@ -72,51 +70,10 @@
   card.setAttribute("tabindex", "0");
   card.setAttribute("aria-label", "Video ve animasyon projelerini görüntüle");
 
-  const visual = card.querySelector(".project-visual");
   const body = card.querySelector(".project-body");
   const title = body?.querySelector("h3");
-  const description = body?.querySelector("p");
-
-  if (visual) {
-    visual.className = "project-visual motion-project-visual";
-    visual.innerHTML = `
-      <div class="motion-project-cover">
-        <div class="motion-project-cover-grid">
-          ${videos.slice(0, 4).map((video) => `
-            <div class="motion-project-cover-panel">
-              <img
-                src="${thumbnail(video.id)}"
-                onerror="this.onerror=null;this.src='${fallbackThumbnail(video.id)}';"
-                alt=""
-                loading="lazy"
-                decoding="async"
-              >
-            </div>
-          `).join("")}
-        </div>
-        <span class="motion-project-badge">MOTION DESIGN</span>
-        <span class="motion-project-play" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
-        </span>
-        <span class="motion-project-ratio">${videos.length} Proje · 9:16</span>
-      </div>
-    `;
-  }
 
   if (title) title.textContent = "Video & Animasyon Tasarımı";
-  if (description) {
-    description.textContent = "Marka mesajlarını hareketli grafikler, açıklayıcı içerikler ve sosyal medya videolarıyla etkili biçimde aktarıyorum.";
-  }
-
-  if (body && !body.querySelector(".motion-project-meta")) {
-    body.insertAdjacentHTML("beforeend", `
-      <div class="motion-project-meta" aria-label="Proje özellikleri">
-        <span>${videos.length} Video</span>
-        <span>Motion Graphics</span>
-        <span>Dikey İçerik</span>
-      </div>
-    `);
-  }
 
   const modal = document.createElement("div");
   modal.className = "motion-modal";
