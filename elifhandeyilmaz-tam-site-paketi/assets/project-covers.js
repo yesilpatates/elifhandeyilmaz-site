@@ -6,9 +6,21 @@
       src: "assets/project-covers/brand-identity-camla-transparent.png",
       alt: "Damla marka kimliği eskizi, renk paleti ve kırtasiye sunumu"
     },
-    { title: "Editoryal Tasarım", label: "EDITORIAL" },
-    { title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
-    { title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
+    {
+      title: "Editoryal Tasarım", label: "EDITORIAL", category: true,
+      src: "assets/project-covers/editorial-design.webp",
+      alt: "Açık dergi, yayın kapağı ve renk paletiyle editoryal tasarım sunumu"
+    },
+    {
+      title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT", category: true,
+      src: "assets/project-covers/event-organization.webp",
+      alt: "Davetiye, yaka kartı ve roll-up ile etkinlik kimliği sunumu"
+    },
+    {
+      title: "Tanıtım & İletişim Tasarımı", label: "PROMO", category: true,
+      src: "assets/project-covers/promotion-communication.webp",
+      alt: "Afiş, broşür ve tanıtım materyallerinin tasarım sunumu"
+    },
     { title: "Web & Arayüz Tasarımı", label: "UI / WEB" },
     { title: "Video & Animasyon Tasarımı", label: "MOTION" }
   ];
@@ -169,7 +181,7 @@
     if (label) label.textContent = cover.label;
     if (!visual || !cover.src) return;
     const image = new Image();
-    image.className = `project-cover-image${index === 0 ? " project-cover-featured" : ""} is-loading`;
+    image.className = `project-cover-image${index === 0 ? " project-cover-featured" : ""}${cover.category ? " project-cover-category" : ""} is-loading`;
     image.alt = cover.alt;
     image.setAttribute("aria-hidden", "true");
     image.loading = index < 2 ? "eager" : "lazy";

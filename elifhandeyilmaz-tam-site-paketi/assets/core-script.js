@@ -8,7 +8,7 @@ const loadStylesheet = (id, href) => {
   document.head.appendChild(stylesheet);
 };
 
-loadStylesheet("project-cover-styles", "assets/project-covers.css?v=20261009-project-card-fit-v9");
+loadStylesheet("project-cover-styles", "assets/project-covers.css?v=20261010-category-artwork-v1");
 loadStylesheet("service-icons-styles", "assets/service-icons.css?v=20261009-site-design-v1");
 loadStylesheet("site-optimizations", "assets/optimizations.css?v=20261009-header-alignment-v1");
 loadStylesheet("education-separation-styles", "assets/education-separation.css");
@@ -26,7 +26,7 @@ const loadPromoProjects = () => {
 
 if (!document.getElementById("project-cover-script")) {
   const projectCoverScript = document.createElement("script");
-  projectCoverScript.src = "assets/project-covers.js?v=20261010-project-typography-v1";
+  projectCoverScript.src = "assets/project-covers.js?v=20261010-category-artwork-v1";
   projectCoverScript.defer = true;
   projectCoverScript.id = "project-cover-script";
   projectCoverScript.addEventListener("load", loadPromoProjects, { once: true });
