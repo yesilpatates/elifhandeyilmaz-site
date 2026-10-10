@@ -47,6 +47,69 @@
         transform: scale(0.86);
       }
     }
+    /* Editorial hierarchy for the brand card only; retain its grid and artwork. */
+    #projeler .project-card.project-card-brand .project-body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 5px;
+    }
+    #projeler .project-card-brand .project-kicker {
+      color: var(--accent-dark);
+      font-size: 0.6rem;
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: 0.14em;
+    }
+    #projeler .project-card.project-card-brand .project-body h3 {
+      width: auto;
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      text-wrap: initial;
+    }
+    #projeler .project-card-brand .project-title-line {
+      display: block;
+      white-space: nowrap;
+    }
+    #projeler .project-card.project-card-brand .project-body .project-services {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.65rem;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    #projeler .project-card-brand .project-services::before {
+      content: "";
+      width: 26px;
+      height: 2px;
+      flex: none;
+      background: var(--accent);
+    }
+    @media (min-width: 1101px) {
+      #projeler .project-card.project-card-brand .project-body {
+        padding: 16px 12px 16px 20px;
+        gap: 10px;
+      }
+      #projeler .project-card.project-card-brand .project-body h3 {
+        font-size: clamp(1.1rem, 1.9vw, 1.7rem);
+      }
+      #projeler .project-card-brand .project-services::before {
+        width: 32px;
+      }
+    }
+    @media (max-width: 1100px) {
+      #projeler .project-card.project-card-brand .project-body {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -260,12 +323,13 @@
         </div>
 
         <div class="project-grid">
-          <article class="project-card reveal">
+          <article class="project-card project-card-brand reveal">
             <div class="project-visual visual-brand"><span>01</span><strong>BRAND</strong></div>
             <div class="project-body">
               <span class="project-number">01</span>
-              <h3>Marka ve Kurumsal Kimlik</h3>
-              <p>Özgün logo ve kurumsal kimlik sistemleriyle tüm basılı ve dijital uygulamalarda tutarlı bir marka dili oluşturuyorum.</p>
+              <span class="project-kicker">PORTFOLYO / 01</span>
+              <h3><span class="project-title-line">Marka &amp;</span><span class="project-title-line">Kurumsal Kimlik</span></h3>
+              <p class="project-services">Logo · Kimlik · Marka Rehberi</p>
             </div>
           </article>
 
