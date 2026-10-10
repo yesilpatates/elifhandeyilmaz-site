@@ -96,9 +96,16 @@
   display: none;
 }
 @media (min-width: 1101px) {
-  #projeler .project-card-typography:nth-child(2) .project-body h3,
-  #projeler .project-card-typography:nth-child(3) .project-body h3 {
+  #projeler .project-card-typography:nth-child(2) .project-body h3 {
     font-size: clamp(1.5rem, 2vw, 1.875rem);
+  }
+}
+#projeler .project-card-typography:nth-child(3) .project-title-line {
+  white-space: nowrap;
+}
+@media (min-width: 1101px) {
+  #projeler .project-card-typography:nth-child(3) .project-body h3 {
+    font-size: clamp(1rem, 1.55vw, 1.5rem);
   }
 }
 @media (max-width: 1100px) {
