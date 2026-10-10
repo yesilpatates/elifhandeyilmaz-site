@@ -58,7 +58,7 @@
 
   const loadCoreScript = () => {
     const coreScript = document.createElement("script");
-    coreScript.src = "assets/core-script.js?v=20261010-services-nowrap-v2";
+    coreScript.src = "assets/core-script.js?v=20261010-featured-one-row-v3";
     coreScript.defer = true;
     coreScript.onload = loadEnhancements;
     coreScript.onerror = () => {
