@@ -47,23 +47,23 @@
         transform: scale(0.86);
       }
     }
-    /* Editorial hierarchy for the brand card only; retain its grid and artwork. */
-    #projeler .project-card.project-card-brand .project-body {
+    /* Shared project typography; preserve the outer grid and image rules. */
+    #projeler .project-card.project-card-typography .project-body {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: center;
+      justify-content: flex-end;
       gap: 5px;
     }
-    #projeler .project-card-brand .project-kicker {
+    #projeler .project-card-typography .project-kicker {
       color: var(--accent-dark);
       font-size: 0.6rem;
       font-weight: 500;
       line-height: 1;
       letter-spacing: 0.14em;
     }
-    #projeler .project-card.project-card-brand .project-body h3 {
-      width: auto;
+    #projeler .project-card.project-card-typography .project-body h3 {
+      width: 100%;
       margin: 0;
       font-size: 1rem;
       font-weight: 600;
@@ -71,43 +71,69 @@
       letter-spacing: -0.035em;
       text-wrap: initial;
     }
-    #projeler .project-card-brand .project-title-line {
+    #projeler .project-card-typography .project-title-line {
       display: block;
       white-space: nowrap;
     }
-    #projeler .project-card.project-card-brand .project-body .project-services {
+    #projeler .project-card.project-card-typography .project-body .project-services {
       display: flex;
       align-items: center;
       gap: 8px;
       margin: 0;
       color: var(--muted);
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       line-height: 1.25;
-      white-space: nowrap;
     }
-    #projeler .project-card-brand .project-services::before {
+    #projeler .project-card-typography .project-services::before {
       content: "";
-      width: 26px;
+      width: 22px;
       height: 2px;
       flex: none;
       background: var(--accent);
     }
+    #projeler .project-card-typography .project-number {
+      top: auto;
+      bottom: 12px;
+      transform: none;
+    }
     @media (min-width: 1101px) {
-      #projeler .project-card.project-card-brand .project-body {
+      #projeler .project-card.project-card-typography .project-body {
         padding: 16px 12px 16px 20px;
-        gap: 10px;
+        gap: 8px;
       }
-      #projeler .project-card.project-card-brand .project-body h3 {
+      #projeler .project-card.project-card-typography .project-body h3 {
         font-size: clamp(1.1rem, 1.9vw, 1.7rem);
       }
-      #projeler .project-card-brand .project-services::before {
-        width: 32px;
+      #projeler .project-card.project-card-typography:nth-child(2) .project-body,
+      #projeler .project-card.project-card-typography:nth-child(3) .project-body {
+        flex-basis: 104px;
+        padding: 12px 17px 20px;
+      }
+      #projeler .project-card.project-card-typography:nth-child(2) .project-body h3,
+      #projeler .project-card.project-card-typography:nth-child(3) .project-body h3 {
+        font-size: clamp(0.9rem, 1.35vw, 1.2rem);
+      }
+      #projeler .project-card-typography .project-number {
+        bottom: 24px;
+      }
+      #projeler .project-card-typography:nth-child(2) .project-number,
+      #projeler .project-card-typography:nth-child(3) .project-number {
+        bottom: 8px;
       }
     }
     @media (max-width: 1100px) {
-      #projeler .project-card.project-card-brand .project-body {
+      #projeler .project-card.project-card-typography .project-body {
         padding-top: 8px;
         padding-bottom: 8px;
+        padding-right: 17px;
+        justify-content: center;
+        gap: 4px;
+      }
+      #projeler .project-card-typography .project-services {
+        max-width: calc(100% - 18px);
+      }
+      #projeler .project-card-typography .project-number {
+        bottom: 8px;
       }
     }
   </style>
@@ -323,58 +349,63 @@
         </div>
 
         <div class="project-grid">
-          <article class="project-card project-card-brand reveal">
+          <article class="project-card project-card-typography project-card-brand reveal">
             <div class="project-visual visual-brand"><span>01</span><strong>BRAND</strong></div>
             <div class="project-body">
               <span class="project-number">01</span>
               <span class="project-kicker">PORTFOLYO / 01</span>
-              <h3><span class="project-title-line">Marka &amp;</span><span class="project-title-line">Kurumsal Kimlik</span></h3>
+              <h3><span class="project-title-line">Marka &amp;</span> <span class="project-title-line">Kurumsal Kimlik</span></h3>
               <p class="project-services">Logo · Kimlik · Marka Rehberi</p>
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card project-card-typography reveal">
             <div class="project-visual visual-editorial"><span>02</span><strong>EDITORIAL</strong></div>
             <div class="project-body">
               <span class="project-number">02</span>
-              <h3>Editoryal Tasarım</h3>
-              <p>Dergi, katalog, kitap ve kurumsal yayınlar için okunabilirliği destekleyen güçlü bir görsel hiyerarşi kuruyorum.</p>
+              <span class="project-kicker">PORTFOLYO / 02</span>
+              <h3><span class="project-title-line">Editoryal Tasarım</span></h3>
+              <p class="project-services">Dergi · Katalog · Kitap</p>
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card project-card-typography reveal">
             <div class="project-visual visual-event"><span>03</span><strong>EVENT</strong></div>
             <div class="project-body">
               <span class="project-number">03</span>
-              <h3>Etkinlik ve Organizasyon Tasarımı</h3>
-              <p>Davetiyeden sahne tasarımına kadar tüm materyalleri bütüncül bir görsel iletişim diliyle hazırlıyorum.</p>
+              <span class="project-kicker">PORTFOLYO / 03</span>
+              <h3><span class="project-title-line">Etkinlik &amp;</span> <span class="project-title-line">Organizasyon Tasarımı</span></h3>
+              <p class="project-services">Davetiye · Yaka Kartı · Etkinlik Kimliği</p>
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card project-card-typography reveal">
             <div class="project-visual visual-promo"><span>04</span><strong>COMMUNICATION</strong></div>
             <div class="project-body">
               <span class="project-number">04</span>
-              <h3>Tanıtım ve İletişim Tasarımı</h3>
-              <p>Broşür, afiş, sunum ve kurumsal iletişim içeriklerini hedef kitleye uygun, net ve etkili biçimde tasarlıyorum.</p>
+              <span class="project-kicker">PORTFOLYO / 04</span>
+              <h3><span class="project-title-line">Tanıtım &amp;</span> <span class="project-title-line">İletişim Tasarımı</span></h3>
+              <p class="project-services">Broşür · Afiş · Sunum</p>
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card project-card-typography reveal">
             <div class="project-visual visual-ui"><span>05</span><strong>UI / WEB</strong></div>
             <div class="project-body">
               <span class="project-number">05</span>
-              <h3>Web ve Arayüz Tasarımı</h3>
-              <p>Kullanıcı deneyimini ön planda tutan, estetik ve işlevselliği birleştiren modern dijital arayüzler oluşturuyorum.</p>
+              <span class="project-kicker">PORTFOLYO / 05</span>
+              <h3><span class="project-title-line">Web &amp;</span> <span class="project-title-line">Arayüz Tasarımı</span></h3>
+              <p class="project-services">Web Sitesi · UI/UX · Responsive</p>
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card project-card-typography reveal">
             <div class="project-visual visual-motion"><span>06</span><strong>MOTION</strong></div>
             <div class="project-body">
               <span class="project-number">06</span>
-              <h3>Video & Animasyon Tasarımı</h3>
-              <p>Tanıtım filmleri, sosyal medya videoları ve hareketli grafiklerle marka mesajını daha etkili hâle getiriyorum.</p>
+              <span class="project-kicker">PORTFOLYO / 06</span>
+              <h3><span class="project-title-line">Video &amp;</span> <span class="project-title-line">Animasyon Tasarımı</span></h3>
+              <p class="project-services">Video · Animasyon · Hareketli Grafik</p>
             </div>
           </article>
         </div>
@@ -584,7 +615,7 @@
     </div>
   </footer>
 
-  <script src="assets/script.js?v=20261010-no-video-service-v4"></script>
+  <script src="assets/script.js?v=20261010-project-typography-v1"></script>
   <script src="assets/certificates.js?v=20260809-2"></script>
 </body>
 </html>
