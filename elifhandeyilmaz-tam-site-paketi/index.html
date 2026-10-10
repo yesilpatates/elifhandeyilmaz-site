@@ -378,6 +378,134 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     ]
   }
   </script>
+<style id="technical-skills-schema-styles">
+
+    #teknik-yetkinlikler {
+      color-scheme: light;
+      --paper: #f3efe7;
+      --card: #fbfaf7;
+      --ink: #151c2a;
+      --muted: #6e7480;
+      --teal: #168e96;
+      --teal-bright: #30d5c8;
+      --line: #bfd9d4;
+      --line-soft: #dce7e3;
+    }
+
+    .ty-page { width: 100%; padding: 52px clamp(24px, 5.4vw, 84px) 70px; }
+    .ty-section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #dedbd4;
+    }
+    .ty-eyebrow { display: block; margin-bottom: 9px; color: var(--teal); font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    #teknik-yetkinlikler .ty-title { margin: 0; font-size: clamp(30px, 4vw, 48px); line-height: 1.08; letter-spacing: -.045em; }
+    .ty-head-note { max-width: 320px; margin: 0 0 3px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .ty-diagram { position: relative; padding-top: 34px; }
+    .ty-root-wrap { display: flex; justify-content: center; position: relative; padding-bottom: 46px; }
+    .ty-root-wrap::after { content: ""; position: absolute; left: 50%; top: 100%; height: 24px; width: 1px; background: var(--line); }
+    .ty-root {
+      min-width: 270px;
+      padding: 15px 24px;
+      border: 1px solid var(--teal);
+      border-radius: 12px;
+      color: white;
+      background: var(--teal);
+      box-shadow: 0 7px 18px rgba(21, 96, 100, .12);
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      
+    }
+    .ty-groups {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: clamp(12px, 1.7vw, 24px);
+      position: relative;
+      
+    }
+    .ty-groups::before { content: ""; position: absolute; left: 8.333%; right: 8.333%; top: -23px; height: 1px; background: var(--line); }
+    .ty-group { position: relative; padding-top: 0; min-width: 0; }
+    .ty-group::before { content: ""; position: absolute; left: 50%; top: -23px; height: 23px; width: 1px; background: var(--line); }
+    .ty-category {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 11px;
+      border: 1px solid var(--teal);
+      border-radius: 11px;
+      background: #e4f3ef;
+      color: #145e62;
+      text-align: center;
+      font-size: clamp(12px, 1.08vw, 15px);
+      font-weight: 650;
+      line-height: 1.4;
+      transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease;
+    }
+    .ty-skills {
+      list-style: none;
+      margin: 20px 0 0;
+      padding: 0 0 0 14px;
+      position: relative;
+      display: grid;
+      gap: 11px;
+    }
+    .ty-skills::before { content: ""; position: absolute; left: 0; top: -10px; bottom: 20px; width: 1px; background: var(--line); }
+    .ty-skills li { position: relative; min-height: 43px; display: flex; align-items: center; padding: 9px 11px; border: 1px solid var(--line-soft); border-radius: 9px; background: var(--card); color: #48505c; font-size: 12px; line-height: 1.35; box-shadow: 0 2px 7px rgba(21, 28, 42, .025); transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+    .ty-skills li::before { content: ""; position: absolute; left: -15px; top: 50%; width: 14px; height: 1px; background: var(--line); }
+    .ty-skills li::after { content: ""; position: absolute; left: -18px; top: calc(50% - 2px); width: 4px; height: 4px; border-radius: 50%; background: var(--teal-bright); }
+    .ty-page.is-visible .ty-group { animation: ty-category-arrive .55s ease-out both; }
+    .ty-group:nth-child(1) { animation-delay: .62s; }
+    .ty-group:nth-child(2) { animation-delay: .75s; }
+    .ty-group:nth-child(3) { animation-delay: .88s; }
+    .ty-group:nth-child(4) { animation-delay: 1.01s; }
+    .ty-group:nth-child(5) { animation-delay: 1.14s; }
+    .ty-group:nth-child(6) { animation-delay: 1.27s; }
+    .ty-category:hover { transform: translateY(-3px); background: #d7efea; box-shadow: 0 8px 18px rgba(22,142,150,.13); }
+    .ty-skills li:hover { transform: translateX(4px); border-color: var(--teal); box-shadow: 0 5px 13px rgba(22,142,150,.12); }
+    @keyframes ty-root-arrive { from { opacity: 0; transform: translateY(-9px); box-shadow: none; } to { opacity: 1; transform: translateY(0); } }
+    @keyframes ty-branches-arrive { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes ty-category-arrive { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .ty-footnote { margin: 26px 0 0; color: #8a8d93; font-size: 11px; letter-spacing: .04em; }
+    @media (max-width: 1120px) {
+      .ty-groups { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 38px; }
+      .ty-groups::before, .ty-group::before { display: none; }
+      .ty-group::after { content: ""; position: absolute; left: 0; top: 36px; width: 11px; height: 1px; background: var(--line); }
+      .ty-category { font-size: 14px; }
+      .ty-skills li { font-size: 13px; }
+    }
+    @media (max-width: 640px) {
+      .ty-page { padding: 35px 20px 48px; }
+      .ty-section-head { display: block; padding-bottom: 18px; }
+      .ty-head-note { margin-top: 13px; font-size: 13px; }
+      .ty-diagram { padding-top: 25px; }
+      .ty-root-wrap { padding-bottom: 36px; }
+      .ty-root { min-width: 0; width: min(100%, 310px); font-size: 14px; }
+      .ty-groups { grid-template-columns: 1fr; gap: 24px; padding-left: 15px; }
+      .ty-groups::after { content: ""; position: absolute; left: 0; top: 0; bottom: 5px; width: 1px; background: var(--line); }
+      .ty-group { padding-left: 13px; }
+      .ty-group::after { left: -15px; top: 35px; width: 28px; }
+      .ty-category { justify-content: flex-start; min-height: 58px; padding: 12px 15px; text-align: left; font-size: 14px; }
+      .ty-skills { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 12px; padding-left: 0; gap: 8px; }
+      .ty-skills::before, .ty-skills li::before { display: none; }
+      .ty-skills li { min-height: 42px; padding: 8px 10px; font-size: 12px; }
+      .ty-skills li::after { left: auto; right: 8px; top: 8px; width: 4px; height: 4px; }
+      .ty-footnote { margin-top: 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #teknik-yetkinlikler *, #teknik-yetkinlikler *::before, #teknik-yetkinlikler *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  
+.ty-page.is-visible .ty-root {animation: ty-root-arrive .75s cubic-bezier(.2,.75,.3,1) both;}
+.ty-page.is-visible .ty-groups {animation: ty-branches-arrive .65s .35s ease-out both;}
+#teknik-yetkinlikler h3 {margin:0;}
+#teknik-yetkinlikler .ty-title {max-width:none;}
+
+</style>
 </head>
 
 <body>
@@ -783,7 +911,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             </div>
             <article class="education-item reveal">
               <span>2010 — 2013</span>
-              <h3>Beykent Üniversitesi Meslek Yüksekokulu</h3>
+              <h3>Beykent Üniversitesi | MYO</h3>
               <p>Grafik Tasarım</p>
             </article>
             <article class="education-item reveal">
@@ -795,6 +923,25 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         </div>
       </div>
     </section>
+
+<section class="ty-page" id="teknik-yetkinlikler" aria-labelledby="technical-skills-title">
+    <header class="ty-section-head">
+      <div><span class="ty-eyebrow">Yetkinlikler</span><h2 class="ty-title" id="technical-skills-title">Teknik Yetkinlikler &amp; Yazılımlar</h2></div>
+      <p class="ty-head-note">Tasarım sürecinde kullandığım araçlar, alanlarına göre dallanan tek bir akışta.</p>
+    </header>
+    <section class="ty-diagram" aria-label="Teknik yetkinlikler akış şeması">
+      <div class="ty-root-wrap"><div class="ty-root">Tasarım ve Dijital Üretim</div></div>
+      <div class="ty-groups">
+        <article class="ty-group"><h3 class="ty-category">Grafik Tasarım &amp; Yayıncılık</h3><ul class="ty-skills"><li>Adobe Photoshop</li><li>Adobe Illustrator</li><li>Adobe InDesign</li><li>CorelDRAW</li></ul></article>
+        <article class="ty-group"><h3 class="ty-category">Motion Design &amp; Animasyon</h3><ul class="ty-skills"><li>Adobe After Effects</li><li>Adobe Animate</li></ul></article>
+        <article class="ty-group"><h3 class="ty-category">Web &amp; Arayüz Tasarımı (UI/UX)</h3><ul class="ty-skills"><li>Figma</li><li>Adobe XD</li><li>WordPress</li></ul></article>
+        <article class="ty-group"><h3 class="ty-category">Dijital İçerik &amp; Video</h3><ul class="ty-skills"><li>CapCut</li><li>VN Video Editor</li><li>Canva</li></ul></article>
+        <article class="ty-group"><h3 class="ty-category">Dijital Pazarlama &amp; Sosyal Medya</h3><ul class="ty-skills"><li>Meta Business Suite</li><li>Sosyal Medya İçerik Yönetimi</li></ul></article>
+        <article class="ty-group"><h3 class="ty-category">Yapay Zekâ Destekli Tasarım</h3><ul class="ty-skills"><li>AI Destekli Görsel Üretimi</li><li>Kreatif İçerik Geliştirme</li><li>Tasarım Otomasyonu</li></ul></article>
+      </div>
+    </section>
+    </section>
+
 
     <dialog class="certificate-lightbox" id="certificate-lightbox" aria-labelledby="certificate-lightbox-title">
       <div class="certificate-lightbox-bar">
@@ -892,5 +1039,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  });
 })();
 </script>
+<script>
+(() => {
+ const section = document.getElementById('teknik-yetkinlikler');
+ if (!section) return;
+ if (!('IntersectionObserver' in window)) { section.classList.add('is-visible'); return; }
+ const observer = new IntersectionObserver(entries => {
+  if (entries.some(entry => entry.isIntersecting)) {
+   section.classList.add('is-visible'); observer.disconnect();
+  }
+ }, {threshold: 0.08});
+ observer.observe(section);
+})();
+</script>
 </body>
 </html>
+
