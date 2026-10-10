@@ -40,12 +40,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   border-width: 2px;
   border-style: solid;
 }
-#projeler .project-card:nth-child(1) { border-color: #ff942f; }
-#projeler .project-card:nth-child(2) { border-color: #ed4e93; }
-#projeler .project-card:nth-child(3) { border-color: #52b947; }
-#projeler .project-card:nth-child(4) { border-color: #9855eb; }
-#projeler .project-card:nth-child(5) { border-color: #4589f5; }
-#projeler .project-card:nth-child(6) { border-color: #10b9ba; }
+#projeler .project-card:nth-child(1) { border-color: #ff7a00; }
+#projeler .project-card:nth-child(2) { border-color: #ff20aa; }
+#projeler .project-card:nth-child(3) { border-color: #9ce600; }
+#projeler .project-card:nth-child(4) { border-color: #a339ff; }
+#projeler .project-card:nth-child(5) { border-color: #2478ff; }
+#projeler .project-card:nth-child(6) { border-color: #00d9e9; }
 @media (min-width: 1101px) {
   #projeler .project-grid {
     grid-template-columns: repeat(14, minmax(0, 1fr));
@@ -152,12 +152,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 /* Adapted from dexter-st / fuzzy-dog-81 on Uiverse (MIT). */
-#projeler .project-card:nth-child(1) { --design-color: #ff942f; }
-#projeler .project-card:nth-child(2) { --design-color: #ed4e93; }
-#projeler .project-card:nth-child(3) { --design-color: #52b947; }
-#projeler .project-card:nth-child(4) { --design-color: #9855eb; }
-#projeler .project-card:nth-child(5) { --design-color: #4589f5; }
-#projeler .project-card:nth-child(6) { --design-color: #10b9ba; }
+#projeler .project-card:nth-child(1) { --design-color: #ff7a00; }
+#projeler .project-card:nth-child(2) { --design-color: #ff20aa; }
+#projeler .project-card:nth-child(3) { --design-color: #9ce600; }
+#projeler .project-card:nth-child(4) { --design-color: #a339ff; }
+#projeler .project-card:nth-child(5) { --design-color: #2478ff; }
+#projeler .project-card:nth-child(6) { --design-color: #00d9e9; }
 #projeler .project-card {
   --dot-size: 6px; --line-weight: 1px; --animation-speed: .35s;
   isolation: isolate; overflow: visible;
@@ -351,6 +351,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  #projeler .project-card:is(.effect-active, :focus-within), #projeler .project-card:active { transform: none; }
  #projeler .project-design-effect * , #projeler .project-design-effect::before { animation: none !important; transition: none; }
 }
+
+#projeler .project-card {
+ border-color: var(--design-color);
+ box-shadow: inset 0 1px 2px rgba(255,255,255,.9), inset 0 -2px 3px rgba(3,7,18,.035), 0 12px 14px -10px rgba(3,7,18,.18), 0 24px 24px -18px rgba(3,7,18,.22), 0 0 8px color-mix(in srgb, var(--design-color) 14%, transparent);
+}
+#projeler .project-card:is(.effect-active, :focus-within) {
+ box-shadow: inset 0 1px 2px rgba(255,255,255,.9), inset 0 -2px 3px rgba(3,7,18,.035), 0 20px 22px -15px rgba(3,7,18,.2), 0 0 5px color-mix(in srgb, var(--design-color) 45%, transparent), 0 0 18px color-mix(in srgb, var(--design-color) 25%, transparent), 0 0 32px color-mix(in srgb, var(--design-color) 12%, transparent);
+}
+#projeler .design-dot { box-shadow: 0 0 5px var(--design-color), 0 0 10px color-mix(in srgb, var(--design-color) 45%, transparent); }
+#projeler .design-line { filter: drop-shadow(0 0 2px var(--design-color)); }
 
   </style>
 
