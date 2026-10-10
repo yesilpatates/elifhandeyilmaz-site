@@ -13,7 +13,7 @@ loadStylesheet("service-icons-styles", "assets/service-icons.css?v=20261009-site
 loadStylesheet("site-optimizations", "assets/optimizations.css?v=20261009-header-alignment-v1");
 loadStylesheet("education-separation-styles", "assets/education-separation.css");
 loadStylesheet("site-design-system", "assets/site-design-system.css?v=20261009-typography-v1");
-loadStylesheet("home-overview-styles", "assets/home-overview.css?v=20261009-overview-layout-v4");
+loadStylesheet("home-overview-styles", "assets/home-overview.css?v=20261010-services-four-rows-v1");
 
 const loadPromoProjects = () => {
   if (document.getElementById("promo-projects-script")) return;
@@ -40,11 +40,6 @@ const serviceIconEntries = [
     target: "marka",
     title: "Marka &<br>Kurumsal Kimlik",
     svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 16.7 8v4.4c0 3.5-2 6.4-4.7 8.1-2.7-1.7-4.7-4.6-4.7-8.1V8L12 3.5Z"></path><path d="M12 7.4v7.1"></path><path d="M9.9 10.6h4.2"></path><circle class="fill-accent" cx="7" cy="8" r="1.1"></circle><circle class="fill-accent" cx="17" cy="8" r="1.1"></circle></svg>'
-  },
-  {
-    target: "editoryal",
-    title: "Editoryal<br>Tasarım",
-    svg: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 6.5h5.8a2.1 2.1 0 0 1 1.7.8 2.1 2.1 0 0 1 1.7-.8h5.8v10.8h-5.8a2.1 2.1 0 0 0-1.7.8 2.1 2.1 0 0 0-1.7-.8H4.5Z"></path><path d="M12 7.3v10"></path><path d="M7.3 9.8h2.2"></path><path d="M7.3 12.2h2.2"></path><path d="M14.5 9.8h2.2"></path><path d="M14.5 12.2h2.2"></path></svg>'
   },
   {
     target: "web",

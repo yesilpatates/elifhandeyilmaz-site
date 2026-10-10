@@ -109,36 +109,38 @@
 }
 
 .home-overview .services-preview .service-mini-grid {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   align-content: start;
-  gap: 8px;
+  gap: 7px;
 }
 
 .home-overview .services-preview .service-mini-grid > .service-mini-card {
-  grid-column: span 2;
+  grid-column: auto;
   aspect-ratio: auto;
-  min-height: 72px;
-  gap: 5px;
-  padding: 6px 4px;
-  border-radius: 14px;
+  min-height: 42px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 11px;
+  padding: 7px 10px;
+  border-radius: 12px;
+  text-align: left;
 }
 
 .home-overview .services-preview .service-mini-icon {
-  width: 18px !important;
-  height: 18px !important;
+  order: 0;
+  width: 20px !important;
+  height: 20px !important;
 }
 
 .home-overview .services-preview .service-mini-title {
-  font-size: 0.62rem !important;
+  order: 1;
+  max-width: none;
+  font-size: 0.72rem !important;
   line-height: 1.2;
-}
-
-.home-overview .services-preview .service-mini-grid > .service-mini-card:nth-child(4) {
-  grid-column: 2 / span 2;
-}
-
-.home-overview .services-preview .service-mini-grid > .service-mini-card:nth-child(5) {
-  grid-column: 4 / span 2;
+  text-align: left;
+  white-space: nowrap;
 }
 
 .home-overview .education-preview .education-card {
@@ -252,21 +254,13 @@
   }
 
   .home-overview .services-preview .service-mini-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 7px;
   }
 
-  .home-overview .services-preview .service-mini-grid > .service-mini-card,
-  .home-overview .services-preview .service-mini-grid > .service-mini-card:nth-child(4),
-  .home-overview .services-preview .service-mini-grid > .service-mini-card:nth-child(5) {
+  .home-overview .services-preview .service-mini-grid > .service-mini-card {
     grid-column: auto;
-    min-height: 108px;
-  }
-
-  .home-overview .services-preview .service-mini-grid > .service-mini-card:last-child {
-    grid-column: 1 / -1;
-    width: calc(50% - 5px);
-    justify-self: center;
+    min-height: 42px;
   }
 
   .home-overview .education-card-content {
