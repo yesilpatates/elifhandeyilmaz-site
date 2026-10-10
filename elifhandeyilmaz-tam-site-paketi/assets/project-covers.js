@@ -165,7 +165,7 @@
     if (!cover) return;
     const title = card.querySelector(".project-body h3");
     const label = card.querySelector(".project-visual strong");
-    if (title) title.textContent = cover.title;
+    if (title && !card.classList.contains("project-card-brand")) title.textContent = cover.title;
     if (label) label.textContent = cover.label;
     if (!visual || !cover.src) return;
     const image = new Image();
