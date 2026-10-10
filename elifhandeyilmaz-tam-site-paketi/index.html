@@ -29,6 +29,18 @@
   <link id="service-icons-styles" rel="stylesheet" href="assets/service-icons.css?v=20261009-site-design-v1">
   <link id="site-design-system" rel="stylesheet" href="assets/site-design-system.css?v=20261009-header-alignment-v1">
   <style>
+@media (min-width: 1101px) {
+  #projeler .project-grid {
+    grid-template-columns: repeat(14, minmax(0, 1fr));
+    grid-template-rows: repeat(4, 66px) repeat(3, 54px);
+  }
+  #projeler .project-card:nth-child(1) { grid-column: 1 / span 6; grid-row: 1 / span 2; }
+  #projeler .project-card:nth-child(2) { grid-column: 7 / span 4; grid-row: 1 / span 4; }
+  #projeler .project-card:nth-child(3) { grid-column: 11 / span 4; grid-row: 1 / span 4; }
+  #projeler .project-card:nth-child(4) { grid-column: 1 / span 6; grid-row: 3 / span 2; }
+  #projeler .project-card:nth-child(5) { grid-column: 1 / span 7; grid-row: 5 / span 3; }
+  #projeler .project-card:nth-child(6) { grid-column: 8 / span 7; grid-row: 5 / span 3; }
+}
 #projeler .project-card:nth-child(n) {
   position: relative;
   height: 100%;
@@ -105,7 +117,7 @@
 }
 @media (min-width: 1101px) {
   #projeler .project-card-typography:nth-child(3) .project-body h3 {
-    font-size: clamp(1rem, 1.55vw, 1.5rem);
+    font-size: clamp(1.125rem, 1.75vw, 1.75rem);
   }
 }
 @media (max-width: 1100px) {
