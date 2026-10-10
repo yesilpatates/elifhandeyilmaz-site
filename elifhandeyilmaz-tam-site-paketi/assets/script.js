@@ -44,7 +44,7 @@
     if (document.getElementById("motion-projects-script")) return;
     const motionScript = document.createElement("script");
     motionScript.id = "motion-projects-script";
-    motionScript.src = "assets/motion-projects.js?v=20261009-promo-motion-card-fix-v1";
+    motionScript.src = "assets/motion-projects.js?v=20261010-project-typography-v1";
     motionScript.defer = true;
     document.body.appendChild(motionScript);
   };
@@ -58,7 +58,7 @@
 
   const loadCoreScript = () => {
     const coreScript = document.createElement("script");
-    coreScript.src = "assets/core-script.js?v=20261010-no-video-service-v4";
+    coreScript.src = "assets/core-script.js?v=20261010-project-typography-v1";
     coreScript.defer = true;
     coreScript.onload = loadEnhancements;
     coreScript.onerror = () => {
