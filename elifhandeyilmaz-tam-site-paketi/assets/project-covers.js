@@ -1,11 +1,6 @@
 (() => {
   const covers = [
-    {
-      title: "Marka & Kurumsal Kimlik",
-      label: "BRAND",
-      src: "assets/project-covers/brand-identity-camla-transparent.png",
-      alt: "Damla marka kimliği eskizi, renk paleti ve kırtasiye sunumu"
-    },
+    { title: "Marka & Kurumsal Kimlik", label: "BRAND" },
     { title: "Editoryal Tasarım", label: "EDITORIAL" },
     { title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
     { title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
@@ -165,25 +160,8 @@
     if (!cover) return;
     const title = card.querySelector(".project-body h3");
     const label = card.querySelector(".project-visual strong");
-    if (title && !card.classList.contains("project-card-brand")) title.textContent = cover.title;
+    if (title && !card.classList.contains("project-card-typography")) title.textContent = cover.title;
     if (label) label.textContent = cover.label;
-    if (!visual || !cover.src) return;
-    const image = new Image();
-    image.className = `project-cover-image${index === 0 ? " project-cover-featured" : ""} is-loading`;
-    image.alt = cover.alt;
-    image.setAttribute("aria-hidden", "true");
-    image.loading = index < 2 ? "eager" : "lazy";
-    image.decoding = "async";
-    image.referrerPolicy = "no-referrer";
-    image.addEventListener("load", () => {
-      image.classList.remove("is-loading");
-      image.removeAttribute("aria-hidden");
-      visual.replaceChildren(image);
-      visual.classList.add("has-cover");
-    }, { once: true });
-    image.addEventListener("error", () => image.remove(), { once: true });
-    visual.appendChild(image);
-    image.src = cover.src;
   });
 
   const projectIntro = document.querySelector("#projeler .section-heading p");

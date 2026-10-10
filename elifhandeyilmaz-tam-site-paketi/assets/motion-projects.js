@@ -73,7 +73,7 @@
   const body = card.querySelector(".project-body");
   const title = body?.querySelector("h3");
 
-  if (title) title.textContent = "Video & Animasyon Tasarımı";
+  if (title && !card.classList.contains("project-card-typography")) title.textContent = "Video & Animasyon Tasarımı";
 
   const modal = document.createElement("div");
   modal.className = "motion-modal";
