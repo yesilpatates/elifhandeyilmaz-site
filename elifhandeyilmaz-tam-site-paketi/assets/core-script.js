@@ -26,7 +26,7 @@ const loadPromoProjects = () => {
 
 if (!document.getElementById("project-cover-script")) {
   const projectCoverScript = document.createElement("script");
-  projectCoverScript.src = "assets/project-covers.js?v=20261009-damla-transparent-v2";
+  projectCoverScript.src = "assets/project-covers.js?v=20261010-brand-editorial-v1";
   projectCoverScript.defer = true;
   projectCoverScript.id = "project-cover-script";
   projectCoverScript.addEventListener("load", loadPromoProjects, { once: true });
