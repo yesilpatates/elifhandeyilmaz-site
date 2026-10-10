@@ -28,7 +28,14 @@
   <link id="hero-title-styles" rel="stylesheet" href="assets/hero-title.css?v=20261009-handwritten-hero-v1">
   <link id="service-icons-styles" rel="stylesheet" href="assets/service-icons.css?v=20261009-site-design-v1">
   <link id="site-design-system" rel="stylesheet" href="assets/site-design-system.css?v=20261009-header-alignment-v1">
-  <style>
+  <!--
+Project card motion adapted from https://uiverse.io/dexter-st/fuzzy-dog-81
+MIT License — Copyright (c) 2026 dexter-st
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+<style>
 #projeler .project-card:nth-child(n) {
   border-width: 2px;
   border-style: solid;
@@ -144,6 +151,200 @@
     gap: 10px;
   }
 }
+/* Adapted from dexter-st / fuzzy-dog-81 on Uiverse (MIT). */
+#projeler .project-card:nth-child(1) { --design-color: #ff942f; }
+#projeler .project-card:nth-child(2) { --design-color: #ed4e93; }
+#projeler .project-card:nth-child(3) { --design-color: #52b947; }
+#projeler .project-card:nth-child(4) { --design-color: #9855eb; }
+#projeler .project-card:nth-child(5) { --design-color: #4589f5; }
+#projeler .project-card:nth-child(6) { --design-color: #10b9ba; }
+#projeler .project-card {
+  --dot-size: 6px; --line-weight: 1px; --animation-speed: .35s;
+  isolation: isolate; overflow: visible;
+  transition: transform .2s ease-in-out, box-shadow .2s ease-in-out, border-radius .3s ease-in-out;
+}
+#projeler .project-card:hover { transform: none; box-shadow: none; }
+#projeler .project-card:is(.effect-active, :focus-within) {
+  transform: scale(1.01); border-radius: 12px;
+  box-shadow: 0 1px 1px rgba(3,7,18,.02), 0 5px 4px rgba(3,7,18,.04), 0 12px 9px rgba(3,7,18,.06), 0 20px 15px rgba(3,7,18,.08), 0 32px 24px color-mix(in srgb, var(--design-color) 14%, transparent);
+}
+#projeler .project-card:active { transform: scale(.98); border-radius: 16px; }
+#projeler .project-design-effect { position: absolute; inset: -5px; pointer-events: none; z-index: -1; }
+#projeler .project-design-effect::before { content: ''; position: absolute; inset: 0; border-radius: 18px; background: var(--design-color); opacity: 0; }
+#projeler .project-card:is(.effect-active, :focus-within) .project-design-effect::before { animation: project-design-halo 1.4s ease-in-out forwards; }
+@keyframes project-design-halo { 80% { opacity: 0; } 100% { opacity: .09; } }
+/* Dots */
+#projeler .design-dot {
+  position: absolute;
+  width: var(--dot-size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--design-color);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+#projeler .project-card:is(.effect-active, :focus-within) .design-dot.top.left {
+  top: 50%;
+  left: 20%;
+  animation: project-move-top-left var(--animation-speed) ease-in-out forwards;
+}
+@keyframes project-move-top-left {
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    top: calc(var(--dot-size) * -0.5);
+    left: calc(var(--dot-size) * -0.5);
+    opacity: 1;
+  }
+}
+#projeler .project-card:is(.effect-active, :focus-within) .design-dot.top.right {
+  top: 50%;
+  right: 20%;
+  animation: project-move-top-right var(--animation-speed) ease-in-out forwards;
+  animation-delay: calc(var(--animation-speed) * 0.6);
+}
+@keyframes project-move-top-right {
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    top: calc(var(--dot-size) * -0.5);
+    right: calc(var(--dot-size) * -0.5);
+    opacity: 1;
+  }
+}
+#projeler .project-card:is(.effect-active, :focus-within) .design-dot.bottom.right {
+  bottom: 50%;
+  right: 20%;
+  animation: project-move-bottom-right var(--animation-speed) ease-in-out forwards;
+  animation-delay: calc(var(--animation-speed) * 1.2);
+}
+@keyframes project-move-bottom-right {
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    bottom: calc(var(--dot-size) * -0.5);
+    right: calc(var(--dot-size) * -0.5);
+    opacity: 1;
+  }
+}
+#projeler .project-card:is(.effect-active, :focus-within) .design-dot.bottom.left {
+  bottom: 50%;
+  left: 20%;
+  animation: project-move-bottom-left var(--animation-speed) ease-in-out forwards;
+  animation-delay: calc(var(--animation-speed) * 1.8);
+}
+@keyframes project-move-bottom-left {
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    bottom: calc(var(--dot-size) * -0.5);
+    left: calc(var(--dot-size) * -0.5);
+    opacity: 1;
+  }
+}
+
+/* Lines */
+#projeler .design-line {
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+#projeler .design-line.horizontal {
+  height: var(--line-weight);
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #0000 0 calc(var(--line-weight) * 2),
+    var(--design-color) calc(var(--line-weight) * 2) calc(var(--line-weight) * 4)
+  );
+}
+#projeler .design-line.top {
+  top: calc(var(--line-weight) * -0.5);
+}
+#projeler .design-line.bottom {
+  bottom: calc(var(--line-weight) * -0.5);
+}
+#projeler .design-line.vertical {
+  width: var(--line-weight);
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #0000 0 calc(var(--line-weight) * 2),
+    var(--design-color) calc(var(--line-weight) * 2) calc(var(--line-weight) * 4)
+  );
+}
+#projeler .design-line.left {
+  left: calc(var(--line-weight) * -0.5);
+}
+#projeler .design-line.right {
+  right: calc(var(--line-weight) * -0.5);
+}
+
+#projeler .design-line.top {
+  transform-origin: top left;
+  transform: rotate(5deg) scaleX(0);
+}
+#projeler .project-card:is(.effect-active, :focus-within) .design-line.top {
+  animation: project-draw-top var(--animation-speed) ease-in-out forwards;
+  animation-delay: calc(var(--animation-speed) * 0.8);
+}
+@keyframes project-draw-top {
+  100% {
+    transform: rotate(0deg) scaleX(1);
+  }
+}
+#projeler .design-line.bottom {
+  transform-origin: bottom right;
+  transform: rotate(5deg) scaleX(0);
+}
+#projeler .project-card:is(.effect-active, :focus-within) .design-line.bottom {
+  animation: project-draw-bottom var(--animation-speed) ease-in-out forwards;
+  animation-delay: calc(var(--animation-speed) * 2);
+}
+@keyframes project-draw-bottom {
+  100% {
+    transform: rotate(0deg) scaleX(1);
+  }
+}
+
+#projeler .design-line.left {
+  transform-origin: bottom left;
+  transform: rotate(0deg) scaleY(0);
+}
+#projeler .project-card:is(.effect-active, :focus-within) .design-line.left {
+  animation: project-draw-left var(--animation-speed) ease-in-out forwards;
+  animation-delay: calc(var(--animation-speed) * 2.4);
+}
+@keyframes project-draw-left {
+  100% {
+    transform: rotate(0deg) scaleY(1);
+  }
+}
+
+#projeler .design-line.right {
+  transform-origin: top right;
+  transform: rotate(5deg) scaleY(0);
+}
+#projeler .project-card:is(.effect-active, :focus-within) .design-line.right {
+  animation: project-draw-right var(--animation-speed) ease-in-out forwards;
+  animation-delay: calc(var(--animation-speed) * 1.4);
+}
+@keyframes project-draw-right {
+  100% {
+    transform: rotate(0deg) scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+ #projeler .project-card { transition: none; }
+ #projeler .project-card:is(.effect-active, :focus-within), #projeler .project-card:active { transform: none; }
+ #projeler .project-design-effect * , #projeler .project-design-effect::before { animation: none !important; transition: none; }
+}
+
   </style>
 
   <script type="application/ld+json">
@@ -365,7 +566,7 @@
               <h3><span class="project-title-line">Marka &amp;</span> <span class="project-title-line">Kurumsal Kimlik</span></h3>
               <p class="project-services">Logo · Kimlik · Marka Rehberi</p>
             </div>
-          </article>
+          <span class="project-design-effect" aria-hidden="true"><span class="design-line horizontal top"></span><span class="design-line vertical right"></span><span class="design-line horizontal bottom"></span><span class="design-line vertical left"></span><span class="design-dot top left"></span><span class="design-dot top right"></span><span class="design-dot bottom right"></span><span class="design-dot bottom left"></span></span></article>
 
           <article class="project-card project-card-typography reveal">
             <div class="project-visual visual-editorial" hidden aria-hidden="true"></div>
@@ -375,7 +576,7 @@
               <h3><span class="project-title-line">Editoryal</span> <span class="project-title-line">Tasarım</span></h3>
               <p class="project-services">Dergi · Katalog · Kitap</p>
             </div>
-          </article>
+          <span class="project-design-effect" aria-hidden="true"><span class="design-line horizontal top"></span><span class="design-line vertical right"></span><span class="design-line horizontal bottom"></span><span class="design-line vertical left"></span><span class="design-dot top left"></span><span class="design-dot top right"></span><span class="design-dot bottom right"></span><span class="design-dot bottom left"></span></span></article>
 
           <article class="project-card project-card-typography reveal">
             <div class="project-visual visual-event" hidden aria-hidden="true"></div>
@@ -385,7 +586,7 @@
               <h3><span class="project-title-line">Etkinlik &amp;</span> <span class="project-title-line">Organizasyon Tasarımı</span></h3>
               <p class="project-services">Davetiye · Yaka Kartı · Etkinlik Kimliği</p>
             </div>
-          </article>
+          <span class="project-design-effect" aria-hidden="true"><span class="design-line horizontal top"></span><span class="design-line vertical right"></span><span class="design-line horizontal bottom"></span><span class="design-line vertical left"></span><span class="design-dot top left"></span><span class="design-dot top right"></span><span class="design-dot bottom right"></span><span class="design-dot bottom left"></span></span></article>
 
           <article class="project-card project-card-typography reveal">
             <div class="project-visual visual-promo" hidden aria-hidden="true"></div>
@@ -395,7 +596,7 @@
               <h3><span class="project-title-line">Tanıtım &amp;</span> <span class="project-title-line">İletişim Tasarımı</span></h3>
               <p class="project-services">Broşür · Afiş · Sunum</p>
             </div>
-          </article>
+          <span class="project-design-effect" aria-hidden="true"><span class="design-line horizontal top"></span><span class="design-line vertical right"></span><span class="design-line horizontal bottom"></span><span class="design-line vertical left"></span><span class="design-dot top left"></span><span class="design-dot top right"></span><span class="design-dot bottom right"></span><span class="design-dot bottom left"></span></span></article>
 
           <article class="project-card project-card-typography reveal">
             <div class="project-visual visual-ui" hidden aria-hidden="true"></div>
@@ -405,7 +606,7 @@
               <h3><span class="project-title-line">Web &amp;</span> <span class="project-title-line">Arayüz Tasarımı</span></h3>
               <p class="project-services">Web Sitesi · UI/UX · Responsive</p>
             </div>
-          </article>
+          <span class="project-design-effect" aria-hidden="true"><span class="design-line horizontal top"></span><span class="design-line vertical right"></span><span class="design-line horizontal bottom"></span><span class="design-line vertical left"></span><span class="design-dot top left"></span><span class="design-dot top right"></span><span class="design-dot bottom right"></span><span class="design-dot bottom left"></span></span></article>
 
           <article class="project-card project-card-typography reveal">
             <div class="project-visual visual-motion" hidden aria-hidden="true"></div>
@@ -415,7 +616,7 @@
               <h3><span class="project-title-line">Video &amp;</span> <span class="project-title-line">Animasyon Tasarımı</span></h3>
               <p class="project-services">Video · Animasyon · Hareketli Grafik</p>
             </div>
-          </article>
+          <span class="project-design-effect" aria-hidden="true"><span class="design-line horizontal top"></span><span class="design-line vertical right"></span><span class="design-line horizontal bottom"></span><span class="design-line vertical left"></span><span class="design-dot top left"></span><span class="design-dot top right"></span><span class="design-dot bottom right"></span><span class="design-dot bottom left"></span></span></article>
         </div>
       </div>
     </section>
@@ -625,5 +826,26 @@
 
   <script src="assets/script.js?v=20261010-text-only-projects-v1"></script>
   <script src="assets/certificates.js?v=20260809-2"></script>
+<script>
+(() => {
+ const cards = document.querySelectorAll('#projeler .project-card');
+ const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+ cards.forEach(card => {
+  let timer;
+  card.addEventListener('pointerenter', event => {
+   if (event.pointerType === 'mouse' && !reduce.matches) { clearTimeout(timer); card.classList.add('effect-active'); }
+  });
+  card.addEventListener('pointerleave', () => card.classList.remove('effect-active'));
+  card.addEventListener('pointerdown', event => {
+   if (event.pointerType !== 'mouse' && !reduce.matches) {
+    clearTimeout(timer); card.classList.add('effect-active');
+    timer = setTimeout(() => card.classList.remove('effect-active'), 1600);
+   }
+  });
+  card.addEventListener('pointercancel', () => card.classList.remove('effect-active'));
+  reduce.addEventListener('change', () => card.classList.remove('effect-active'));
+ });
+})();
+</script>
 </body>
 </html>
