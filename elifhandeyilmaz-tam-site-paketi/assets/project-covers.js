@@ -1,26 +1,9 @@
 (() => {
   const covers = [
-    {
-      title: "Marka & Kurumsal Kimlik",
-      label: "BRAND",
-      src: "assets/project-covers/brand-identity-camla-transparent.png",
-      alt: "Damla marka kimliği eskizi, renk paleti ve kırtasiye sunumu"
-    },
-    {
-      title: "Editoryal Tasarım", label: "EDITORIAL", category: true,
-      src: "assets/project-covers/editorial-design.webp",
-      alt: "Açık dergi, yayın kapağı ve renk paletiyle editoryal tasarım sunumu"
-    },
-    {
-      title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT", category: true,
-      src: "assets/project-covers/event-organization.webp",
-      alt: "Davetiye, yaka kartı ve roll-up ile etkinlik kimliği sunumu"
-    },
-    {
-      title: "Tanıtım & İletişim Tasarımı", label: "PROMO", category: true,
-      src: "assets/project-covers/promotion-communication.webp",
-      alt: "Afiş, broşür ve tanıtım materyallerinin tasarım sunumu"
-    },
+    { title: "Marka & Kurumsal Kimlik", label: "BRAND" },
+    { title: "Editoryal Tasarım", label: "EDITORIAL" },
+    { title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
+    { title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
     { title: "Web & Arayüz Tasarımı", label: "UI / WEB" },
     { title: "Video & Animasyon Tasarımı", label: "MOTION" }
   ];
@@ -179,23 +162,6 @@
     const label = card.querySelector(".project-visual strong");
     if (title && !card.classList.contains("project-card-typography")) title.textContent = cover.title;
     if (label) label.textContent = cover.label;
-    if (!visual || !cover.src) return;
-    const image = new Image();
-    image.className = `project-cover-image${index === 0 ? " project-cover-featured" : ""}${cover.category ? " project-cover-category" : ""} is-loading`;
-    image.alt = cover.alt;
-    image.setAttribute("aria-hidden", "true");
-    image.loading = index < 2 ? "eager" : "lazy";
-    image.decoding = "async";
-    image.referrerPolicy = "no-referrer";
-    image.addEventListener("load", () => {
-      image.classList.remove("is-loading");
-      image.removeAttribute("aria-hidden");
-      visual.replaceChildren(image);
-      visual.classList.add("has-cover");
-    }, { once: true });
-    image.addEventListener("error", () => image.remove(), { once: true });
-    visual.appendChild(image);
-    image.src = cover.src;
   });
 
   const projectIntro = document.querySelector("#projeler .section-heading p");
