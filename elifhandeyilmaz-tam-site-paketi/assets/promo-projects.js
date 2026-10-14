@@ -11,7 +11,7 @@
   const projects = [
     {
       title: 'Grand Seyahat – Afiş Tasarımı',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Afiş ve Açık Hava Reklamı',
       image: 'assets/promo-projects/grand-seyahat-afis.webp',
       alt: 'Grand Seyahat için hazırlanan afiş tasarımının havaalanı reklam panosu mockupı',
@@ -26,7 +26,7 @@
     },
     {
       title: 'Special Burger – Afiş Tasarımı',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Ürün Tanıtımı ve Mekân İçi Reklam',
       image: 'assets/promo-projects/special-burger-afis.webp',
       alt: 'Special Burger için hazırlanan ürün afişinin restoran içi ışıklı reklam panosu mockupı',
@@ -41,7 +41,7 @@
     },
     {
       title: 'Eğitim Zamanı – Etkinlik Afişi',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Etkinlik Duyurusu ve Kurumsal İletişim',
       image: 'assets/promo-projects/egitim-zamani-afis.webp',
       alt: 'Eğitim Zamanı için hazırlanan etkinlik afişinin kurumsal mekân içi ışıklı pano mockupı',
@@ -56,7 +56,7 @@
     },
     {
       title: 'Haydarpaşa Liman Hizmetleri – Dergi Reklamı',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Kurumsal İlan ve Hizmet Tanıtımı',
       image: 'assets/promo-projects/haydarpasa-liman-dergi-reklami.webp',
       alt: 'Haydarpaşa Liman Hizmetleri için hazırlanan tam sayfa dergi reklamı mockupı',
@@ -71,7 +71,7 @@
     },
     {
       title: 'Yacht News – Yeni Sayı Dijital Tanıtımı',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Web Sitesi ve Sosyal Medya Duyurusu',
       image: 'assets/promo-projects/yacht-news-yeni-sayi-dijital-tanitim.webp',
       alt: 'Yacht News yeni sayı kapağının web sitesi ve sosyal medya uygulamalarını gösteren mockup',
@@ -86,7 +86,7 @@
     },
     {
       title: 'Neta Sea – Yeni Sayı Dijital Tanıtımı',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Web Sitesi, Feed ve Hikâye Uygulamaları',
       image: 'assets/promo-projects/neta-sea-yeni-sayi-dijital-tanitim.webp',
       alt: 'Neta Sea 82. sayı için hazırlanan web sitesi, sosyal medya gönderisi ve hikâye uygulamaları mockupı',
@@ -101,7 +101,7 @@
     },
     {
       title: 'Turizm – Üç Kırımlı Tanıtım Broşürü',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Basılı Tanıtım ve Seyahat İletişimi',
       image: 'assets/promo-projects/turizm-tanitim-brosuru.webp',
       alt: 'Turizm firması için hazırlanan üç kırımlı tanıtım broşürünün masa üstü mockupı',
@@ -116,7 +116,7 @@
     },
     {
       title: 'HeliPLAT – 10. Yıl Dijital Davetiyesi',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Etkinlik Davetiyesi ve Dijital Uyarlamalar',
       image: 'assets/promo-projects/heliplat-10-yil-dijital-davetiye.webp',
       alt: 'HeliPLAT 10. yıl kutlama davetiyesinin e-posta, web ve sosyal medya uygulamaları mockupı',
@@ -131,7 +131,7 @@
     },
     {
       title: 'Ayşe & Yusuf – Nikâh Davetiyesi',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Özel Gün Davetiyesi ve Basılı İletişim',
       image: 'assets/promo-projects/ayse-yusuf-nikah-davetiyesi.webp',
       alt: 'Ayşe ve Yusuf için hazırlanan çiçek desenli nikâh davetiyesi mockupı',
@@ -146,7 +146,7 @@
     },
     {
       title: 'XV. Ulusal Gemi ve Yat Tasarım Yarışması – Afiş Tasarımı',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Yarışma Duyurusu ve Kurumsal Afiş',
       image: 'assets/promo-projects/xv-ulusal-gemi-yat-tasarim-yarismasi-afis.webp',
       alt: 'XV. Ulusal Gemi ve Yat Tasarım Yarışması için hazırlanan afişin ışıklı pano mockupı',
@@ -161,7 +161,7 @@
     },
     {
       title: 'Organik Zeytinyağı – Etiket ve Ambalaj Tasarımı',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Şişe Etiketi ve Ürün Ambalajı',
       image: 'assets/promo-projects/organik-zeytinyagi-etiket-ambalaj.webp',
       alt: 'Organik zeytinyağı için hazırlanan şişe etiketi ve kutu ambalajı mockupı',
@@ -176,7 +176,7 @@
     },
     {
       title: 'Dalından Reçel Ailesi – Kavanoz Etiketleri',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Gıda Ambalajı ve Ürün Serisi',
       image: 'assets/promo-projects/dalindan-recel-kavanoz-etiketleri.webp',
       alt: 'Dalından Reçel Ailesi için hazırlanan kayısı ve çilek reçeli kavanoz etiketleri mockupı',
@@ -191,7 +191,7 @@
     },
     {
       title: 'Burgers Cafe & Bar – A3 Amerikan Servis',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Menü ve Masa Üstü İletişimi',
       image: 'assets/promo-projects/burgers-a3-amerikan-servis.webp',
       alt: 'Burgers Cafe and Bar için hazırlanan A3 Amerikan servis menü tasarımı mockupı',
@@ -206,7 +206,7 @@
     },
     {
       title: 'Theatre Magazine – Dergi Kapağı',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Editoryal Kapak ve Magazin Yayını',
       image: 'assets/promo-projects/theatre-magazine-dergi-kapagi.webp',
       alt: 'Theatre Magazine için hazırlanan Alessandra Ambrosio temalı dergi kapağı mockupı',
@@ -221,7 +221,7 @@
     },
     {
       title: 'Magazin Dünyası – Kapak ve İç Sayfa Tasarımı',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Magazin Dergisi ve Editoryal Uygulama',
       image: 'assets/promo-projects/magazin-dunyasi-dergi-tasarimi.webp',
       alt: 'Magazin Dünyası için hazırlanan kapak ve açık iç sayfa tasarımı mockupı',
@@ -237,7 +237,7 @@
 
     {
       title: 'Canvera – Kurumsal Kartvizit Tasarımı',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Sağlık Sektörü / Kurumsal İletişim',
       image: 'assets/promo-projects/canvera-kartvizit.avif',
       alt: 'Canvera için hazırlanan kurumsal kartvizit tasarımı',
@@ -252,7 +252,7 @@
     },
     {
       title: 'Pilavyeri – Kurumsal Kartvizit Tasarımı',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Yeme-İçme / Kurumsal İletişim',
       image: 'assets/promo-projects/pilavyeri-kartvizit.avif',
       alt: 'Pilavyeri için hazırlanan kurumsal kartvizit tasarımı',
@@ -267,7 +267,7 @@
     },
     {
       title: 'Coko Pet Shop – Kurumsal Kartvizit Tasarımı',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Pet Shop / Kurumsal İletişim',
       image: 'assets/promo-projects/coko-pet-shop-kartvizit.avif',
       alt: 'Coko Pet Shop için hazırlanan kurumsal kartvizit tasarımı',
@@ -282,7 +282,7 @@
     },
     {
       title: 'KÖK Kahve Atölyesi – Üç Kırımlı Tanıtım Broşürü',
-      category: 'Tanıtım & İletişim Tasarımı',
+      category: 'Basılı & Dijital Tanıtım Tasarımı',
       subtitle: 'Kahve Markası / Basılı Tanıtım',
       image: 'assets/promo-projects/kok-kahve-atolyesi-brosur.avif',
       alt: 'KÖK Kahve Atölyesi için hazırlanan üç kırımlı tanıtım broşürü',
@@ -424,7 +424,7 @@
   const trigger = document.createElement('button');
   trigger.className = 'project-card-modal-trigger promo-card-modal-trigger';
   trigger.type = 'button';
-  trigger.setAttribute('aria-label', 'Tanıtım & İletişim Tasarımı projelerini galeride görüntüle');
+  trigger.setAttribute('aria-label', 'Basılı & Dijital Tanıtım Tasarımı projelerini galeride görüntüle');
   trigger.addEventListener('click', () => openModal(0));
   promoCard.appendChild(trigger);
 

@@ -3,7 +3,7 @@
     { title: "Marka & Kurumsal Kimlik", label: "BRAND" },
     { title: "Editoryal Tasarım", label: "EDITORIAL" },
     { title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
-    { title: "Tanıtım & İletişim Tasarımı", label: "PROMO" },
+    { title: "Basılı & Dijital Tanıtım Tasarımı", label: "PROMO" },
     { title: "Web & Arayüz Tasarımı", label: "UI / WEB" },
     { title: "Video & Animasyon Tasarımı", label: "MOTION" }
   ];
