@@ -373,15 +373,11 @@
   }
 
   .main-nav {
-    display: grid;
-    grid-template-columns: 82px 87px 72px 85px 44px 72px;
-    column-gap: clamp(8px, 1vw, 14px);
+    display: flex;
+    align-items: center;
     justify-content: center;
+    gap: clamp(16px, 1.5vw, 20px);
     white-space: nowrap;
-  }
-
-  .main-nav a {
-    justify-self: start;
   }
 
   .language-switch {
