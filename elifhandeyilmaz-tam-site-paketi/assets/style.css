@@ -1340,15 +1340,15 @@ body.contact-modal-open {
   position: fixed;
   left: 0;
   top: 0;
-  width: 360px;
-  height: 360px;
+  width: 210px;
+  height: 210px;
   z-index: 9998;
   border-radius: 50%;
   pointer-events: none;
   opacity: 0;
   transform: translate3d(-50%, -50%, 0);
   will-change: left, top, opacity;
-  filter: blur(22px);
+  filter: blur(10px);
   mix-blend-mode: screen;
   background:
     radial-gradient(

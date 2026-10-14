@@ -119,10 +119,10 @@
 
 /* Refined #07beb8 cursor glow */
 .cursor-glow {
-  width: 260px;
-  height: 260px;
+  width: 210px;
+  height: 210px;
   opacity: 0;
-  filter: blur(12px);
+  filter: blur(10px);
   mix-blend-mode: normal;
   background: radial-gradient(
     circle,
