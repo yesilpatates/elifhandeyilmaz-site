@@ -121,3 +121,185 @@
 @media(prefers-reduced-motion:reduce){.ehy-section *{transition:none!important}}
 
 .ehy-section .ehy-brand-link{position:absolute;inset:0;z-index:3}
+
+/* Adapted from dexter-st, https://uiverse.io/dexter-st/fuzzy-dog-81
+MIT License. Copyright (c) 2026 dexter-st
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
+
+.ehy-section .ehy-pf-card{--dot-size:6px;--line-weight:1px;--animation-speed:.35s;--dot-color:var(--c);--line-color:var(--c);overflow:visible}
+.ehy-section .ehy-pf-card:is(:hover,:focus-within){transform:none}
+.ehy-section .ehy-pf-card [class*="ehy-fx-"]{pointer-events:none;z-index:4}
+/* Dots */
+.ehy-fx-dot {
+  position: absolute;
+  width: var(--dot-size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--dot-color);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.ehy-section .ehy-pf-card:is(:hover,:focus-within) .ehy-fx-dot.ehy-fx-top.ehy-fx-left {
+  top: 50%;
+  left: 20%;
+  animation: ehy-fx-move-top-left var(--animation-speed) ease-in-out forwards;
+}
+@keyframes ehy-fx-move-top-left {
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    top: calc(var(--dot-size) * -0.5);
+    left: calc(var(--dot-size) * -0.5);
+    opacity: 1;
+  }
+}
+.ehy-section .ehy-pf-card:is(:hover,:focus-within) .ehy-fx-dot.ehy-fx-top.ehy-fx-right {
+  top: 50%;
+  right: 20%;
+  animation: ehy-fx-move-top-right var(--animation-speed) ease-in-out forwards;
+  animation-delay: calc(var(--animation-speed) * 0.6);
+}
+@keyframes ehy-fx-move-top-right {
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    top: calc(var(--dot-size) * -0.5);
+    right: calc(var(--dot-size) * -0.5);
+    opacity: 1;
+  }
+}
+.ehy-section .ehy-pf-card:is(:hover,:focus-within) .ehy-fx-dot.ehy-fx-bottom.ehy-fx-right {
+  bottom: 50%;
+  right: 20%;
+  animation: ehy-fx-move-bottom-right var(--animation-speed) ease-in-out forwards;
+  animation-delay: calc(var(--animation-speed) * 1.2);
+}
+@keyframes ehy-fx-move-bottom-right {
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    bottom: calc(var(--dot-size) * -0.5);
+    right: calc(var(--dot-size) * -0.5);
+    opacity: 1;
+  }
+}
+.ehy-section .ehy-pf-card:is(:hover,:focus-within) .ehy-fx-dot.ehy-fx-bottom.ehy-fx-left {
+  bottom: 50%;
+  left: 20%;
+  animation: ehy-fx-move-bottom-left var(--animation-speed) ease-in-out forwards;
+  animation-delay: calc(var(--animation-speed) * 1.8);
+}
+@keyframes ehy-fx-move-bottom-left {
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    bottom: calc(var(--dot-size) * -0.5);
+    left: calc(var(--dot-size) * -0.5);
+    opacity: 1;
+  }
+}
+
+/* Lines */
+.ehy-fx-line {
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+.ehy-fx-line.ehy-fx-horizontal {
+  height: var(--line-weight);
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #0000 0 calc(var(--line-weight) * 2),
+    var(--line-color) calc(var(--line-weight) * 2) calc(var(--line-weight) * 4)
+  );
+}
+.ehy-fx-line.ehy-fx-top {
+  top: calc(var(--line-weight) * -0.5);
+}
+.ehy-fx-line.ehy-fx-bottom {
+  bottom: calc(var(--line-weight) * -0.5);
+}
+.ehy-fx-line.ehy-fx-vertical {
+  width: var(--line-weight);
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #0000 0 calc(var(--line-weight) * 2),
+    var(--line-color) calc(var(--line-weight) * 2) calc(var(--line-weight) * 4)
+  );
+}
+.ehy-fx-line.ehy-fx-left {
+  left: calc(var(--line-weight) * -0.5);
+}
+.ehy-fx-line.ehy-fx-right {
+  right: calc(var(--line-weight) * -0.5);
+}
+
+.ehy-fx-line.ehy-fx-top {
+  transform-origin: top left;
+  transform: rotate(5deg) scaleX(0);
+}
+.ehy-section .ehy-pf-card:is(:hover,:focus-within) .ehy-fx-line.ehy-fx-top {
+  animation: ehy-fx-draw-top var(--animation-speed) ease-in-out forwards;
+  animation-delay: calc(var(--animation-speed) * 0.8);
+}
+@keyframes ehy-fx-draw-top {
+  100% {
+    transform: rotate(0deg) scaleX(1);
+  }
+}
+.ehy-fx-line.ehy-fx-bottom {
+  transform-origin: bottom right;
+  transform: rotate(5deg) scaleX(0);
+}
+.ehy-section .ehy-pf-card:is(:hover,:focus-within) .ehy-fx-line.ehy-fx-bottom {
+  animation: ehy-fx-draw-bottom var(--animation-speed) ease-in-out forwards;
+  animation-delay: calc(var(--animation-speed) * 2);
+}
+@keyframes ehy-fx-draw-bottom {
+  100% {
+    transform: rotate(0deg) scaleX(1);
+  }
+}
+
+.ehy-fx-line.ehy-fx-left {
+  transform-origin: bottom left;
+  transform: rotate(0deg) scaleY(0);
+}
+.ehy-section .ehy-pf-card:is(:hover,:focus-within) .ehy-fx-line.ehy-fx-left {
+  animation: ehy-fx-draw-left var(--animation-speed) ease-in-out forwards;
+  animation-delay: calc(var(--animation-speed) * 2.4);
+}
+@keyframes ehy-fx-draw-left {
+  100% {
+    transform: rotate(0deg) scaleY(1);
+  }
+}
+
+.ehy-fx-line.ehy-fx-right {
+  transform-origin: top right;
+  transform: rotate(5deg) scaleY(0);
+}
+.ehy-section .ehy-pf-card:is(:hover,:focus-within) .ehy-fx-line.ehy-fx-right {
+  animation: ehy-fx-draw-right var(--animation-speed) ease-in-out forwards;
+  animation-delay: calc(var(--animation-speed) * 1.4);
+}
+@keyframes ehy-fx-draw-right {
+  100% {
+    transform: rotate(0deg) scaleY(1);
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+.ehy-section .ehy-pf-card [class*="ehy-fx-"]{animation:none!important}
+.ehy-section .ehy-pf-card:is(:hover,:focus-within) .ehy-fx-dot{opacity:1}
+.ehy-section .ehy-pf-card:is(:hover,:focus-within) .ehy-fx-line{transform:none}
+.ehy-fx-dot.ehy-fx-top{top:-3px}.ehy-fx-dot.ehy-fx-bottom{bottom:-3px}.ehy-fx-dot.ehy-fx-left{left:-3px}.ehy-fx-dot.ehy-fx-right{right:-3px}
+}
