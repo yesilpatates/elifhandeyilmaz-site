@@ -1,7 +1,7 @@
 (() => {
   const covers = [
     { title: "Marka & Kurumsal Kimlik", label: "BRAND" },
-    { title: "Editoryal Tasarım", label: "EDITORIAL" },
+    { title: "Editoryal", label: "EDITORIAL" },
     { title: "Etkinlik & Organizasyon Tasarımı", label: "EVENT" },
     { title: "Basılı & Dijital Tanıtım Tasarımı", label: "PROMO" },
     { title: "Web & Arayüz Tasarımı", label: "UI / WEB" },
