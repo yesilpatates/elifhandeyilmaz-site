@@ -1,0 +1,123 @@
+
+
+.ehy-section{max-width:1040px;margin:0 auto;padding:72px 16px;}
+.ehy-section+.ehy-section{border-top:1px solid var(--line);}
+
+/* Bölüm başlığı — mevcut sitedeki küçük etiket + büyük başlık yapısı */
+.ehy-eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-dark);font-weight:500;margin:0 0 10px;display:flex;align-items:center;gap:10px;}
+.ehy-eyebrow::before{content:"";width:24px;height:2px;background:var(--accent);}
+.ehy-section h2{font-size:30px;line-height:1.2;margin:0 0 36px;font-weight:600;max-width:640px;}
+.ehy-head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;}
+.ehy-section .ehy-head-row h2{margin-bottom:36px}
+
+/* ---------- PROJELER (A: Kaydırmalı) ---------- */
+.ehy-pf-grid{display:grid;grid-template-columns:repeat(5,1fr);grid-auto-rows:130px;grid-template-areas:"a a b c c" "d e e f f";gap:14px;}
+.ehy-pf-card{display:flex;flex-direction:column;justify-content:flex-end;padding:18px;background:var(--surface-soft);border:1px solid var(--line);border-radius:12px;text-decoration:none;color:var(--ink);position:relative;min-width:0;transition:border-color .25s,transform .25s;}
+.ehy-pf-card::before{content:"";position:absolute;top:18px;left:18px;width:8px;height:8px;border-radius:50%;background:var(--c);}
+.ehy-pf-no{position:absolute;top:14px;right:18px;font-size:11px;letter-spacing:.1em;color:var(--muted);}
+.ehy-pf-card h3{font-size:17px;font-weight:600;line-height:1.25;margin:0 0 5px;}
+.ehy-pf-card p{font-size:12px;color:var(--muted);margin:0;}
+.ehy-pf-card .ehy-go{position:absolute;bottom:18px;right:18px;font-size:14px;color:var(--c);opacity:0;transform:translateX(-4px);transition:.25s;}
+.ehy-pf-card:hover{border-color:var(--c);transform:translateY(-3px);}
+.ehy-pf-card:hover .ehy-go{opacity:1;transform:none;}
+.ehy-k1{grid-area:a}.ehy-k2{grid-area:b}.ehy-k3{grid-area:c}.ehy-k4{grid-area:d}.ehy-k5{grid-area:e}.ehy-k6{grid-area:f}
+
+/* ---------- DENEYİM (Timeline) ---------- */
+.ehy-exp-wrap{display:grid;grid-template-columns:240px 1fr;gap:40px;}
+.ehy-exp-side{position:sticky;top:24px;align-self:start;}
+.ehy-stat{background:var(--surface-soft);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:12px;}
+.ehy-stat b{display:block;font-size:28px;color:var(--accent-dark);line-height:1;}
+.ehy-stat span{font-size:12px;color:var(--muted);}
+.ehy-tl{list-style:none;margin:0;padding:0;position:relative;}
+.ehy-tl::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:var(--line);}
+.ehy-tl li{position:relative;padding:0 0 28px 32px;}
+.ehy-tl li::before{content:"";position:absolute;left:0;top:6px;width:13px;height:13px;border-radius:50%;background:var(--surface);border:2px solid var(--accent);}
+.ehy-tl li.ehy-now::before{background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 15%,transparent);}
+.ehy-tl .ehy-date{font-size:12px;color:var(--accent-dark);font-weight:500;letter-spacing:.04em;}
+.ehy-tl .ehy-badge{display:inline-block;margin-left:8px;font-size:10px;padding:2px 8px;border-radius:20px;background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent-dark);font-weight:600;letter-spacing:.06em;}
+.ehy-tl h3{font-size:18px;margin:4px 0 2px;font-weight:600;}
+.ehy-tl .ehy-role{font-size:13px;color:var(--ink);opacity:.75;margin:0 0 8px;}
+.ehy-tl .ehy-desc{font-size:13.5px;color:var(--muted);line-height:1.65;margin:0 0 10px;max-width:620px;}
+.ehy-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.ehy-tags span{font-size:11px;padding:3px 10px;border:1px solid var(--line);border-radius:20px;color:var(--muted);background:var(--surface);}
+.ehy-tl li.ehy-old{display:none;}
+.ehy-tl.ehy-open li.ehy-old{display:block;}
+.ehy-more{margin-left:32px;font:inherit;font-size:13px;font-weight:500;color:var(--accent-dark);background:none;border:1px solid var(--accent);border-radius:24px;padding:8px 18px;cursor:pointer;}
+.ehy-more:hover{background:var(--accent);color:var(--surface);}
+
+/* ---------- YETKİNLİKLER ---------- */
+.ehy-sk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.ehy-sk{background:var(--surface-soft);border:1px solid var(--line);border-radius:12px;padding:20px;transition:border-color .25s;}
+.ehy-sk:hover{border-color:var(--accent);}
+.ehy-sk-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:14px;}
+.ehy-sk h3{font-size:15px;font-weight:600;margin:0;line-height:1.3;}
+.ehy-sk .ehy-n{font-size:11px;color:var(--muted);letter-spacing:.1em;}
+.ehy-sk ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;}
+.ehy-sk li{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink);}
+.ehy-mono{width:28px;height:28px;border-radius:7px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;font-size:10.5px;font-weight:600;color:var(--accent-dark);flex-shrink:0;}
+.ehy-sk.ehy-ai{background:var(--ink);border-color:var(--ink);}
+.ehy-sk.ehy-ai h3,.ehy-sk.ehy-ai li{color:var(--surface);}
+.ehy-sk.ehy-ai .ehy-mono{background:color-mix(in srgb,var(--accent) 15%,transparent);border-color:color-mix(in srgb,var(--accent) 35%,transparent);color:var(--accent);}
+
+/* ---------- ÖZGEÇMİŞ / EĞİTİM ---------- */
+.ehy-edu-grid{display:grid;grid-template-columns:1fr 1fr 260px;gap:14px;}
+.ehy-edu{background:var(--surface-soft);border:1px solid var(--line);border-radius:12px;padding:22px;}
+.ehy-edu .ehy-date{font-size:12px;color:var(--accent-dark);font-weight:500;}
+.ehy-edu h3{font-size:17px;margin:6px 0 4px;font-weight:600;}
+.ehy-edu p{font-size:13px;color:var(--muted);margin:0;}
+.ehy-edu .ehy-lvl{display:inline-block;margin-top:14px;font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;}
+.ehy-cv{background:var(--ink);color:var(--surface);border-radius:12px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;}
+.ehy-cv small{font-size:11px;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;}
+.ehy-cv strong{font-size:18px;font-weight:600;line-height:1.3;margin:8px 0 16px;display:block;}
+.ehy-cv span{font-size:13px;color:var(--surface-soft);}
+.ehy-cv:hover span{color:var(--accent);}
+
+/* ---------- MESLEKİ GELİŞİM ---------- */
+.ehy-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
+.ehy-filters button{font:inherit;font-size:12.5px;font-weight:500;padding:7px 16px;border-radius:24px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer;}
+.ehy-filters button em{font-style:normal;opacity:.6;margin-left:4px;}
+.ehy-filters button.ehy-on{background:var(--accent);border-color:var(--accent);color:var(--surface);}
+.ehy-cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.ehy-cert{display:flex;align-items:center;gap:14px;padding:12px;background:var(--surface-soft);border:1px solid var(--line);border-radius:10px;cursor:pointer;transition:border-color .2s;}
+.ehy-cert:hover{border-color:var(--accent);}
+.ehy-cert img{width:64px;height:46px;object-fit:cover;border-radius:6px;background:var(--surface-soft);flex-shrink:0;}
+.ehy-cert b{display:block;font-size:13.5px;font-weight:600;line-height:1.3;}
+.ehy-cert span{font-size:11.5px;color:var(--muted);}
+.ehy-cert.ehy-hide{display:none;}
+.ehy-note{font-size:12px;color:var(--muted);margin-top:16px;}
+
+/* ---------- MOBİL ---------- */
+@media (max-width:900px){
+  .ehy-pf-grid{grid-template-columns:repeat(2,1fr);grid-template-areas:"a a" "b c" "d e" "f f";}
+  .ehy-exp-wrap{grid-template-columns:1fr;gap:24px;}
+  .ehy-exp-side{position:static;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .ehy-stat{margin:0;}
+  .ehy-edu-grid{grid-template-columns:1fr 1fr;}
+  .ehy-cv{grid-column:1/-1;}
+  .ehy-sk-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:560px){
+  .ehy-section h2{font-size:24px;}
+  .ehy-pf-grid{grid-template-columns:1fr;grid-auto-rows:110px;grid-template-areas:"a" "b" "c" "d" "e" "f";}
+  .ehy-exp-side{grid-template-columns:1fr 1fr 1fr;}
+  .ehy-stat{padding:12px;} .ehy-stat b{font-size:22px;}
+  .ehy-edu-grid,.ehy-cert-grid,.ehy-sk-grid{grid-template-columns:1fr;}
+}
+
+/* Scope compatibility rules to the redesigned sections only. */
+.ehy-section{scroll-margin-top:110px;font-family:inherit;line-height:1.7}
+.ehy-section .ehy-pf-card{height:auto;min-height:0;overflow:hidden;box-shadow:none;aspect-ratio:auto;border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;background:var(--surface-soft)}
+.ehy-section .ehy-pf-card:hover{border-color:var(--c);transform:translateY(-3px)}
+.ehy-section .ehy-project-body{padding:0;position:static;background:none;border:0;display:block}
+.ehy-section .ehy-pf-card h3{font-size:17px;line-height:1.25;margin:0 0 5px;font-weight:600;color:var(--ink)}
+.ehy-section .ehy-pf-card p{font-size:12px;line-height:1.7;color:var(--muted);margin:0;padding-right:16px}
+.ehy-section .ehy-pf-card .project-visual{display:none!important}
+.ehy-section .ehy-pf-card>button{position:absolute;inset:0;width:100%;height:100%;z-index:3;opacity:0;cursor:pointer}
+.ehy-section .ehy-pf-card:focus-within{outline:2px solid var(--accent);outline-offset:3px}
+.ehy-section .ehy-cert{text-align:left;font:inherit;color:var(--ink);width:100%}
+.ehy-section .ehy-cert.hide,.ehy-section .ehy-cert.ehy-hide{display:none}
+.ehy-section .ehy-pf-card:focus-visible,.ehy-section button:focus-visible,.ehy-section .ehy-cv:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.ehy-anchor{display:block;scroll-margin-top:110px}
+@media(prefers-reduced-motion:reduce){.ehy-section *{transition:none!important}}
+
+.ehy-section .ehy-brand-link{position:absolute;inset:0;z-index:3}

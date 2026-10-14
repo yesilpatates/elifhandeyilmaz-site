@@ -205,7 +205,7 @@ if (academicSection && academicSection.dataset.academicHistory !== "true") {
   if (academicTitle) academicTitle.textContent = "Akademik geçmiş ve mesleki gelişim";
 }
 
-if (!document.querySelector("section.guide-section#egitim")) {
+if (!document.querySelector(".ehy-section#egitim") && !document.querySelector("section.guide-section#egitim")) {
   const guideSection = document.createElement("section");
   guideSection.className = "guide-section section";
   guideSection.id = "egitim";

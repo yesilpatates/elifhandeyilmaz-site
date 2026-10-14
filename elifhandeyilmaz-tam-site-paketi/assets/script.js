@@ -58,7 +58,7 @@
 
   const loadCoreScript = () => {
     const coreScript = document.createElement("script");
-    coreScript.src = "assets/core-script.js?v=20261010-text-only-projects-v1";
+    coreScript.src = "assets/core-script.js?v=20261014-sections-v1";
     coreScript.defer = true;
     coreScript.onload = loadEnhancements;
     coreScript.onerror = () => {
