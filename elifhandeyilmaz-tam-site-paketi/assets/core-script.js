@@ -18,7 +18,7 @@ loadStylesheet("site-design-system", "assets/site-design-system.css?v=20261009-t
 const loadPromoProjects = () => {
   if (document.getElementById("promo-projects-script")) return;
   const promoScript = document.createElement("script");
-  promoScript.src = "assets/promo-projects.js?v=20260811-promo-gallery-v5";
+  promoScript.src = "assets/promo-projects.js?v=20261014-print-digital-promo-v1";
   promoScript.defer = true;
   promoScript.id = "promo-projects-script";
   document.body.appendChild(promoScript);
