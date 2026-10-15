@@ -44,7 +44,7 @@
     if (document.getElementById("motion-projects-script")) return;
     const motionScript = document.createElement("script");
     motionScript.id = "motion-projects-script";
-    motionScript.src = "assets/motion-projects.js?v=20261010-project-typography-v1";
+    motionScript.src = "assets/motion-projects.js?v=20261016-four-shorts-v1";
     motionScript.defer = true;
     document.body.appendChild(motionScript);
   };

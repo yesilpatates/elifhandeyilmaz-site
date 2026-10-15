@@ -1,6 +1,30 @@
 (() => {
   const videos = [
     {
+      id: "KsWVmGhfWZs",
+      title: "Video & Animasyon — Shorts 01",
+      description: "YouTube Shorts formatında yayınlanan dikey video ve animasyon çalışması.",
+      tags: ["Dikey Video", "Animasyon", "YouTube Shorts"]
+    },
+    {
+      id: "QfwLGTac3UA",
+      title: "Video & Animasyon — Shorts 02",
+      description: "YouTube Shorts formatında yayınlanan dikey video ve animasyon çalışması.",
+      tags: ["Dikey Video", "Animasyon", "YouTube Shorts"]
+    },
+    {
+      id: "PmFewFdtra0",
+      title: "Video & Animasyon — Shorts 03",
+      description: "YouTube Shorts formatında yayınlanan dikey video ve animasyon çalışması.",
+      tags: ["Dikey Video", "Animasyon", "YouTube Shorts"]
+    },
+    {
+      id: "NqV6w15ypQ0",
+      title: "Video & Animasyon — Shorts 04",
+      description: "YouTube Shorts formatında yayınlanan dikey video ve animasyon çalışması.",
+      tags: ["Dikey Video", "Animasyon", "YouTube Shorts"]
+    },
+    {
       id: "yRAWQz-qm-U",
       title: "Alfa Sigorta Sağlık Sigortaları Animasyonu",
       description: "Sağlık sigortası ürünlerini 8-bit oyun estetiği ve piksel animasyon diliyle anlatan dikey sosyal medya videosu.",
