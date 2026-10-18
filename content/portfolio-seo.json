@@ -1,0 +1,507 @@
+{
+  "categories": [
+    {
+      "id": "brand",
+      "tr": "marka-kurumsal-kimlik",
+      "en": "brand-identity",
+      "title": {
+        "tr": "Marka & Kurumsal Kimlik",
+        "en": "Brand Identity"
+      },
+      "description": {
+        "tr": "Logo, görsel kimlik ve kurumsal uygulamaları tek bir marka sistemi içinde bir araya getiren seçili çalışmalar.",
+        "en": "Selected projects bringing logos, visual identity and brand applications together as a coherent system."
+      }
+    },
+    {
+      "id": "editorial",
+      "tr": "editoryal",
+      "en": "editorial",
+      "title": {
+        "tr": "Editoryal",
+        "en": "Editorial"
+      },
+      "description": {
+        "tr": "Dergi ve yayın tasarımında kapak, tipografi, görsel hiyerarşi ve sayfa düzenini bir araya getiren seçili çalışmalar.",
+        "en": "Selected magazine and publishing projects combining covers, typography, visual hierarchy and page layout."
+      }
+    },
+    {
+      "id": "events",
+      "tr": "etkinlik-organizasyon",
+      "en": "events",
+      "title": {
+        "tr": "Etkinlik & Organizasyon",
+        "en": "Event & Experience"
+      },
+      "description": {
+        "tr": "Etkinlik kimliğini sahne, basılı materyaller ve katılımcı iletişimine taşıyan seçili tasarım çalışmaları.",
+        "en": "Selected design projects extending event identity across stage graphics, print materials and attendee communication."
+      }
+    },
+    {
+      "id": "promo",
+      "tr": "basili-dijital",
+      "en": "print-digital",
+      "title": {
+        "tr": "Basılı & Dijital",
+        "en": "Print & Digital"
+      },
+      "description": {
+        "tr": "Afiş ve tanıtım materyallerinde mesajı, görsel dili ve okunabilirliği bir araya getiren seçili çalışmalar.",
+        "en": "Selected posters and promotional materials bringing together clear messages, visual language and readability."
+      }
+    },
+    {
+      "id": "web",
+      "tr": "web-arayuz",
+      "en": "web-interface",
+      "title": {
+        "tr": "Web & Arayüz",
+        "en": "Web & Interface"
+      },
+      "description": {
+        "tr": "Marka kimliğini anlaşılır içerik, kullanıcı odaklı sayfa kurgusu ve responsive arayüzlerle buluşturan seçili projeler.",
+        "en": "Selected projects combining brand identity, clear content, user-focused page structure and responsive interfaces."
+      }
+    },
+    {
+      "id": "motion",
+      "tr": "video-animasyon",
+      "en": "video-motion",
+      "title": {
+        "tr": "Video & Animasyon",
+        "en": "Video & Motion"
+      },
+      "description": {
+        "tr": "Marka mesajını hareketli grafikler ve dikey video anlatımıyla aktaran seçili video ve animasyon çalışmaları.",
+        "en": "Selected video and animation projects communicating brand messages through motion graphics and vertical storytelling."
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "pilavyeri",
+      "category": "brand",
+      "slug": {
+        "tr": "pilavyeri",
+        "en": "pilavyeri"
+      },
+      "title": {
+        "tr": "PilavYeri — Marka Kimliği",
+        "en": "PilavYeri — Brand Identity"
+      },
+      "description": {
+        "tr": "PilavYeri için logo, renk paleti ve kurumsal uygulamaları bir araya getiren marka kimliği sunumu.",
+        "en": "A brand identity presentation for PilavYeri, combining its logo, color palette and brand applications."
+      },
+      "image": "assets/brand-projects/pilavyeri.webp",
+      "alt": {
+        "tr": "PilavYeri logosu, kaşık simgesi, renk paleti ve kurumsal uygulama mockupları",
+        "en": "PilavYeri logo, spoon symbol, color palette and brand application mockups"
+      },
+      "roles": {
+        "tr": [
+          "Logo tasarımı",
+          "Marka görsel dili",
+          "Kurumsal kimlik uygulamaları",
+          "Proje sunumu"
+        ],
+        "en": [
+          "Logo design",
+          "Brand visual language",
+          "Identity applications",
+          "Project presentation"
+        ]
+      },
+      "sections": [
+        {
+          "title": {
+            "tr": "Proje ve ihtiyaç",
+            "en": "Project and brief"
+          },
+          "text": {
+            "tr": "PilavYeri, geleneksel pilav lezzetini modern sunum ve hızlı servis anlayışıyla birleştiren bir restoran markasıdır. Marka kimliği çalışması, bu yaklaşımın logo ve kurumsal uygulamalarda aynı görsel dille ifade edilmesine odaklanır. Sunumda restoranın ürün dünyası, servis yaklaşımı ve dijital görünümü birlikte ele alınır; tek başına bir logo yerine farklı temas noktalarında kullanılabilen bir kimlik sistemi gösterilir.",
+            "en": "PilavYeri is a restaurant brand combining traditional rice dishes with modern presentation and quick service. The identity project focuses on expressing that approach consistently through the logo and its applications. The presentation brings together the restaurant’s products, service setting and digital presence. It shows an identity system across several touchpoints rather than presenting the logo in isolation."
+          }
+        },
+        {
+          "title": {
+            "tr": "Görsel yaklaşım",
+            "en": "Visual approach"
+          },
+          "text": {
+            "tr": "Logoda kaşık simgesi ve akıcı yazı karakteri bir araya gelir. Sunumdaki koyu yeşil, açık krem ve turkuaz tonları; yemek fotoğrafları, renk kartları ve uygulama örnekleri arasında görsel bağ kurar. Açık ve koyu zeminlerdeki kullanımlar, kimliğin farklı yüzeylerde nasıl göründüğünü karşılaştırmayı sağlar. Logo, ikon ve renklerin aynı sunum içinde gösterilmesi tasarım kararlarını daha anlaşılır kılar.",
+            "en": "The logo combines a spoon symbol with flowing lettering. Deep green, warm light tones and turquoise connect the food imagery, palette cards and application examples. Light and dark backgrounds show how the identity appears on different surfaces. Presenting the logo, symbol and colors together makes the visual decisions easier to understand and demonstrates the relationship between the individual elements."
+          }
+        },
+        {
+          "title": {
+            "tr": "Sunum kapsamı",
+            "en": "Presentation scope"
+          },
+          "text": {
+            "tr": "Kurumsal sunumda kartvizit, çanta, menü, tekstil, tabela ve dijital ekran mockupları yer alır. Bu görseller, kimliğin farklı ölçeklerdeki uygulamalarını bir arada incelemek için hazırlanmış sunum örnekleridir. Çalışma; logo tasarımı, marka görsel dili, kurumsal uygulamalar ve proje sunumu başlıkları altında ele alınmıştır. Sunum görseli, logonun küçük kartlardan büyük tabelalara kadar farklı ölçeklerdeki ilişkisini gösterir. Renk paleti ile uygulama örneklerinin birlikte düzenlenmesi, markanın karakterini tek bakışta anlatan bir proje sunumu oluşturur.",
+            "en": "The presentation includes mockups for business cards, bags, menus, textiles, signage and digital screens. These examples allow the identity to be reviewed across different scales and surfaces. The documented scope covers logo design, visual language, identity applications and presentation design. The presentation shows the relationship between small items such as business cards and larger applications such as signage. Grouping the palette with the application examples creates an overview of the identity and its character."
+          }
+        }
+      ],
+      "source": [
+        "assets/project-covers.js: brandProjects Pilavyeri",
+        "assets/brand-projects/pilavyeri.webp"
+      ]
+    },
+    {
+      "id": "yacht-news-60",
+      "category": "editorial",
+      "slug": {
+        "tr": "yacht-news-turkiye-60",
+        "en": "yacht-news-turkiye-60"
+      },
+      "title": {
+        "tr": "Yacht News Türkiye — 60. Sayı",
+        "en": "Yacht News Türkiye — Issue 60"
+      },
+      "description": {
+        "tr": "Yacht News Türkiye 60. sayı için kapak, sayfa düzeni ve görsel hiyerarşiyi buluşturan editoryal tasarım.",
+        "en": "Editorial design for Yacht News Türkiye Issue 60, bringing together cover design, page layout and visual hierarchy."
+      },
+      "image": "assets/editorial-projects/yacht-news-turkiye-60-2026-temmuz-agustos.jpg",
+      "alt": {
+        "tr": "Yacht News Türkiye Temmuz–Ağustos 2026, 60. sayı kapağı",
+        "en": "Yacht News Türkiye July–August 2026, Issue 60 cover"
+      },
+      "pdf": "assets/editorial-pdfs/yacht-news-turkiye-60-2026-temmuz-agustos.pdf",
+      "roles": {
+        "tr": [
+          "Editoryal tasarım",
+          "Sayfa düzeni",
+          "Görsel hiyerarşi"
+        ],
+        "en": [
+          "Editorial design",
+          "Page layout",
+          "Visual hierarchy"
+        ]
+      },
+      "sections": [
+        {
+          "title": {
+            "tr": "Yayın ve içerik",
+            "en": "Publication and content"
+          },
+          "text": {
+            "tr": "Yacht News Türkiye’nin 60. sayısı, Temmuz–Ağustos 2026 dönemine ait 72 sayfalık bir yayındır. Sayıda küresel süperyat sektörü, yat tasarımı, festival ve zirve içerikleri bir araya gelir. Editoryal yaklaşım, farklı konuları aynı yayın kimliği içinde toplarken görsellerin ve metnin dengeli biçimde sunulmasına odaklanır.",
+            "en": "Yacht News Türkiye Issue 60 is a 72-page publication for July–August 2026. Its coverage includes the global superyacht industry, yacht design, festivals and summits. The editorial approach brings these subjects into one publication identity, balancing imagery and text while maintaining a recognizable visual language across the issue."
+          }
+        },
+        {
+          "title": {
+            "tr": "Tasarım yaklaşımı",
+            "en": "Design approach"
+          },
+          "text": {
+            "tr": "Yayın tasarımında güçlü görseller ve dengeli bir sayfa düzeni öne çıkar. Başlıkların, gövde metninin ve fotoğrafların aynı hiyerarşi içinde ele alınması, farklı içerik türlerinin birlikte okunmasını destekler. Kapak, sayının görsel girişini oluştururken iç sayfalar yayın akışını taşır. Bu proje sayfasında kapak görseli ile tam PDF birbirinden ayrı sunularak hem genel görünüm hem sayfa içi düzen incelenebilir.",
+            "en": "The documented design approach emphasizes strong imagery and balanced page layouts. Headlines, body text and photographs work within a shared hierarchy so that different types of content can sit together coherently. The cover introduces the issue, while the interior pages carry its reading flow. This project page separates the cover preview from the complete PDF so visitors can inspect both the overall impression and the detailed layout."
+          }
+        },
+        {
+          "title": {
+            "tr": "İncelenebilir çıktı",
+            "en": "Reviewable output"
+          },
+          "text": {
+            "tr": "Aşağıdaki kapak mevcut arşivden alınmıştır; tam yayın PDF bağlantısıyla açılabilir. PDF’nin ayrı sunulması, büyük yayın dosyasının yalnızca incelemek isteyen ziyaretçi tarafından yüklenmesini sağlar. Tasarımın sayfa geçişleri, görsel kullanımı ve içerik hiyerarşisi doğrudan yayın üzerinden değerlendirilebilir. Mevcut ana sayfadaki dergi galerisi ve flipbook işlevi bu statik proje sayfasından bağımsız olarak korunur. Yayın, tek tek sayfa tasarımlarının yanında kapak ile iç sayfalar arasındaki görsel süreklilik üzerinden de incelenebilir.",
+            "en": "The cover below comes from the existing archive, and the full publication is available through the PDF link. Keeping the PDF separate means the larger publication file is loaded when a visitor chooses to review it. Page sequences, image placement and information hierarchy can be evaluated directly in the publication. The existing magazine gallery and flipbook on the homepage remain available independently of this static project page."
+          }
+        }
+      ],
+      "source": [
+        "assets/editorial-projects.js: yacht-news-60"
+      ]
+    },
+    {
+      "id": "denizcilik-zirvesi",
+      "category": "events",
+      "slug": {
+        "tr": "denizcilik-zirvesi",
+        "en": "maritime-summit"
+      },
+      "title": {
+        "tr": "5. Türkiye Denizcilik Zirvesi",
+        "en": "5th Türkiye Maritime Summit"
+      },
+      "description": {
+        "tr": "5. Türkiye Denizcilik Zirvesi için sahne, yönlendirme ve basılı materyalleri birleştiren etkinlik tasarımı sunumu.",
+        "en": "An event design presentation for the 5th Türkiye Maritime Summit, covering stage graphics, signage and printed materials."
+      },
+      "image": "assets/event-projects/turkiye-denizcilik-zirvesi/01-ana-mockup.webp",
+      "alt": {
+        "tr": "5. Türkiye Denizcilik Zirvesi sahne, roll-up, flama, program ve yaka kartı sunumu",
+        "en": "Stage graphics, roll-up, flag, programme and badge presentation for the 5th Türkiye Maritime Summit"
+      },
+      "roles": {
+        "tr": [
+          "Etkinlik görsel kimliği",
+          "Sahne ve yönlendirme grafikleri",
+          "Basılı materyaller",
+          "Proje sunumu"
+        ],
+        "en": [
+          "Event visual identity",
+          "Stage graphics and signage",
+          "Printed materials",
+          "Project presentation"
+        ]
+      },
+      "sections": [
+        {
+          "title": {
+            "tr": "Etkinlik ve ihtiyaç",
+            "en": "Event and brief"
+          },
+          "text": {
+            "tr": "5. Türkiye Denizcilik Zirvesi için hazırlanan sunum, etkinlik kimliğinin farklı alanlarda tutarlı kullanılmasını ele alır. Sahne arka planı, roll-up, flama, program, masa kartı ve yaka kartı aynı görsel sistem içinde gösterilir. Amaç, tek bir afişten daha geniş bir uygulama ailesi oluşturarak katılımcının etkinlik boyunca karşılaştığı materyaller arasında ilişki kurmaktır.",
+            "en": "The presentation for the 5th Türkiye Maritime Summit explores a consistent event identity across different settings. Stage graphics, a roll-up, a flag, a programme, table signage and a participant badge are shown within the same visual system. The project extends beyond a single poster to show a family of applications that can be recognized throughout the event environment."
+          }
+        },
+        {
+          "title": {
+            "tr": "Görsel sistem",
+            "en": "Visual system"
+          },
+          "text": {
+            "tr": "Ana mockupta koyu lacivert zemin, altın tonlu başlıklar ve denizcilik motifleri birlikte kullanılır. Çapa, dümen ve dalga çizgileri gibi öğeler etkinliğin konusuyla görsel bağ kurar. Ana başlık, tarih ve konum farklı uygulamalarda ortak bir düzenle yer alır. Büyük sahne yüzeyi ile küçük basılı parçaların aynı kimliği taşıması, sunumun temel tasarım yaklaşımını oluşturur.",
+            "en": "The main mockup combines a dark navy background, gold-toned headings and maritime motifs. Anchors, a ship’s wheel and wave lines connect the graphics to the subject of the summit. The main title, date and location follow a consistent structure across the applications. Carrying the same identity from the large stage surface to smaller printed pieces is central to the presentation."
+          }
+        },
+        {
+          "title": {
+            "tr": "Uygulamalar ve arşiv",
+            "en": "Applications and archive"
+          },
+          "text": {
+            "tr": "Sunum, sahne grafikleri ile katılımcı materyallerini tek kompozisyonda bir araya getirir. Sahne arka planındaki geniş kompozisyon ile yaka kartındaki daha dar bilgi alanı, aynı görsel öğelerin farklı ölçülerde düzenlenişini gösterir. Program ve yönlendirme parçaları da etkinlik kimliğinin yalnızca dekoratif bir yüzey olarak kalmayıp bilgi taşıyan materyallere nasıl uyarlandığını örnekler.",
+            "en": "The presentation brings stage graphics and attendee materials together in one composition. The broad stage composition and the narrower information area on a badge show how the same elements can be arranged at different scales. The programme and signage also illustrate how the identity extends from decorative surfaces to materials that communicate practical event information."
+          }
+        }
+      ],
+      "source": [
+        "assets/event-projects.js: turkiye-denizcilik-zirvesi and summitPhotos",
+        "assets/event-projects/turkiye-denizcilik-zirvesi/01-ana-mockup.webp"
+      ]
+    },
+    {
+      "id": "grand-seyahat",
+      "category": "promo",
+      "slug": {
+        "tr": "grand-seyahat-afis",
+        "en": "grand-seyahat-poster"
+      },
+      "title": {
+        "tr": "Grand Seyahat — Afiş Tasarımı",
+        "en": "Grand Seyahat — Poster Design"
+      },
+      "description": {
+        "tr": "Grand Seyahat için seyahat hizmetlerini ve rezervasyon mesajını öne çıkaran afiş ve açık hava reklamı sunumu.",
+        "en": "A poster and outdoor advertising presentation highlighting Grand Seyahat’s travel services and reservation message."
+      },
+      "image": "assets/promo-projects/grand-seyahat-afis.webp",
+      "alt": {
+        "tr": "Grand Seyahat afişinin havaalanındaki reklam panosu mockupı",
+        "en": "Mockup of the Grand Seyahat poster on an airport advertising display"
+      },
+      "roles": {
+        "tr": [
+          "Konsept ve görsel dil",
+          "Afiş ve sayfa düzeni",
+          "Tipografi ve renk sistemi",
+          "Mockup sunumu"
+        ],
+        "en": [
+          "Concept and visual language",
+          "Poster and layout design",
+          "Typography and color system",
+          "Mockup presentation"
+        ]
+      },
+      "sections": [
+        {
+          "title": {
+            "tr": "İletişim ihtiyacı",
+            "en": "Communication brief"
+          },
+          "text": {
+            "tr": "Grand Seyahat afişi; seyahat planlama, rezervasyon ve rehberlik hizmetlerini tek bir tanıtım yüzeyinde anlaşılır biçimde sunmak üzere kurgulanmıştır. havaalanı gibi yoğun yolcu trafiğine sahip kamusal alanlarda mesajın kısa sürede algılanması hedeflenir. Ana iletişim, seyahat fikrini öne çıkaran başlık ile hizmet ve rezervasyon bilgilerini aynı kompozisyonda buluşturur.",
+            "en": "The Grand Seyahat poster is designed to present travel planning, reservations and guidance services clearly on a single promotional surface. The design focuses on making the message quickly understandable in busy public settings such as an airport. Its main communication combines a travel-focused headline with service details and reservation information in one composition."
+          }
+        },
+        {
+          "title": {
+            "tr": "Kompozisyon ve hiyerarşi",
+            "en": "Composition and hierarchy"
+          },
+          "text": {
+            "tr": "Mor ve yeşil renk paleti güçlü bir karşıtlık oluştururken sarı vurgu kampanya başlığını öne çıkarır. Dairesel fotoğraf alanları ve kesik rota çizgisi seyahat temasını destekler. Başlık, hizmet listesi ve iletişim bilgileri ayrı alanlarda düzenlenerek okunma sırası belirginleştirilir. Fotoğraf ve tipografi birlikte kullanılır; afişteki görsel hareket, bilgi alanlarının önüne geçmeyecek biçimde dengelenir.",
+            "en": "A purple and green palette creates contrast, while a yellow accent draws attention to the campaign headline. Circular photographs and a dotted route line reinforce the travel theme. The headline, service list and contact details occupy distinct areas, creating a clear reading order. Photography and typography work together, with visual movement balanced against the information that a viewer needs to find."
+          }
+        },
+        {
+          "title": {
+            "tr": "Sunulan çalışma",
+            "en": "Presented work"
+          },
+          "text": {
+            "tr": "Afişin mekân içindeki ölçeği, kampanya başlığı ve rezervasyon mesajının birlikte değerlendirilmesini sağlar. Sunumda reklam yüzeyinin tamamı görünür; böylece tasarımın sınırları, görsel yoğunluğu ve çevresiyle kurduğu ilişki incelenebilir. Çalışma, tipografi ile fotoğrafı tek mesaj etrafında birleştiren bir tanıtım örneğidir. Telefon, web adresi ve QR alanının bir arada bulunması, afişin farklı iletişim seçeneklerini aynı düzen içinde sunmasını sağlar.",
+            "en": "Showing the poster at environmental scale allows the campaign headline and reservation message to be reviewed together. The complete display surface remains visible, making its boundaries, visual density and relationship with the surroundings clear. The result is a promotional design example that brings photography and typography around one message."
+          }
+        }
+      ],
+      "source": [
+        "assets/promo-projects.js: Grand Seyahat"
+      ]
+    },
+    {
+      "id": "sigortaguru",
+      "category": "web",
+      "slug": {
+        "tr": "sigortaguru",
+        "en": "sigortaguru"
+      },
+      "title": {
+        "tr": "SigortaGuru — Web & Arayüz",
+        "en": "SigortaGuru — Web & Interface"
+      },
+      "description": {
+        "tr": "SigortaGuru için responsive arayüz, sayfa kurgusu, içerik ve WordPress geliştirmesini birleştiren kurumsal web projesi.",
+        "en": "A corporate website project for SigortaGuru combining responsive interfaces, page structure, content and WordPress development."
+      },
+      "image": "assets/web-projects/sigortaguru.webp",
+      "alt": {
+        "tr": "SigortaGuru web sitesinin masaüstü ve mobil arayüz sunumu",
+        "en": "Desktop and mobile interface presentation for the SigortaGuru website"
+      },
+      "liveUrl": "https://www.sigortaguru.com",
+      "roles": {
+        "tr": [
+          "Logo ve marka kimliği",
+          "UI/UX tasarımı",
+          "Responsive web tasarımı",
+          "WordPress geliştirme",
+          "İçerik ve sayfa kurgusu"
+        ],
+        "en": [
+          "Logo and brand identity",
+          "UI/UX design",
+          "Responsive web design",
+          "WordPress development",
+          "Content and page structure"
+        ]
+      },
+      "sections": [
+        {
+          "title": {
+            "tr": "Proje ve ihtiyaç",
+            "en": "Project and brief"
+          },
+          "text": {
+            "tr": "SigortaGuru için hazırlanan kurumsal web sitesi, sigorta hizmetlerinin kullanıcı dostu ve anlaşılır bir yapıda sunulmasına odaklanır. ziyaretçinin ihtiyaç duyduğu hizmeti incelemesi ve teklif sürecine yönelmesi temel amaçlar olarak yer alır. Marka kimliği, metinler ve sayfa yapısı tek bir dijital deneyimin parçaları olarak ele alınır; arayüz yalnızca görsel sunumla sınırlı tutulmaz.",
+            "en": "The SigortaGuru corporate website focuses on presenting insurance services in a clear and user-friendly structure. Helping visitors discover services and move towards a quotation process are central aims. Brand identity, written content and page structure are treated as parts of one digital experience, with the interface considered beyond its visual appearance alone."
+          }
+        },
+        {
+          "title": {
+            "tr": "Arayüz ve içerik yaklaşımı",
+            "en": "Interface and content approach"
+          },
+          "text": {
+            "tr": "Responsive sayfa yapısı, masaüstü ve mobil ekranlarda tutarlı bir deneyim sunmak üzere tasarlanmıştır. Hizmetlerin gruplanması, içerik sırası ve yönlendirme alanları sade bir arayüz içinde birleştirilir. Güven odaklı görsel dil ve belirgin iletişim alanları, kullanıcıların sonraki adımı bulmasını destekler. Sunum görseli, farklı ekranlardaki tasarımın aynı marka yaklaşımını nasıl taşıdığını birlikte gösterir.",
+            "en": "The responsive structure is designed to support a consistent experience on desktop and mobile screens. Service grouping, content order and navigation areas come together in a straightforward interface. A trust-focused visual language and clear contact areas support the visitor’s next step. The presentation image shows the desktop and mobile designs together, making their shared brand approach visible."
+          }
+        },
+        {
+          "title": {
+            "tr": "Çalışma kapsamı",
+            "en": "Project scope"
+          },
+          "text": {
+            "tr": "Çalışma kapsamı; logo ve marka kimliği, UI/UX tasarımı, responsive web tasarımı, WordPress geliştirme, sayfa kurgusu, içerik yazarlığı ve görsel kompozisyon tasarımını kapsar. Görsel kimlik ile hizmet metinlerinin birlikte ele alınması, sayfalar arasında ortak bir anlatım kurulmasını destekler. Masaüstü ve mobil ekranların aynı sunumda yer alması, arayüzün farklı görüntüleme koşullarında incelenmesine olanak verir.",
+            "en": "The project scope includes logo and brand identity, UI/UX design, responsive web design, WordPress development, page structure, content writing and visual composition. Considering the identity alongside the service copy supports a common language across the pages. Showing desktop and mobile screens together allows the interface to be reviewed in different viewing contexts."
+          }
+        }
+      ],
+      "source": [
+        "assets/web-projects.js: sigortaguru"
+      ]
+    },
+    {
+      "id": "alfa-sigorta",
+      "category": "motion",
+      "slug": {
+        "tr": "alfa-sigorta",
+        "en": "alfa-sigorta"
+      },
+      "title": {
+        "tr": "Alfa Sigorta — Sağlık Sigortaları Animasyonu",
+        "en": "Alfa Sigorta — Health Insurance Animation"
+      },
+      "description": {
+        "tr": "Alfa Sigorta sağlık sigortalarını 8-bit oyun estetiği ve piksel animasyon diliyle anlatan dikey sosyal medya videosu.",
+        "en": "A vertical social video presenting Alfa Sigorta health insurance through an 8-bit game aesthetic and pixel animation."
+      },
+      "image": "https://i.ytimg.com/vi/yRAWQz-qm-U/hq720.jpg",
+      "alt": {
+        "tr": "Alfa Sigorta sağlık sigortaları piksel animasyonunun video kapağı",
+        "en": "Video cover for the Alfa Sigorta health insurance pixel animation"
+      },
+      "videoId": "yRAWQz-qm-U",
+      "roles": {
+        "tr": [
+          "8-bit görsel dil",
+          "Piksel animasyon",
+          "Dikey sosyal medya videosu"
+        ],
+        "en": [
+          "8-bit visual language",
+          "Pixel animation",
+          "Vertical social video"
+        ]
+      },
+      "sections": [
+        {
+          "title": {
+            "tr": "Proje ve anlatım",
+            "en": "Project and storytelling"
+          },
+          "text": {
+            "tr": "Alfa Sigorta için hazırlanan sağlık sigortaları animasyonu, ürün iletişimini dikey sosyal medya videosu üzerinden ele alır. Çalışmada 8-bit oyun estetiği ve piksel animasyon dili kullanılır. Sigorta konusunu farklı bir görsel anlatımla sunan proje, portfolyonun video ve animasyon kategorisinde yer alır. Kapak ile video birlikte, durağan görselin hareketli anlatımla kurduğu ilişkiyi incelemeyi sağlar.",
+            "en": "The Alfa Sigorta health insurance animation approaches product communication through a vertical social media video. The work uses an 8-bit game aesthetic and pixel animation. Presenting insurance communication in a distinctive visual language, it belongs to the portfolio’s video and motion category. This page gives the project a directly accessible address for review."
+          }
+        },
+        {
+          "title": {
+            "tr": "Görsel dil ve format",
+            "en": "Visual language and format"
+          },
+          "text": {
+            "tr": "Piksel tabanlı yaklaşım ve oyun estetiği, çalışmanın belirleyici görsel özellikleridir. Dikey format, videonun sosyal medya akışındaki sunum biçimini belirler. Görsel anlatım; grafik öğelerin hareket, sıra ve süre ilişkileri üzerinden izlenir. Sabit kapak projenin genel karakterini gösterirken, video bağlantısı hareketli anlatımın tamamına ulaşmayı sağlar. Bu iki görünüm, aynı tasarımın durağan ve hareketli hâllerini birlikte değerlendirme olanağı verir.",
+            "en": "Pixel-based graphics and a game-inspired aesthetic define the visual language of the work. The vertical format shapes its presentation in a social feed. The visual story can be reviewed through the sequence, movement and timing of its graphic elements. The still cover introduces its overall character, while the video link provides access to the complete animated piece. Together they allow both the static and moving expressions of the design to be reviewed."
+          }
+        },
+        {
+          "title": {
+            "tr": "Videoyu inceleme",
+            "en": "Reviewing the video"
+          },
+          "text": {
+            "tr": "Kapak ve izleme bağlantısı aynı videoya aittir. Çalışma, dikey sosyal medya formatında izlenebilir. Kapak görseli anlatımın genel estetiğini tanıtır; videoda ise hareketli grafiklerin zaman içindeki ilişkisi görülebilir. Proje, sigorta iletişimini oyun kültüründen beslenen bir görsel yaklaşımla ele alan seçili animasyon örnekleri arasında yer alır.",
+            "en": "The cover and viewing link refer to the same video, which can be watched in its vertical social media format. The cover introduces the visual aesthetic, while the video shows how the animated elements relate over time. The project is a selected example of insurance communication explored through a visual approach influenced by game culture."
+          }
+        }
+      ],
+      "source": [
+        "assets/motion-projects.js: yRAWQz-qm-U"
+      ]
+    }
+  ]
+}

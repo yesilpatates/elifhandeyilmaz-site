@@ -24,7 +24,7 @@
     if (document.getElementById("web-projects-script")) return;
     const webScript = document.createElement("script");
     webScript.id = "web-projects-script";
-    webScript.src = "assets/web-projects.js?v=20260804-featured-project-v10";
+    webScript.src = "assets/web-projects.js?v=20261019-portfolio-links-v1";
     webScript.defer = true;
     document.body.appendChild(webScript);
   };
@@ -34,7 +34,7 @@
     if (document.getElementById("event-projects-script")) return;
     const eventScript = document.createElement("script");
     eventScript.id = "event-projects-script";
-    eventScript.src = "assets/event-projects.js?v=20260811-featured-links-v1";
+    eventScript.src = "assets/event-projects.js?v=20261019-portfolio-links-v1";
     eventScript.defer = true;
     document.body.appendChild(eventScript);
   };
@@ -44,7 +44,7 @@
     if (document.getElementById("motion-projects-script")) return;
     const motionScript = document.createElement("script");
     motionScript.id = "motion-projects-script";
-    motionScript.src = "assets/motion-projects.js?v=20261016-four-shorts-v1";
+    motionScript.src = "assets/motion-projects.js?v=20261019-portfolio-links-v1";
     motionScript.defer = true;
     document.body.appendChild(motionScript);
   };
@@ -58,7 +58,7 @@
 
   const loadCoreScript = () => {
     const coreScript = document.createElement("script");
-    coreScript.src = "assets/core-script.js?v=20261014-sections-v1";
+    coreScript.src = "assets/core-script.js?v=20261019-portfolio-links-v1";
     coreScript.defer = true;
     coreScript.onload = loadEnhancements;
     coreScript.onerror = () => {

@@ -827,7 +827,7 @@
 
   trigger.addEventListener('click', () => open());
   document.querySelectorAll('[data-featured-event-project]').forEach((featuredTrigger) => {
-    featuredTrigger.addEventListener('click', () => open(featuredTrigger.dataset.featuredEventProject));
+    featuredTrigger.addEventListener('click', (event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; if (featuredTrigger.matches('a[href]')) event.preventDefault(); open(featuredTrigger.dataset.featuredEventProject); });
   });
   modal.querySelectorAll('[data-event-project]').forEach((projectCard) => projectCard.addEventListener('click', showProject));
   backButton.addEventListener('click', showList);

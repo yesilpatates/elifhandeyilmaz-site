@@ -327,7 +327,7 @@
   document.querySelectorAll("[data-brand-project]").forEach((trigger) => {
     const projectIndex = brandProjects.findIndex((item) => item.title === trigger.dataset.brandProject);
     if (projectIndex < 0) return;
-    trigger.addEventListener("click", () => openLightbox(projectIndex));
+    trigger.addEventListener("click", (event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; if (trigger.matches("a[href]")) event.preventDefault(); openLightbox(projectIndex); });
   });
 
   prevButton.addEventListener("click", showPrevious);

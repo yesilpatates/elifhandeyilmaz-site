@@ -1,0 +1,16 @@
+/* Additional navigation and case copy for static portfolio pages only. */
+.portfolio-seo-page .project-page-actions { display:flex; align-items:center; flex-wrap:wrap; gap:16px; }
+.portfolio-breadcrumb { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px; color:var(--muted); font-size:.78rem; overflow-wrap:anywhere; }
+.portfolio-category-nav { display:flex; flex-wrap:wrap; gap:12px 20px; margin-top:44px; padding-top:24px; border-top:1px solid var(--line); color:var(--accent-dark); font-size:.82rem; }
+.portfolio-category-nav a[aria-current="page"] { font-weight:700; }
+.portfolio-case-copy { width:min(100%,860px); margin:40px auto; }
+.portfolio-case-copy section { margin-block:32px; }
+.portfolio-case-copy p { color:var(--muted); line-height:1.72; }
+.portfolio-seo-page .project-page-nav > * { min-width:0; }
+.portfolio-seo-page .project-page-brand { flex-shrink:0; }
+.portfolio-seo-page .brand-project-cover img { object-fit:contain; }
+@media(max-width:680px) {
+  .portfolio-seo-page .project-page-nav { flex-wrap:wrap; gap:12px; padding-block:16px; }
+  .portfolio-seo-page .project-page-actions { gap:12px; }
+  .portfolio-seo-page h1 { overflow-wrap:anywhere; }
+}

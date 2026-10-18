@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://elifhandeyilmaz.com/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/" />
   </url>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/brand-identity/" />
   </url>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://elifhandeyilmaz.com/en/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/" />
   </url>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://elifhandeyilmaz.com/en/projects/brand-identity/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/brand-identity/" />
   </url>
@@ -131,5 +131,137 @@
     <lastmod>2026-10-18</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/dosya-formatlari-rehberi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/design-file-formats/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/projeler/editoryal/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/editoryal/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/editorial/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/projects/editorial/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/editoryal/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/editorial/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/projeler/etkinlik-organizasyon/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/etkinlik-organizasyon/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/events/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/projects/events/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/etkinlik-organizasyon/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/events/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/projeler/basili-dijital/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/basili-dijital/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/print-digital/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/projects/print-digital/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/basili-dijital/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/print-digital/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/projeler/web-arayuz/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/web-arayuz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/web-interface/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/projects/web-interface/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/web-arayuz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/web-interface/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/projeler/video-animasyon/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/video-animasyon/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/video-motion/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/projects/video-motion/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/video-animasyon/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/video-motion/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/pilavyeri/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/pilavyeri/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/brand-identity/pilavyeri/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/projects/brand-identity/pilavyeri/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/pilavyeri/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/brand-identity/pilavyeri/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/projeler/editoryal/yacht-news-turkiye-60/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/editoryal/yacht-news-turkiye-60/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/editorial/yacht-news-turkiye-60/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/projects/editorial/yacht-news-turkiye-60/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/editoryal/yacht-news-turkiye-60/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/editorial/yacht-news-turkiye-60/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/projeler/etkinlik-organizasyon/denizcilik-zirvesi/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/etkinlik-organizasyon/denizcilik-zirvesi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/events/maritime-summit/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/projects/events/maritime-summit/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/etkinlik-organizasyon/denizcilik-zirvesi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/events/maritime-summit/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/projeler/basili-dijital/grand-seyahat-afis/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/basili-dijital/grand-seyahat-afis/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/print-digital/grand-seyahat-poster/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/projects/print-digital/grand-seyahat-poster/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/basili-dijital/grand-seyahat-afis/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/print-digital/grand-seyahat-poster/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/projeler/web-arayuz/sigortaguru/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/web-arayuz/sigortaguru/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/web-interface/sigortaguru/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/projects/web-interface/sigortaguru/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/web-arayuz/sigortaguru/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/web-interface/sigortaguru/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/projeler/video-animasyon/alfa-sigorta/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/video-animasyon/alfa-sigorta/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/video-motion/alfa-sigorta/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/projects/video-motion/alfa-sigorta/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/video-animasyon/alfa-sigorta/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/video-motion/alfa-sigorta/" />
   </url>
 </urlset>
