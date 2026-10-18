@@ -10,7 +10,7 @@
 
 .hero-title-line {
   display: block;
-  font-size: clamp(2.95rem, 4vw, 4.15rem);
+  font-size: clamp(2.36rem, 3.2vw, 3.32rem);
   line-height: 1.02;
   font-weight: 600;
 }
