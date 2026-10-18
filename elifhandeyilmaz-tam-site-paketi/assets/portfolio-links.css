@@ -1,0 +1,3 @@
+/* The existing arrow is a direct page link above the unchanged gallery hit area. */
+.ehy-section .ehy-pf-card a.ehy-go { z-index:31; font-style:italic; }
+.ehy-section .ehy-pf-card a.ehy-go:focus-visible { opacity:1; transform:none; }

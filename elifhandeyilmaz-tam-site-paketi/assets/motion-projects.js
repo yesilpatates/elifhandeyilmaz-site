@@ -187,7 +187,7 @@
     }
   });
   document.querySelectorAll("[data-featured-motion-project]").forEach((featuredTrigger) => {
-    featuredTrigger.addEventListener("click", () => openModal(featuredTrigger.dataset.featuredMotionProject));
+    featuredTrigger.addEventListener("click", (event) => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; if (featuredTrigger.matches("a[href]")) event.preventDefault(); openModal(featuredTrigger.dataset.featuredMotionProject); });
   });
   closeButton.addEventListener("click", closeModal);
   previousButton.addEventListener("click", () => showVideo(-1));
