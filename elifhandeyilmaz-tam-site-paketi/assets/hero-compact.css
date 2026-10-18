@@ -1,0 +1,19 @@
+/* Desktop-only balance adjustments; shared by the TR and EN homepages. */
+@media (min-width: 901px) {
+  .hero .hero-title-script {
+    font-size: clamp(2.835rem, 4.005vw, 4.185rem);
+  }
+
+  .hero .hero-copy > p {
+    font-size: calc(clamp(0.96rem, 1vw, 1.05rem) - 1px);
+    line-height: 1.55;
+  }
+
+  .hero .hero-actions .button {
+    min-height: 43.2px;
+    padding: 9px 16.2px;
+    gap: 9px;
+    border-radius: 9.9px;
+    font-size: 0.81rem;
+  }
+}
