@@ -71,6 +71,7 @@
     }));
     dialog.querySelector("[data-certificate-close]")?.addEventListener("click", () => dialog.close());
     dialog.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); });
+    dialog.addEventListener("close", () => image.removeAttribute("src"));
   }
   document.addEventListener("keydown", (event) => { if (event.key === "Escape" && !modal?.hidden) closeModal(); });
 })();
