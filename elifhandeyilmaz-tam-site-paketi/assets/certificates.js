@@ -42,7 +42,7 @@
 
   dialog.addEventListener("close", () => {
     document.body.classList.remove("certificate-lightbox-open");
-    image.src = "";
+    image.removeAttribute("src");
     lastTrigger?.focus({ preventScroll: true });
   });
 })();

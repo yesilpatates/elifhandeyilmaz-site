@@ -1,35 +1,135 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://elifhandeyilmaz.com/</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/" />
   </url>
   <url>
     <loc>https://elifhandeyilmaz.com/blog/</loc>
-    <lastmod>2026-08-09</lastmod>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/" />
   </url>
   <url>
     <loc>https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/brand-identity/" />
   </url>
   <url>
     <loc>https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/" />
   </url>
   <url>
     <loc>https://elifhandeyilmaz.com/en/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/" />
   </url>
   <url>
     <loc>https://elifhandeyilmaz.com/en/blog/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/" />
   </url>
   <url>
     <loc>https://elifhandeyilmaz.com/en/projects/brand-identity/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/brand-identity/" />
   </url>
   <url>
     <loc>https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/blog/grafik-tasarim-nedir/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/grafik-tasarim-nedir/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/what-is-graphic-design/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-unsurlari/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-unsurlari/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/elements-of-graphic-design/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/principles-of-graphic-design/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/blog/vektorel-ve-bitmap-farki/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/vektorel-ve-bitmap-farki/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/vector-vs-bitmap/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/blog/rgb-cmyk-renk-bilgisi/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/rgb-cmyk-renk-bilgisi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/rgb-cmyk-color-guide/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/blog/tipografi-nedir/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/tipografi-nedir/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/what-is-typography/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/blog/dosya-formatlari-rehberi/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/dosya-formatlari-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/design-file-formats/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/blog/what-is-graphic-design/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/grafik-tasarim-nedir/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/what-is-graphic-design/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/blog/elements-of-graphic-design/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-unsurlari/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/elements-of-graphic-design/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/blog/principles-of-graphic-design/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/principles-of-graphic-design/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/blog/vector-vs-bitmap/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/vektorel-ve-bitmap-farki/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/vector-vs-bitmap/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/blog/rgb-cmyk-color-guide/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/rgb-cmyk-renk-bilgisi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/rgb-cmyk-color-guide/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/blog/what-is-typography/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/tipografi-nedir/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/what-is-typography/" />
+  </url>
+  <url>
+    <loc>https://elifhandeyilmaz.com/en/blog/design-file-formats/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/dosya-formatlari-rehberi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/design-file-formats/" />
   </url>
 </urlset>

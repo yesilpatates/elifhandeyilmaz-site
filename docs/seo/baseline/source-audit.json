@@ -1,0 +1,892 @@
+{
+  "source": "67b4bebb9f856473dc5dfdedeaea6f4ee8c5696a",
+  "pages": [
+    {
+      "route": "/blog/",
+      "file": "blog/index.html",
+      "lang": "tr",
+      "title": [
+        "Grafik Tasarım Rehberi | Elif Handegül Yılmaz"
+      ],
+      "h1": [
+        "Grafik Tasarım Rehberi"
+      ],
+      "meta": {
+        "null": null,
+        "viewport": "width=device-width, initial-scale=1.0",
+        "description": "Mesleğe yeni başlayanlar için grafik tasarım temelleri, renk, tipografi, vektörel ve bitmap tasarım ile dosya formatları rehberi."
+      },
+      "canonical": [
+        "https://elifhandeyilmaz.com/blog/"
+      ],
+      "alternates": [
+        {
+          "rel": "alternate",
+          "hreflang": "tr",
+          "href": "https://elifhandeyilmaz.com/blog/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "en",
+          "href": "https://elifhandeyilmaz.com/en/blog/"
+        }
+      ],
+      "jsonld": [],
+      "articleIds": [
+        "grafik-tasarim-nedir",
+        "grafik-tasarimin-temel-unsurlari",
+        "grafik-tasarimin-temel-ilkeleri",
+        "vektorel-ve-bitmap-tasarim",
+        "renk-bilgisi",
+        "tipografi",
+        "dosya-formatlari"
+      ],
+      "images": [
+        {
+          "src": "../images/ehy-logo.png",
+          "alt": "Elif Handegül Yılmaz"
+        },
+        {
+          "class": "article-info-image",
+          "src": "../images/blog/topics/01-grafik-tasarim-nedir-mbk.png",
+          "alt": "Graphic Design teriminin ilk kez 1922 yılında William Addison Dwiggins tarafından kullanıldığını anlatan mini bilgi kutusu"
+        },
+        {
+          "class": "article-info-image",
+          "src": "../images/blog/topics/03-grafik-tasarimin-temel-ilkeleri-mbk.png",
+          "alt": "Başarılı markaların denge, kontrast, hizalama ve görsel hiyerarşi ilkelerini ortak kullandığını anlatan mini bilgi kutusu"
+        },
+        {
+          "class": "article-info-image",
+          "src": "../images/blog/topics/04-vektorel-ve-bitmap-mbk.png",
+          "alt": "Logoların AI, SVG veya EPS gibi vektörel formatlarda arşivlenmesinin önemini anlatan mini bilgi kutusu"
+        },
+        {
+          "class": "article-info-image",
+          "src": "../images/blog/topics/05-renk-bilgisi-mbk.png",
+          "alt": "Coca-Cola, IKEA ve McDonald's markalarının renk tercihlerinin psikolojik etkilerini anlatan mini bilgi kutusu"
+        },
+        {
+          "class": "article-info-image",
+          "src": "../images/blog/topics/06-tipografi-mbk.png",
+          "alt": "Helvetica yazı karakterinin 1957 yılından beri global markalar tarafından kullanıldığını anlatan mini bilgi kutusu"
+        }
+      ],
+      "indexHtmlLinks": [
+        "../index.html#anasayfa",
+        "../index.html#egitim"
+      ],
+      "mailtoLinks": [],
+      "missingLocalTargets": []
+    },
+    {
+      "route": "/en/blog/",
+      "file": "en/blog/index.html",
+      "lang": "en",
+      "title": [
+        "Graphic Design Guide | Elif Handegül Yılmaz"
+      ],
+      "h1": [
+        "Graphic Design Guide"
+      ],
+      "meta": {
+        "null": null,
+        "viewport": "width=device-width, initial-scale=1",
+        "description": "A practical graphic design guide covering visual communication, design principles, color, typography and file formats."
+      },
+      "canonical": [
+        "https://elifhandeyilmaz.com/en/blog/"
+      ],
+      "alternates": [
+        {
+          "rel": "alternate",
+          "hreflang": "tr",
+          "href": "https://elifhandeyilmaz.com/blog/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "en",
+          "href": "https://elifhandeyilmaz.com/en/blog/"
+        }
+      ],
+      "jsonld": [],
+      "articleIds": [
+        "what-is-graphic-design",
+        "design-elements",
+        "design-principles",
+        "vector-and-raster",
+        "color",
+        "typography",
+        "file-formats"
+      ],
+      "images": [
+        {
+          "src": "../../images/ehy-logo-en.png",
+          "alt": "Elif Handegül Yılmaz"
+        },
+        {
+          "class": "article-info-image",
+          "src": "../../images/blog/topics/01-grafik-tasarim-nedir-mbk.png",
+          "alt": "Graphic design terminology and its early history"
+        },
+        {
+          "class": "article-info-image",
+          "src": "../../images/blog/topics/03-grafik-tasarimin-temel-ilkeleri-mbk.png",
+          "alt": "Balance, contrast, alignment and hierarchy in visual design"
+        },
+        {
+          "class": "article-info-image",
+          "src": "../../images/blog/topics/04-vektorel-ve-bitmap-mbk.png",
+          "alt": "Why logos should be kept in vector formats"
+        },
+        {
+          "class": "article-info-image",
+          "src": "../../images/blog/topics/05-renk-bilgisi-mbk.png",
+          "alt": "Color choices and brand perception"
+        },
+        {
+          "class": "article-info-image",
+          "src": "../../images/blog/topics/06-tipografi-mbk.png",
+          "alt": "The long-standing use of Helvetica by global brands"
+        }
+      ],
+      "indexHtmlLinks": [],
+      "mailtoLinks": [],
+      "missingLocalTargets": []
+    },
+    {
+      "route": "/en/",
+      "file": "en/index.html",
+      "lang": "en",
+      "title": [
+        "Elif Handegül Yılmaz | Senior Graphic Designer & Educator"
+      ],
+      "h1": [
+        "I create visual identities that give brands character."
+      ],
+      "meta": {
+        "null": null,
+        "viewport": "width=device-width, initial-scale=1.0",
+        "description": "Explore the graphic design, brand identity, editorial, digital, web, video and animation work of Elif Handegül Yılmaz.",
+        "author": "Elif Handegül Yılmaz",
+        "theme-color": "#18b7c5",
+        "og:title": "Elif Handegül Yılmaz | Portfolio",
+        "og:description": "Senior Graphic Designer & Educator",
+        "og:type": "website",
+        "og:url": "https://elifhandeyilmaz.com/en/",
+        "og:image": "https://elifhandeyilmaz.com/images/hero.png"
+      },
+      "canonical": [
+        "https://elifhandeyilmaz.com/en/"
+      ],
+      "alternates": [
+        {
+          "rel": "alternate",
+          "hreflang": "tr",
+          "href": "https://elifhandeyilmaz.com/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "en",
+          "href": "https://elifhandeyilmaz.com/en/"
+        }
+      ],
+      "jsonld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Elif Handegül Yılmaz",
+          "jobTitle": "Senior Graphic Designer and Educator",
+          "url": "https://elifhandeyilmaz.com",
+          "email": "mailto:elifhandegulyilmaz@icloud.com",
+          "sameAs": [
+            "https://www.linkedin.com/in/elifhandegulyilmaz",
+            "https://www.behance.net/elifhandegulyilmaz"
+          ]
+        }
+      ],
+      "articleIds": [],
+      "images": [
+        {
+          "src": "../images/ehy-logo-en.png",
+          "alt": "Elif Handegül Yılmaz personal logo"
+        },
+        {
+          "src": "../images/hero.png",
+          "alt": "Illustration of a graphic design workspace"
+        },
+        {
+          "src": "../assets/brand-projects/pilavyeri.webp",
+          "alt": "PilavYeri brand identity presentation"
+        },
+        {
+          "src": "../assets/event-projects/turkiye-denizcilik-zirvesi/01-ana-mockup.webp",
+          "alt": "Event design mockup for the 5th Türkiye Maritime Summit"
+        },
+        {
+          "src": "https://i.ytimg.com/vi/yRAWQz-qm-U/hq720.jpg",
+          "alt": "Alfa Insurance health insurance animation video cover"
+        },
+        {
+          "src": "../assets/web-projects/sigortaguru.webp",
+          "alt": "SigortaGuru desktop and mobile insurance website presentation"
+        },
+        {
+          "src": "../assets/certificates/canva-magic-design-2026.webp",
+          "alt": "Training certificate",
+          "loading": "lazy"
+        },
+        {
+          "src": "../assets/certificates/adobe-animate-after-effects-2025.webp",
+          "alt": "Training certificate",
+          "loading": "lazy"
+        },
+        {
+          "src": "../assets/certificates/adobe-xd-ui-ux-2025.webp",
+          "alt": "Training certificate",
+          "loading": "lazy"
+        },
+        {
+          "src": "../assets/certificates/uygulamali-figma-2025.webp",
+          "alt": "Training certificate",
+          "loading": "lazy"
+        },
+        {
+          "src": "../assets/certificates/uygulamali-canva-2024.webp",
+          "alt": "Training certificate",
+          "loading": "lazy"
+        },
+        {
+          "src": "../assets/certificates/sosyal-medya-uzmanligina-giris-2025.webp",
+          "alt": "Training certificate",
+          "loading": "lazy"
+        },
+        {
+          "src": "../assets/certificates/microsoft-powerpoint-2025.webp",
+          "alt": "Training certificate",
+          "loading": "lazy"
+        },
+        {
+          "src": "../assets/certificates/dijital-okuryazarlik-2025.webp",
+          "alt": "Training certificate",
+          "loading": "lazy"
+        },
+        {
+          "src": "../assets/certificates/microsoft-word-temelleri-2025.webp",
+          "alt": "Training certificate",
+          "loading": "lazy"
+        },
+        {
+          "src": "../assets/certificates/etkili-iletisim-stratejileri-2025.webp",
+          "alt": "Training certificate",
+          "loading": "lazy"
+        },
+        {
+          "src": "../assets/certificates/topluluk-onunde-konusma-2024.webp",
+          "alt": "Training certificate",
+          "loading": "lazy"
+        },
+        {
+          "src": "../assets/certificates/problem-cozme-teknikleri-2024.webp",
+          "alt": "Training certificate",
+          "loading": "lazy"
+        },
+        {
+          "src": "../assets/certificates/stresle-basa-cikma-2024.webp",
+          "alt": "Training certificate",
+          "loading": "lazy"
+        },
+        {
+          "src": "../assets/certificates/a1-seviye-ingilizce-2024.webp",
+          "alt": "Training certificate",
+          "loading": "lazy"
+        },
+        {
+          "src": "",
+          "alt": "",
+          "width": "1800",
+          "height": "1273"
+        }
+      ],
+      "indexHtmlLinks": [],
+      "mailtoLinks": [],
+      "missingLocalTargets": []
+    },
+    {
+      "route": "/en/projects/brand-identity/",
+      "file": "en/projects/brand-identity/index.html",
+      "lang": "en",
+      "title": [
+        "Brand Identity Projects | Elif Handegül Yılmaz"
+      ],
+      "h1": [
+        "Brand Identity"
+      ],
+      "meta": {
+        "null": null,
+        "viewport": "width=device-width, initial-scale=1",
+        "description": "Selected brand identity projects by Elif Handegül Yılmaz."
+      },
+      "canonical": [
+        "https://elifhandeyilmaz.com/en/projects/brand-identity/"
+      ],
+      "alternates": [
+        {
+          "rel": "alternate",
+          "hreflang": "tr",
+          "href": "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "en",
+          "href": "https://elifhandeyilmaz.com/en/projects/brand-identity/"
+        }
+      ],
+      "jsonld": [],
+      "articleIds": [],
+      "images": [
+        {
+          "src": "https://at.adobe.com/S38mohytVzQkPjQS",
+          "alt": "Sağlığım Burada identity system and brand applications",
+          "width": "1500",
+          "height": "2000",
+          "loading": "lazy",
+          "referrerpolicy": "no-referrer"
+        }
+      ],
+      "indexHtmlLinks": [],
+      "mailtoLinks": [],
+      "missingLocalTargets": []
+    },
+    {
+      "route": "/en/projects/brand-identity/sagligim-burada/",
+      "file": "en/projects/brand-identity/sagligim-burada/index.html",
+      "lang": "en",
+      "title": [
+        "Sağlığım Burada | Brand Identity Project"
+      ],
+      "h1": [
+        "Sağlığım Burada"
+      ],
+      "meta": {
+        "null": null,
+        "viewport": "width=device-width, initial-scale=1",
+        "description": "Brand identity and applications for Sağlığım Burada."
+      },
+      "canonical": [
+        "https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/"
+      ],
+      "alternates": [
+        {
+          "rel": "alternate",
+          "hreflang": "tr",
+          "href": "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "en",
+          "href": "https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/"
+        }
+      ],
+      "jsonld": [],
+      "articleIds": [],
+      "images": [
+        {
+          "src": "https://at.adobe.com/S38mohytVzQkPjQS",
+          "alt": "Sağlığım Burada brand identity: logo, outdoor advertising, promotional products and corporate materials",
+          "width": "1500",
+          "height": "2000",
+          "referrerpolicy": "no-referrer"
+        }
+      ],
+      "indexHtmlLinks": [],
+      "mailtoLinks": [],
+      "missingLocalTargets": []
+    },
+    {
+      "route": "/",
+      "file": "index.html",
+      "lang": "tr",
+      "title": [
+        "Elif Handegül Yılmaz | Grafik Tasarım Uzmanı & Eğitmen"
+      ],
+      "h1": [
+        "Markalara karakter kazandıran görsel kimlikler tasarlıyorum."
+      ],
+      "meta": {
+        "null": null,
+        "viewport": "width=device-width, initial-scale=1.0",
+        "description": "Elif Handegül Yılmaz'ın grafik tasarım, kurumsal kimlik, editoryal tasarım, sosyal medya, web arayüzü, video ve animasyon çalışmalarını keşfedin.",
+        "author": "Elif Handegül Yılmaz",
+        "theme-color": "#18b7c5",
+        "og:title": "Elif Handegül Yılmaz | Portfolyo",
+        "og:description": "Kıdemli Grafik Tasarım Uzmanı & Eğitmen",
+        "og:type": "website",
+        "og:url": "https://elifhandeyilmaz.com",
+        "og:image": "https://elifhandeyilmaz.com/images/hero.png"
+      },
+      "canonical": [
+        "https://elifhandeyilmaz.com/"
+      ],
+      "alternates": [
+        {
+          "rel": "alternate",
+          "hreflang": "tr",
+          "href": "https://elifhandeyilmaz.com/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "en",
+          "href": "https://elifhandeyilmaz.com/en/"
+        }
+      ],
+      "jsonld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Elif Handegül Yılmaz",
+          "jobTitle": "Kıdemli Grafik Tasarım Uzmanı ve Eğitmen",
+          "url": "https://elifhandeyilmaz.com",
+          "email": "mailto:elifhandegulyilmaz@icloud.com",
+          "sameAs": [
+            "https://www.linkedin.com/in/elifhandegulyilmaz",
+            "https://www.behance.net/elifhandegulyilmaz"
+          ]
+        }
+      ],
+      "articleIds": [],
+      "images": [
+        {
+          "src": "images/ehy-logo.png",
+          "alt": "Elif Handegül Yılmaz kişisel logosu"
+        },
+        {
+          "src": "images/hero.png",
+          "alt": "Grafik tasarım çalışma alanını temsil eden illüstrasyon"
+        },
+        {
+          "src": "assets/brand-projects/pilavyeri.webp",
+          "alt": "PilavYeri marka kimliği sunumu"
+        },
+        {
+          "src": "assets/event-projects/turkiye-denizcilik-zirvesi/01-ana-mockup.webp",
+          "alt": "5. Türkiye Denizcilik Zirvesi organizasyon tasarımlarının toplu mockup sunumu"
+        },
+        {
+          "src": "https://i.ytimg.com/vi/yRAWQz-qm-U/hq720.jpg",
+          "alt": "Alfa Sigorta Sağlık Sigortaları Animasyonu video kapağı"
+        },
+        {
+          "src": "assets/web-projects/sigortaguru.webp",
+          "alt": "SigortaGuru masaüstü ve mobil web sitesi sunumu"
+        },
+        {
+          "src": "assets/certificates/canva-magic-design-2026.webp",
+          "alt": "Eğitim sertifikası",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/certificates/adobe-animate-after-effects-2025.webp",
+          "alt": "Eğitim sertifikası",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/certificates/adobe-xd-ui-ux-2025.webp",
+          "alt": "Eğitim sertifikası",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/certificates/uygulamali-figma-2025.webp",
+          "alt": "Eğitim sertifikası",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/certificates/uygulamali-canva-2024.webp",
+          "alt": "Eğitim sertifikası",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/certificates/sosyal-medya-uzmanligina-giris-2025.webp",
+          "alt": "Eğitim sertifikası",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/certificates/microsoft-powerpoint-2025.webp",
+          "alt": "Eğitim sertifikası",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/certificates/dijital-okuryazarlik-2025.webp",
+          "alt": "Eğitim sertifikası",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/certificates/microsoft-word-temelleri-2025.webp",
+          "alt": "Eğitim sertifikası",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/certificates/etkili-iletisim-stratejileri-2025.webp",
+          "alt": "Eğitim sertifikası",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/certificates/topluluk-onunde-konusma-2024.webp",
+          "alt": "Eğitim sertifikası",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/certificates/problem-cozme-teknikleri-2024.webp",
+          "alt": "Eğitim sertifikası",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/certificates/stresle-basa-cikma-2024.webp",
+          "alt": "Eğitim sertifikası",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/certificates/a1-seviye-ingilizce-2024.webp",
+          "alt": "Eğitim sertifikası",
+          "loading": "lazy"
+        },
+        {
+          "src": "",
+          "alt": "",
+          "width": "1800",
+          "height": "1273"
+        }
+      ],
+      "indexHtmlLinks": [],
+      "mailtoLinks": [],
+      "missingLocalTargets": []
+    },
+    {
+      "route": "/projeler/marka-kurumsal-kimlik/",
+      "file": "projeler/marka-kurumsal-kimlik/index.html",
+      "lang": "tr",
+      "title": [
+        "Marka & Kurumsal Kimlik Projeleri | Elif Hande Yılmaz"
+      ],
+      "h1": [
+        "Marka & Kurumsal Kimlik"
+      ],
+      "meta": {
+        "null": null,
+        "viewport": "width=device-width, initial-scale=1",
+        "description": "Elif Hande Yılmaz tarafından hazırlanan marka ve kurumsal kimlik projeleri."
+      },
+      "canonical": [
+        "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/"
+      ],
+      "alternates": [
+        {
+          "rel": "alternate",
+          "hreflang": "tr",
+          "href": "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "en",
+          "href": "https://elifhandeyilmaz.com/en/projects/brand-identity/"
+        }
+      ],
+      "jsonld": [],
+      "articleIds": [],
+      "images": [
+        {
+          "src": "https://at.adobe.com/S38mohytVzQkPjQS",
+          "alt": "Sağlığım Burada marka kimliği sunumu",
+          "width": "1500",
+          "height": "2000",
+          "loading": "lazy",
+          "referrerpolicy": "no-referrer"
+        }
+      ],
+      "indexHtmlLinks": [
+        "../../index.html",
+        "../../index.html#projeler"
+      ],
+      "mailtoLinks": [],
+      "missingLocalTargets": []
+    },
+    {
+      "route": "/projeler/marka-kurumsal-kimlik/sagligim-burada/",
+      "file": "projeler/marka-kurumsal-kimlik/sagligim-burada/index.html",
+      "lang": "tr",
+      "title": [
+        "Sağlığım Burada | Marka Kimliği Projesi"
+      ],
+      "h1": [
+        "Sağlığım Burada"
+      ],
+      "meta": {
+        "null": null,
+        "viewport": "width=device-width, initial-scale=1",
+        "description": "Sağlığım Burada marka kimliği ve kurumsal uygulama sunumu."
+      },
+      "canonical": [
+        "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/"
+      ],
+      "alternates": [
+        {
+          "rel": "alternate",
+          "hreflang": "tr",
+          "href": "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "en",
+          "href": "https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/"
+        }
+      ],
+      "jsonld": [],
+      "articleIds": [],
+      "images": [
+        {
+          "src": "https://at.adobe.com/S38mohytVzQkPjQS",
+          "alt": "Sağlığım Burada marka kimliği; logo, açık hava uygulamaları, promosyon ürünleri ve kurumsal materyaller",
+          "width": "1500",
+          "height": "2000",
+          "referrerpolicy": "no-referrer"
+        }
+      ],
+      "indexHtmlLinks": [
+        "../../../index.html",
+        "../../../index.html#iletisim"
+      ],
+      "mailtoLinks": [],
+      "missingLocalTargets": []
+    }
+  ],
+  "sitemap": [
+    "https://elifhandeyilmaz.com/",
+    "https://elifhandeyilmaz.com/blog/",
+    "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/",
+    "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/",
+    "https://elifhandeyilmaz.com/en/",
+    "https://elifhandeyilmaz.com/en/blog/",
+    "https://elifhandeyilmaz.com/en/projects/brand-identity/",
+    "https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/"
+  ],
+  "robots": "User-agent: *\nAllow: /\n\nSitemap: https://elifhandeyilmaz.com/sitemap.xml\n",
+  "sha256": {
+    "README.txt": "8892c6f58f1bc116f9ccb6c549802ea554c73010bd659346bf45b16540aaaa9c",
+    "assets/brand-image-urls.js": "0faf697f4005afedf349af864c687e36d8f6577f40a243991bd6c966b5d1181d",
+    "assets/brand-projects/baytekin-sigorta.webp": "d4380ecf2ea3464ab76186fc82aee78e9203975c1a4b1dbdce881a172a1421db",
+    "assets/brand-projects/canvera.webp": "2a067583a189ff59b4c670b3e54dd71cd995d8a6bf035f477e8b596f7723a0ac",
+    "assets/brand-projects/coffee-point.webp": "9153367fd0658077da11b650413adceaf7357e08e7504e464d3b54f853d45467",
+    "assets/brand-projects/coko-pet-shop.webp": "ab1fe0c9ced1d4b763835dfba1b7b26dff2b04b0f5b097a3fc886f003ff989fb",
+    "assets/brand-projects/damla.webp": "87615ba2ffe27dccf3ad2de8b58370289795e8f52b4716204550ae1bf062c60d",
+    "assets/brand-projects/dentiva-plus.webp": "193d142fa27a30646b0cc5da02ff3204b5bfffcc29c44b99929f16b4444f11ff",
+    "assets/brand-projects/dreampix.webp": "3109e8c4ee32c9584bc76c8379075b9275032e015fce6e40d7fba09a0dcabe10",
+    "assets/brand-projects/fikir-atolyesi.webp": "ea70143bebdf057c715459a9f5b80243d9470d63bc316e2ef2586b8ef48528a9",
+    "assets/brand-projects/la-douceur.webp": "b3c75c7a5c638170ca5af7f2f7a48bea9800a32f4557119e0d8ecf310c11bfcd",
+    "assets/brand-projects/louvreia.webp": "ec20b3d8e239a511427582616eb788d7f882ac0689650d87771da02bab75799e",
+    "assets/brand-projects/minik-dunya-kresi.webp": "8a053b424b1e742848a40c93eebcfcf9adf518631ed9b7bb4aee74a9f1be83b9",
+    "assets/brand-projects/pilavyeri.webp": "b38740651083341971237a3c1fd732ed4aa111434c796e4b646c4ca883e1e8a6",
+    "assets/brand-projects/pixel-craft-studio.webp": "348b4abadd16f0ea72f37dbea758ffff7c592a65ee61648737470c7942ea94f1",
+    "assets/brand-projects/sagligim-burada.webp": "9f05238fefb1ae6a4a53043229ac5bc726dc9a27ce637f81dd3e63a27822de38",
+    "assets/brand-projects/sigortaguru.webp": "68e9258f2fb1f2498883a542d56aea81ada05b054043f45710dd534d2f86821b",
+    "assets/brand-projects/special-burger.webp": "029d60d88ae78b0eddc7e99870bfdafd6e5d8be10c956570b98a44f041f30691",
+    "assets/brand-projects/taze-masa.webp": "f8f0d291e87309c2be9d3e310f1a8df642e8a79b44e752f54acc554538cebd15",
+    "assets/brand-projects/techora.webp": "a2254de492e8cfbea43a9031df6aff762c6d4daa4c758849a502d4c7ca6f9c55",
+    "assets/brand-projects/velorie.webp": "139ca783c5ae15643d8f7d2c8700ab8b1b27e302d10823fd2750933869266131",
+    "assets/certificates/a1-seviye-ingilizce-2024.webp": "63d15b5ad5ecfbd5e97b8459fcffbed2979edf574bd952bd86ba59f481fd39e4",
+    "assets/certificates/adobe-animate-after-effects-2025.webp": "a5dc979388488d148e97671689ca1106254edff465245989a4cd52d6d96d1318",
+    "assets/certificates/adobe-xd-ui-ux-2025.webp": "77a89c8d0b373671d395f9af326dbafc222a2237fb12602fa22c50a3aaad7988",
+    "assets/certificates/canva-magic-design-2026.webp": "844c6b77f3c80b2b4be1e6c9da5e67f94bd987c1583e0f294cd43bc8c86a8717",
+    "assets/certificates/dijital-okuryazarlik-2025.webp": "db04d3fadf6f4d113c4dbcaee69ab2a2fe5b86880a87d9e9ad793aa86883d645",
+    "assets/certificates/etkili-iletisim-stratejileri-2025.webp": "579156018fc2db4a21eedda4ed3af50996249c2b368913e8feac1c001a77c0c7",
+    "assets/certificates/microsoft-powerpoint-2025.webp": "ec78c78676573d54003132bc5c060867f9bf43a41d95b321665609d73ec36b79",
+    "assets/certificates/microsoft-word-temelleri-2025.webp": "b44303b72a2f0db05ff8f7c8fc232f1448d37a7f7d19c5111815a458480cd4eb",
+    "assets/certificates/problem-cozme-teknikleri-2024.webp": "976b68898df2c91110a5f8172e4313b2b6aba08273cf87bc6be04095b8542af8",
+    "assets/certificates/sosyal-medya-uzmanligina-giris-2025.webp": "6e8e5fe045244f318d22146357fe0c3195c398eb901c02d41fc56569ddbeb9fb",
+    "assets/certificates/stresle-basa-cikma-2024.webp": "d2f75ca15e760de3a60334155face0864215c2fedd71c7b33aad9e518d049469",
+    "assets/certificates/topluluk-onunde-konusma-2024.webp": "8f7289129dbd5da80d8c4bbe66253ff4338858a9c89cb1637ec2facedaacafc8",
+    "assets/certificates/uygulamali-canva-2024.webp": "2f0108f87bf5308d6ad37e4ca07c46fac0c0cc1ba958aaad8cd50a26218014ae",
+    "assets/certificates/uygulamali-figma-2025.webp": "195e2cea18e1d2cd6afb9e01dd486597a0a851b029037c0596d9c6b2b27c1d1e",
+    "assets/certificates.css": "7108e7186dc1ee55ad87071d78857aa31180a98195f26aef255965cb0370a0f2",
+    "assets/certificates.js": "f8a38c2ed29b0be2c74e3457b9d2f55c3247409ec31b86f8176eebb1be75c40a",
+    "assets/core-script.js": "50bcf94ce78dfa430feacb7d704f83a307b52e3a0eb9b7b9995f823605ee59c4",
+    "assets/editorial-flipbook.css": "b45fbf63625afc4b6a9c05c12238b4d0a13cf38aa1fd837cbbd5d1b8798c64bd",
+    "assets/editorial-flipbook.js": "26183d12ed3ca6bec2d4c1dd7d07ea7cd5c8b5ae75cb83efa64e85c12920a168",
+    "assets/editorial-pdfs/edinburgh-sehir-tanitim-rehberi.pdf": "0d08d4df2a694edd5e9f6b3cafd07f8f9464c3b0d8bab71b7c0718ac5c3c625c",
+    "assets/editorial-pdfs/neta-sea-ingilizce-82-2026-mayis-haziran.pdf": "d7bf8831e853bb988fc3bea50448bb0ed5656fb4ef8f6678092be78301129c0e",
+    "assets/editorial-pdfs/neta-sea-kabotaj-ozel-83-2026-temmuz-agustos.pdf": "d48a36541d57fdc76edb40f5e38763877133e0830f2209f4e43632822899aa51",
+    "assets/editorial-pdfs/neta-sea-turkce-80-2026-ocak-subat.pdf": "05e0719523ce7ff15f330eb1209c521b19c4a470e01563da9f1bbbfb84dd74cb",
+    "assets/editorial-pdfs/neta-sea-turkce-81-2026-mart-nisan.pdf": "c5e41871ef4ee0bc38f233f0f2b2b49ca5bd2cc378ac8b39645b10f188d5d48e",
+    "assets/editorial-pdfs/yacht-news-turkiye-57-2026-ocak-subat.pdf": "be2baeb580cc05c929652a13ccf629b9bacb9fe69be1b8c2741116a5fc651f7a",
+    "assets/editorial-pdfs/yacht-news-turkiye-58-2026-mart-nisan.pdf": "c34d7c19489c221359aac168aa06e7c321b2e1b8ef5e0e551b6eda83003400b6",
+    "assets/editorial-pdfs/yacht-news-turkiye-59-2026-mayis-haziran.pdf": "5f7606998d70af1c0c4180325218677587c0d8c99ee0bde0a9b3a1deb8b91ca1",
+    "assets/editorial-pdfs/yacht-news-turkiye-60-2026-temmuz-agustos.pdf": "aa6faf1d026c923f93d01662823f42c93e09161ea9c87e05982643075fabb9bd",
+    "assets/editorial-projects/edinburgh-sehir-tanitim-rehberi.jpg": "edd40f11f6e6a81fe86b96a6bab5625db5bbeb85de9f5ffa41b8c2ce1b0ea810",
+    "assets/editorial-projects/neta-sea-ingilizce-82-2026-mayis-haziran.jpg": "d3eeef3035d3b28a3ebe9fb0559b6ccf2bc6803a9c109b5fb225b3658485b4ba",
+    "assets/editorial-projects/neta-sea-kabotaj-ozel-83-2026-temmuz-agustos.jpg": "103ca780f2f0bb873cb10c4eda8ec00ea5a5a4a5f95a012c55bae559a3444162",
+    "assets/editorial-projects/neta-sea-turkce-80-2026-ocak-subat.jpg": "43b399e6e570337d4eaf142a2253f3279121bccdc8e9bda45559b1cb6d850299",
+    "assets/editorial-projects/neta-sea-turkce-81-2026-mart-nisan.jpg": "8cf187152d240c8f1d2a54b43769d0b2e7a50f358d30e984ae8e9a964081754e",
+    "assets/editorial-projects/yacht-news-turkiye-57-2026-ocak-subat.webp": "7476bfcf046512bfd51d5c8ae6978633f4d77ae6a042e46ef96cb010d6160deb",
+    "assets/editorial-projects/yacht-news-turkiye-58-2026-mart-nisan.jpg": "c6e7c8c107e84e81f5cc21a662cc04e1c4d610eaa348ac0e17551a2fcc0c74b4",
+    "assets/editorial-projects/yacht-news-turkiye-59-2026-mayis-haziran.jpg": "841f41200896ca1856b7a13626d274a46e35773a483cf73f708f9bd6fdff4aa9",
+    "assets/editorial-projects/yacht-news-turkiye-60-2026-temmuz-agustos.jpg": "421b0262be64cacecb76c7169afe1caa9aad56476dbecc37bed3b82a3d6b5cd5",
+    "assets/editorial-projects.css": "a19c22ff0bc161b88dc47b4bc5d64cc7f556a8a64ec9f93da4b1f139f13b2baf",
+    "assets/editorial-projects.js": "725c522433102f85740060cc5e046a8a8889f2bf89ae6dea21daa9cf4ff890a1",
+    "assets/education-separation.css": "4a54af8fcc69519173c2acf7d6e401d006d3a83eb85c007b146bb6806fc441e2",
+    "assets/ehy-sections.css": "e3f108c15f356f202eeef64e5d97c85b5a8416868ccddbd3e556957ceb2003b6",
+    "assets/ehy-sections.js": "2319840d14e2f7b54c0cd2d07865077724e481dc50e7a66e11bdd07df4355c10",
+    "assets/en-site.js": "b3aec86d58746d9560b0199a9334068ca86a8b55b666a7991039823d47ea7b9c",
+    "assets/event-projects/denizci-fenerbahceliler-dernegi/01-ana-mockup.webp": "92ba6c50c62597303aa294b465d02236285fa4def54e9ec04ae11da794c2adb0",
+    "assets/event-projects/denizci-fenerbahceliler-dernegi/03-etkinlik-fotografi.webp": "fcf3073f79ad606b506676aeaf8507dc00dfa2cd6b0744311b9405a29434f131",
+    "assets/event-projects/denizci-fenerbahceliler-dernegi/04-etkinlik-fotografi.webp": "5ba3f227054e526ca0bd05e1ca8e785a7f6f0a79dba93d4910cf583dd6e4337b",
+    "assets/event-projects/denizci-fenerbahceliler-dernegi/05-etkinlik-fotografi.webp": "1675e2c0291cb09a23f81bd32740274a3b9d446848fd4616b3e0de49ea13971d",
+    "assets/event-projects/denizci-fenerbahceliler-dernegi/06-etkinlik-fotografi.webp": "40953309ae54e3b6276ea63851fbf9bf38e6d68e388d8f8e85dc2f2d229ae878",
+    "assets/event-projects/denizci-fenerbahceliler-dernegi/07-etkinlik-fotografi.webp": "397623538a1311cbebaed495e67c3d5de548a38caa381ea906bcb372f74c72a7",
+    "assets/event-projects/denizci-fenerbahceliler-dernegi/08-etkinlik-fotografi.webp": "a96da9f8fbc35973993e5deae64f3f9bdd82177aee83232f36fe1dfdf6d064e5",
+    "assets/event-projects/denizci-fenerbahceliler-dernegi/09-etkinlik-fotografi.webp": "f466b18a44afe6d331cbdca842223806a811a259dc9240c224099de4f6a00ff2",
+    "assets/event-projects/denizci-fenerbahceliler-dernegi/10-etkinlik-fotografi.webp": "fb6e00624639362ebc7e003dd893c3ec375a5f43776b062a5c8f6a8ff137afca",
+    "assets/event-projects/denizci-fenerbahceliler-dernegi/11-etkinlik-fotografi.webp": "b9925c6b0bfd24026730677f8960fbc7b5bdc0e0be73aa7f69e030c8ca315d81",
+    "assets/event-projects/gemi-yat-tasarim-yarismasi/01-ana-mockup.webp": "5ee6115c0380e444c75a3992d9c0f98821876851c3dddb2629f3b933025e83b0",
+    "assets/event-projects/gemi-yat-tasarim-yarismasi/02-etkinlik-fotografi.webp": "0b98b7a9532c439d687d948e585c8697e9abd8247beaa2a051102155c54732ad",
+    "assets/event-projects/gemi-yat-tasarim-yarismasi/03-etkinlik-fotografi.webp": "38b97a8cb8d86b45da6a06117c2d095ae905274ba3112f5cd88221e43c5f017e",
+    "assets/event-projects/gemi-yat-tasarim-yarismasi/04-etkinlik-fotografi.webp": "cd3ca7f6fdb308b74781b5c57bbcde05605be16b333426cee80467848ea712f1",
+    "assets/event-projects/gemi-yat-tasarim-yarismasi/05-etkinlik-fotografi.webp": "aed069fd449194935513f9168bd0a2c5b1691204f92b53a5a4d5585633afc4f5",
+    "assets/event-projects/gemi-yat-tasarim-yarismasi/06-etkinlik-fotografi.webp": "24ed620dc4559919339a273a59739d0b0f9dd8123e522cdb4de65a81f88bf14c",
+    "assets/event-projects/gemi-yat-tasarim-yarismasi/07-etkinlik-fotografi.webp": "ac7c043c16c06a65c7981a328845b03ac2a19004b5887f1ded1f9552bb89e0d3",
+    "assets/event-projects/gemi-yat-tasarim-yarismasi/08-etkinlik-fotografi.webp": "e884273b5d3a51ea272dbf4569fb0f793d2235e49a9fbddeb99528c3a3ac4c57",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/01-ana-mockup.webp": "019b9e725c3048f4c8900eec3856a0801cf2a07aa99b525a48a5005e1a855a14",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/02-neta-sea-etkinlik.webp": "7e74ec128c7b68f56160d986a92d93245b2c2ff1b34a06adbe9c9765ec3db8db",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/03-zirve-katilimcilari.webp": "744e0d1e4107045144bf0b58397397b94862339117b2a9f4864aefb787c5dccc",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/04-etkinlik-fotografi.webp": "586f266840a2aabb48eea5ac121e3d7e426a7835fe22229e0d7ec2deca1b6e49",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/05-etkinlik-fotografi.webp": "7c3c038939d92e6ff917aa267d8659cc18ac2be74155e805787e1ac89a157a56",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/06-etkinlik-fotografi.webp": "f74671212a800ae343e49b299aa58dfa08588f537ef65ffba65920f8779aad35",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/07-etkinlik-fotografi.webp": "a136b1f430559d0764ae2741dd563b68a6c917de5a61a817afac7082167cfee4",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/08-etkinlik-fotografi.webp": "48d771d7b6c54ae520431ba0c6cec0a4cc2ef5d690c1f4cfcaacb5842ea45b29",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/09-etkinlik-fotografi.webp": "e6988ba6e684ee1f284fa8557455ced593da26856de1b332c78f01f25322111b",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/10-etkinlik-fotografi.webp": "57a741a675ee0d06e6628f0fc1286462073a15fe7ab34ea1a65c6af85e050c7c",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/11-etkinlik-fotografi.webp": "03581fef2f72894fa65f70724fd0582e0e3d1c313825b16bc2d461b943a721e5",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/12-etkinlik-fotografi.webp": "5ec4a954b228e5b157790bf363989677300b7222985244575ecfa8843d3a897b",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/13-etkinlik-fotografi.webp": "443304535f5b2750596a4865b4cf4aa042c2208430edc1e20211e23d3cee76f3",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/14-etkinlik-fotografi.webp": "e77633c7d75fd3974f288b95fe10e1b48b770cc1e50dfc52843209b526a31c6f",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/15-etkinlik-fotografi.webp": "a18f1f124e51b3be0be0d2d229aaf3b2055e2b05550249c26a713a52c7d329c2",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/16-etkinlik-fotografi.webp": "971222b78a56824eb402ea61cb973ec97d8d521c1c9ca506a8b826472a819ca2",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/17-etkinlik-fotografi.webp": "f1d25ea772e5ca15f9dc743e2c8dab93439284bc319809a6ed1d70550999de89",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/18-etkinlik-fotografi.webp": "e4962a6d0408e66e87656c6a603767d514b70e7328f6c7771e163175ed5b4a4f",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/19-etkinlik-fotografi.webp": "183ca567560c64c5b7f1cc397bad536a0c9470ee35b499458f71f7f0832a96e3",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/20-etkinlik-fotografi.webp": "4677e5dbcec852fff4225ab4aed00456ff189b99796a926c54e032e2a32b8fd7",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/21-etkinlik-fotografi.webp": "4f934f3dfb11dd3d7921693038562d092bc782c7f85c67745070d52420dece38",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/22-etkinlik-fotografi.webp": "ee1b0b5299285b8539c7f68c86c86c9a85fb5ce0da558e8c09539276779cac26",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/23-etkinlik-fotografi.webp": "784300199d10bc1efd02196d2b97ddd8e6b4105255f2651ddb9da7238899721d",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/24-etkinlik-fotografi.webp": "6dc7056422f9fe3fdf4de403df14cc868e43844be8e10faf7d7340d6fe3e600b",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/25-etkinlik-fotografi.webp": "8be06b228f7c81706aadc86cf385db6542bd2b81a26841f096678c835d3aeeaa",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/26-etkinlik-fotografi.webp": "0c2a0dbed716ecd84e444bbecf2a2a25ff28fb8f501a14cac4b6384c713db2b7",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/27-etkinlik-fotografi.webp": "f4c4f029e2266b140747e691306b2befb2fb4fc4fb263cf5291f2204910c6026",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/28-etkinlik-fotografi.webp": "7b2d19ab1a524f66266ca46a8de0e60de69001dda2d557f0554371bc49bebfd8",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/29-etkinlik-fotografi.webp": "8b0e0b81f5d3cf5bd0012733b2be61ee9d51f4657afda248193d8e39a8deb89b",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/30-etkinlik-fotografi.webp": "8129f8c9be9ce90c399b74b6eae14d763d5d3acc144f5dd6d19a24481b3f037d",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/31-etkinlik-fotografi.webp": "90ebe5f79c926d1434a2afc181e879fea28238ef7a1f9275f456de38e3ea3d3e",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/32-etkinlik-fotografi.webp": "4ab761b494c731d858e437905adecce8a1c861a0208324a60b895b676a02ec93",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/33-etkinlik-fotografi.webp": "858b333c6a11e05bf57ac83b63bbf0d25745cd557d142a7d5ed04a6e7bc41e44",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/34-etkinlik-fotografi.webp": "7b314e8f1fd1e23a37887ce54caa2fa10df0e2a0191d20e8911f230dda5398bd",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/35-etkinlik-fotografi.webp": "6069a4d7c6b57091ea42c4488a23bc1413f5ce2ffe6f3b249ab2430b98a1eb8e",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/36-etkinlik-fotografi.webp": "30c4d5a99b44d5a3593feb5b120f591aa721e0c1a843716a51ee07393a827aa8",
+    "assets/event-projects/turkiye-denizcilik-zirvesi/37-etkinlik-fotografi.webp": "4b997555778a33e78a3a73b11bf1bab6ef494f5f9ab7bb2cb12bbbb2ea7a93a5",
+    "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/01-ana-mockup.webp": "2a0874b769a204ed40e97d48a2fd3bfe82338838f01944c8729016e4fdb44f9b",
+    "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/02-ana-tasarim.webp": "eeac60387077662fa52a6d3ea29b1f543c219eb22c35e84172d1c2d34307f08b",
+    "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/03-etkinlik-fotografi.webp": "f6226a09a569caad7684b57c434d968e951d8b442a6683a9d391b02445937951",
+    "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/04-etkinlik-fotografi.webp": "904b173b4375aa371cdf9126f215446819d643be1dfa3cdf6d316f429e2d8364",
+    "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/05-etkinlik-fotografi.webp": "4f06ac6e1a4f5a444163b86d22790d75c7f8dc24fc02b9c52f44638e6b658fa0",
+    "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/06-etkinlik-fotografi.webp": "279762eb2d5096d06f37229870f80eb3ff20fddc6af55618c63ff7dc41346363",
+    "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/07-etkinlik-fotografi.webp": "a8f19ba7c7fccc2e61ffd80bad9dc2f22db77352ecadd90233e11f215a5e7422",
+    "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/08-etkinlik-fotografi.webp": "6e9533100a839754a5aec1fc3946693a129f853bd23fcb45fe38ea948930151a",
+    "assets/event-projects/uluslararasi-denizci-kadinlar-gunu/09-etkinlik-fotografi.webp": "7784127b055fe3aefc98e436bc5628bbaa725ea7ad2d9f2e2cdd520a75ad9d27",
+    "assets/event-projects/yesil-donusum-zirvesi/01-ana-mockup.webp": "eb33ca3dfe2644318bafe1a999c0d1556264af4c8e5c387fdeb7afcb5bbe2e02",
+    "assets/event-projects/yesil-donusum-zirvesi/02-genel-sahne.webp": "704ae2456c76cf950f5874e0c88f9264dbca6ed1010e5eb4751d932466267282",
+    "assets/event-projects/yesil-donusum-zirvesi/03-karsilama-alani.webp": "e3f885e53f0c7eca82b43c162278b388206e4d916d22f02846c80c42b14326aa",
+    "assets/event-projects/yesil-donusum-zirvesi/04-fotograf-duvari.webp": "3d228189626d612e257f5f001b551eb75f35570da712ca7d289b01e95021b83d",
+    "assets/event-projects/yesil-donusum-zirvesi/05-odul-toreni.webp": "6e6f1f384606f7afe935b2c761555297489b713a8b28b071fe2a569b64d1de84",
+    "assets/event-projects/yesil-donusum-zirvesi/06-oturum-ekrani.webp": "7078cc538a6039a505946a39c5b2f52d0523d2da0b57ae49f70b9fb975d2afd2",
+    "assets/event-projects/yesil-donusum-zirvesi/07-panel-sahnesi.webp": "ab10dbdfeae42697c9b7a135c8e391c2f49c1a49c1df97ff491f09d5d5ae8e9c",
+    "assets/event-projects/yesil-donusum-zirvesi/08-yaka-karti.webp": "606e1d12f7f8841d2e37c2933ae5d27aaf9cfc9ed26b0f7c878645bd4c17e0f6",
+    "assets/event-projects.css": "1d7ad271d3c0962da31ce7d514d7239fe5e233d77c4a6b1ebcbd4b70ab2708b0",
+    "assets/event-projects.js": "937311b018595302f45c55167bc9cc936343b51d40bef6e3d2d3af4c42ffa6ae",
+    "assets/featured-projects.css": "fc6a8250e4ef88e4f1e0695d24c030b826b34a2b05c94755cc6515be61dc483e",
+    "assets/hero-title.css": "311639139580eba3c6c2019a18bc1fed921c5e210e5031024b0289c39e51d2c6",
+    "assets/home-hero-polish.css": "d162e4fd5221132148227a50b2e07f7b576aba0b11da73e03b51c5be6176d82f",
+    "assets/home-overview.css": "d6e5a0d1b3ff73062b4d9c3f182c425c3791d933c195fcee8cc138b336bc0ace",
+    "assets/motion-projects.css": "6e2b6d7b47bc4882e7feb517463c6eb1923682daa1214783daf906c00d62bfc6",
+    "assets/motion-projects.js": "5927f72b24a7c4777d9b6d6a2d8b9ed3bb65d067c0eb3b1aeb21b8295bd7e70b",
+    "assets/optimizations.css": "6bb60ec4b969fbf245e4efda1bc95811bb148ba88246be0bbfc13652ad824cf8",
+    "assets/project-covers/brand-identity-camla-transparent.png": "25f2b139939a3048430f8ee05d94429893c41ce29d3d771628cc84b5660df739",
+    "assets/project-covers/brand-identity-camla.png": "82b47ffbda00f191049b2e78f40378d44ea5f0f5db1a667679452b43a3325baa",
+    "assets/project-covers/brand-identity-spiral.svg": "873ebd70a7fdddde8ccd941321cec71537ed1f6d2d16d83bf84ec2e47cd6b500",
+    "assets/project-covers.css": "d0b39714028c1b55c8492e9928b611fbf1db9f4f3674cae64ecb92cdb738bda4",
+    "assets/project-covers.js": "cd8155d7ba8cef60c4a665198fb04eeb9639fba3c88470d2f51efbbc4ff4417a",
+    "assets/project-lightbox.css": "0e6ba3c88e3507556b5c7fba83d90087ad0752b917d19cbba187d92ddc965351",
+    "assets/project-pages.css": "f54b9a3eda95a8402abd1376a7dc3dbc42682f2154c4bb1518333b352b3d768c",
+    "assets/promo-projects/ayse-yusuf-nikah-davetiyesi.webp": "72324ca036f2c716d046582431889b32800dce7e1b061968824cb4f53fdcd9e1",
+    "assets/promo-projects/burgers-a3-amerikan-servis.webp": "cc8e2e428f2bd0a3b844c17d4b29a840466377b31159a32257bcf1598c5c10ff",
+    "assets/promo-projects/canvera-kartvizit.avif": "062f4b21d5bacfd45b41dd116af0383bb0f7fdcfc304f8767e20a80cd3d3a394",
+    "assets/promo-projects/coko-pet-shop-kartvizit.avif": "06e84b5cfdd1b02c8eaa5cd3ba09081ce8c582870fbeaba46cad2e0fd403039a",
+    "assets/promo-projects/dalindan-recel-kavanoz-etiketleri.webp": "f6d2d41a7ef01eee77fae3c2bcb5c9e7388a6c27ce564d8d39b5ec4800455fd7",
+    "assets/promo-projects/egitim-zamani-afis.webp": "d6c716e0329a74b751039996c5d270317f6e6d4bb8a2704fee7104968d76c895",
+    "assets/promo-projects/grand-seyahat-afis.webp": "0b3ad9be25867db364c6ddc058ea08fbd29eeb12def73eb8eac8662ce5cd7dda",
+    "assets/promo-projects/haydarpasa-liman-dergi-reklami.webp": "7b1d00ffaf477d3a4b2855cde726d1487a1b816d035eca9fb06b4ac1ec7f59a6",
+    "assets/promo-projects/heliplat-10-yil-dijital-davetiye.webp": "1519948798af5387f16737a5eff01e73c6e04ead082e6cc988a6b2abba081bba",
+    "assets/promo-projects/kok-kahve-atolyesi-brosur.avif": "3daba4719f1f9066c3788c2fbc62e9d485f68f157ad3571ef059916a1a72e339",
+    "assets/promo-projects/magazin-dunyasi-dergi-tasarimi.webp": "6539db5af785c8f926be3aa866d83635229f67fd55cdf091eb545764d50e0283",
+    "assets/promo-projects/neta-sea-yeni-sayi-dijital-tanitim.webp": "30d38a93c347d1dc2b4fc57e62dbc45460c00642e73397639700f75c4e7dae83",
+    "assets/promo-projects/organik-zeytinyagi-etiket-ambalaj.webp": "9b714fe5bcbbef177411fdba64e74b9d70fc3e5e1a580a0c964def46271db98c",
+    "assets/promo-projects/pilavyeri-kartvizit.avif": "d7de1b4a42abaafe31ff94c23d193b73a4dcf56b5f0400ba8dad1a764087f587",
+    "assets/promo-projects/special-burger-afis.webp": "cf49901208b93510d24a66cbe8656238e80433a701a6a25c98e09e4aad24c830",
+    "assets/promo-projects/theatre-magazine-dergi-kapagi.webp": "c97df23145bdd37ad383ce9829b10d7cbb721c4e4b81f6f9c549c232436cb4eb",
+    "assets/promo-projects/turizm-tanitim-brosuru.webp": "e1cfed557d26e8ddeee6c82d47567f00bfb543b15e6814348cc0f74c603848e5",
+    "assets/promo-projects/xv-ulusal-gemi-yat-tasarim-yarismasi-afis.webp": "5c14413ed655d8b2c4cd1ddf77ee1ebc194238b31374bbafc91da93d1308c1f4",
+    "assets/promo-projects/yacht-news-yeni-sayi-dijital-tanitim.webp": "d383169327783c78a946e67c0cbb013bf80deeb62010b448223ffa6bea7db3e0",
+    "assets/promo-projects.js": "db3f8d9c4334e6b54cf34131d331abc2e310cd8417bd3fb8d0afc687a4eaa766",
+    "assets/script.js": "45dd25d48e1cd1abf5a288f35fb59c85db8de0802a75c22d3e646c9da939a999",
+    "assets/service-icons.css": "3b52a65bf7da45a2accd532831fee1a37ae2abe9d56133985ab2be9d3036f55a",
+    "assets/site-design-system.css": "aed30dda28ee278d70102c0ed749a9dd16180d4fa193220bb26e8e176b5a3ecb",
+    "assets/style.css": "26632613af26ce05b606a8f74f6df0a65b7227d47d0d94a05469f90e05fbf994",
+    "assets/web-projects/baytekin-sigorta.webp": "32c1055ed7d161654261990b094ff1f2cdf206d89b768a4b9057460af0fc4a88",
+    "assets/web-projects/elifhandeyilmazcom.webp": "23f74702c7bdbf90b4e5a4a0452ab50ce9bcc8721431b9929285ba9ce3279b9d",
+    "assets/web-projects/formakutusu.webp": "e0f605374d90688e30a2fc03233e6515ffd5d6d33026daec23599021dbdcd486",
+    "assets/web-projects/pilavyeri.webp": "b3a10ae0ed908ec6ede5c571692ae8c250d00bf1d462d95991109f9fac62939d",
+    "assets/web-projects/sigortaguru.webp": "0cbddd885d3339a516d3f9ff6a506e0618948a09419d1398ea8ad09bef533376",
+    "assets/web-projects-data/baytekin.js": "210a96b6f0fa5c71558bcbde114dddbbb3caca5d3c595f5450317d4c66748978",
+    "assets/web-projects-data/elifhandeyilmaz.js": "e70c08bc08968487d0e29fb2ff3e153852f0eac7f15b11b02fcc916e912eb9c7",
+    "assets/web-projects-data/formakutusu.js": "5364de99d5133e2db12a1f89d1ab83e09773f53ab53d35088c5d7cb964284be1",
+    "assets/web-projects-data/sigortaguru.js": "b7970496989f0dc937ea77468ee698aaaf764386d1b41dd1e73c7a7dc4e8a4e6",
+    "assets/web-projects.css": "9d0238ec8ce01b82209a5a1aa752433362baed0b5aff94071c0246c497dd2ad3",
+    "assets/web-projects.js": "3754a6dea4c555d65fec792b274abdad634e1e59770732eb809e1e2b1b74789b",
+    "blog/index.html": "b40b37d8bb511aff7692ebd063d48c283aeaf01c98336f7fd2c437c48693ec60",
+    "cv.pdf": "a08ded411c4d71e1ce77ed0b679bc97e4704f3cccc809c6ea34a69ce5e088183",
+    "en/blog/index.html": "e623a5b7e46768b9b37d2fd6ee1b421793dc5c2cbf6665c64db058e32d89bbda",
+    "en/index.html": "41322bc9bffceee1306ea7c6bde83024423ae930d786606e1660052b0766b472",
+    "en/projects/brand-identity/index.html": "f4ce85660b3ef166e1addeaec1ded1ece2b88ef39400df8f8564793f0a8484f8",
+    "en/projects/brand-identity/sagligim-burada/index.html": "10d08e7fd92cd061dcf001cde96b738b8c025aa156490b87dd2d5846a55eaa01",
+    "images/blog/blog-covers-sprite.webp": "398cbae53637aa662dec0ffc12b90d72d094cfbe96292563d9341d26f00a735c",
+    "images/blog/topics/01-grafik-tasarim-nedir-kapak.jpg": "80210c1492ca9d069ae0fc57f2faadc8e56764ebeb52f8073eb7b12b4610bdcb",
+    "images/blog/topics/01-grafik-tasarim-nedir-mbk.png": "951924e6f54156fcf4f13c709085ec15957e1e8ade1d2b0f4cb2e18f62ecf7d7",
+    "images/blog/topics/02-grafik-tasarimin-temel-unsurlari-kapak.jpg": "d35cce0c265e449ce5e4209d0c03201200ab566df7403a72346770de11b6152f",
+    "images/blog/topics/03-grafik-tasarimin-temel-ilkeleri-kapak.jpg": "c80bb069999112c2f236ca735535fb89676cb81f2b54465017f551f679cfc0e5",
+    "images/blog/topics/03-grafik-tasarimin-temel-ilkeleri-mbk.png": "70a4be67f80e0bab845d0d9dc7faac40b7f9ef216abe06a1f1311a41fd0e7477",
+    "images/blog/topics/04-vektorel-ve-bitmap-kapak.jpg": "136a8a91f77eaf16ae862b8bcaeeaad1ef649873b89d97ab702576f014dd8431",
+    "images/blog/topics/04-vektorel-ve-bitmap-mbk.png": "60c60ae42e1dc8a34d08c019f840e0a047b7e437743c2e01004120b8f861a27d",
+    "images/blog/topics/05-renk-bilgisi-kapak.jpg": "0769264e0688a4e68e9a32b0ef65bc3da192b861c2c9ae0e7c888d135671ad07",
+    "images/blog/topics/05-renk-bilgisi-mbk.png": "cf8054dc4c11b72440c0e252a60183fab3e191535c17baf2c2333440e02bcc20",
+    "images/blog/topics/06-tipografi-kapak.jpg": "d67a75893a62836c6852d8d460d4544d23688e7ff281991729353023f789122e",
+    "images/blog/topics/06-tipografi-mbk.png": "d7a5fadb94d59be01817c4a95df109c1f5e5c55ec33dcb9eac684174f1c1735d",
+    "images/blog/topics/07-design-file-formats-cover.svg": "26c198bbc2a70ff671888c7ab3324911c9a4ffb0660e42075fab21362877ff2a",
+    "images/blog/topics/07-dosya-formatlari-kapak.svg": "12626a7c94cb960866d0d495961722b01b58cfbfca731199e03c8654f10b7641",
+    "images/ehy-logo-en.png": "2eccfb4e5811036d000d9ebeceb6d09367adefc1d891a27fdc814787bfa0630b",
+    "images/ehy-logo.png": "8085d808a357cf081b52d1ff8fb8b9bf464d1f25947daecc16c226f216dc9b55",
+    "images/hero.png": "182cfedcb60bd841f229d2f3c996b46870662edc465c8f62dd77d7005b418e4c",
+    "images/projects/marka-kurumsal-kimlik/sagligim-burada-sunum.webp.b64": "f549c9a6373ceb5116ebffe0add8120d76dc81dbcd06b0c06cbcb2c892c7fd01",
+    "index.html": "55dbfda469ce98b182597d7d0fd5286896f612ed980484ff5c7547359b9a6d99",
+    "projeler/marka-kurumsal-kimlik/index.html": "50663ab67be768bb845e26258915c3aed4b32ab87823388c9a99373474501b4b",
+    "projeler/marka-kurumsal-kimlik/sagligim-burada/index.html": "9f5daed30b91a02624535853df54b2bab46920907c106426df9d57e7df34b21a",
+    "robots.txt": "4b32c84ef739ef9ac6d1948ab0d143ddf072fb807e08fa5eca650cae31b44f62",
+    "sitemap.xml": "326fd681ed02565908bd625ac55042cd0ab16080b0681b99d1d2ccd6b1210ca5",
+    "test-upload.txt": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+  }
+}

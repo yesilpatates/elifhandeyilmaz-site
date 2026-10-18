@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grafik Tasarımın Temel İlkeleri | Elif Handegül Yılmaz</title>
+  <meta name="description" content="Denge, hiyerarşi, vurgu, ritim, birlik, kontrast ve oran.">
+  <link rel="canonical" href="https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/">
+  <link rel="alternate" hreflang="tr" href="https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/">
+  <link rel="alternate" hreflang="en" href="https://elifhandeyilmaz.com/en/blog/principles-of-graphic-design/">
+
+  <meta property="og:title" content="Grafik Tasarımın Temel İlkeleri">
+  <meta property="og:description" content="Denge, hiyerarşi, vurgu, ritim, birlik, kontrast ve oran.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/">
+  <meta property="og:image" content="https://elifhandeyilmaz.com/images/blog/topics/03-grafik-tasarimin-temel-ilkeleri-kapak.jpg">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Grafik Tasarımın Temel İlkeleri">
+  <meta name="twitter:description" content="Denge, hiyerarşi, vurgu, ritim, birlik, kontrast ve oran.">
+  <meta name="twitter:image" content="https://elifhandeyilmaz.com/images/blog/topics/03-grafik-tasarimin-temel-ilkeleri-kapak.jpg">
+  <link rel="icon" type="image/png" href="/images/ehy-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbf8f2;
+      --surface: #fff;
+      --ink: #0b1624;
+      --muted: #68717d;
+      --line: #e7ded2;
+      --accent: #07beb8;
+      --accent-dark: #087d88;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: "Poppins", Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+
+    .container {
+      width: min(calc(100% - 40px), 1180px);
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid var(--line);
+      background: rgba(251, 248, 242, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand img {
+      width: 280px;
+      height: 70px;
+      display: block;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    .back-link {
+      color: var(--accent-dark);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 88px 0 58px;
+    }
+
+    .eyebrow,
+    .category {
+      color: var(--accent-dark);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 12px 0 20px;
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      line-height: 1.04;
+      font-weight: 500;
+      letter-spacing: -0.05em;
+    }
+
+    .hero > .container > p {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      padding: 12px 0 92px;
+    }
+
+    .card {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--surface);
+      transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(7, 190, 184, 0.32);
+      box-shadow: 0 20px 44px rgba(15, 26, 40, 0.09);
+    }
+
+    .cover {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-image: url("/images/blog/blog-covers-sprite.webp");
+      background-repeat: no-repeat;
+      background-size: 300% 300%;
+      background-color: #f3eee7;
+    }
+
+    .cover-1 { background-position: 0% 0%; }
+    .cover-2 { background-position: 50% 0%; }
+    .cover-3 { background-position: 100% 0%; }
+    .cover-4 { background-position: 0% 50%; }
+    .cover-5 { background-position: 50% 50%; }
+    .cover-6 { background-position: 100% 50%; }
+    .cover-7 { background-position: 0% 100%; }
+
+    .cover-1 {
+      background-image: url("/images/blog/topics/01-grafik-tasarim-nedir-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .cover-2 {
+      background-image: url("/images/blog/topics/02-grafik-tasarimin-temel-unsurlari-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .cover-3 {
+      background-image: url("/images/blog/topics/03-grafik-tasarimin-temel-ilkeleri-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .cover-4 {
+      background-image: url("/images/blog/topics/04-vektorel-ve-bitmap-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .cover-5 {
+      background-image: url("/images/blog/topics/05-renk-bilgisi-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .cover-6 {
+      background-image: url("/images/blog/topics/06-tipografi-kapak.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .cover-7 {
+      background-image: url("/images/blog/topics/07-dosya-formatlari-kapak.svg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .card-body {
+      padding: 21px 21px 23px;
+    }
+
+    .card h2 {
+      margin: 8px 0 10px;
+      font-size: 1.08rem;
+      line-height: 1.38;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .card p {
+      margin: 0 0 17px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.65;
+    }
+
+    .read-more {
+      color: var(--accent-dark);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .articles {
+      padding: 88px 0 100px;
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .articles-heading {
+      max-width: 760px;
+      margin-bottom: 44px;
+    }
+
+    .articles-heading h2 {
+      margin: 10px 0 12px;
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.08;
+      font-weight: 500;
+      letter-spacing: -0.045em;
+    }
+
+    .articles-heading p { margin: 0; color: var(--muted); }
+
+    .article {
+      scroll-margin-top: 110px;
+      display: grid;
+      grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
+      gap: clamp(28px, 5vw, 68px);
+      align-items: start;
+      padding: 54px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .article-cover {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 16px 35px rgba(15, 26, 40, 0.07);
+    }
+
+    .article-number {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 17px;
+      border-radius: 50%;
+      color: var(--accent-dark);
+      background: #d9f3f4;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .article h3 {
+      margin: 0 0 14px;
+      font-size: clamp(1.6rem, 3vw, 2.55rem);
+      line-height: 1.18;
+      font-weight: 500;
+      letter-spacing: -0.035em;
+    }
+
+    .article p { margin: 0 0 14px; color: var(--muted); }
+    .article h4 {
+      margin: 30px 0 12px;
+      color: var(--ink);
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      line-height: 1.3;
+    }
+    .article h5 {
+      margin: 20px 0 8px;
+      color: var(--accent-dark);
+      font-size: 0.98rem;
+      line-height: 1.35;
+    }
+    .article ul { margin: 12px 0 20px; padding-left: 20px; color: var(--muted); }
+    .article li { margin-bottom: 7px; }
+
+    .article-content {
+      min-width: 0;
+    }
+
+    .article.article-full {
+      grid-template-columns: 1fr;
+    }
+
+    .article.article-full .article-cover {
+      width: 100%;
+      max-width: none;
+    }
+
+    .article.article-full .article-content {
+      width: min(100%, 860px);
+      margin-inline: auto;
+    }
+
+    .article-lead {
+      color: var(--ink) !important;
+      font-size: 1.02rem;
+    }
+
+    .article-info-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 14px 0 28px;
+      border: 1px solid #eadfcd;
+      border-radius: 18px;
+      box-shadow: 0 16px 35px rgba(15, 26, 40, 0.08);
+    }
+
+    .faq-item {
+      margin-bottom: 18px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fbf8f2;
+    }
+
+    .faq-item strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--ink);
+    }
+
+    .faq-item p {
+      margin: 0;
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      background: var(--bg);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 950px) {
+      .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .article { grid-template-columns: 1fr; }
+      .article-cover { max-width: 720px; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(calc(100% - 28px), 1180px); }
+      .brand img { width: 215px; height: 62px; }
+      .header-inner { min-height: 74px; }
+      .hero { padding: 60px 0 42px; }
+      .card-grid { grid-template-columns: 1fr; gap: 19px; padding-bottom: 70px; }
+      .articles { padding: 66px 0 78px; }
+      .article { padding: 42px 0; gap: 24px; }
+    }
+      .language-switch { display: inline-flex; align-items: center; justify-content: center; min-width: 42px; height: 36px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--accent-dark); background: var(--surface); font-size: .76rem; font-weight: 700; letter-spacing: .06em; }
+  </style>
+  <link rel="stylesheet" href="/assets/site-design-system.css?v=20261009-typography-v1">
+
+<link rel="stylesheet" href="/assets/blog-article.css?v=20261018-article-v1">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/#article",
+      "headline": "Grafik Tasarımın Temel İlkeleri",
+      "description": "Denge, hiyerarşi, vurgu, ritim, birlik, kontrast ve oran.",
+      "author": {
+        "@type": "Person",
+        "name": "Elif Handegül Yılmaz",
+        "url": "https://elifhandeyilmaz.com/"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/"
+      },
+      "image": "https://elifhandeyilmaz.com/images/blog/topics/03-grafik-tasarimin-temel-ilkeleri-kapak.jpg",
+      "inLanguage": "tr",
+      "dateModified": "2026-10-18"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Anasayfa",
+          "item": "https://elifhandeyilmaz.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://elifhandeyilmaz.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Grafik Tasarımın Temel İlkeleri",
+          "item": "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/#faq",
+      "inLanguage": "tr",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Grafik tasarımın en önemli ilkesi hangisidir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tek bir ilke diğerlerinden daha önemli değildir. Başarılı tasarımlar tüm ilkelerin birlikte kullanılmasına dayanır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kontrast neden önemlidir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Önemli bilgilerin öne çıkmasını ve tasarımın daha kolay algılanmasını sağlar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Görsel hiyerarşi ne işe yarar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kullanıcının içerikleri doğru sırayla okumasına yardımcı olur."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="guide-page blog-article">
+<header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/#anasayfa" aria-label="Ana sayfaya dön">
+        <img src="/images/ehy-logo.png" alt="Elif Handegül Yılmaz" width="2048" height="618">
+      </a>
+      <a class="back-link" href="/blog/">← Tüm yazılar</a><a class="language-switch" href="/en/blog/principles-of-graphic-design/" lang="en" aria-label="Read this article in English">EN</a>
+    </div>
+  </header>
+<main id="main-content"><nav class="container article-breadcrumb" aria-label="İçerik yolu"><a href="/">Anasayfa</a><span aria-hidden="true">/</span><a href="/blog/">Blog</a><span aria-hidden="true">/</span><span aria-current="page">Grafik Tasarımın Temel İlkeleri</span></nav><section class="articles"><div class="container"><article class="article article-full" id="grafik-tasarimin-temel-ilkeleri">
+          <div class="article-cover"><div class="cover cover-3" role="img" aria-label="Grafik Tasarımın Temel İlkeleri"></div></div>
+          <div class="article-content">
+            <span class="article-number">03</span>
+            <h1>Grafik Tasarımın Temel İlkeleri</h1>
+            <p class="article-lead">İyi bir tasarımın dikkat çekmesi yalnızca güzel görünmesine bağlı değildir. Tasarımın düzenli, anlaşılır ve dengeli olması da en az estetik kadar önemlidir.</p>
+            <p>Grafik tasarımın temel ilkeleri, tasarımdaki tüm unsurların nasıl bir araya geleceğini belirleyen kurallardır. Bu ilkeler sayesinde tasarımlar daha okunabilir, daha etkili ve daha profesyonel görünür.</p>
+            <p>Bu yazıda grafik tasarımın en önemli temel ilkelerini örneklerle inceleyeceğiz.</p>
+
+            <h2>Denge (Balance)</h2>
+            <p>Denge, tasarım içerisindeki tüm ögelerin görsel ağırlığının eşit hissedilmesini sağlar. Bir tarafta çok fazla içerik, diğer tarafta ise boşluk olması tasarımı dengesiz gösterebilir. Simetrik ve asimetrik denge en yaygın iki yaklaşımdır.</p>
+
+            <h2>Kontrast (Contrast)</h2>
+            <p>Kontrast; renk, boyut, kalınlık, şekil veya boşluk gibi farklılıklar oluşturarak önemli bilgilerin öne çıkmasını sağlar.</p>
+
+            <h2>Vurgu (Emphasis)</h2>
+            <p>Her tasarımın dikkat çekmesi gereken bir odak noktası vardır. Büyük başlıklar, canlı renkler veya büyük görseller vurgu oluşturabilir.</p>
+
+            <h2>Görsel Hiyerarşi (Visual Hierarchy)</h2>
+            <p>Kullanıcı önce başlığı, ardından alt başlığı ve son olarak metni okur. Görsel hiyerarşi bu okuma sırasını planlamayı sağlar.</p>
+
+            <h2>Hizalama (Alignment)</h2>
+            <p>Tüm ögelerin belirli bir düzene göre yerleştirilmesidir. Doğru hizalama tasarımı temiz ve profesyonel gösterir.</p>
+
+            <h2>Yakınlık (Proximity)</h2>
+            <p>Birbiriyle ilişkili bilgiler birbirine yakın, ilgisiz bilgiler ise daha uzak yerleştirilmelidir.</p>
+
+            <h2>Tekrar (Repetition)</h2>
+            <p>Aynı renklerin, fontların ve görsel ögelerin bilinçli olarak tekrar edilmesi tutarlılık oluşturur.</p>
+
+            <h2>Bütünlük (Unity)</h2>
+            <p>Tüm tasarım ögelerinin tek bir bütünün parçası gibi görünmesini sağlar.</p>
+
+            <h2>Bu İlkeler Neden Önemlidir?</h2>
+            <ul>
+              <li>Bilginin daha kolay okunmasını sağlar.</li>
+              <li>Tasarımı daha estetik gösterir.</li>
+              <li>Dikkati doğru noktaya yönlendirir.</li>
+              <li>Daha profesyonel bir görünüm oluşturur.</li>
+            </ul>
+
+            <img class="article-info-image" src="/images/blog/topics/03-grafik-tasarimin-temel-ilkeleri-mbk.png" alt="Başarılı markaların denge, kontrast, hizalama ve görsel hiyerarşi ilkelerini ortak kullandığını anlatan mini bilgi kutusu" width="1312" height="762" loading="lazy" decoding="async">
+
+            <h2>Sonuç</h2>
+            <p>Grafik tasarımın temel ilkeleri, tasarımın yalnızca güzel görünmesini değil, aynı zamanda etkili bir iletişim kurmasını sağlar. Denge, kontrast, vurgu, görsel hiyerarşi, hizalama, yakınlık, tekrar ve bütünlük birlikte kullanıldığında güçlü tasarımlar ortaya çıkar.</p>
+
+            <h2>Sık Sorulan Sorular</h2>
+            <div class="faq-item">
+              <strong>Grafik tasarımın en önemli ilkesi hangisidir?</strong>
+              <p>Tek bir ilke diğerlerinden daha önemli değildir. Başarılı tasarımlar tüm ilkelerin birlikte kullanılmasına dayanır.</p>
+            </div>
+            <div class="faq-item">
+              <strong>Kontrast neden önemlidir?</strong>
+              <p>Önemli bilgilerin öne çıkmasını ve tasarımın daha kolay algılanmasını sağlar.</p>
+            </div>
+            <div class="faq-item">
+              <strong>Görsel hiyerarşi ne işe yarar?</strong>
+              <p>Kullanıcının içerikleri doğru sırayla okumasına yardımcı olur.</p>
+            </div>
+          </div>
+        </article><nav class="article-next" aria-label="Yazı gezinmesi"><a class="back-link" href="/blog/vektorel-ve-bitmap-farki/">Sonraki yazı: Vektörel ve Bitmap Tasarım Arasındaki Farklar →</a></nav><aside class="article-cta"><p>Projeniz için tasarım desteği mi arıyorsunuz?</p><a class="back-link" href="/#iletisim">İletişime geçin →</a></aside></div></section></main>
+<footer>
+    <div class="container">© Elif Handegül Yılmaz · Grafik Tasarım Rehberi</div>
+  </footer>
+</body>
+</html>
