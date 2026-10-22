@@ -375,14 +375,15 @@
     .card[id] { scroll-margin-top: 110px; }
   </style>
   <link rel="stylesheet" href="../../assets/site-design-system.css?v=20261009-typography-v1">
+  <link rel="stylesheet" href="../../assets/blog-hub.css?v=20261022-video-tabs-v1">
 </head>
-<body class="guide-page">
+<body class="guide-page" data-content-tabs>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="../" aria-label="Back to portfolio home">
         <img src="../../images/ehy-logo-en.png" alt="Elif Handegül Yılmaz">
       </a>
-      <div class="blog-header-actions"><a class="back-link" href="../#education">← Back to portfolio</a><a class="language-switch" href="../../blog/" lang="tr" aria-label="Türkçe bloga geç">TR</a></div>
+      <div class="blog-header-actions"><a class="back-link" href="../#education">← Back to portfolio</a><a class="language-switch" href="../../blog/" data-articles-href="../../blog/" data-video-href="../../blog/#video-egitimler" lang="tr" aria-label="Türkçe bloga geç">TR</a></div>
     </div>
   </header>
   <main>
@@ -394,7 +395,14 @@
       </div>
     </section>
 
-    <section class="container card-grid" aria-label="Graphic design articles">
+    <div class="container content-tabs-shell">
+      <div class="content-tabs" role="tablist" aria-label="Content type">
+        <button class="content-tab" id="articles-tab" type="button" role="tab" aria-selected="true" aria-controls="articles-panel" data-tab="articles" data-tab-hash="#articles">Articles</button>
+        <button class="content-tab" id="videos-tab" type="button" role="tab" aria-selected="false" aria-controls="videos-panel" data-tab="videos" data-tab-hash="#video-tutorials" tabindex="-1">Video Tutorials</button>
+      </div>
+    </div>
+
+    <section class="container card-grid tab-panel" id="articles-panel" role="tabpanel" aria-labelledby="articles-tab" data-tab-panel="articles">
       <a class="card" id="what-is-graphic-design" href="/en/blog/what-is-graphic-design/"><div class="cover cover-1" role="img" aria-label="What is graphic design? cover"></div><div class="card-body"><span class="category">Getting Started</span><h2>What Is Graphic Design?</h2><p>Its purpose, role in communication and everyday applications.</p><span class="read-more">Read article →</span></div></a>
       <a class="card" id="design-elements" href="/en/blog/elements-of-graphic-design/"><div class="cover cover-2" role="img" aria-label="The basic elements of graphic design cover"></div><div class="card-body"><span class="category">Design Basics</span><h2>The Elements of Graphic Design</h2><p>Line, shape, form, color, texture, typography and space.</p><span class="read-more">Read article →</span></div></a>
       <a class="card" id="design-principles" href="/en/blog/principles-of-graphic-design/"><div class="cover cover-3" role="img" aria-label="The principles of graphic design cover"></div><div class="card-body"><span class="category">Design Basics</span><h2>The Principles of Graphic Design</h2><p>Balance, hierarchy, emphasis, rhythm, unity and contrast.</p><span class="read-more">Read article →</span></div></a>
@@ -403,7 +411,24 @@
       <a class="card" id="typography" href="/en/blog/what-is-typography/"><div class="cover cover-6" role="img" aria-label="Typography in design cover"></div><div class="card-body"><span class="category">Typography</span><h2>Typography: The Power of Type</h2><p>Typeface choice, readability, hierarchy and typographic layout.</p><span class="read-more">Read article →</span></div></a>
       <a class="card" id="file-formats" href="/en/blog/design-file-formats/"><div class="cover cover-7" role="img" aria-label="Graphic design file formats cover"></div><div class="card-body"><span class="category">Technical Guide</span><h2>A Guide to Design File Formats</h2><p>When to use AI, EPS, PDF, SVG, JPG, PNG, TIFF and GIF.</p><span class="read-more">Read article →</span></div></a>
     </section>
+
+    <section class="container video-learning-panel tab-panel" id="videos-panel" role="tabpanel" aria-labelledby="videos-tab" data-tab-panel="videos" hidden>
+      <div class="video-grid" aria-live="polite">
+        <div class="video-empty-state">
+          <span class="video-empty-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><path d="m10 8 6 4-6 4V8Z"></path></svg>
+          </span>
+          <div class="video-empty-copy">
+            <span class="eyebrow">Video Tutorials</span>
+            <h2>New tutorials are in production</h2>
+            <p>Once verified tutorials are published, they will appear here with vertical covers, related article links and an in-page video player.</p>
+          </div>
+          <button class="video-empty-action" type="button" data-tab-switch="articles">Browse articles →</button>
+        </div>
+      </div>
+    </section>
   </main>
   <footer><div class="container">© Elif Handegül Yılmaz · Graphic Design Guide</div></footer>
+  <script src="../../assets/blog-hub.js?v=20261022-video-tabs-v1" defer></script>
 </body>
 </html>
