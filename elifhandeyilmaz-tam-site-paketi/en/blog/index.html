@@ -375,7 +375,7 @@
     .card[id] { scroll-margin-top: 110px; }
   </style>
   <link rel="stylesheet" href="../../assets/site-design-system.css?v=20261009-typography-v1">
-  <link rel="stylesheet" href="../../assets/blog-hub.css?v=20261022-video-tabs-v1">
+  <link rel="stylesheet" href="../../assets/blog-hub.css?v=20261022-video-lesson-v2">
 </head>
 <body class="guide-page" data-content-tabs>
   <header class="site-header">
@@ -414,21 +414,23 @@
 
     <section class="container video-learning-panel tab-panel" id="videos-panel" role="tabpanel" aria-labelledby="videos-tab" data-tab-panel="videos" hidden>
       <div class="video-grid" aria-live="polite">
-        <div class="video-empty-state">
-          <span class="video-empty-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><path d="m10 8 6 4-6 4V8Z"></path></svg>
-          </span>
-          <div class="video-empty-copy">
-            <span class="eyebrow">Video Tutorials</span>
-            <h2>New tutorials are in production</h2>
-            <p>Once verified tutorials are published, they will appear here with vertical covers, related article links and an in-page video player.</p>
+        <article class="card video-lesson-card">
+          <a class="video-lesson-preview" href="https://www.youtube.com/shorts/OMZrb0iIQgI" data-video-id="OMZrb0iIQgI" data-video-title="Video Tutorial 01" aria-label="Play Video Tutorial 01">
+            <img src="https://i.ytimg.com/vi/OMZrb0iIQgI/hqdefault.jpg" alt="" loading="lazy" decoding="async">
+            <span class="video-lesson-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.7a1 1 0 0 1 1.52-.85l10 6.3a1 1 0 0 1 0 1.7l-10 6.3A1 1 0 0 1 8 18.3V5.7Z"/></svg></span>
+          </a>
+          <div class="card-body">
+            <span class="category">Video Tutorials · 01</span>
+            <h2>Video Tutorial 01</h2>
+            <p>A short video from the graphic design learning series.</p>
+            <a class="read-more video-lesson-watch" href="https://www.youtube.com/shorts/OMZrb0iIQgI" data-video-id="OMZrb0iIQgI" data-video-title="Video Tutorial 01">Watch video →</a>
+            <button class="video-lesson-articles" type="button" data-tab-switch="articles">Browse articles →</button>
           </div>
-          <button class="video-empty-action" type="button" data-tab-switch="articles">Browse articles →</button>
-        </div>
+        </article>
       </div>
     </section>
   </main>
   <footer><div class="container">© Elif Handegül Yılmaz · Graphic Design Guide</div></footer>
-  <script src="../../assets/blog-hub.js?v=20261022-video-tabs-v1" defer></script>
+  <script src="../../assets/blog-hub.js?v=20261022-video-lesson-v2" defer></script>
 </body>
 </html>
