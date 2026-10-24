@@ -1,6 +1,12 @@
 (() => {
   const videos = [
     {
+      id: "GJ7KQnlwJ_Q",
+      title: "Alfa Sigorta – Podcast 1",
+      description: "Alfa Sigorta için hazırlanan podcast formatındaki dikey video çalışması.",
+      tags: ["Podcast", "Dikey Video", "Sosyal Medya"]
+    },
+    {
       id: "KsWVmGhfWZs",
       title: "Video & Animasyon — Shorts 01",
       description: "YouTube Shorts formatında yayınlanan dikey video ve animasyon çalışması.",
