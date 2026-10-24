@@ -1,0 +1,493 @@
+{
+  "checked_at_utc": "2026-10-24T18:54:11.260534+00:00",
+  "mode": "source",
+  "count": 22,
+  "rows": [
+    {
+      "url": "https://elifhandeyilmaz.com/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/"
+          ]
+        ],
+        "robots": [],
+        "lang": "tr"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/blog/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/blog/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/"
+          ]
+        ],
+        "robots": [],
+        "lang": "tr"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/projects/brand-identity/"
+          ]
+        ],
+        "robots": [],
+        "lang": "tr"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/"
+          ]
+        ],
+        "robots": [],
+        "lang": "tr"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/en/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/en/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/"
+          ]
+        ],
+        "robots": [],
+        "lang": "en"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/en/blog/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/en/blog/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/"
+          ]
+        ],
+        "robots": [],
+        "lang": "en"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/en/projects/brand-identity/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/en/projects/brand-identity/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/projects/brand-identity/"
+          ]
+        ],
+        "robots": [],
+        "lang": "en"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/"
+          ]
+        ],
+        "robots": [],
+        "lang": "en"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/blog/grafik-tasarim-nedir/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/blog/grafik-tasarim-nedir/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/grafik-tasarim-nedir/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/what-is-graphic-design/"
+          ]
+        ],
+        "robots": [],
+        "lang": "tr"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-unsurlari/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-unsurlari/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-unsurlari/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/elements-of-graphic-design/"
+          ]
+        ],
+        "robots": [],
+        "lang": "tr"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/principles-of-graphic-design/"
+          ]
+        ],
+        "robots": [],
+        "lang": "tr"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/blog/vektorel-ve-bitmap-farki/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/blog/vektorel-ve-bitmap-farki/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/vektorel-ve-bitmap-farki/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/vector-vs-bitmap/"
+          ]
+        ],
+        "robots": [],
+        "lang": "tr"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/blog/rgb-cmyk-renk-bilgisi/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/blog/rgb-cmyk-renk-bilgisi/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/rgb-cmyk-renk-bilgisi/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/rgb-cmyk-color-guide/"
+          ]
+        ],
+        "robots": [],
+        "lang": "tr"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/blog/tipografi-nedir/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/blog/tipografi-nedir/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/tipografi-nedir/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/what-is-typography/"
+          ]
+        ],
+        "robots": [],
+        "lang": "tr"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/blog/dosya-formatlari-rehberi/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/blog/dosya-formatlari-rehberi/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/dosya-formatlari-rehberi/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/design-file-formats/"
+          ]
+        ],
+        "robots": [],
+        "lang": "tr"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/en/blog/what-is-graphic-design/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/en/blog/what-is-graphic-design/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/grafik-tasarim-nedir/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/what-is-graphic-design/"
+          ]
+        ],
+        "robots": [],
+        "lang": "en"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/en/blog/elements-of-graphic-design/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/en/blog/elements-of-graphic-design/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-unsurlari/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/elements-of-graphic-design/"
+          ]
+        ],
+        "robots": [],
+        "lang": "en"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/en/blog/principles-of-graphic-design/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/en/blog/principles-of-graphic-design/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/principles-of-graphic-design/"
+          ]
+        ],
+        "robots": [],
+        "lang": "en"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/en/blog/vector-vs-bitmap/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/en/blog/vector-vs-bitmap/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/vektorel-ve-bitmap-farki/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/vector-vs-bitmap/"
+          ]
+        ],
+        "robots": [],
+        "lang": "en"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/en/blog/rgb-cmyk-color-guide/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/en/blog/rgb-cmyk-color-guide/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/rgb-cmyk-renk-bilgisi/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/rgb-cmyk-color-guide/"
+          ]
+        ],
+        "robots": [],
+        "lang": "en"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/en/blog/what-is-typography/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/en/blog/what-is-typography/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/tipografi-nedir/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/what-is-typography/"
+          ]
+        ],
+        "robots": [],
+        "lang": "en"
+      },
+      "errors": []
+    },
+    {
+      "url": "https://elifhandeyilmaz.com/en/blog/design-file-formats/",
+      "googlebot_allowed": true,
+      "page": {
+        "canonical": [
+          "https://elifhandeyilmaz.com/en/blog/design-file-formats/"
+        ],
+        "alternates": [
+          [
+            "tr",
+            "https://elifhandeyilmaz.com/blog/dosya-formatlari-rehberi/"
+          ],
+          [
+            "en",
+            "https://elifhandeyilmaz.com/en/blog/design-file-formats/"
+          ]
+        ],
+        "robots": [],
+        "lang": "en"
+      },
+      "errors": []
+    }
+  ],
+  "resources": [],
+  "errors": []
+}
