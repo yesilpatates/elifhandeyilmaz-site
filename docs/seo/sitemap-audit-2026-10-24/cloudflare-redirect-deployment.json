@@ -1,0 +1,839 @@
+{
+  "applied_at": "2026-10-25T08:54:25Z",
+  "ruleset_id": "9974050d80b842248e942116dbf88eb6",
+  "rule_id": "c7c0b0a3c3aa489caf025fae8667c7eb",
+  "configuration": {
+    "name": "Canonical HTTPS and host redirects",
+    "kind": "zone",
+    "phase": "http_request_dynamic_redirect",
+    "rules": [
+      {
+        "ref": "canonical_https_non_www",
+        "description": "Redirect HTTP and www to canonical HTTPS host; preserve path and query",
+        "enabled": true,
+        "expression": "(http.host in {\"elifhandeyilmaz.com\" \"www.elifhandeyilmaz.com\"} and (not ssl or http.host eq \"www.elifhandeyilmaz.com\"))",
+        "action": "redirect",
+        "action_parameters": {
+          "from_value": {
+            "target_url": {
+              "expression": "concat(\"https://elifhandeyilmaz.com\", http.request.uri.path)"
+            },
+            "status_code": 301,
+            "preserve_query_string": true
+          }
+        }
+      }
+    ]
+  },
+  "validation": {
+    "api_dry_run": "passed",
+    "api_readback": "enabled",
+    "variants": [
+      {
+        "url": "https://elifhandeyilmaz.com/index.html",
+        "status": 200,
+        "final": "https://elifhandeyilmaz.com/",
+        "redirects": 1,
+        "canonical": [
+          "https://elifhandeyilmaz.com/"
+        ],
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://www.elifhandeyilmaz.com/index.html",
+        "status": 200,
+        "final": "https://elifhandeyilmaz.com/",
+        "redirects": 2,
+        "canonical": [
+          "https://elifhandeyilmaz.com/"
+        ],
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "http://elifhandeyilmaz.com/index.html",
+        "status": 200,
+        "final": "https://elifhandeyilmaz.com/",
+        "redirects": 2,
+        "canonical": [
+          "https://elifhandeyilmaz.com/"
+        ],
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "http://elifhandeyilmaz.com/blog/index.html",
+        "status": 200,
+        "final": "https://elifhandeyilmaz.com/blog/",
+        "redirects": 2,
+        "canonical": [
+          "https://elifhandeyilmaz.com/blog/"
+        ],
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://www.elifhandeyilmaz.com/blog/index.html",
+        "status": 200,
+        "final": "https://elifhandeyilmaz.com/blog/",
+        "redirects": 2,
+        "canonical": [
+          "https://elifhandeyilmaz.com/blog/"
+        ],
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "http://www.elifhandeyilmaz.com/",
+        "status": 200,
+        "final": "https://elifhandeyilmaz.com/",
+        "redirects": 1,
+        "canonical": [
+          "https://elifhandeyilmaz.com/"
+        ],
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "http://elifhandeyilmaz.com/",
+        "status": 200,
+        "final": "https://elifhandeyilmaz.com/",
+        "redirects": 1,
+        "canonical": [
+          "https://elifhandeyilmaz.com/"
+        ],
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://www.elifhandeyilmaz.com/",
+        "status": 200,
+        "final": "https://elifhandeyilmaz.com/",
+        "redirects": 1,
+        "canonical": [
+          "https://elifhandeyilmaz.com/"
+        ],
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "http://elifhandeyilmaz.com/blog/",
+        "status": 200,
+        "final": "https://elifhandeyilmaz.com/blog/",
+        "redirects": 1,
+        "canonical": [
+          "https://elifhandeyilmaz.com/blog/"
+        ],
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "http://www.elifhandeyilmaz.com/en/",
+        "status": 200,
+        "final": "https://elifhandeyilmaz.com/en/",
+        "redirects": 1,
+        "canonical": [
+          "https://elifhandeyilmaz.com/en/"
+        ],
+        "error": "",
+        "exit": 0
+      }
+    ],
+    "sitemap": {
+      "checked_at_utc": "2026-10-25T08:55:03.087917+00:00",
+      "mode": "live",
+      "count": 22,
+      "rows": [
+        {
+          "url": "https://elifhandeyilmaz.com/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/"
+              ]
+            ],
+            "robots": [],
+            "lang": "tr",
+            "url": "https://elifhandeyilmaz.com/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/blog/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/blog/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/"
+              ]
+            ],
+            "robots": [],
+            "lang": "tr",
+            "url": "https://elifhandeyilmaz.com/blog/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/blog/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/projects/brand-identity/"
+              ]
+            ],
+            "robots": [],
+            "lang": "tr",
+            "url": "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/"
+              ]
+            ],
+            "robots": [],
+            "lang": "tr",
+            "url": "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/en/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/en/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/"
+              ]
+            ],
+            "robots": [],
+            "lang": "en",
+            "url": "https://elifhandeyilmaz.com/en/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/en/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/en/blog/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/en/blog/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/"
+              ]
+            ],
+            "robots": [],
+            "lang": "en",
+            "url": "https://elifhandeyilmaz.com/en/blog/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/en/blog/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/en/projects/brand-identity/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/en/projects/brand-identity/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/projects/brand-identity/"
+              ]
+            ],
+            "robots": [],
+            "lang": "en",
+            "url": "https://elifhandeyilmaz.com/en/projects/brand-identity/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/en/projects/brand-identity/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/projeler/marka-kurumsal-kimlik/sagligim-burada/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/"
+              ]
+            ],
+            "robots": [],
+            "lang": "en",
+            "url": "https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/en/projects/brand-identity/sagligim-burada/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/blog/grafik-tasarim-nedir/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/blog/grafik-tasarim-nedir/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/grafik-tasarim-nedir/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/what-is-graphic-design/"
+              ]
+            ],
+            "robots": [],
+            "lang": "tr",
+            "url": "https://elifhandeyilmaz.com/blog/grafik-tasarim-nedir/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/blog/grafik-tasarim-nedir/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-unsurlari/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-unsurlari/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-unsurlari/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/elements-of-graphic-design/"
+              ]
+            ],
+            "robots": [],
+            "lang": "tr",
+            "url": "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-unsurlari/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-unsurlari/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/principles-of-graphic-design/"
+              ]
+            ],
+            "robots": [],
+            "lang": "tr",
+            "url": "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/blog/vektorel-ve-bitmap-farki/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/blog/vektorel-ve-bitmap-farki/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/vektorel-ve-bitmap-farki/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/vector-vs-bitmap/"
+              ]
+            ],
+            "robots": [],
+            "lang": "tr",
+            "url": "https://elifhandeyilmaz.com/blog/vektorel-ve-bitmap-farki/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/blog/vektorel-ve-bitmap-farki/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/blog/rgb-cmyk-renk-bilgisi/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/blog/rgb-cmyk-renk-bilgisi/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/rgb-cmyk-renk-bilgisi/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/rgb-cmyk-color-guide/"
+              ]
+            ],
+            "robots": [],
+            "lang": "tr",
+            "url": "https://elifhandeyilmaz.com/blog/rgb-cmyk-renk-bilgisi/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/blog/rgb-cmyk-renk-bilgisi/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/blog/tipografi-nedir/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/blog/tipografi-nedir/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/tipografi-nedir/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/what-is-typography/"
+              ]
+            ],
+            "robots": [],
+            "lang": "tr",
+            "url": "https://elifhandeyilmaz.com/blog/tipografi-nedir/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/blog/tipografi-nedir/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/blog/dosya-formatlari-rehberi/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/blog/dosya-formatlari-rehberi/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/dosya-formatlari-rehberi/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/design-file-formats/"
+              ]
+            ],
+            "robots": [],
+            "lang": "tr",
+            "url": "https://elifhandeyilmaz.com/blog/dosya-formatlari-rehberi/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/blog/dosya-formatlari-rehberi/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/en/blog/what-is-graphic-design/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/en/blog/what-is-graphic-design/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/grafik-tasarim-nedir/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/what-is-graphic-design/"
+              ]
+            ],
+            "robots": [],
+            "lang": "en",
+            "url": "https://elifhandeyilmaz.com/en/blog/what-is-graphic-design/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/en/blog/what-is-graphic-design/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/en/blog/elements-of-graphic-design/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/en/blog/elements-of-graphic-design/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-unsurlari/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/elements-of-graphic-design/"
+              ]
+            ],
+            "robots": [],
+            "lang": "en",
+            "url": "https://elifhandeyilmaz.com/en/blog/elements-of-graphic-design/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/en/blog/elements-of-graphic-design/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/en/blog/principles-of-graphic-design/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/en/blog/principles-of-graphic-design/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/grafik-tasarimin-temel-ilkeleri/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/principles-of-graphic-design/"
+              ]
+            ],
+            "robots": [],
+            "lang": "en",
+            "url": "https://elifhandeyilmaz.com/en/blog/principles-of-graphic-design/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/en/blog/principles-of-graphic-design/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/en/blog/vector-vs-bitmap/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/en/blog/vector-vs-bitmap/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/vektorel-ve-bitmap-farki/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/vector-vs-bitmap/"
+              ]
+            ],
+            "robots": [],
+            "lang": "en",
+            "url": "https://elifhandeyilmaz.com/en/blog/vector-vs-bitmap/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/en/blog/vector-vs-bitmap/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/en/blog/rgb-cmyk-color-guide/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/en/blog/rgb-cmyk-color-guide/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/rgb-cmyk-renk-bilgisi/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/rgb-cmyk-color-guide/"
+              ]
+            ],
+            "robots": [],
+            "lang": "en",
+            "url": "https://elifhandeyilmaz.com/en/blog/rgb-cmyk-color-guide/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/en/blog/rgb-cmyk-color-guide/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/en/blog/what-is-typography/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/en/blog/what-is-typography/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/tipografi-nedir/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/what-is-typography/"
+              ]
+            ],
+            "robots": [],
+            "lang": "en",
+            "url": "https://elifhandeyilmaz.com/en/blog/what-is-typography/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/en/blog/what-is-typography/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/en/blog/design-file-formats/",
+          "googlebot_allowed": true,
+          "page": {
+            "canonical": [
+              "https://elifhandeyilmaz.com/en/blog/design-file-formats/"
+            ],
+            "alternates": [
+              [
+                "tr",
+                "https://elifhandeyilmaz.com/blog/dosya-formatlari-rehberi/"
+              ],
+              [
+                "en",
+                "https://elifhandeyilmaz.com/en/blog/design-file-formats/"
+              ]
+            ],
+            "robots": [],
+            "lang": "en",
+            "url": "https://elifhandeyilmaz.com/en/blog/design-file-formats/",
+            "status": 200,
+            "final_url": "https://elifhandeyilmaz.com/en/blog/design-file-formats/",
+            "redirects": 0,
+            "content_type": "text/html",
+            "curl_exit": 0,
+            "error": "",
+            "x_robots_tag": []
+          },
+          "errors": []
+        }
+      ],
+      "resources": [
+        {
+          "url": "https://elifhandeyilmaz.com/robots.txt",
+          "status": 200,
+          "final_url": "https://elifhandeyilmaz.com/robots.txt",
+          "redirects": 0,
+          "content_type": "text/plain; charset=utf-8",
+          "curl_exit": 0,
+          "error": "",
+          "x_robots_tag": []
+        },
+        {
+          "url": "https://elifhandeyilmaz.com/sitemap.xml",
+          "status": 200,
+          "final_url": "https://elifhandeyilmaz.com/sitemap.xml",
+          "redirects": 0,
+          "content_type": "application/xml",
+          "curl_exit": 0,
+          "error": "",
+          "x_robots_tag": []
+        }
+      ],
+      "errors": []
+    },
+    "query_preservation": {
+      "source": "http://www.elifhandeyilmaz.com/blog/?utm_source=seo-test&ref=a%2Fb",
+      "status": 301,
+      "location": "https://elifhandeyilmaz.com/blog/?utm_source=seo-test&ref=a%2Fb"
+    }
+  }
+}
