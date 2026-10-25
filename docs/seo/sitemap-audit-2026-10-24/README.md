@@ -122,3 +122,24 @@ Tüm GET istekleri curl çıkış kodu 0 ile tamamlandı. İlk 5 adres birer yö
 - **Bu plandaki yönlendirme değişiklikleri uygulanmadı. Kullanıcı onayı olmadan production değiştirilmeyecek.**
 
 Sitemap gönderim ve başarılı işleme sonucu, kullanıcının 25.10.2026 ekran görüntülerinde 22 keşfedilen sayfa ile doğrulandı. Bu takipte sitemap tekrar gönderilmedi; “Düzeltmeyi doğrula”, indeksleme talebi, main birleştirmesi veya canlı yayın işlemi yapılmadı.
+
+## 25 Ekim 2026 — Onaylı Cloudflare yönlendirme uygulaması
+
+Kullanıcının “Yap” talebi ve ardından Cloudflare bağlantısıyla devam etme yönlendirmesi kapsamında yalnızca HTTP/www birleştirmesi Cloudflare’da uygulandı. Önceki bölümlerdeki “uygulanmadı” ifadeleri o aşamaların durum kaydıdır; bu bölüm güncel uygulama durumudur.
+
+- Uygulama zamanı: **25 Ekim 2026, 11:54 Türkiye saati**.
+- Zone: `elifhandeyilmaz.com`; mevcut Single Redirect giriş kuralları yoktu.
+- Cloudflare ruleset: `9974050d80b842248e942116dbf88eb6`.
+- Kural: `canonical_https_non_www` / `c7c0b0a3c3aa489caf025fae8667c7eb`.
+- Eşleşme: `(http.host in {"elifhandeyilmaz.com" "www.elifhandeyilmaz.com"} and (not ssl or http.host eq "www.elifhandeyilmaz.com"))`.
+- Hedef: `concat("https://elifhandeyilmaz.com", http.request.uri.path)`.
+- Durum: **301**; `preserve_query_string: true`; kural etkin.
+- API dry-run doğrulaması başarılı; uygulama sonrası API GET ile etkin kural yeniden doğrulandı.
+- Önceki 10 Search Console varyantı canlı GET ile yeniden test edildi: **10/10**, doğru canonical HTTPS hedef, son yanıt 200; döngü yok.
+- HTTP ve www birleşimi normal yollarda tek yönlendirmeyle hedefe gider. Eski `index.html` adresleri mevcut temizleme davranışı nedeniyle bir veya iki adımda doğru adrese ulaşır.
+- Parametre testi: `http://www.elifhandeyilmaz.com/blog/?utm_source=seo-test&ref=a%2Fb` → **301** → `https://elifhandeyilmaz.com/blog/?utm_source=seo-test&ref=a%2Fb`.
+- Sitemap sonrası regresyon kontrolü: `scripts/verify-sitemap.py --live` → **22 URL, 0 hata**.
+- Tasarım, içerikler, site JavaScript/CSS/HTML dosyaları, DNS ve SSL ayarları değiştirilmedi. GitHub main dalı birleştirilmedi. Canlıda yalnızca burada tarif edilen Cloudflare yönlendirme kuralı eklendi.
+- Geri alma: Cloudflare Single Redirects altında yalnızca `canonical_https_non_www` kuralını devre dışı bırak; başka kuralları veya zone ayarlarını silme.
+
+Uygulama ve test kaydı: `cloudflare-redirect-deployment.json`.
