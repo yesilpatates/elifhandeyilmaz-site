@@ -85,3 +85,40 @@ Bu çalışma mevcut 22 URL’nin teknik taranabilirliği ve dil eşleşmeleri i
 
 - Google hreflang kuralları: https://developers.google.com/search/docs/specialty/international/localized-versions
 - Google sitemap yönergeleri: https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
+
+## 25 Ekim 2026 — Search Console erişimi ve kapsam dışı URL incelemesi
+
+Önceki “Search Console erişilemedi” notu ilk denetim anını anlatır. Bu takipte güvenli oturum açıldı ve `sc-domain:elifhandeyilmaz.com` mülkündeki gerçek örnek URL listeleri okundu. Arayüzdeki raporun son güncellemesi hâlâ **16.10.2026**: 6 indekslenen, 10 kapsam dışı URL. Bu sayılar yeni 22 URL sitemap’in güncel indekslenme oranı olarak kullanılmamalıdır.
+
+### Search Console’dan alınan 10 adres ve canlı GET testi
+
+| Search Console nedeni | Örnek URL | Canlı son adres | Son HTTP | Canonical |
+|---|---|---|---|---|
+| Yönlendirmeli sayfa | https://elifhandeyilmaz.com/index.html | https://elifhandeyilmaz.com/ | 200 | https://elifhandeyilmaz.com/ |
+| Yönlendirmeli sayfa | https://www.elifhandeyilmaz.com/index.html | https://www.elifhandeyilmaz.com/ | 200 | https://elifhandeyilmaz.com/ |
+| Yönlendirmeli sayfa | http://elifhandeyilmaz.com/index.html | http://elifhandeyilmaz.com/ | 200 | https://elifhandeyilmaz.com/ |
+| Yönlendirmeli sayfa | http://elifhandeyilmaz.com/blog/index.html | http://elifhandeyilmaz.com/blog/ | 200 | https://elifhandeyilmaz.com/blog/ |
+| Yönlendirmeli sayfa | https://www.elifhandeyilmaz.com/blog/index.html | https://www.elifhandeyilmaz.com/blog/ | 200 | https://elifhandeyilmaz.com/blog/ |
+| Alternatif canonical | http://www.elifhandeyilmaz.com/ | http://www.elifhandeyilmaz.com/ | 200 | https://elifhandeyilmaz.com/ |
+| Alternatif canonical | http://elifhandeyilmaz.com/ | http://elifhandeyilmaz.com/ | 200 | https://elifhandeyilmaz.com/ |
+| Alternatif canonical | https://www.elifhandeyilmaz.com/ | https://www.elifhandeyilmaz.com/ | 200 | https://elifhandeyilmaz.com/ |
+| Alternatif canonical | http://elifhandeyilmaz.com/blog/ | http://elifhandeyilmaz.com/blog/ | 200 | https://elifhandeyilmaz.com/blog/ |
+| Alternatif canonical | http://www.elifhandeyilmaz.com/en/ | http://www.elifhandeyilmaz.com/en/ | 200 | https://elifhandeyilmaz.com/en/ |
+
+Tüm GET istekleri curl çıkış kodu 0 ile tamamlandı. İlk 5 adres birer yönlendirme ile `index.html` içermeyen adrese ulaştı; son 5 adres yönlendirmesiz 200 döndü.
+
+**Değerlendirme:** Listeler ayrı içeriklerin kaybını değil, ana sayfa/blog/İngilizce ana sayfanın URL varyantlarını gösteriyor. Hepsinde beklenen canonical var; bunların ayrıca indekslenmesini istemek gerekmiyor. Bu sonuç Google’ın sitemap’teki tüm 22 URL’yi indekslediği anlamına gelmez.
+
+**Ek teknik iyileştirme:** HTTP ve www varyantları canlı testte kendi adreslerinde 200 dönebiliyor. Canonical sinyali mevcut olsa da, kullanımdan kaldırılacak bu varyantları yol ve sorgu parametrelerini koruyarak HTTPS + www’siz adrese 301/308 yönlendirmek tutarlılığı artırır. Bu, önceki 22 canonical sitemap URL denetiminin dışındaki varyantlarda bulunan bir iyileştirmedir.
+
+### Yayın öncesi uygulanabilecek yönlendirme planı
+
+- Kapsam yalnızca `elifhandeyilmaz.com` ve `www.elifhandeyilmaz.com` hostları.
+- HTTP isteklerini HTTPS’ye, www hostunu www’siz hosta kalıcı yönlendir.
+- Yolu ve sorgu parametrelerini koru. Mevcut `index.html` temizleme davranışını ve son slash düzenini bozma.
+- Ana sayfa, `/blog/`, `/en/`, `index.html` varyantları ve sorgulu bir URL ile test et.
+- Hedef canonical URL’ler doğrudan 200 dönmeli; döngü veya yanlış yola yönlendirme olmamalı.
+- Hosting/Cloudflare ayarları incelenip uygulama tercihi doğrulanmadan repo içine rastgele `_redirects` veya Worker kodu eklenmedi.
+- **Bu plandaki yönlendirme değişiklikleri uygulanmadı. Kullanıcı onayı olmadan production değiştirilmeyecek.**
+
+Sitemap gönderim ve başarılı işleme sonucu, kullanıcının 25.10.2026 ekran görüntülerinde 22 keşfedilen sayfa ile doğrulandı. Bu takipte sitemap tekrar gönderilmedi; “Düzeltmeyi doğrula”, indeksleme talebi, main birleştirmesi veya canlı yayın işlemi yapılmadı.
