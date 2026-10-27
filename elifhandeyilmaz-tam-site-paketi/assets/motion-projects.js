@@ -1,6 +1,12 @@
 (() => {
   const videos = [
     {
+      id: "Auo5BAkAt1k",
+      title: "Alfa Sigorta – Afet Uyarısı",
+      description: "Alfa Sigorta için hazırlanan afet uyarısı konulu dikey bilgilendirme videosu.",
+      tags: ["Afet Uyarısı", "Dikey Video", "Sosyal Medya"]
+    },
+    {
       id: "GJ7KQnlwJ_Q",
       title: "Alfa Sigorta – Podcast 1",
       description: "Alfa Sigorta için hazırlanan podcast formatındaki dikey video çalışması.",
