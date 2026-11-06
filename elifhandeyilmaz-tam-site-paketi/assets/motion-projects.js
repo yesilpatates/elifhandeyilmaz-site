@@ -1,12 +1,6 @@
 (() => {
   const videos = [
     {
-      id: "O5zuSi-YvkM",
-      title: "6 Kasım 2026",
-      description: "YouTube Shorts formatında yayınlanan dikey video çalışması.",
-      tags: ["Dikey Video", "YouTube Shorts", "Sosyal Medya"]
-    },
-    {
       id: "Auo5BAkAt1k",
       title: "Alfa Sigorta – Afet Uyarısı",
       description: "Alfa Sigorta için hazırlanan afet uyarısı konulu dikey bilgilendirme videosu.",
